@@ -4,7 +4,7 @@ int main(void)
 {
 	int legs;
 
-	printf("My object analyzer 0.24 AC\n");
+	printf("My object analyzer 0.24 RB\n");
 
 	printf("Enter number of legs : ");
 	scanf("%d", &legs);
