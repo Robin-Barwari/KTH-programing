@@ -53,7 +53,7 @@ int main()
 	}
 
 	// Kontrollera om landningen var framgångsrik
-	if (velocity > -2)
+	if (2 > velocity && velocity > -2)
 	{
 		printf("SUCCESS! Safe landing at %.1f m/s.\n", velocity);
 	}
