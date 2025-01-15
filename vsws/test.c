@@ -28,14 +28,13 @@ int main(void)
 	printf("Set the throttle for each turn, 1..100%%\n");
 	printf("Time Height Velocity Fuel Throttle?\n");
 
-	// Steg 4 & 5
-	printf("%2d %7.1f %7.1f %7.1f     ", i, height, velocity, fuel); // skriver utan throttle
-	scanf("%d", &throttle);											 // separerar throttle och resterande så jag kan skriva separat throttle varje gång
-
 	// steg 6 & 7
 	do
 	{
-		i += 1; // ökar tiden med 1 t.e per input av throttle
+		// Steg 4 & 5
+		printf("%2d %7.1f %7.1f %7.1f     ", i, height, velocity, fuel); // skriver utan throttle
+		scanf("%d", &throttle);											 // separerar throttle och resterande så jag kan skriva separat throttle varje gång
+		i += 1;															 // ökar tiden med 1 t.e per input av throttle
 
 		velocity = velocity + (throttle * K - G); // formler från lathunden
 		height = height + velocity - (throttle * K - G) / 2.0;
