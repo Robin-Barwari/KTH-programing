@@ -33,14 +33,11 @@ int main()
 			throttle = 100;
 
 		// Beräkna ny hastighet
-		velocity = velocity + (throttle * K - G);
-
+		velocity += (throttle * K - G);
 		// Beräkna ny höjd
 		height = height + velocity - (throttle * K - G) / 2;
-
 		// Beräkna återstående bränsle
 		fuel = fuel - throttle;
-
 		// Öka tiden med 1 sekund
 		time++;
 
@@ -52,7 +49,7 @@ int main()
 		}
 	}
 
-	// Kontrollera om landningen var framgångsrik
+	// Kontrollera om crash eller ej
 	if (2 > velocity && velocity > -2)
 	{
 		printf("SUCCESS! Safe landing at %.1f m/s.\n", velocity);
