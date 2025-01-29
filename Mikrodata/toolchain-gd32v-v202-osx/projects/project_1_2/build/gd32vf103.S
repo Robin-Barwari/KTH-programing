@@ -7,8 +7,8 @@ start address 0x0800015c
 
 Program Header:
     LOAD off    0x00001000 vaddr 0x08000000 paddr 0x08000000 align 2**12
-         filesz 0x00001148 memsz 0x00001148 flags r-x
-    LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001148 align 2**12
+         filesz 0x00001144 memsz 0x00001144 flags r-x
+    LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001144 align 2**12
          filesz 0x00000088 memsz 0x00000088 flags rw-
     LOAD off    0x00003088 vaddr 0x20000088 paddr 0x20000088 align 2**12
          filesz 0x00000000 memsz 0x00000094 flags rw-
@@ -21,15 +21,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .ilalign      00000000  08000254  08000254  00003088  2**0
                   CONTENTS
-  2 .text         00000ec4  08000280  08000280  00001280  2**6
+  2 .text         00000ec0  08000280  08000280  00001280  2**6
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .sdata2._global_impure_ptr 00000004  08001144  08001144  00002144  2**2
+  3 .sdata2._global_impure_ptr 00000004  08001140  08001140  00002140  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .lalign       00000000  08001148  08001148  00003088  2**0
+  4 .lalign       00000000  08001144  08001144  00003088  2**0
                   CONTENTS
   5 .dalign       00000000  20000000  20000000  00003088  2**0
                   CONTENTS
-  6 .data         00000088  20000000  08001148  00003000  2**2
+  6 .data         00000088  20000000  08001144  00003000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   7 .bss          00000094  20000088  20000088  00003088  2**2
                   ALLOC
@@ -45,22 +45,22 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  13 .debug_ranges 000002e8  00000000  00000000  00008340  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   00002e24  00000000  00000000  00008628  2**0
+ 14 .debug_line   00002e18  00000000  00000000  00008628  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00000ee9  00000000  00000000  0000b44c  2**0
+ 15 .debug_str    00000ee9  00000000  00000000  0000b440  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0000c335  2**0
+ 16 .comment      00000028  00000000  00000000  0000c329  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  0000c35d  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  0000c351  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00000408  00000000  00000000  0000c388  2**2
+ 18 .debug_frame  00000408  00000000  00000000  0000c37c  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
 08000254 l    d  .ilalign	00000000 .ilalign
 08000280 l    d  .text	00000000 .text
-08001144 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
-08001148 l    d  .lalign	00000000 .lalign
+08001140 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
+08001144 l    d  .lalign	00000000 .lalign
 20000000 l    d  .dalign	00000000 .dalign
 20000000 l    d  .data	00000000 .data
 20000088 l    d  .bss	00000000 .bss
@@ -113,25 +113,26 @@ SYMBOL TABLE:
 00000008 l       *ABS*	00000000 PBEN
 080006c4 l       .text	00000000 rcu1en
 080006d6 l       .text	00000000 rcu2en
-0800074e l       .text	00000000 select_sequence
-080007b0 l       .text	00000000 disco0
-08000812 l       .text	00000000 disco1
-08000874 l       .text	00000000 disco2
-080008d6 l       .text	00000000 disco3
-08000938 l       .text	00000000 disco4
-0800099a l       .text	00000000 disco5
-080009fc l       .text	00000000 disco6
-08000a5e l       .text	00000000 disco7
-08000ac0 l       .text	00000000 disco0inv
-08000b32 l       .text	00000000 disco1inv
-08000ba4 l       .text	00000000 disco2inv
-08000c16 l       .text	00000000 disco3inv
-08000c88 l       .text	00000000 disco4inv
-08000cfa l       .text	00000000 disco5inv
-08000d6c l       .text	00000000 disco6inv
-08000dde l       .text	00000000 disco7inv
+0800072e l       .text	00000000 start
+0800074c l       .text	00000000 select_sequence
+080007ac l       .text	00000000 disco0
+0800080e l       .text	00000000 disco1
+08000870 l       .text	00000000 disco2
+080008d2 l       .text	00000000 disco3
+08000934 l       .text	00000000 disco4
+08000996 l       .text	00000000 disco5
+080009f8 l       .text	00000000 disco6
+08000a5a l       .text	00000000 disco7
+08000abc l       .text	00000000 disco0inv
+08000b2e l       .text	00000000 disco1inv
+08000ba0 l       .text	00000000 disco2inv
+08000c12 l       .text	00000000 disco3inv
+08000c84 l       .text	00000000 disco4inv
+08000cf6 l       .text	00000000 disco5inv
+08000d68 l       .text	00000000 disco6inv
+08000dda l       .text	00000000 disco7inv
 20000000 l       .data	00000000 sequence0
-08000e50 l       .text	00000000 delay
+08000e4c l       .text	00000000 delay
 20000004 l       .data	00000000 sequence1
 20000008 l       .data	00000000 sequence2
 2000000c l       .data	00000000 sequence3
@@ -153,33 +154,33 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 impure.c
 20000020 l     O .data	00000060 impure_data
 00000000 l    df *ABS*	00000000 
-08001148 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
-08001148 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
-08001148 l       .sdata2._global_impure_ptr	00000000 __init_array_end
-08001148 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
-08001148 l       .sdata2._global_impure_ptr	00000000 __init_array_start
-08001148 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
+08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
+08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
+08001144 l       .sdata2._global_impure_ptr	00000000 __init_array_end
+08001144 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
+08001144 l       .sdata2._global_impure_ptr	00000000 __init_array_start
+08001144 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
 20000880 g       .data	00000000 __global_pointer$
-08001138 g     F .text	0000000c __errno
+08001134 g     F .text	0000000c __errno
 20000118 g     O .bss	00000004 errno
 00001000 g       *ABS*	00000000 __stack_size
-08000f48 g     F .text	00000016 memcpy
+08000f44 g     F .text	00000016 memcpy
 080004ee  w    F .text	00000038 handle_trap
 08000604  w      .text	00000000 irq_entry
 20007000 g       .stack	00000000 _heap_end
-08001144 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
-08000ede g     F .text	0000006a __libc_init_array
+08001140 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
+08000eda g     F .text	0000006a __libc_init_array
 08000526 g     F .text	0000002c _init
-08000ea6 g     F .text	00000038 __libc_fini_array
+08000ea2 g     F .text	00000038 __libc_fini_array
 080004cc  w    F .text	00000022 handle_nmi
-08000f5e g     F .text	00000018 write
+08000f5a g     F .text	00000018 write
 0800041c g     F .text	0000007c write_hex
 20000088 g     O .bss	00000004 _global_atexit
-0800103c g     F .text	000000c8 __call_exitprocs
+08001038 g     F .text	000000c8 __call_exitprocs
 20008000 g       .stack	00000000 _sp
 0800015c g     F .init	00000000 _start
 0800024c g       .init	00000000 enable_mcycle_minstret
-08000fb0 g     F .text	0000008c __register_exitproc
+08000fac g     F .text	0000008c __register_exitproc
 20000088 g       .bss	00000000 __bss_start
 080006e8 g       .text	00000000 main
 08000580  w      .text	00000000 trap_entry
@@ -188,15 +189,15 @@ SYMBOL TABLE:
 080002b4 g     F .text	0000011c SystemInit
 08000552 g     F .text	00000002 _fini
 00000000 g       *ABS*	00000000 __dbg_stack_size
-08000e60 g     F .text	00000010 atexit
-08000f76 g     F .text	0000003a _write_r
+08000e5c g     F .text	00000010 atexit
+08000f72 g     F .text	0000003a _write_r
 20000080 g     O .data	00000004 _impure_ptr
 20000000 g       .dalign	00000000 _data
-08001104 g     F .text	00000034 _write
+08001100 g     F .text	00000034 _write
 20000088 g       .bss	00000000 _edata
 20000120 g       .bss	00000000 _end
-08001148 g       .lalign	00000000 _data_lma
-08000e70 g     F .text	00000036 exit
+08001144 g       .lalign	00000000 _data_lma
+08000e6c g     F .text	00000036 exit
 08000498 g     F .text	00000022 eclic_init
 080003d0 g     F .text	0000004c _exit
 
@@ -293,7 +294,7 @@ _start0800:
 	/* Load data section */
 	la a0, _data_lma
  80001c2:	00001517          	auipc	a0,0x1
- 80001c6:	f8650513          	addi	a0,a0,-122 # 8001148 <__fini_array_end>
+ 80001c6:	f8250513          	addi	a0,a0,-126 # 8001144 <__fini_array_end>
 	la a1, _data
  80001ca:	18000597          	auipc	a1,0x18000
  80001ce:	e3658593          	addi	a1,a1,-458 # 20000000 <_data>
@@ -337,13 +338,13 @@ _start0800:
 	/* Call global constructors */
 	la a0, __libc_fini_array
  8000210:	00001517          	auipc	a0,0x1
- 8000214:	c9650513          	addi	a0,a0,-874 # 8000ea6 <__libc_fini_array>
+ 8000214:	c9250513          	addi	a0,a0,-878 # 8000ea2 <__libc_fini_array>
 	call atexit
  8000218:	00001097          	auipc	ra,0x1
- 800021c:	c48080e7          	jalr	-952(ra) # 8000e60 <atexit>
+ 800021c:	c44080e7          	jalr	-956(ra) # 8000e5c <atexit>
 	call __libc_init_array
  8000220:	00001097          	auipc	ra,0x1
- 8000224:	cbe080e7          	jalr	-834(ra) # 8000ede <__libc_init_array>
+ 8000224:	cba080e7          	jalr	-838(ra) # 8000eda <__libc_init_array>
 
 
 	/* argc = argv = 0 */
@@ -359,7 +360,7 @@ _start0800:
  8000238:	4b4080e7          	jalr	1204(ra) # 80006e8 <main>
 	tail exit
  800023c:	00001317          	auipc	t1,0x1
- 8000240:	c3430067          	jr	-972(t1) # 8000e70 <exit>
+ 8000240:	c3030067          	jr	-976(t1) # 8000e6c <exit>
 
 1:
 	j 1b
@@ -398,7 +399,7 @@ Disassembly of section .text:
  8000292:	2064                	fld	fs1,192(s0)
  8000294:	68746977          	0x68746977
  8000298:	6320                	flw	fs0,64(a4)
- 800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x554f8>
+ 800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x554fc>
  800029e:	0000                	unimp
  80002a0:	7830                	flw	fa2,112(s0)
  80002a2:	0000                	unimp
@@ -641,14 +642,14 @@ void _exit(int code)
  80003e2:	d606                	sw	ra,44(sp)
   const char message[] = "\nProgram has exited with code:";
  80003e4:	00001097          	auipc	ra,0x1
- 80003e8:	b64080e7          	jalr	-1180(ra) # 8000f48 <memcpy>
+ 80003e8:	b60080e7          	jalr	-1184(ra) # 8000f44 <memcpy>
 
   write(STDERR_FILENO, message, sizeof(message) - 1);
  80003ec:	4679                	li	a2,30
  80003ee:	858a                	mv	a1,sp
  80003f0:	4509                	li	a0,2
  80003f2:	00001097          	auipc	ra,0x1
- 80003f6:	b6c080e7          	jalr	-1172(ra) # 8000f5e <write>
+ 80003f6:	b68080e7          	jalr	-1176(ra) # 8000f5a <write>
   write_hex(STDERR_FILENO, code);
  80003fa:	85a2                	mv	a1,s0
  80003fc:	4509                	li	a0,2
@@ -660,7 +661,7 @@ void _exit(int code)
  800040c:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
  8000410:	4509                	li	a0,2
  8000412:	00001097          	auipc	ra,0x1
- 8000416:	b4c080e7          	jalr	-1204(ra) # 8000f5e <write>
+ 8000416:	b48080e7          	jalr	-1208(ra) # 8000f5a <write>
 
   for (;;);
  800041a:	a001                	j	800041a <_exit+0x4a>
@@ -693,7 +694,7 @@ void write_hex(int fd, unsigned long int hex)
   write(fd , "0x", 2);
  800043a:	4471                	li	s0,28
  800043c:	00001097          	auipc	ra,0x1
- 8000440:	b22080e7          	jalr	-1246(ra) # 8000f5e <write>
+ 8000440:	b1e080e7          	jalr	-1250(ra) # 8000f5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
     jj = ii - 1;
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
@@ -720,7 +721,7 @@ void write_hex(int fd, unsigned long int hex)
  8000470:	00f107a3          	sb	a5,15(sp)
     write(fd, &towrite, 1);
  8000474:	00001097          	auipc	ra,0x1
- 8000478:	aea080e7          	jalr	-1302(ra) # 8000f5e <write>
+ 8000478:	ae6080e7          	jalr	-1306(ra) # 8000f5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
  800047c:	fc9417e3          	bne	s0,s1,800044a <write_hex+0x2e>
   }
@@ -810,7 +811,7 @@ __attribute__((weak)) uintptr_t handle_nmi()
  80004da:	c606                	sw	ra,12(sp)
   write(1, "nmi\n", 5);
  80004dc:	00001097          	auipc	ra,0x1
- 80004e0:	a82080e7          	jalr	-1406(ra) # 8000f5e <write>
+ 80004e0:	a7e080e7          	jalr	-1410(ra) # 8000f5a <write>
   _exit(1);
  80004e4:	4505                	li	a0,1
  80004e6:	00000097          	auipc	ra,0x0
@@ -845,7 +846,7 @@ __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
  800050e:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
  8000512:	4505                	li	a0,1
  8000514:	00001097          	auipc	ra,0x1
- 8000518:	a4a080e7          	jalr	-1462(ra) # 8000f5e <write>
+ 8000518:	a46080e7          	jalr	-1466(ra) # 8000f5a <write>
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
@@ -1234,8 +1235,10 @@ main:
  8000728:	0685                	addi	a3,a3,1
         bne a3, a4, 1b
  800072a:	fee69be3          	bne	a3,a4,8000720 <main+0x38>
+
+0800072e <start>:
         # Main loop to read switches and control LEDs
-1: li a0, GPIOA
+start:  li a0, GPIOA
  800072e:	40011537          	lui	a0,0x40011
  8000732:	80050513          	addi	a0,a0,-2048 # 40010800 <GPIOA>
         call gpiois # Read switch states
@@ -1250,1176 +1253,1176 @@ main:
  8000742:	862e                	mv	a2,a1
         call select_sequence
  8000744:	00000097          	auipc	ra,0x0
- 8000748:	00a080e7          	jalr	10(ra) # 800074e <select_sequence>
-        j 1b # Repeat forever
- 800074c:	b7cd                	j	800072e <main+0x46>
+ 8000748:	008080e7          	jalr	8(ra) # 800074c <select_sequence>
 
-0800074e <select_sequence>:
+0800074c <select_sequence>:
 # Select LED sequence based on switch state
 # Select LED sequence based on switch state
 select_sequence:
         # Check the switch state
         
         li t1, 0x00
- 800074e:	4301                	li	t1,0
+ 800074c:	4301                	li	t1,0
         li t2, 0x01
- 8000750:	4385                	li	t2,1
+ 800074e:	4385                	li	t2,1
         li t3, 0x02
- 8000752:	4e09                	li	t3,2
+ 8000750:	4e09                	li	t3,2
         li t4, 0x03
- 8000754:	4e8d                	li	t4,3
+ 8000752:	4e8d                	li	t4,3
         li t5, 0x04
- 8000756:	4f11                	li	t5,4
+ 8000754:	4f11                	li	t5,4
         li t6, 0x05
- 8000758:	4f95                	li	t6,5
+ 8000756:	4f95                	li	t6,5
         li s2, 0x06
- 800075a:	4919                	li	s2,6
+ 8000758:	4919                	li	s2,6
         li s3, 0x07
- 800075c:	499d                	li	s3,7
+ 800075a:	499d                	li	s3,7
+        
         li s4, 0x08
- 800075e:	4a21                	li	s4,8
+ 800075c:	4a21                	li	s4,8
         li s5, 0x09
- 8000760:	4aa5                	li	s5,9
+ 800075e:	4aa5                	li	s5,9
         li s6, 0x0A
- 8000762:	4b29                	li	s6,10
+ 8000760:	4b29                	li	s6,10
         li s7, 0x0B
- 8000764:	4bad                	li	s7,11
+ 8000762:	4bad                	li	s7,11
         li s8, 0x0C
- 8000766:	4c31                	li	s8,12
+ 8000764:	4c31                	li	s8,12
         li s9, 0x0D
- 8000768:	4cb5                	li	s9,13
+ 8000766:	4cb5                	li	s9,13
         li s10, 0x0E
- 800076a:	4d39                	li	s10,14
+ 8000768:	4d39                	li	s10,14
         li s11, 0x0F
- 800076c:	4dbd                	li	s11,15
+ 800076a:	4dbd                	li	s11,15
 
         beq a2, t1, disco0
- 800076e:	04660163          	beq	a2,t1,80007b0 <disco0>
+ 800076c:	04660063          	beq	a2,t1,80007ac <disco0>
         beq a2, t2, disco1
- 8000772:	0a760063          	beq	a2,t2,8000812 <disco1>
+ 8000770:	08760f63          	beq	a2,t2,800080e <disco1>
         beq a2, t3, disco2
- 8000776:	0fc60f63          	beq	a2,t3,8000874 <disco2>
+ 8000774:	0fc60e63          	beq	a2,t3,8000870 <disco2>
         beq a2, t4, disco3
- 800077a:	15d60e63          	beq	a2,t4,80008d6 <disco3>
+ 8000778:	15d60d63          	beq	a2,t4,80008d2 <disco3>
         beq a2, t5, disco4
- 800077e:	1be60d63          	beq	a2,t5,8000938 <disco4>
+ 800077c:	1be60c63          	beq	a2,t5,8000934 <disco4>
         beq a2, t6, disco5
- 8000782:	21f60c63          	beq	a2,t6,800099a <disco5>
+ 8000780:	21f60b63          	beq	a2,t6,8000996 <disco5>
         beq a2, s2, disco6
- 8000786:	27260b63          	beq	a2,s2,80009fc <disco6>
+ 8000784:	27260a63          	beq	a2,s2,80009f8 <disco6>
         beq a2, s3, disco7
- 800078a:	2d360a63          	beq	a2,s3,8000a5e <disco7>
+ 8000788:	2d360963          	beq	a2,s3,8000a5a <disco7>
         beq a2, s4, disco0inv
- 800078e:	33460963          	beq	a2,s4,8000ac0 <disco0inv>
+ 800078c:	33460863          	beq	a2,s4,8000abc <disco0inv>
         beq a2, s5, disco1inv
- 8000792:	3b560063          	beq	a2,s5,8000b32 <disco1inv>
+ 8000790:	39560f63          	beq	a2,s5,8000b2e <disco1inv>
         beq a2, s6, disco2inv
- 8000796:	41660763          	beq	a2,s6,8000ba4 <disco2inv>
+ 8000794:	41660663          	beq	a2,s6,8000ba0 <disco2inv>
         beq a2, s7, disco3inv
- 800079a:	47760e63          	beq	a2,s7,8000c16 <disco3inv>
+ 8000798:	47760d63          	beq	a2,s7,8000c12 <disco3inv>
         beq a2, s8, disco4inv
- 800079e:	4f860563          	beq	a2,s8,8000c88 <disco4inv>
+ 800079c:	4f860463          	beq	a2,s8,8000c84 <disco4inv>
         beq a2, s9, disco5inv
- 80007a2:	55960c63          	beq	a2,s9,8000cfa <disco5inv>
+ 80007a0:	55960b63          	beq	a2,s9,8000cf6 <disco5inv>
         beq a2, s10, disco6inv
- 80007a6:	5da60363          	beq	a2,s10,8000d6c <disco6inv>
+ 80007a4:	5da60263          	beq	a2,s10,8000d68 <disco6inv>
         beq a2, s11, disco7inv
- 80007aa:	63b60a63          	beq	a2,s11,8000dde <disco7inv>
+ 80007a8:	63b60963          	beq	a2,s11,8000dda <disco7inv>
 
-        ret # Return to main loop if not the specified switch state
- 80007ae:	8082                	ret
+080007ac <disco0>:
 
-080007b0 <disco0>:
+        #ret # Return to main loop if not the specified switch state
 disco0:
         la t0, sequence0
- 80007b0:	18000297          	auipc	t0,0x18000
- 80007b4:	85028293          	addi	t0,t0,-1968 # 20000000 <_data>
+ 80007ac:	18000297          	auipc	t0,0x18000
+ 80007b0:	85428293          	addi	t0,t0,-1964 # 20000000 <_data>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 80007b8:	40011537          	lui	a0,0x40011
- 80007bc:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 80007b4:	40011537          	lui	a0,0x40011
+ 80007b8:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 80007c0:	00028583          	lb	a1,0(t0)
+ 80007bc:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 80007c4:	00000097          	auipc	ra,0x0
- 80007c8:	ef8080e7          	jalr	-264(ra) # 80006bc <gpiooc>
+ 80007c0:	00000097          	auipc	ra,0x0
+ 80007c4:	efc080e7          	jalr	-260(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 80007cc:	00000097          	auipc	ra,0x0
- 80007d0:	684080e7          	jalr	1668(ra) # 8000e50 <delay>
+ 80007c8:	00000097          	auipc	ra,0x0
+ 80007cc:	684080e7          	jalr	1668(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 80007d4:	00128583          	lb	a1,1(t0)
+ 80007d0:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 80007d8:	00000097          	auipc	ra,0x0
- 80007dc:	ee4080e7          	jalr	-284(ra) # 80006bc <gpiooc>
+ 80007d4:	00000097          	auipc	ra,0x0
+ 80007d8:	ee8080e7          	jalr	-280(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 80007e0:	00000097          	auipc	ra,0x0
- 80007e4:	670080e7          	jalr	1648(ra) # 8000e50 <delay>
+ 80007dc:	00000097          	auipc	ra,0x0
+ 80007e0:	670080e7          	jalr	1648(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 80007e8:	00228583          	lb	a1,2(t0)
+ 80007e4:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 80007ec:	00000097          	auipc	ra,0x0
- 80007f0:	ed0080e7          	jalr	-304(ra) # 80006bc <gpiooc>
+ 80007e8:	00000097          	auipc	ra,0x0
+ 80007ec:	ed4080e7          	jalr	-300(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 80007f4:	00000097          	auipc	ra,0x0
- 80007f8:	65c080e7          	jalr	1628(ra) # 8000e50 <delay>
+ 80007f0:	00000097          	auipc	ra,0x0
+ 80007f4:	65c080e7          	jalr	1628(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 80007fc:	00328583          	lb	a1,3(t0)
+ 80007f8:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000800:	00000097          	auipc	ra,0x0
- 8000804:	ebc080e7          	jalr	-324(ra) # 80006bc <gpiooc>
+ 80007fc:	00000097          	auipc	ra,0x0
+ 8000800:	ec0080e7          	jalr	-320(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000808:	00000097          	auipc	ra,0x0
- 800080c:	648080e7          	jalr	1608(ra) # 8000e50 <delay>
-        j select_sequence # 0 the sequence indefinitely
- 8000810:	bf3d                	j	800074e <select_sequence>
+ 8000804:	00000097          	auipc	ra,0x0
+ 8000808:	648080e7          	jalr	1608(ra) # 8000e4c <delay>
+        
+        j start
+ 800080c:	b70d                	j	800072e <start>
 
-08000812 <disco1>:
+0800080e <disco1>:
 
 disco1:
         la t0, sequence1
- 8000812:	17fff297          	auipc	t0,0x17fff
- 8000816:	7f228293          	addi	t0,t0,2034 # 20000004 <sequence1>
+ 800080e:	17fff297          	auipc	t0,0x17fff
+ 8000812:	7f628293          	addi	t0,t0,2038 # 20000004 <sequence1>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 800081a:	40011537          	lui	a0,0x40011
- 800081e:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000816:	40011537          	lui	a0,0x40011
+ 800081a:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000822:	00028583          	lb	a1,0(t0)
+ 800081e:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000826:	00000097          	auipc	ra,0x0
- 800082a:	e96080e7          	jalr	-362(ra) # 80006bc <gpiooc>
+ 8000822:	00000097          	auipc	ra,0x0
+ 8000826:	e9a080e7          	jalr	-358(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 800082e:	00000097          	auipc	ra,0x0
- 8000832:	622080e7          	jalr	1570(ra) # 8000e50 <delay>
+ 800082a:	00000097          	auipc	ra,0x0
+ 800082e:	622080e7          	jalr	1570(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000836:	00128583          	lb	a1,1(t0)
+ 8000832:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 800083a:	00000097          	auipc	ra,0x0
- 800083e:	e82080e7          	jalr	-382(ra) # 80006bc <gpiooc>
+ 8000836:	00000097          	auipc	ra,0x0
+ 800083a:	e86080e7          	jalr	-378(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000842:	00000097          	auipc	ra,0x0
- 8000846:	60e080e7          	jalr	1550(ra) # 8000e50 <delay>
+ 800083e:	00000097          	auipc	ra,0x0
+ 8000842:	60e080e7          	jalr	1550(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 800084a:	00228583          	lb	a1,2(t0)
+ 8000846:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 800084e:	00000097          	auipc	ra,0x0
- 8000852:	e6e080e7          	jalr	-402(ra) # 80006bc <gpiooc>
+ 800084a:	00000097          	auipc	ra,0x0
+ 800084e:	e72080e7          	jalr	-398(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000856:	00000097          	auipc	ra,0x0
- 800085a:	5fa080e7          	jalr	1530(ra) # 8000e50 <delay>
+ 8000852:	00000097          	auipc	ra,0x0
+ 8000856:	5fa080e7          	jalr	1530(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 800085e:	00328583          	lb	a1,3(t0)
+ 800085a:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000862:	00000097          	auipc	ra,0x0
- 8000866:	e5a080e7          	jalr	-422(ra) # 80006bc <gpiooc>
+ 800085e:	00000097          	auipc	ra,0x0
+ 8000862:	e5e080e7          	jalr	-418(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 800086a:	00000097          	auipc	ra,0x0
- 800086e:	5e6080e7          	jalr	1510(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000872:	bdf1                	j	800074e <select_sequence>
+ 8000866:	00000097          	auipc	ra,0x0
+ 800086a:	5e6080e7          	jalr	1510(ra) # 8000e4c <delay>
+        
+        j start
+ 800086e:	b5c1                	j	800072e <start>
 
-08000874 <disco2>:
+08000870 <disco2>:
 
 disco2:
         la t0, sequence2
- 8000874:	17fff297          	auipc	t0,0x17fff
- 8000878:	79428293          	addi	t0,t0,1940 # 20000008 <sequence2>
+ 8000870:	17fff297          	auipc	t0,0x17fff
+ 8000874:	79828293          	addi	t0,t0,1944 # 20000008 <sequence2>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 800087c:	40011537          	lui	a0,0x40011
- 8000880:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000878:	40011537          	lui	a0,0x40011
+ 800087c:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000884:	00028583          	lb	a1,0(t0)
+ 8000880:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000888:	00000097          	auipc	ra,0x0
- 800088c:	e34080e7          	jalr	-460(ra) # 80006bc <gpiooc>
+ 8000884:	00000097          	auipc	ra,0x0
+ 8000888:	e38080e7          	jalr	-456(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000890:	00000097          	auipc	ra,0x0
- 8000894:	5c0080e7          	jalr	1472(ra) # 8000e50 <delay>
+ 800088c:	00000097          	auipc	ra,0x0
+ 8000890:	5c0080e7          	jalr	1472(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000898:	00128583          	lb	a1,1(t0)
+ 8000894:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 800089c:	00000097          	auipc	ra,0x0
- 80008a0:	e20080e7          	jalr	-480(ra) # 80006bc <gpiooc>
+ 8000898:	00000097          	auipc	ra,0x0
+ 800089c:	e24080e7          	jalr	-476(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 80008a4:	00000097          	auipc	ra,0x0
- 80008a8:	5ac080e7          	jalr	1452(ra) # 8000e50 <delay>
+ 80008a0:	00000097          	auipc	ra,0x0
+ 80008a4:	5ac080e7          	jalr	1452(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 80008ac:	00228583          	lb	a1,2(t0)
+ 80008a8:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 80008b0:	00000097          	auipc	ra,0x0
- 80008b4:	e0c080e7          	jalr	-500(ra) # 80006bc <gpiooc>
+ 80008ac:	00000097          	auipc	ra,0x0
+ 80008b0:	e10080e7          	jalr	-496(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 80008b8:	00000097          	auipc	ra,0x0
- 80008bc:	598080e7          	jalr	1432(ra) # 8000e50 <delay>
+ 80008b4:	00000097          	auipc	ra,0x0
+ 80008b8:	598080e7          	jalr	1432(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 80008c0:	00328583          	lb	a1,3(t0)
+ 80008bc:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 80008c4:	00000097          	auipc	ra,0x0
- 80008c8:	df8080e7          	jalr	-520(ra) # 80006bc <gpiooc>
+ 80008c0:	00000097          	auipc	ra,0x0
+ 80008c4:	dfc080e7          	jalr	-516(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 80008cc:	00000097          	auipc	ra,0x0
- 80008d0:	584080e7          	jalr	1412(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 80008d4:	bdad                	j	800074e <select_sequence>
+ 80008c8:	00000097          	auipc	ra,0x0
+ 80008cc:	584080e7          	jalr	1412(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 80008d0:	bdb9                	j	800072e <start>
 
-080008d6 <disco3>:
+080008d2 <disco3>:
 
 disco3:
         la t0, sequence3
- 80008d6:	17fff297          	auipc	t0,0x17fff
- 80008da:	73628293          	addi	t0,t0,1846 # 2000000c <sequence3>
+ 80008d2:	17fff297          	auipc	t0,0x17fff
+ 80008d6:	73a28293          	addi	t0,t0,1850 # 2000000c <sequence3>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 80008de:	40011537          	lui	a0,0x40011
- 80008e2:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 80008da:	40011537          	lui	a0,0x40011
+ 80008de:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 80008e6:	00028583          	lb	a1,0(t0)
+ 80008e2:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 80008ea:	00000097          	auipc	ra,0x0
- 80008ee:	dd2080e7          	jalr	-558(ra) # 80006bc <gpiooc>
+ 80008e6:	00000097          	auipc	ra,0x0
+ 80008ea:	dd6080e7          	jalr	-554(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 80008f2:	00000097          	auipc	ra,0x0
- 80008f6:	55e080e7          	jalr	1374(ra) # 8000e50 <delay>
+ 80008ee:	00000097          	auipc	ra,0x0
+ 80008f2:	55e080e7          	jalr	1374(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 80008fa:	00128583          	lb	a1,1(t0)
+ 80008f6:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 80008fe:	00000097          	auipc	ra,0x0
- 8000902:	dbe080e7          	jalr	-578(ra) # 80006bc <gpiooc>
+ 80008fa:	00000097          	auipc	ra,0x0
+ 80008fe:	dc2080e7          	jalr	-574(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000906:	00000097          	auipc	ra,0x0
- 800090a:	54a080e7          	jalr	1354(ra) # 8000e50 <delay>
+ 8000902:	00000097          	auipc	ra,0x0
+ 8000906:	54a080e7          	jalr	1354(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 800090e:	00228583          	lb	a1,2(t0)
+ 800090a:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000912:	00000097          	auipc	ra,0x0
- 8000916:	daa080e7          	jalr	-598(ra) # 80006bc <gpiooc>
+ 800090e:	00000097          	auipc	ra,0x0
+ 8000912:	dae080e7          	jalr	-594(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 800091a:	00000097          	auipc	ra,0x0
- 800091e:	536080e7          	jalr	1334(ra) # 8000e50 <delay>
+ 8000916:	00000097          	auipc	ra,0x0
+ 800091a:	536080e7          	jalr	1334(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000922:	00328583          	lb	a1,3(t0)
+ 800091e:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000926:	00000097          	auipc	ra,0x0
- 800092a:	d96080e7          	jalr	-618(ra) # 80006bc <gpiooc>
+ 8000922:	00000097          	auipc	ra,0x0
+ 8000926:	d9a080e7          	jalr	-614(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 800092e:	00000097          	auipc	ra,0x0
- 8000932:	522080e7          	jalr	1314(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000936:	bd21                	j	800074e <select_sequence>
+ 800092a:	00000097          	auipc	ra,0x0
+ 800092e:	522080e7          	jalr	1314(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000932:	bbf5                	j	800072e <start>
 
-08000938 <disco4>:
+08000934 <disco4>:
 
 disco4:
         la t0, sequence4
- 8000938:	17fff297          	auipc	t0,0x17fff
- 800093c:	6d828293          	addi	t0,t0,1752 # 20000010 <sequence4>
+ 8000934:	17fff297          	auipc	t0,0x17fff
+ 8000938:	6dc28293          	addi	t0,t0,1756 # 20000010 <sequence4>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000940:	40011537          	lui	a0,0x40011
- 8000944:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 800093c:	40011537          	lui	a0,0x40011
+ 8000940:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000948:	00028583          	lb	a1,0(t0)
+ 8000944:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 800094c:	00000097          	auipc	ra,0x0
- 8000950:	d70080e7          	jalr	-656(ra) # 80006bc <gpiooc>
+ 8000948:	00000097          	auipc	ra,0x0
+ 800094c:	d74080e7          	jalr	-652(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000954:	00000097          	auipc	ra,0x0
- 8000958:	4fc080e7          	jalr	1276(ra) # 8000e50 <delay>
+ 8000950:	00000097          	auipc	ra,0x0
+ 8000954:	4fc080e7          	jalr	1276(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 800095c:	00128583          	lb	a1,1(t0)
+ 8000958:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 8000960:	00000097          	auipc	ra,0x0
- 8000964:	d5c080e7          	jalr	-676(ra) # 80006bc <gpiooc>
+ 800095c:	00000097          	auipc	ra,0x0
+ 8000960:	d60080e7          	jalr	-672(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000968:	00000097          	auipc	ra,0x0
- 800096c:	4e8080e7          	jalr	1256(ra) # 8000e50 <delay>
+ 8000964:	00000097          	auipc	ra,0x0
+ 8000968:	4e8080e7          	jalr	1256(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000970:	00228583          	lb	a1,2(t0)
+ 800096c:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000974:	00000097          	auipc	ra,0x0
- 8000978:	d48080e7          	jalr	-696(ra) # 80006bc <gpiooc>
+ 8000970:	00000097          	auipc	ra,0x0
+ 8000974:	d4c080e7          	jalr	-692(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 800097c:	00000097          	auipc	ra,0x0
- 8000980:	4d4080e7          	jalr	1236(ra) # 8000e50 <delay>
+ 8000978:	00000097          	auipc	ra,0x0
+ 800097c:	4d4080e7          	jalr	1236(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000984:	00328583          	lb	a1,3(t0)
+ 8000980:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000988:	00000097          	auipc	ra,0x0
- 800098c:	d34080e7          	jalr	-716(ra) # 80006bc <gpiooc>
+ 8000984:	00000097          	auipc	ra,0x0
+ 8000988:	d38080e7          	jalr	-712(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000990:	00000097          	auipc	ra,0x0
- 8000994:	4c0080e7          	jalr	1216(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000998:	bb5d                	j	800074e <select_sequence>
+ 800098c:	00000097          	auipc	ra,0x0
+ 8000990:	4c0080e7          	jalr	1216(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000994:	bb69                	j	800072e <start>
 
-0800099a <disco5>:
+08000996 <disco5>:
 
 disco5:
         la t0, sequence5
- 800099a:	17fff297          	auipc	t0,0x17fff
- 800099e:	67a28293          	addi	t0,t0,1658 # 20000014 <sequence5>
+ 8000996:	17fff297          	auipc	t0,0x17fff
+ 800099a:	67e28293          	addi	t0,t0,1662 # 20000014 <sequence5>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 80009a2:	40011537          	lui	a0,0x40011
- 80009a6:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 800099e:	40011537          	lui	a0,0x40011
+ 80009a2:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 80009aa:	00028583          	lb	a1,0(t0)
+ 80009a6:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 80009ae:	00000097          	auipc	ra,0x0
- 80009b2:	d0e080e7          	jalr	-754(ra) # 80006bc <gpiooc>
+ 80009aa:	00000097          	auipc	ra,0x0
+ 80009ae:	d12080e7          	jalr	-750(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 80009b6:	00000097          	auipc	ra,0x0
- 80009ba:	49a080e7          	jalr	1178(ra) # 8000e50 <delay>
+ 80009b2:	00000097          	auipc	ra,0x0
+ 80009b6:	49a080e7          	jalr	1178(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 80009be:	00128583          	lb	a1,1(t0)
+ 80009ba:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 80009c2:	00000097          	auipc	ra,0x0
- 80009c6:	cfa080e7          	jalr	-774(ra) # 80006bc <gpiooc>
+ 80009be:	00000097          	auipc	ra,0x0
+ 80009c2:	cfe080e7          	jalr	-770(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 80009ca:	00000097          	auipc	ra,0x0
- 80009ce:	486080e7          	jalr	1158(ra) # 8000e50 <delay>
+ 80009c6:	00000097          	auipc	ra,0x0
+ 80009ca:	486080e7          	jalr	1158(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 80009d2:	00228583          	lb	a1,2(t0)
+ 80009ce:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 80009d6:	00000097          	auipc	ra,0x0
- 80009da:	ce6080e7          	jalr	-794(ra) # 80006bc <gpiooc>
+ 80009d2:	00000097          	auipc	ra,0x0
+ 80009d6:	cea080e7          	jalr	-790(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 80009de:	00000097          	auipc	ra,0x0
- 80009e2:	472080e7          	jalr	1138(ra) # 8000e50 <delay>
+ 80009da:	00000097          	auipc	ra,0x0
+ 80009de:	472080e7          	jalr	1138(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 80009e6:	00328583          	lb	a1,3(t0)
+ 80009e2:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 80009ea:	00000097          	auipc	ra,0x0
- 80009ee:	cd2080e7          	jalr	-814(ra) # 80006bc <gpiooc>
+ 80009e6:	00000097          	auipc	ra,0x0
+ 80009ea:	cd6080e7          	jalr	-810(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 80009f2:	00000097          	auipc	ra,0x0
- 80009f6:	45e080e7          	jalr	1118(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 80009fa:	bb91                	j	800074e <select_sequence>
+ 80009ee:	00000097          	auipc	ra,0x0
+ 80009f2:	45e080e7          	jalr	1118(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 80009f6:	bb25                	j	800072e <start>
 
-080009fc <disco6>:
+080009f8 <disco6>:
 
 disco6:
         la t0, sequence6
- 80009fc:	17fff297          	auipc	t0,0x17fff
- 8000a00:	61c28293          	addi	t0,t0,1564 # 20000018 <sequence6>
+ 80009f8:	17fff297          	auipc	t0,0x17fff
+ 80009fc:	62028293          	addi	t0,t0,1568 # 20000018 <sequence6>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000a04:	40011537          	lui	a0,0x40011
- 8000a08:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000a00:	40011537          	lui	a0,0x40011
+ 8000a04:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000a0c:	00028583          	lb	a1,0(t0)
+ 8000a08:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000a10:	00000097          	auipc	ra,0x0
- 8000a14:	cac080e7          	jalr	-852(ra) # 80006bc <gpiooc>
+ 8000a0c:	00000097          	auipc	ra,0x0
+ 8000a10:	cb0080e7          	jalr	-848(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000a18:	00000097          	auipc	ra,0x0
- 8000a1c:	438080e7          	jalr	1080(ra) # 8000e50 <delay>
+ 8000a14:	00000097          	auipc	ra,0x0
+ 8000a18:	438080e7          	jalr	1080(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000a20:	00128583          	lb	a1,1(t0)
+ 8000a1c:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 8000a24:	00000097          	auipc	ra,0x0
- 8000a28:	c98080e7          	jalr	-872(ra) # 80006bc <gpiooc>
+ 8000a20:	00000097          	auipc	ra,0x0
+ 8000a24:	c9c080e7          	jalr	-868(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000a2c:	00000097          	auipc	ra,0x0
- 8000a30:	424080e7          	jalr	1060(ra) # 8000e50 <delay>
+ 8000a28:	00000097          	auipc	ra,0x0
+ 8000a2c:	424080e7          	jalr	1060(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000a34:	00228583          	lb	a1,2(t0)
+ 8000a30:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000a38:	00000097          	auipc	ra,0x0
- 8000a3c:	c84080e7          	jalr	-892(ra) # 80006bc <gpiooc>
+ 8000a34:	00000097          	auipc	ra,0x0
+ 8000a38:	c88080e7          	jalr	-888(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000a40:	00000097          	auipc	ra,0x0
- 8000a44:	410080e7          	jalr	1040(ra) # 8000e50 <delay>
+ 8000a3c:	00000097          	auipc	ra,0x0
+ 8000a40:	410080e7          	jalr	1040(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000a48:	00328583          	lb	a1,3(t0)
+ 8000a44:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000a4c:	00000097          	auipc	ra,0x0
- 8000a50:	c70080e7          	jalr	-912(ra) # 80006bc <gpiooc>
+ 8000a48:	00000097          	auipc	ra,0x0
+ 8000a4c:	c74080e7          	jalr	-908(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000a54:	00000097          	auipc	ra,0x0
- 8000a58:	3fc080e7          	jalr	1020(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000a5c:	b9cd                	j	800074e <select_sequence>
+ 8000a50:	00000097          	auipc	ra,0x0
+ 8000a54:	3fc080e7          	jalr	1020(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000a58:	b9d9                	j	800072e <start>
 
-08000a5e <disco7>:
+08000a5a <disco7>:
 
 disco7:
         la t0, sequence7
- 8000a5e:	17fff297          	auipc	t0,0x17fff
- 8000a62:	5be28293          	addi	t0,t0,1470 # 2000001c <sequence7>
+ 8000a5a:	17fff297          	auipc	t0,0x17fff
+ 8000a5e:	5c228293          	addi	t0,t0,1474 # 2000001c <sequence7>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000a66:	40011537          	lui	a0,0x40011
- 8000a6a:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000a62:	40011537          	lui	a0,0x40011
+ 8000a66:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000a6e:	00028583          	lb	a1,0(t0)
+ 8000a6a:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000a72:	00000097          	auipc	ra,0x0
- 8000a76:	c4a080e7          	jalr	-950(ra) # 80006bc <gpiooc>
+ 8000a6e:	00000097          	auipc	ra,0x0
+ 8000a72:	c4e080e7          	jalr	-946(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000a7a:	00000097          	auipc	ra,0x0
- 8000a7e:	3d6080e7          	jalr	982(ra) # 8000e50 <delay>
+ 8000a76:	00000097          	auipc	ra,0x0
+ 8000a7a:	3d6080e7          	jalr	982(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000a82:	00128583          	lb	a1,1(t0)
+ 8000a7e:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 8000a86:	00000097          	auipc	ra,0x0
- 8000a8a:	c36080e7          	jalr	-970(ra) # 80006bc <gpiooc>
+ 8000a82:	00000097          	auipc	ra,0x0
+ 8000a86:	c3a080e7          	jalr	-966(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000a8e:	00000097          	auipc	ra,0x0
- 8000a92:	3c2080e7          	jalr	962(ra) # 8000e50 <delay>
+ 8000a8a:	00000097          	auipc	ra,0x0
+ 8000a8e:	3c2080e7          	jalr	962(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000a96:	00228583          	lb	a1,2(t0)
+ 8000a92:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000a9a:	00000097          	auipc	ra,0x0
- 8000a9e:	c22080e7          	jalr	-990(ra) # 80006bc <gpiooc>
+ 8000a96:	00000097          	auipc	ra,0x0
+ 8000a9a:	c26080e7          	jalr	-986(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000aa2:	00000097          	auipc	ra,0x0
- 8000aa6:	3ae080e7          	jalr	942(ra) # 8000e50 <delay>
+ 8000a9e:	00000097          	auipc	ra,0x0
+ 8000aa2:	3ae080e7          	jalr	942(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000aaa:	00328583          	lb	a1,3(t0)
+ 8000aa6:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000aae:	00000097          	auipc	ra,0x0
- 8000ab2:	c0e080e7          	jalr	-1010(ra) # 80006bc <gpiooc>
+ 8000aaa:	00000097          	auipc	ra,0x0
+ 8000aae:	c12080e7          	jalr	-1006(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000ab6:	00000097          	auipc	ra,0x0
- 8000aba:	39a080e7          	jalr	922(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000abe:	b941                	j	800074e <select_sequence>
+ 8000ab2:	00000097          	auipc	ra,0x0
+ 8000ab6:	39a080e7          	jalr	922(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000aba:	b995                	j	800072e <start>
 
-08000ac0 <disco0inv>:
+08000abc <disco0inv>:
 
 disco0inv:
         la t0, sequence0
- 8000ac0:	17fff297          	auipc	t0,0x17fff
- 8000ac4:	54028293          	addi	t0,t0,1344 # 20000000 <_data>
+ 8000abc:	17fff297          	auipc	t0,0x17fff
+ 8000ac0:	54428293          	addi	t0,t0,1348 # 20000000 <_data>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000ac8:	40011537          	lui	a0,0x40011
- 8000acc:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000ac4:	40011537          	lui	a0,0x40011
+ 8000ac8:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000ad0:	00028583          	lb	a1,0(t0)
+ 8000acc:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000ad4:	fff5c593          	not	a1,a1
+ 8000ad0:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000ad8:	00000097          	auipc	ra,0x0
- 8000adc:	be4080e7          	jalr	-1052(ra) # 80006bc <gpiooc>
+ 8000ad4:	00000097          	auipc	ra,0x0
+ 8000ad8:	be8080e7          	jalr	-1048(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000ae0:	00000097          	auipc	ra,0x0
- 8000ae4:	370080e7          	jalr	880(ra) # 8000e50 <delay>
+ 8000adc:	00000097          	auipc	ra,0x0
+ 8000ae0:	370080e7          	jalr	880(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000ae8:	00128583          	lb	a1,1(t0)
+ 8000ae4:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000aec:	fff5c593          	not	a1,a1
+ 8000ae8:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000af0:	00000097          	auipc	ra,0x0
- 8000af4:	bcc080e7          	jalr	-1076(ra) # 80006bc <gpiooc>
+ 8000aec:	00000097          	auipc	ra,0x0
+ 8000af0:	bd0080e7          	jalr	-1072(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000af8:	00000097          	auipc	ra,0x0
- 8000afc:	358080e7          	jalr	856(ra) # 8000e50 <delay>
+ 8000af4:	00000097          	auipc	ra,0x0
+ 8000af8:	358080e7          	jalr	856(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000b00:	00228583          	lb	a1,2(t0)
+ 8000afc:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000b04:	fff5c593          	not	a1,a1
+ 8000b00:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000b08:	00000097          	auipc	ra,0x0
- 8000b0c:	bb4080e7          	jalr	-1100(ra) # 80006bc <gpiooc>
+ 8000b04:	00000097          	auipc	ra,0x0
+ 8000b08:	bb8080e7          	jalr	-1096(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000b10:	00000097          	auipc	ra,0x0
- 8000b14:	340080e7          	jalr	832(ra) # 8000e50 <delay>
+ 8000b0c:	00000097          	auipc	ra,0x0
+ 8000b10:	340080e7          	jalr	832(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000b18:	00328583          	lb	a1,3(t0)
+ 8000b14:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000b1c:	fff5c593          	not	a1,a1
+ 8000b18:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000b20:	00000097          	auipc	ra,0x0
- 8000b24:	b9c080e7          	jalr	-1124(ra) # 80006bc <gpiooc>
+ 8000b1c:	00000097          	auipc	ra,0x0
+ 8000b20:	ba0080e7          	jalr	-1120(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000b28:	00000097          	auipc	ra,0x0
- 8000b2c:	328080e7          	jalr	808(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000b30:	b939                	j	800074e <select_sequence>
+ 8000b24:	00000097          	auipc	ra,0x0
+ 8000b28:	328080e7          	jalr	808(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000b2c:	b109                	j	800072e <start>
 
-08000b32 <disco1inv>:
+08000b2e <disco1inv>:
 
 disco1inv:
         la t0, sequence1
- 8000b32:	17fff297          	auipc	t0,0x17fff
- 8000b36:	4d228293          	addi	t0,t0,1234 # 20000004 <sequence1>
+ 8000b2e:	17fff297          	auipc	t0,0x17fff
+ 8000b32:	4d628293          	addi	t0,t0,1238 # 20000004 <sequence1>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000b3a:	40011537          	lui	a0,0x40011
- 8000b3e:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000b36:	40011537          	lui	a0,0x40011
+ 8000b3a:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000b42:	00028583          	lb	a1,0(t0)
+ 8000b3e:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000b46:	fff5c593          	not	a1,a1
+ 8000b42:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000b4a:	00000097          	auipc	ra,0x0
- 8000b4e:	b72080e7          	jalr	-1166(ra) # 80006bc <gpiooc>
+ 8000b46:	00000097          	auipc	ra,0x0
+ 8000b4a:	b76080e7          	jalr	-1162(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000b52:	00000097          	auipc	ra,0x0
- 8000b56:	2fe080e7          	jalr	766(ra) # 8000e50 <delay>
+ 8000b4e:	00000097          	auipc	ra,0x0
+ 8000b52:	2fe080e7          	jalr	766(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000b5a:	00128583          	lb	a1,1(t0)
+ 8000b56:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000b5e:	fff5c593          	not	a1,a1
+ 8000b5a:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000b62:	00000097          	auipc	ra,0x0
- 8000b66:	b5a080e7          	jalr	-1190(ra) # 80006bc <gpiooc>
+ 8000b5e:	00000097          	auipc	ra,0x0
+ 8000b62:	b5e080e7          	jalr	-1186(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000b6a:	00000097          	auipc	ra,0x0
- 8000b6e:	2e6080e7          	jalr	742(ra) # 8000e50 <delay>
+ 8000b66:	00000097          	auipc	ra,0x0
+ 8000b6a:	2e6080e7          	jalr	742(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000b72:	00228583          	lb	a1,2(t0)
+ 8000b6e:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000b76:	fff5c593          	not	a1,a1
+ 8000b72:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000b7a:	00000097          	auipc	ra,0x0
- 8000b7e:	b42080e7          	jalr	-1214(ra) # 80006bc <gpiooc>
+ 8000b76:	00000097          	auipc	ra,0x0
+ 8000b7a:	b46080e7          	jalr	-1210(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000b82:	00000097          	auipc	ra,0x0
- 8000b86:	2ce080e7          	jalr	718(ra) # 8000e50 <delay>
+ 8000b7e:	00000097          	auipc	ra,0x0
+ 8000b82:	2ce080e7          	jalr	718(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000b8a:	00328583          	lb	a1,3(t0)
+ 8000b86:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000b8e:	fff5c593          	not	a1,a1
+ 8000b8a:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000b92:	00000097          	auipc	ra,0x0
- 8000b96:	b2a080e7          	jalr	-1238(ra) # 80006bc <gpiooc>
+ 8000b8e:	00000097          	auipc	ra,0x0
+ 8000b92:	b2e080e7          	jalr	-1234(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000b9a:	00000097          	auipc	ra,0x0
- 8000b9e:	2b6080e7          	jalr	694(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000ba2:	b675                	j	800074e <select_sequence>
+ 8000b96:	00000097          	auipc	ra,0x0
+ 8000b9a:	2b6080e7          	jalr	694(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000b9e:	be41                	j	800072e <start>
 
-08000ba4 <disco2inv>:
+08000ba0 <disco2inv>:
 
 disco2inv:
         la t0, sequence2
- 8000ba4:	17fff297          	auipc	t0,0x17fff
- 8000ba8:	46428293          	addi	t0,t0,1124 # 20000008 <sequence2>
+ 8000ba0:	17fff297          	auipc	t0,0x17fff
+ 8000ba4:	46828293          	addi	t0,t0,1128 # 20000008 <sequence2>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000bac:	40011537          	lui	a0,0x40011
- 8000bb0:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000ba8:	40011537          	lui	a0,0x40011
+ 8000bac:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000bb4:	00028583          	lb	a1,0(t0)
+ 8000bb0:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000bb8:	fff5c593          	not	a1,a1
+ 8000bb4:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000bbc:	00000097          	auipc	ra,0x0
- 8000bc0:	b00080e7          	jalr	-1280(ra) # 80006bc <gpiooc>
+ 8000bb8:	00000097          	auipc	ra,0x0
+ 8000bbc:	b04080e7          	jalr	-1276(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000bc4:	00000097          	auipc	ra,0x0
- 8000bc8:	28c080e7          	jalr	652(ra) # 8000e50 <delay>
+ 8000bc0:	00000097          	auipc	ra,0x0
+ 8000bc4:	28c080e7          	jalr	652(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000bcc:	00128583          	lb	a1,1(t0)
+ 8000bc8:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000bd0:	fff5c593          	not	a1,a1
+ 8000bcc:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000bd4:	00000097          	auipc	ra,0x0
- 8000bd8:	ae8080e7          	jalr	-1304(ra) # 80006bc <gpiooc>
+ 8000bd0:	00000097          	auipc	ra,0x0
+ 8000bd4:	aec080e7          	jalr	-1300(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000bdc:	00000097          	auipc	ra,0x0
- 8000be0:	274080e7          	jalr	628(ra) # 8000e50 <delay>
+ 8000bd8:	00000097          	auipc	ra,0x0
+ 8000bdc:	274080e7          	jalr	628(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000be4:	00228583          	lb	a1,2(t0)
+ 8000be0:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000be8:	fff5c593          	not	a1,a1
+ 8000be4:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000bec:	00000097          	auipc	ra,0x0
- 8000bf0:	ad0080e7          	jalr	-1328(ra) # 80006bc <gpiooc>
+ 8000be8:	00000097          	auipc	ra,0x0
+ 8000bec:	ad4080e7          	jalr	-1324(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000bf4:	00000097          	auipc	ra,0x0
- 8000bf8:	25c080e7          	jalr	604(ra) # 8000e50 <delay>
+ 8000bf0:	00000097          	auipc	ra,0x0
+ 8000bf4:	25c080e7          	jalr	604(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000bfc:	00328583          	lb	a1,3(t0)
+ 8000bf8:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000c00:	fff5c593          	not	a1,a1
+ 8000bfc:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000c04:	00000097          	auipc	ra,0x0
- 8000c08:	ab8080e7          	jalr	-1352(ra) # 80006bc <gpiooc>
+ 8000c00:	00000097          	auipc	ra,0x0
+ 8000c04:	abc080e7          	jalr	-1348(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000c0c:	00000097          	auipc	ra,0x0
- 8000c10:	244080e7          	jalr	580(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000c14:	be2d                	j	800074e <select_sequence>
+ 8000c08:	00000097          	auipc	ra,0x0
+ 8000c0c:	244080e7          	jalr	580(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000c10:	be39                	j	800072e <start>
 
-08000c16 <disco3inv>:
+08000c12 <disco3inv>:
 
 disco3inv:
         la t0, sequence3
- 8000c16:	17fff297          	auipc	t0,0x17fff
- 8000c1a:	3f628293          	addi	t0,t0,1014 # 2000000c <sequence3>
+ 8000c12:	17fff297          	auipc	t0,0x17fff
+ 8000c16:	3fa28293          	addi	t0,t0,1018 # 2000000c <sequence3>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000c1e:	40011537          	lui	a0,0x40011
- 8000c22:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000c1a:	40011537          	lui	a0,0x40011
+ 8000c1e:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000c26:	00028583          	lb	a1,0(t0)
+ 8000c22:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000c2a:	fff5c593          	not	a1,a1
+ 8000c26:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000c2e:	00000097          	auipc	ra,0x0
- 8000c32:	a8e080e7          	jalr	-1394(ra) # 80006bc <gpiooc>
+ 8000c2a:	00000097          	auipc	ra,0x0
+ 8000c2e:	a92080e7          	jalr	-1390(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000c36:	00000097          	auipc	ra,0x0
- 8000c3a:	21a080e7          	jalr	538(ra) # 8000e50 <delay>
+ 8000c32:	00000097          	auipc	ra,0x0
+ 8000c36:	21a080e7          	jalr	538(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000c3e:	00128583          	lb	a1,1(t0)
+ 8000c3a:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000c42:	fff5c593          	not	a1,a1
+ 8000c3e:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000c46:	00000097          	auipc	ra,0x0
- 8000c4a:	a76080e7          	jalr	-1418(ra) # 80006bc <gpiooc>
+ 8000c42:	00000097          	auipc	ra,0x0
+ 8000c46:	a7a080e7          	jalr	-1414(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000c4e:	00000097          	auipc	ra,0x0
- 8000c52:	202080e7          	jalr	514(ra) # 8000e50 <delay>
+ 8000c4a:	00000097          	auipc	ra,0x0
+ 8000c4e:	202080e7          	jalr	514(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000c56:	00228583          	lb	a1,2(t0)
+ 8000c52:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000c5a:	fff5c593          	not	a1,a1
+ 8000c56:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000c5e:	00000097          	auipc	ra,0x0
- 8000c62:	a5e080e7          	jalr	-1442(ra) # 80006bc <gpiooc>
+ 8000c5a:	00000097          	auipc	ra,0x0
+ 8000c5e:	a62080e7          	jalr	-1438(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000c66:	00000097          	auipc	ra,0x0
- 8000c6a:	1ea080e7          	jalr	490(ra) # 8000e50 <delay>
+ 8000c62:	00000097          	auipc	ra,0x0
+ 8000c66:	1ea080e7          	jalr	490(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000c6e:	00328583          	lb	a1,3(t0)
+ 8000c6a:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000c72:	fff5c593          	not	a1,a1
+ 8000c6e:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000c76:	00000097          	auipc	ra,0x0
- 8000c7a:	a46080e7          	jalr	-1466(ra) # 80006bc <gpiooc>
+ 8000c72:	00000097          	auipc	ra,0x0
+ 8000c76:	a4a080e7          	jalr	-1462(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000c7e:	00000097          	auipc	ra,0x0
- 8000c82:	1d2080e7          	jalr	466(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000c86:	b4e1                	j	800074e <select_sequence>
+ 8000c7a:	00000097          	auipc	ra,0x0
+ 8000c7e:	1d2080e7          	jalr	466(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000c82:	b475                	j	800072e <start>
 
-08000c88 <disco4inv>:
+08000c84 <disco4inv>:
 
 disco4inv:
         la t0, sequence4
- 8000c88:	17fff297          	auipc	t0,0x17fff
- 8000c8c:	38828293          	addi	t0,t0,904 # 20000010 <sequence4>
+ 8000c84:	17fff297          	auipc	t0,0x17fff
+ 8000c88:	38c28293          	addi	t0,t0,908 # 20000010 <sequence4>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000c90:	40011537          	lui	a0,0x40011
- 8000c94:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000c8c:	40011537          	lui	a0,0x40011
+ 8000c90:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000c98:	00028583          	lb	a1,0(t0)
+ 8000c94:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000c9c:	fff5c593          	not	a1,a1
+ 8000c98:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000ca0:	00000097          	auipc	ra,0x0
- 8000ca4:	a1c080e7          	jalr	-1508(ra) # 80006bc <gpiooc>
+ 8000c9c:	00000097          	auipc	ra,0x0
+ 8000ca0:	a20080e7          	jalr	-1504(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000ca8:	00000097          	auipc	ra,0x0
- 8000cac:	1a8080e7          	jalr	424(ra) # 8000e50 <delay>
+ 8000ca4:	00000097          	auipc	ra,0x0
+ 8000ca8:	1a8080e7          	jalr	424(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000cb0:	00128583          	lb	a1,1(t0)
+ 8000cac:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000cb4:	fff5c593          	not	a1,a1
+ 8000cb0:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000cb8:	00000097          	auipc	ra,0x0
- 8000cbc:	a04080e7          	jalr	-1532(ra) # 80006bc <gpiooc>
+ 8000cb4:	00000097          	auipc	ra,0x0
+ 8000cb8:	a08080e7          	jalr	-1528(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000cc0:	00000097          	auipc	ra,0x0
- 8000cc4:	190080e7          	jalr	400(ra) # 8000e50 <delay>
+ 8000cbc:	00000097          	auipc	ra,0x0
+ 8000cc0:	190080e7          	jalr	400(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000cc8:	00228583          	lb	a1,2(t0)
+ 8000cc4:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000ccc:	fff5c593          	not	a1,a1
+ 8000cc8:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000cd0:	00000097          	auipc	ra,0x0
- 8000cd4:	9ec080e7          	jalr	-1556(ra) # 80006bc <gpiooc>
+ 8000ccc:	00000097          	auipc	ra,0x0
+ 8000cd0:	9f0080e7          	jalr	-1552(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000cd8:	00000097          	auipc	ra,0x0
- 8000cdc:	178080e7          	jalr	376(ra) # 8000e50 <delay>
+ 8000cd4:	00000097          	auipc	ra,0x0
+ 8000cd8:	178080e7          	jalr	376(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000ce0:	00328583          	lb	a1,3(t0)
+ 8000cdc:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000ce4:	fff5c593          	not	a1,a1
+ 8000ce0:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000ce8:	00000097          	auipc	ra,0x0
- 8000cec:	9d4080e7          	jalr	-1580(ra) # 80006bc <gpiooc>
+ 8000ce4:	00000097          	auipc	ra,0x0
+ 8000ce8:	9d8080e7          	jalr	-1576(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000cf0:	00000097          	auipc	ra,0x0
- 8000cf4:	160080e7          	jalr	352(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely                
- 8000cf8:	bc99                	j	800074e <select_sequence>
+ 8000cec:	00000097          	auipc	ra,0x0
+ 8000cf0:	160080e7          	jalr	352(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely                
+ 8000cf4:	bc2d                	j	800072e <start>
 
-08000cfa <disco5inv>:
+08000cf6 <disco5inv>:
 
 disco5inv:
         la t0, sequence5
- 8000cfa:	17fff297          	auipc	t0,0x17fff
- 8000cfe:	31a28293          	addi	t0,t0,794 # 20000014 <sequence5>
+ 8000cf6:	17fff297          	auipc	t0,0x17fff
+ 8000cfa:	31e28293          	addi	t0,t0,798 # 20000014 <sequence5>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000d02:	40011537          	lui	a0,0x40011
- 8000d06:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000cfe:	40011537          	lui	a0,0x40011
+ 8000d02:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000d0a:	00028583          	lb	a1,0(t0)
+ 8000d06:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000d0e:	fff5c593          	not	a1,a1
+ 8000d0a:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000d12:	00000097          	auipc	ra,0x0
- 8000d16:	9aa080e7          	jalr	-1622(ra) # 80006bc <gpiooc>
+ 8000d0e:	00000097          	auipc	ra,0x0
+ 8000d12:	9ae080e7          	jalr	-1618(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000d1a:	00000097          	auipc	ra,0x0
- 8000d1e:	136080e7          	jalr	310(ra) # 8000e50 <delay>
+ 8000d16:	00000097          	auipc	ra,0x0
+ 8000d1a:	136080e7          	jalr	310(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000d22:	00128583          	lb	a1,1(t0)
+ 8000d1e:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000d26:	fff5c593          	not	a1,a1
+ 8000d22:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000d2a:	00000097          	auipc	ra,0x0
- 8000d2e:	992080e7          	jalr	-1646(ra) # 80006bc <gpiooc>
+ 8000d26:	00000097          	auipc	ra,0x0
+ 8000d2a:	996080e7          	jalr	-1642(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000d32:	00000097          	auipc	ra,0x0
- 8000d36:	11e080e7          	jalr	286(ra) # 8000e50 <delay>
+ 8000d2e:	00000097          	auipc	ra,0x0
+ 8000d32:	11e080e7          	jalr	286(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000d3a:	00228583          	lb	a1,2(t0)
+ 8000d36:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000d3e:	fff5c593          	not	a1,a1
+ 8000d3a:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000d42:	00000097          	auipc	ra,0x0
- 8000d46:	97a080e7          	jalr	-1670(ra) # 80006bc <gpiooc>
+ 8000d3e:	00000097          	auipc	ra,0x0
+ 8000d42:	97e080e7          	jalr	-1666(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000d4a:	00000097          	auipc	ra,0x0
- 8000d4e:	106080e7          	jalr	262(ra) # 8000e50 <delay>
+ 8000d46:	00000097          	auipc	ra,0x0
+ 8000d4a:	106080e7          	jalr	262(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000d52:	00328583          	lb	a1,3(t0)
+ 8000d4e:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000d56:	fff5c593          	not	a1,a1
+ 8000d52:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000d5a:	00000097          	auipc	ra,0x0
- 8000d5e:	962080e7          	jalr	-1694(ra) # 80006bc <gpiooc>
+ 8000d56:	00000097          	auipc	ra,0x0
+ 8000d5a:	966080e7          	jalr	-1690(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000d62:	00000097          	auipc	ra,0x0
- 8000d66:	0ee080e7          	jalr	238(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000d6a:	b2d5                	j	800074e <select_sequence>
+ 8000d5e:	00000097          	auipc	ra,0x0
+ 8000d62:	0ee080e7          	jalr	238(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000d66:	b2e1                	j	800072e <start>
 
-08000d6c <disco6inv>:
+08000d68 <disco6inv>:
 
 disco6inv:
         la t0, sequence6
- 8000d6c:	17fff297          	auipc	t0,0x17fff
- 8000d70:	2ac28293          	addi	t0,t0,684 # 20000018 <sequence6>
+ 8000d68:	17fff297          	auipc	t0,0x17fff
+ 8000d6c:	2b028293          	addi	t0,t0,688 # 20000018 <sequence6>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000d74:	40011537          	lui	a0,0x40011
- 8000d78:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000d70:	40011537          	lui	a0,0x40011
+ 8000d74:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000d7c:	00028583          	lb	a1,0(t0)
+ 8000d78:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000d80:	fff5c593          	not	a1,a1
+ 8000d7c:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000d84:	00000097          	auipc	ra,0x0
- 8000d88:	938080e7          	jalr	-1736(ra) # 80006bc <gpiooc>
+ 8000d80:	00000097          	auipc	ra,0x0
+ 8000d84:	93c080e7          	jalr	-1732(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000d8c:	00000097          	auipc	ra,0x0
- 8000d90:	0c4080e7          	jalr	196(ra) # 8000e50 <delay>
+ 8000d88:	00000097          	auipc	ra,0x0
+ 8000d8c:	0c4080e7          	jalr	196(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000d94:	00128583          	lb	a1,1(t0)
+ 8000d90:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000d98:	fff5c593          	not	a1,a1
+ 8000d94:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000d9c:	00000097          	auipc	ra,0x0
- 8000da0:	920080e7          	jalr	-1760(ra) # 80006bc <gpiooc>
+ 8000d98:	00000097          	auipc	ra,0x0
+ 8000d9c:	924080e7          	jalr	-1756(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000da4:	00000097          	auipc	ra,0x0
- 8000da8:	0ac080e7          	jalr	172(ra) # 8000e50 <delay>
+ 8000da0:	00000097          	auipc	ra,0x0
+ 8000da4:	0ac080e7          	jalr	172(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000dac:	00228583          	lb	a1,2(t0)
+ 8000da8:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000db0:	fff5c593          	not	a1,a1
+ 8000dac:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000db4:	00000097          	auipc	ra,0x0
- 8000db8:	908080e7          	jalr	-1784(ra) # 80006bc <gpiooc>
+ 8000db0:	00000097          	auipc	ra,0x0
+ 8000db4:	90c080e7          	jalr	-1780(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000dbc:	00000097          	auipc	ra,0x0
- 8000dc0:	094080e7          	jalr	148(ra) # 8000e50 <delay>
+ 8000db8:	00000097          	auipc	ra,0x0
+ 8000dbc:	094080e7          	jalr	148(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000dc4:	00328583          	lb	a1,3(t0)
+ 8000dc0:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000dc8:	fff5c593          	not	a1,a1
+ 8000dc4:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000dcc:	00000097          	auipc	ra,0x0
- 8000dd0:	8f0080e7          	jalr	-1808(ra) # 80006bc <gpiooc>
+ 8000dc8:	00000097          	auipc	ra,0x0
+ 8000dcc:	8f4080e7          	jalr	-1804(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000dd4:	00000097          	auipc	ra,0x0
- 8000dd8:	07c080e7          	jalr	124(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely        
- 8000ddc:	ba8d                	j	800074e <select_sequence>
+ 8000dd0:	00000097          	auipc	ra,0x0
+ 8000dd4:	07c080e7          	jalr	124(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely        
+ 8000dd8:	ba99                	j	800072e <start>
 
-08000dde <disco7inv>:
+08000dda <disco7inv>:
 
 disco7inv:
         la t0, sequence7
- 8000dde:	17fff297          	auipc	t0,0x17fff
- 8000de2:	23e28293          	addi	t0,t0,574 # 2000001c <sequence7>
+ 8000dda:	17fff297          	auipc	t0,0x17fff
+ 8000dde:	24228293          	addi	t0,t0,578 # 2000001c <sequence7>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000de6:	40011537          	lui	a0,0x40011
- 8000dea:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000de2:	40011537          	lui	a0,0x40011
+ 8000de6:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000dee:	00028583          	lb	a1,0(t0)
+ 8000dea:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000df2:	fff5c593          	not	a1,a1
+ 8000dee:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000df6:	00000097          	auipc	ra,0x0
- 8000dfa:	8c6080e7          	jalr	-1850(ra) # 80006bc <gpiooc>
+ 8000df2:	00000097          	auipc	ra,0x0
+ 8000df6:	8ca080e7          	jalr	-1846(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000dfe:	00000097          	auipc	ra,0x0
- 8000e02:	052080e7          	jalr	82(ra) # 8000e50 <delay>
+ 8000dfa:	00000097          	auipc	ra,0x0
+ 8000dfe:	052080e7          	jalr	82(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000e06:	00128583          	lb	a1,1(t0)
+ 8000e02:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000e0a:	fff5c593          	not	a1,a1
+ 8000e06:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000e0e:	00000097          	auipc	ra,0x0
- 8000e12:	8ae080e7          	jalr	-1874(ra) # 80006bc <gpiooc>
+ 8000e0a:	00000097          	auipc	ra,0x0
+ 8000e0e:	8b2080e7          	jalr	-1870(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000e16:	00000097          	auipc	ra,0x0
- 8000e1a:	03a080e7          	jalr	58(ra) # 8000e50 <delay>
+ 8000e12:	00000097          	auipc	ra,0x0
+ 8000e16:	03a080e7          	jalr	58(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000e1e:	00228583          	lb	a1,2(t0)
+ 8000e1a:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000e22:	fff5c593          	not	a1,a1
+ 8000e1e:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000e26:	00000097          	auipc	ra,0x0
- 8000e2a:	896080e7          	jalr	-1898(ra) # 80006bc <gpiooc>
+ 8000e22:	00000097          	auipc	ra,0x0
+ 8000e26:	89a080e7          	jalr	-1894(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000e2e:	00000097          	auipc	ra,0x0
- 8000e32:	022080e7          	jalr	34(ra) # 8000e50 <delay>
+ 8000e2a:	00000097          	auipc	ra,0x0
+ 8000e2e:	022080e7          	jalr	34(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000e36:	00328583          	lb	a1,3(t0)
+ 8000e32:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000e3a:	fff5c593          	not	a1,a1
+ 8000e36:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000e3e:	00000097          	auipc	ra,0x0
- 8000e42:	87e080e7          	jalr	-1922(ra) # 80006bc <gpiooc>
+ 8000e3a:	00000097          	auipc	ra,0x0
+ 8000e3e:	882080e7          	jalr	-1918(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000e46:	00000097          	auipc	ra,0x0
- 8000e4a:	00a080e7          	jalr	10(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000e4e:	b201                	j	800074e <select_sequence>
+ 8000e42:	00000097          	auipc	ra,0x0
+ 8000e46:	00a080e7          	jalr	10(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000e4a:	b0d5                	j	800072e <start>
 
-08000e50 <delay>:
+08000e4c <delay>:
 
 delay:
-        li t1, 25000000 # Delay count, adjust the number based on timing requirements
- 8000e50:	017d8337          	lui	t1,0x17d8
- 8000e54:	84030313          	addi	t1,t1,-1984 # 17d7840 <__stack_size+0x17d6840>
+        li t1, 0x87F513 # Delay count, adjust the number based on timing requirements
+ 8000e4c:	0087f337          	lui	t1,0x87f
+ 8000e50:	51330313          	addi	t1,t1,1299 # 87f513 <__stack_size+0x87e513>
 1: addi t1, t1, -1 # Decrement the delay counter
- 8000e58:	137d                	addi	t1,t1,-1
+ 8000e54:	137d                	addi	t1,t1,-1
         bnez t1, 1b # Keep looping until the counter reaches 0
- 8000e5a:	fe031fe3          	bnez	t1,8000e58 <delay+0x8>
+ 8000e56:	fe031fe3          	bnez	t1,8000e54 <delay+0x8>
         ret # Return to calling function
- 8000e5e:	8082                	ret
+ 8000e5a:	8082                	ret
 
-08000e60 <atexit>:
- 8000e60:	85aa                	mv	a1,a0
- 8000e62:	4681                	li	a3,0
- 8000e64:	4601                	li	a2,0
- 8000e66:	4501                	li	a0,0
- 8000e68:	00000317          	auipc	t1,0x0
- 8000e6c:	14830067          	jr	328(t1) # 8000fb0 <__register_exitproc>
+08000e5c <atexit>:
+ 8000e5c:	85aa                	mv	a1,a0
+ 8000e5e:	4681                	li	a3,0
+ 8000e60:	4601                	li	a2,0
+ 8000e62:	4501                	li	a0,0
+ 8000e64:	00000317          	auipc	t1,0x0
+ 8000e68:	14830067          	jr	328(t1) # 8000fac <__register_exitproc>
 
-08000e70 <exit>:
- 8000e70:	1141                	addi	sp,sp,-16
- 8000e72:	c422                	sw	s0,8(sp)
- 8000e74:	c606                	sw	ra,12(sp)
- 8000e76:	00000797          	auipc	a5,0x0
- 8000e7a:	1c678793          	addi	a5,a5,454 # 800103c <__call_exitprocs>
- 8000e7e:	842a                	mv	s0,a0
- 8000e80:	c791                	beqz	a5,8000e8c <exit+0x1c>
- 8000e82:	4581                	li	a1,0
- 8000e84:	00000097          	auipc	ra,0x0
- 8000e88:	1b8080e7          	jalr	440(ra) # 800103c <__call_exitprocs>
- 8000e8c:	00000797          	auipc	a5,0x0
- 8000e90:	2b878793          	addi	a5,a5,696 # 8001144 <_global_impure_ptr>
- 8000e94:	4388                	lw	a0,0(a5)
- 8000e96:	551c                	lw	a5,40(a0)
- 8000e98:	c391                	beqz	a5,8000e9c <exit+0x2c>
- 8000e9a:	9782                	jalr	a5
- 8000e9c:	8522                	mv	a0,s0
- 8000e9e:	fffff097          	auipc	ra,0xfffff
- 8000ea2:	532080e7          	jalr	1330(ra) # 80003d0 <_exit>
+08000e6c <exit>:
+ 8000e6c:	1141                	addi	sp,sp,-16
+ 8000e6e:	c422                	sw	s0,8(sp)
+ 8000e70:	c606                	sw	ra,12(sp)
+ 8000e72:	00000797          	auipc	a5,0x0
+ 8000e76:	1c678793          	addi	a5,a5,454 # 8001038 <__call_exitprocs>
+ 8000e7a:	842a                	mv	s0,a0
+ 8000e7c:	c791                	beqz	a5,8000e88 <exit+0x1c>
+ 8000e7e:	4581                	li	a1,0
+ 8000e80:	00000097          	auipc	ra,0x0
+ 8000e84:	1b8080e7          	jalr	440(ra) # 8001038 <__call_exitprocs>
+ 8000e88:	00000797          	auipc	a5,0x0
+ 8000e8c:	2b878793          	addi	a5,a5,696 # 8001140 <_global_impure_ptr>
+ 8000e90:	4388                	lw	a0,0(a5)
+ 8000e92:	551c                	lw	a5,40(a0)
+ 8000e94:	c391                	beqz	a5,8000e98 <exit+0x2c>
+ 8000e96:	9782                	jalr	a5
+ 8000e98:	8522                	mv	a0,s0
+ 8000e9a:	fffff097          	auipc	ra,0xfffff
+ 8000e9e:	536080e7          	jalr	1334(ra) # 80003d0 <_exit>
 
-08000ea6 <__libc_fini_array>:
- 8000ea6:	1141                	addi	sp,sp,-16
- 8000ea8:	00000797          	auipc	a5,0x0
- 8000eac:	2a078793          	addi	a5,a5,672 # 8001148 <__fini_array_end>
- 8000eb0:	c422                	sw	s0,8(sp)
- 8000eb2:	00000417          	auipc	s0,0x0
- 8000eb6:	29640413          	addi	s0,s0,662 # 8001148 <__fini_array_end>
- 8000eba:	8c1d                	sub	s0,s0,a5
- 8000ebc:	c226                	sw	s1,4(sp)
- 8000ebe:	c606                	sw	ra,12(sp)
- 8000ec0:	8409                	srai	s0,s0,0x2
- 8000ec2:	84be                	mv	s1,a5
- 8000ec4:	e411                	bnez	s0,8000ed0 <__libc_fini_array+0x2a>
- 8000ec6:	40b2                	lw	ra,12(sp)
- 8000ec8:	4422                	lw	s0,8(sp)
- 8000eca:	4492                	lw	s1,4(sp)
- 8000ecc:	0141                	addi	sp,sp,16
- 8000ece:	8082                	ret
- 8000ed0:	147d                	addi	s0,s0,-1
- 8000ed2:	00241793          	slli	a5,s0,0x2
- 8000ed6:	97a6                	add	a5,a5,s1
- 8000ed8:	439c                	lw	a5,0(a5)
- 8000eda:	9782                	jalr	a5
- 8000edc:	b7e5                	j	8000ec4 <__libc_fini_array+0x1e>
+08000ea2 <__libc_fini_array>:
+ 8000ea2:	1141                	addi	sp,sp,-16
+ 8000ea4:	00000797          	auipc	a5,0x0
+ 8000ea8:	2a078793          	addi	a5,a5,672 # 8001144 <__fini_array_end>
+ 8000eac:	c422                	sw	s0,8(sp)
+ 8000eae:	00000417          	auipc	s0,0x0
+ 8000eb2:	29640413          	addi	s0,s0,662 # 8001144 <__fini_array_end>
+ 8000eb6:	8c1d                	sub	s0,s0,a5
+ 8000eb8:	c226                	sw	s1,4(sp)
+ 8000eba:	c606                	sw	ra,12(sp)
+ 8000ebc:	8409                	srai	s0,s0,0x2
+ 8000ebe:	84be                	mv	s1,a5
+ 8000ec0:	e411                	bnez	s0,8000ecc <__libc_fini_array+0x2a>
+ 8000ec2:	40b2                	lw	ra,12(sp)
+ 8000ec4:	4422                	lw	s0,8(sp)
+ 8000ec6:	4492                	lw	s1,4(sp)
+ 8000ec8:	0141                	addi	sp,sp,16
+ 8000eca:	8082                	ret
+ 8000ecc:	147d                	addi	s0,s0,-1
+ 8000ece:	00241793          	slli	a5,s0,0x2
+ 8000ed2:	97a6                	add	a5,a5,s1
+ 8000ed4:	439c                	lw	a5,0(a5)
+ 8000ed6:	9782                	jalr	a5
+ 8000ed8:	b7e5                	j	8000ec0 <__libc_fini_array+0x1e>
 
-08000ede <__libc_init_array>:
- 8000ede:	1141                	addi	sp,sp,-16
- 8000ee0:	00000797          	auipc	a5,0x0
- 8000ee4:	26878793          	addi	a5,a5,616 # 8001148 <__fini_array_end>
- 8000ee8:	c422                	sw	s0,8(sp)
- 8000eea:	00000417          	auipc	s0,0x0
- 8000eee:	25e40413          	addi	s0,s0,606 # 8001148 <__fini_array_end>
- 8000ef2:	8c1d                	sub	s0,s0,a5
- 8000ef4:	c226                	sw	s1,4(sp)
- 8000ef6:	c04a                	sw	s2,0(sp)
- 8000ef8:	c606                	sw	ra,12(sp)
- 8000efa:	8409                	srai	s0,s0,0x2
- 8000efc:	4481                	li	s1,0
- 8000efe:	893e                	mv	s2,a5
- 8000f00:	02849663          	bne	s1,s0,8000f2c <__libc_init_array+0x4e>
- 8000f04:	00000797          	auipc	a5,0x0
- 8000f08:	24478793          	addi	a5,a5,580 # 8001148 <__fini_array_end>
- 8000f0c:	00000417          	auipc	s0,0x0
- 8000f10:	23c40413          	addi	s0,s0,572 # 8001148 <__fini_array_end>
- 8000f14:	8c1d                	sub	s0,s0,a5
- 8000f16:	8409                	srai	s0,s0,0x2
- 8000f18:	4481                	li	s1,0
- 8000f1a:	893e                	mv	s2,a5
- 8000f1c:	00849f63          	bne	s1,s0,8000f3a <__libc_init_array+0x5c>
- 8000f20:	40b2                	lw	ra,12(sp)
- 8000f22:	4422                	lw	s0,8(sp)
- 8000f24:	4492                	lw	s1,4(sp)
- 8000f26:	4902                	lw	s2,0(sp)
- 8000f28:	0141                	addi	sp,sp,16
- 8000f2a:	8082                	ret
- 8000f2c:	00249793          	slli	a5,s1,0x2
- 8000f30:	97ca                	add	a5,a5,s2
- 8000f32:	439c                	lw	a5,0(a5)
- 8000f34:	0485                	addi	s1,s1,1
- 8000f36:	9782                	jalr	a5
- 8000f38:	b7e1                	j	8000f00 <__libc_init_array+0x22>
- 8000f3a:	00249793          	slli	a5,s1,0x2
- 8000f3e:	97ca                	add	a5,a5,s2
- 8000f40:	439c                	lw	a5,0(a5)
- 8000f42:	0485                	addi	s1,s1,1
- 8000f44:	9782                	jalr	a5
- 8000f46:	bfd9                	j	8000f1c <__libc_init_array+0x3e>
+08000eda <__libc_init_array>:
+ 8000eda:	1141                	addi	sp,sp,-16
+ 8000edc:	00000797          	auipc	a5,0x0
+ 8000ee0:	26878793          	addi	a5,a5,616 # 8001144 <__fini_array_end>
+ 8000ee4:	c422                	sw	s0,8(sp)
+ 8000ee6:	00000417          	auipc	s0,0x0
+ 8000eea:	25e40413          	addi	s0,s0,606 # 8001144 <__fini_array_end>
+ 8000eee:	8c1d                	sub	s0,s0,a5
+ 8000ef0:	c226                	sw	s1,4(sp)
+ 8000ef2:	c04a                	sw	s2,0(sp)
+ 8000ef4:	c606                	sw	ra,12(sp)
+ 8000ef6:	8409                	srai	s0,s0,0x2
+ 8000ef8:	4481                	li	s1,0
+ 8000efa:	893e                	mv	s2,a5
+ 8000efc:	02849663          	bne	s1,s0,8000f28 <__libc_init_array+0x4e>
+ 8000f00:	00000797          	auipc	a5,0x0
+ 8000f04:	24478793          	addi	a5,a5,580 # 8001144 <__fini_array_end>
+ 8000f08:	00000417          	auipc	s0,0x0
+ 8000f0c:	23c40413          	addi	s0,s0,572 # 8001144 <__fini_array_end>
+ 8000f10:	8c1d                	sub	s0,s0,a5
+ 8000f12:	8409                	srai	s0,s0,0x2
+ 8000f14:	4481                	li	s1,0
+ 8000f16:	893e                	mv	s2,a5
+ 8000f18:	00849f63          	bne	s1,s0,8000f36 <__libc_init_array+0x5c>
+ 8000f1c:	40b2                	lw	ra,12(sp)
+ 8000f1e:	4422                	lw	s0,8(sp)
+ 8000f20:	4492                	lw	s1,4(sp)
+ 8000f22:	4902                	lw	s2,0(sp)
+ 8000f24:	0141                	addi	sp,sp,16
+ 8000f26:	8082                	ret
+ 8000f28:	00249793          	slli	a5,s1,0x2
+ 8000f2c:	97ca                	add	a5,a5,s2
+ 8000f2e:	439c                	lw	a5,0(a5)
+ 8000f30:	0485                	addi	s1,s1,1
+ 8000f32:	9782                	jalr	a5
+ 8000f34:	b7e1                	j	8000efc <__libc_init_array+0x22>
+ 8000f36:	00249793          	slli	a5,s1,0x2
+ 8000f3a:	97ca                	add	a5,a5,s2
+ 8000f3c:	439c                	lw	a5,0(a5)
+ 8000f3e:	0485                	addi	s1,s1,1
+ 8000f40:	9782                	jalr	a5
+ 8000f42:	bfd9                	j	8000f18 <__libc_init_array+0x3e>
 
-08000f48 <memcpy>:
- 8000f48:	832a                	mv	t1,a0
- 8000f4a:	ca09                	beqz	a2,8000f5c <memcpy+0x14>
- 8000f4c:	00058383          	lb	t2,0(a1)
- 8000f50:	00730023          	sb	t2,0(t1)
- 8000f54:	167d                	addi	a2,a2,-1
- 8000f56:	0305                	addi	t1,t1,1
- 8000f58:	0585                	addi	a1,a1,1
- 8000f5a:	fa6d                	bnez	a2,8000f4c <memcpy+0x4>
- 8000f5c:	8082                	ret
+08000f44 <memcpy>:
+ 8000f44:	832a                	mv	t1,a0
+ 8000f46:	ca09                	beqz	a2,8000f58 <memcpy+0x14>
+ 8000f48:	00058383          	lb	t2,0(a1)
+ 8000f4c:	00730023          	sb	t2,0(t1)
+ 8000f50:	167d                	addi	a2,a2,-1
+ 8000f52:	0305                	addi	t1,t1,1
+ 8000f54:	0585                	addi	a1,a1,1
+ 8000f56:	fa6d                	bnez	a2,8000f48 <memcpy+0x4>
+ 8000f58:	8082                	ret
 
-08000f5e <write>:
- 8000f5e:	17fff797          	auipc	a5,0x17fff
- 8000f62:	12278793          	addi	a5,a5,290 # 20000080 <_impure_ptr>
- 8000f66:	86b2                	mv	a3,a2
- 8000f68:	862e                	mv	a2,a1
- 8000f6a:	85aa                	mv	a1,a0
- 8000f6c:	4388                	lw	a0,0(a5)
- 8000f6e:	00000317          	auipc	t1,0x0
- 8000f72:	00830067          	jr	8(t1) # 8000f76 <_write_r>
+08000f5a <write>:
+ 8000f5a:	17fff797          	auipc	a5,0x17fff
+ 8000f5e:	12678793          	addi	a5,a5,294 # 20000080 <_impure_ptr>
+ 8000f62:	86b2                	mv	a3,a2
+ 8000f64:	862e                	mv	a2,a1
+ 8000f66:	85aa                	mv	a1,a0
+ 8000f68:	4388                	lw	a0,0(a5)
+ 8000f6a:	00000317          	auipc	t1,0x0
+ 8000f6e:	00830067          	jr	8(t1) # 8000f72 <_write_r>
 
-08000f76 <_write_r>:
- 8000f76:	1141                	addi	sp,sp,-16
- 8000f78:	c422                	sw	s0,8(sp)
- 8000f7a:	842a                	mv	s0,a0
- 8000f7c:	852e                	mv	a0,a1
- 8000f7e:	85b2                	mv	a1,a2
- 8000f80:	8636                	mv	a2,a3
- 8000f82:	17fff797          	auipc	a5,0x17fff
- 8000f86:	1807ab23          	sw	zero,406(a5) # 20000118 <errno>
- 8000f8a:	c606                	sw	ra,12(sp)
- 8000f8c:	00000097          	auipc	ra,0x0
- 8000f90:	178080e7          	jalr	376(ra) # 8001104 <_write>
- 8000f94:	57fd                	li	a5,-1
- 8000f96:	00f51963          	bne	a0,a5,8000fa8 <_write_r+0x32>
- 8000f9a:	17fff797          	auipc	a5,0x17fff
- 8000f9e:	17e78793          	addi	a5,a5,382 # 20000118 <errno>
- 8000fa2:	439c                	lw	a5,0(a5)
- 8000fa4:	c391                	beqz	a5,8000fa8 <_write_r+0x32>
- 8000fa6:	c01c                	sw	a5,0(s0)
- 8000fa8:	40b2                	lw	ra,12(sp)
- 8000faa:	4422                	lw	s0,8(sp)
- 8000fac:	0141                	addi	sp,sp,16
- 8000fae:	8082                	ret
+08000f72 <_write_r>:
+ 8000f72:	1141                	addi	sp,sp,-16
+ 8000f74:	c422                	sw	s0,8(sp)
+ 8000f76:	842a                	mv	s0,a0
+ 8000f78:	852e                	mv	a0,a1
+ 8000f7a:	85b2                	mv	a1,a2
+ 8000f7c:	8636                	mv	a2,a3
+ 8000f7e:	17fff797          	auipc	a5,0x17fff
+ 8000f82:	1807ad23          	sw	zero,410(a5) # 20000118 <errno>
+ 8000f86:	c606                	sw	ra,12(sp)
+ 8000f88:	00000097          	auipc	ra,0x0
+ 8000f8c:	178080e7          	jalr	376(ra) # 8001100 <_write>
+ 8000f90:	57fd                	li	a5,-1
+ 8000f92:	00f51963          	bne	a0,a5,8000fa4 <_write_r+0x32>
+ 8000f96:	17fff797          	auipc	a5,0x17fff
+ 8000f9a:	18278793          	addi	a5,a5,386 # 20000118 <errno>
+ 8000f9e:	439c                	lw	a5,0(a5)
+ 8000fa0:	c391                	beqz	a5,8000fa4 <_write_r+0x32>
+ 8000fa2:	c01c                	sw	a5,0(s0)
+ 8000fa4:	40b2                	lw	ra,12(sp)
+ 8000fa6:	4422                	lw	s0,8(sp)
+ 8000fa8:	0141                	addi	sp,sp,16
+ 8000faa:	8082                	ret
 
-08000fb0 <__register_exitproc>:
- 8000fb0:	17fff797          	auipc	a5,0x17fff
- 8000fb4:	0d878793          	addi	a5,a5,216 # 20000088 <_global_atexit>
- 8000fb8:	439c                	lw	a5,0(a5)
- 8000fba:	8e2a                	mv	t3,a0
- 8000fbc:	e78d                	bnez	a5,8000fe6 <__register_exitproc+0x36>
- 8000fbe:	17fff717          	auipc	a4,0x17fff
- 8000fc2:	0ce70713          	addi	a4,a4,206 # 2000008c <_global_atexit0>
- 8000fc6:	17fff797          	auipc	a5,0x17fff
- 8000fca:	0ce7a123          	sw	a4,194(a5) # 20000088 <_global_atexit>
- 8000fce:	f7fff517          	auipc	a0,0xf7fff
- 8000fd2:	03250513          	addi	a0,a0,50 # 0 <__dbg_stack_size>
- 8000fd6:	87ba                	mv	a5,a4
- 8000fd8:	c519                	beqz	a0,8000fe6 <__register_exitproc+0x36>
- 8000fda:	411c                	lw	a5,0(a0)
- 8000fdc:	17fff517          	auipc	a0,0x17fff
- 8000fe0:	12f52c23          	sw	a5,312(a0) # 20000114 <_global_atexit0+0x88>
- 8000fe4:	87ba                	mv	a5,a4
- 8000fe6:	43d8                	lw	a4,4(a5)
- 8000fe8:	487d                	li	a6,31
- 8000fea:	557d                	li	a0,-1
- 8000fec:	04e84763          	blt	a6,a4,800103a <__register_exitproc+0x8a>
- 8000ff0:	020e0e63          	beqz	t3,800102c <__register_exitproc+0x7c>
- 8000ff4:	0887a803          	lw	a6,136(a5)
- 8000ff8:	04080163          	beqz	a6,800103a <__register_exitproc+0x8a>
- 8000ffc:	00271893          	slli	a7,a4,0x2
- 8001000:	98c2                	add	a7,a7,a6
- 8001002:	00c8a023          	sw	a2,0(a7)
- 8001006:	10082303          	lw	t1,256(a6)
- 800100a:	4605                	li	a2,1
- 800100c:	00e61633          	sll	a2,a2,a4
- 8001010:	00c36333          	or	t1,t1,a2
- 8001014:	10682023          	sw	t1,256(a6)
- 8001018:	08d8a023          	sw	a3,128(a7)
- 800101c:	4689                	li	a3,2
- 800101e:	00de1763          	bne	t3,a3,800102c <__register_exitproc+0x7c>
- 8001022:	10482683          	lw	a3,260(a6)
- 8001026:	8e55                	or	a2,a2,a3
- 8001028:	10c82223          	sw	a2,260(a6)
- 800102c:	00170693          	addi	a3,a4,1
- 8001030:	070a                	slli	a4,a4,0x2
- 8001032:	c3d4                	sw	a3,4(a5)
- 8001034:	97ba                	add	a5,a5,a4
- 8001036:	c78c                	sw	a1,8(a5)
- 8001038:	4501                	li	a0,0
- 800103a:	8082                	ret
+08000fac <__register_exitproc>:
+ 8000fac:	17fff797          	auipc	a5,0x17fff
+ 8000fb0:	0dc78793          	addi	a5,a5,220 # 20000088 <_global_atexit>
+ 8000fb4:	439c                	lw	a5,0(a5)
+ 8000fb6:	8e2a                	mv	t3,a0
+ 8000fb8:	e78d                	bnez	a5,8000fe2 <__register_exitproc+0x36>
+ 8000fba:	17fff717          	auipc	a4,0x17fff
+ 8000fbe:	0d270713          	addi	a4,a4,210 # 2000008c <_global_atexit0>
+ 8000fc2:	17fff797          	auipc	a5,0x17fff
+ 8000fc6:	0ce7a323          	sw	a4,198(a5) # 20000088 <_global_atexit>
+ 8000fca:	f7fff517          	auipc	a0,0xf7fff
+ 8000fce:	03650513          	addi	a0,a0,54 # 0 <__dbg_stack_size>
+ 8000fd2:	87ba                	mv	a5,a4
+ 8000fd4:	c519                	beqz	a0,8000fe2 <__register_exitproc+0x36>
+ 8000fd6:	411c                	lw	a5,0(a0)
+ 8000fd8:	17fff517          	auipc	a0,0x17fff
+ 8000fdc:	12f52e23          	sw	a5,316(a0) # 20000114 <_global_atexit0+0x88>
+ 8000fe0:	87ba                	mv	a5,a4
+ 8000fe2:	43d8                	lw	a4,4(a5)
+ 8000fe4:	487d                	li	a6,31
+ 8000fe6:	557d                	li	a0,-1
+ 8000fe8:	04e84763          	blt	a6,a4,8001036 <__register_exitproc+0x8a>
+ 8000fec:	020e0e63          	beqz	t3,8001028 <__register_exitproc+0x7c>
+ 8000ff0:	0887a803          	lw	a6,136(a5)
+ 8000ff4:	04080163          	beqz	a6,8001036 <__register_exitproc+0x8a>
+ 8000ff8:	00271893          	slli	a7,a4,0x2
+ 8000ffc:	98c2                	add	a7,a7,a6
+ 8000ffe:	00c8a023          	sw	a2,0(a7)
+ 8001002:	10082303          	lw	t1,256(a6)
+ 8001006:	4605                	li	a2,1
+ 8001008:	00e61633          	sll	a2,a2,a4
+ 800100c:	00c36333          	or	t1,t1,a2
+ 8001010:	10682023          	sw	t1,256(a6)
+ 8001014:	08d8a023          	sw	a3,128(a7)
+ 8001018:	4689                	li	a3,2
+ 800101a:	00de1763          	bne	t3,a3,8001028 <__register_exitproc+0x7c>
+ 800101e:	10482683          	lw	a3,260(a6)
+ 8001022:	8e55                	or	a2,a2,a3
+ 8001024:	10c82223          	sw	a2,260(a6)
+ 8001028:	00170693          	addi	a3,a4,1
+ 800102c:	070a                	slli	a4,a4,0x2
+ 800102e:	c3d4                	sw	a3,4(a5)
+ 8001030:	97ba                	add	a5,a5,a4
+ 8001032:	c78c                	sw	a1,8(a5)
+ 8001034:	4501                	li	a0,0
+ 8001036:	8082                	ret
 
-0800103c <__call_exitprocs>:
- 800103c:	7179                	addi	sp,sp,-48
- 800103e:	cc52                	sw	s4,24(sp)
- 8001040:	ca56                	sw	s5,20(sp)
- 8001042:	c85a                	sw	s6,16(sp)
- 8001044:	c65e                	sw	s7,12(sp)
- 8001046:	d606                	sw	ra,44(sp)
- 8001048:	d422                	sw	s0,40(sp)
- 800104a:	d226                	sw	s1,36(sp)
- 800104c:	d04a                	sw	s2,32(sp)
- 800104e:	ce4e                	sw	s3,28(sp)
- 8001050:	c462                	sw	s8,8(sp)
- 8001052:	8b2a                	mv	s6,a0
- 8001054:	8a2e                	mv	s4,a1
- 8001056:	17fffa97          	auipc	s5,0x17fff
- 800105a:	032a8a93          	addi	s5,s5,50 # 20000088 <_global_atexit>
- 800105e:	4b85                	li	s7,1
- 8001060:	000aa403          	lw	s0,0(s5)
- 8001064:	c811                	beqz	s0,8001078 <__call_exitprocs+0x3c>
- 8001066:	4044                	lw	s1,4(s0)
- 8001068:	08842983          	lw	s3,136(s0)
- 800106c:	fff48913          	addi	s2,s1,-1
- 8001070:	048a                	slli	s1,s1,0x2
- 8001072:	94a2                	add	s1,s1,s0
- 8001074:	00095e63          	bgez	s2,8001090 <__call_exitprocs+0x54>
- 8001078:	50b2                	lw	ra,44(sp)
- 800107a:	5422                	lw	s0,40(sp)
- 800107c:	5492                	lw	s1,36(sp)
- 800107e:	5902                	lw	s2,32(sp)
- 8001080:	49f2                	lw	s3,28(sp)
- 8001082:	4a62                	lw	s4,24(sp)
- 8001084:	4ad2                	lw	s5,20(sp)
- 8001086:	4b42                	lw	s6,16(sp)
- 8001088:	4bb2                	lw	s7,12(sp)
- 800108a:	4c22                	lw	s8,8(sp)
- 800108c:	6145                	addi	sp,sp,48
- 800108e:	8082                	ret
- 8001090:	000a0e63          	beqz	s4,80010ac <__call_exitprocs+0x70>
- 8001094:	00099563          	bnez	s3,800109e <__call_exitprocs+0x62>
- 8001098:	197d                	addi	s2,s2,-1
- 800109a:	14f1                	addi	s1,s1,-4
- 800109c:	bfe1                	j	8001074 <__call_exitprocs+0x38>
- 800109e:	00291793          	slli	a5,s2,0x2
- 80010a2:	97ce                	add	a5,a5,s3
- 80010a4:	0807a783          	lw	a5,128(a5)
- 80010a8:	ff4798e3          	bne	a5,s4,8001098 <__call_exitprocs+0x5c>
- 80010ac:	4058                	lw	a4,4(s0)
- 80010ae:	40dc                	lw	a5,4(s1)
- 80010b0:	177d                	addi	a4,a4,-1
- 80010b2:	03271863          	bne	a4,s2,80010e2 <__call_exitprocs+0xa6>
- 80010b6:	01242223          	sw	s2,4(s0)
- 80010ba:	dff9                	beqz	a5,8001098 <__call_exitprocs+0x5c>
- 80010bc:	00442c03          	lw	s8,4(s0)
- 80010c0:	00098863          	beqz	s3,80010d0 <__call_exitprocs+0x94>
- 80010c4:	1009a683          	lw	a3,256(s3)
- 80010c8:	012b9733          	sll	a4,s7,s2
- 80010cc:	8ef9                	and	a3,a3,a4
- 80010ce:	ee89                	bnez	a3,80010e8 <__call_exitprocs+0xac>
- 80010d0:	9782                	jalr	a5
- 80010d2:	4058                	lw	a4,4(s0)
- 80010d4:	000aa783          	lw	a5,0(s5)
- 80010d8:	f98714e3          	bne	a4,s8,8001060 <__call_exitprocs+0x24>
- 80010dc:	faf40ee3          	beq	s0,a5,8001098 <__call_exitprocs+0x5c>
- 80010e0:	b741                	j	8001060 <__call_exitprocs+0x24>
- 80010e2:	0004a223          	sw	zero,4(s1)
- 80010e6:	bfd1                	j	80010ba <__call_exitprocs+0x7e>
- 80010e8:	00291693          	slli	a3,s2,0x2
- 80010ec:	96ce                	add	a3,a3,s3
- 80010ee:	428c                	lw	a1,0(a3)
- 80010f0:	1049a683          	lw	a3,260(s3)
- 80010f4:	8f75                	and	a4,a4,a3
- 80010f6:	e701                	bnez	a4,80010fe <__call_exitprocs+0xc2>
- 80010f8:	855a                	mv	a0,s6
- 80010fa:	9782                	jalr	a5
- 80010fc:	bfd9                	j	80010d2 <__call_exitprocs+0x96>
- 80010fe:	852e                	mv	a0,a1
- 8001100:	9782                	jalr	a5
- 8001102:	bfc1                	j	80010d2 <__call_exitprocs+0x96>
+08001038 <__call_exitprocs>:
+ 8001038:	7179                	addi	sp,sp,-48
+ 800103a:	cc52                	sw	s4,24(sp)
+ 800103c:	ca56                	sw	s5,20(sp)
+ 800103e:	c85a                	sw	s6,16(sp)
+ 8001040:	c65e                	sw	s7,12(sp)
+ 8001042:	d606                	sw	ra,44(sp)
+ 8001044:	d422                	sw	s0,40(sp)
+ 8001046:	d226                	sw	s1,36(sp)
+ 8001048:	d04a                	sw	s2,32(sp)
+ 800104a:	ce4e                	sw	s3,28(sp)
+ 800104c:	c462                	sw	s8,8(sp)
+ 800104e:	8b2a                	mv	s6,a0
+ 8001050:	8a2e                	mv	s4,a1
+ 8001052:	17fffa97          	auipc	s5,0x17fff
+ 8001056:	036a8a93          	addi	s5,s5,54 # 20000088 <_global_atexit>
+ 800105a:	4b85                	li	s7,1
+ 800105c:	000aa403          	lw	s0,0(s5)
+ 8001060:	c811                	beqz	s0,8001074 <__call_exitprocs+0x3c>
+ 8001062:	4044                	lw	s1,4(s0)
+ 8001064:	08842983          	lw	s3,136(s0)
+ 8001068:	fff48913          	addi	s2,s1,-1
+ 800106c:	048a                	slli	s1,s1,0x2
+ 800106e:	94a2                	add	s1,s1,s0
+ 8001070:	00095e63          	bgez	s2,800108c <__call_exitprocs+0x54>
+ 8001074:	50b2                	lw	ra,44(sp)
+ 8001076:	5422                	lw	s0,40(sp)
+ 8001078:	5492                	lw	s1,36(sp)
+ 800107a:	5902                	lw	s2,32(sp)
+ 800107c:	49f2                	lw	s3,28(sp)
+ 800107e:	4a62                	lw	s4,24(sp)
+ 8001080:	4ad2                	lw	s5,20(sp)
+ 8001082:	4b42                	lw	s6,16(sp)
+ 8001084:	4bb2                	lw	s7,12(sp)
+ 8001086:	4c22                	lw	s8,8(sp)
+ 8001088:	6145                	addi	sp,sp,48
+ 800108a:	8082                	ret
+ 800108c:	000a0e63          	beqz	s4,80010a8 <__call_exitprocs+0x70>
+ 8001090:	00099563          	bnez	s3,800109a <__call_exitprocs+0x62>
+ 8001094:	197d                	addi	s2,s2,-1
+ 8001096:	14f1                	addi	s1,s1,-4
+ 8001098:	bfe1                	j	8001070 <__call_exitprocs+0x38>
+ 800109a:	00291793          	slli	a5,s2,0x2
+ 800109e:	97ce                	add	a5,a5,s3
+ 80010a0:	0807a783          	lw	a5,128(a5)
+ 80010a4:	ff4798e3          	bne	a5,s4,8001094 <__call_exitprocs+0x5c>
+ 80010a8:	4058                	lw	a4,4(s0)
+ 80010aa:	40dc                	lw	a5,4(s1)
+ 80010ac:	177d                	addi	a4,a4,-1
+ 80010ae:	03271863          	bne	a4,s2,80010de <__call_exitprocs+0xa6>
+ 80010b2:	01242223          	sw	s2,4(s0)
+ 80010b6:	dff9                	beqz	a5,8001094 <__call_exitprocs+0x5c>
+ 80010b8:	00442c03          	lw	s8,4(s0)
+ 80010bc:	00098863          	beqz	s3,80010cc <__call_exitprocs+0x94>
+ 80010c0:	1009a683          	lw	a3,256(s3)
+ 80010c4:	012b9733          	sll	a4,s7,s2
+ 80010c8:	8ef9                	and	a3,a3,a4
+ 80010ca:	ee89                	bnez	a3,80010e4 <__call_exitprocs+0xac>
+ 80010cc:	9782                	jalr	a5
+ 80010ce:	4058                	lw	a4,4(s0)
+ 80010d0:	000aa783          	lw	a5,0(s5)
+ 80010d4:	f98714e3          	bne	a4,s8,800105c <__call_exitprocs+0x24>
+ 80010d8:	faf40ee3          	beq	s0,a5,8001094 <__call_exitprocs+0x5c>
+ 80010dc:	b741                	j	800105c <__call_exitprocs+0x24>
+ 80010de:	0004a223          	sw	zero,4(s1)
+ 80010e2:	bfd1                	j	80010b6 <__call_exitprocs+0x7e>
+ 80010e4:	00291693          	slli	a3,s2,0x2
+ 80010e8:	96ce                	add	a3,a3,s3
+ 80010ea:	428c                	lw	a1,0(a3)
+ 80010ec:	1049a683          	lw	a3,260(s3)
+ 80010f0:	8f75                	and	a4,a4,a3
+ 80010f2:	e701                	bnez	a4,80010fa <__call_exitprocs+0xc2>
+ 80010f4:	855a                	mv	a0,s6
+ 80010f6:	9782                	jalr	a5
+ 80010f8:	bfd9                	j	80010ce <__call_exitprocs+0x96>
+ 80010fa:	852e                	mv	a0,a1
+ 80010fc:	9782                	jalr	a5
+ 80010fe:	bfc1                	j	80010ce <__call_exitprocs+0x96>
 
-08001104 <_write>:
- 8001104:	1141                	addi	sp,sp,-16
- 8001106:	c606                	sw	ra,12(sp)
- 8001108:	c422                	sw	s0,8(sp)
- 800110a:	4681                	li	a3,0
- 800110c:	4701                	li	a4,0
- 800110e:	4781                	li	a5,0
- 8001110:	04000893          	li	a7,64
- 8001114:	00000073          	ecall
- 8001118:	842a                	mv	s0,a0
- 800111a:	00055a63          	bgez	a0,800112e <_write+0x2a>
- 800111e:	40800433          	neg	s0,s0
- 8001122:	00000097          	auipc	ra,0x0
- 8001126:	016080e7          	jalr	22(ra) # 8001138 <__errno>
- 800112a:	c100                	sw	s0,0(a0)
- 800112c:	547d                	li	s0,-1
- 800112e:	8522                	mv	a0,s0
- 8001130:	40b2                	lw	ra,12(sp)
- 8001132:	4422                	lw	s0,8(sp)
- 8001134:	0141                	addi	sp,sp,16
- 8001136:	8082                	ret
+08001100 <_write>:
+ 8001100:	1141                	addi	sp,sp,-16
+ 8001102:	c606                	sw	ra,12(sp)
+ 8001104:	c422                	sw	s0,8(sp)
+ 8001106:	4681                	li	a3,0
+ 8001108:	4701                	li	a4,0
+ 800110a:	4781                	li	a5,0
+ 800110c:	04000893          	li	a7,64
+ 8001110:	00000073          	ecall
+ 8001114:	842a                	mv	s0,a0
+ 8001116:	00055a63          	bgez	a0,800112a <_write+0x2a>
+ 800111a:	40800433          	neg	s0,s0
+ 800111e:	00000097          	auipc	ra,0x0
+ 8001122:	016080e7          	jalr	22(ra) # 8001134 <__errno>
+ 8001126:	c100                	sw	s0,0(a0)
+ 8001128:	547d                	li	s0,-1
+ 800112a:	8522                	mv	a0,s0
+ 800112c:	40b2                	lw	ra,12(sp)
+ 800112e:	4422                	lw	s0,8(sp)
+ 8001130:	0141                	addi	sp,sp,16
+ 8001132:	8082                	ret
 
-08001138 <__errno>:
- 8001138:	17fff797          	auipc	a5,0x17fff
- 800113c:	f4878793          	addi	a5,a5,-184 # 20000080 <_impure_ptr>
- 8001140:	4388                	lw	a0,0(a5)
- 8001142:	8082                	ret
+08001134 <__errno>:
+ 8001134:	17fff797          	auipc	a5,0x17fff
+ 8001138:	f4c78793          	addi	a5,a5,-180 # 20000080 <_impure_ptr>
+ 800113c:	4388                	lw	a0,0(a5)
+ 800113e:	8082                	ret
 
 build/gd32vf103.elf:     file format elf32-littleriscv
 build/gd32vf103.elf
@@ -2429,8 +2432,8 @@ start address 0x0800015c
 
 Program Header:
     LOAD off    0x00001000 vaddr 0x08000000 paddr 0x08000000 align 2**12
-         filesz 0x00001148 memsz 0x00001148 flags r-x
-    LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001148 align 2**12
+         filesz 0x00001144 memsz 0x00001144 flags r-x
+    LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001144 align 2**12
          filesz 0x00000088 memsz 0x00000088 flags rw-
     LOAD off    0x00003088 vaddr 0x20000088 paddr 0x20000088 align 2**12
          filesz 0x00000000 memsz 0x00000094 flags rw-
@@ -2443,15 +2446,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .ilalign      00000000  08000254  08000254  00003088  2**0
                   CONTENTS
-  2 .text         00000ec4  08000280  08000280  00001280  2**6
+  2 .text         00000ec0  08000280  08000280  00001280  2**6
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .sdata2._global_impure_ptr 00000004  08001144  08001144  00002144  2**2
+  3 .sdata2._global_impure_ptr 00000004  08001140  08001140  00002140  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .lalign       00000000  08001148  08001148  00003088  2**0
+  4 .lalign       00000000  08001144  08001144  00003088  2**0
                   CONTENTS
   5 .dalign       00000000  20000000  20000000  00003088  2**0
                   CONTENTS
-  6 .data         00000088  20000000  08001148  00003000  2**2
+  6 .data         00000088  20000000  08001144  00003000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   7 .bss          00000094  20000088  20000088  00003088  2**2
                   ALLOC
@@ -2467,22 +2470,22 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  13 .debug_ranges 000002e8  00000000  00000000  00008340  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   00002e24  00000000  00000000  00008628  2**0
+ 14 .debug_line   00002e18  00000000  00000000  00008628  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00000ee9  00000000  00000000  0000b44c  2**0
+ 15 .debug_str    00000ee9  00000000  00000000  0000b440  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0000c335  2**0
+ 16 .comment      00000028  00000000  00000000  0000c329  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  0000c35d  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  0000c351  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00000408  00000000  00000000  0000c388  2**2
+ 18 .debug_frame  00000408  00000000  00000000  0000c37c  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
 08000254 l    d  .ilalign	00000000 .ilalign
 08000280 l    d  .text	00000000 .text
-08001144 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
-08001148 l    d  .lalign	00000000 .lalign
+08001140 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
+08001144 l    d  .lalign	00000000 .lalign
 20000000 l    d  .dalign	00000000 .dalign
 20000000 l    d  .data	00000000 .data
 20000088 l    d  .bss	00000000 .bss
@@ -2535,25 +2538,26 @@ SYMBOL TABLE:
 00000008 l       *ABS*	00000000 PBEN
 080006c4 l       .text	00000000 rcu1en
 080006d6 l       .text	00000000 rcu2en
-0800074e l       .text	00000000 select_sequence
-080007b0 l       .text	00000000 disco0
-08000812 l       .text	00000000 disco1
-08000874 l       .text	00000000 disco2
-080008d6 l       .text	00000000 disco3
-08000938 l       .text	00000000 disco4
-0800099a l       .text	00000000 disco5
-080009fc l       .text	00000000 disco6
-08000a5e l       .text	00000000 disco7
-08000ac0 l       .text	00000000 disco0inv
-08000b32 l       .text	00000000 disco1inv
-08000ba4 l       .text	00000000 disco2inv
-08000c16 l       .text	00000000 disco3inv
-08000c88 l       .text	00000000 disco4inv
-08000cfa l       .text	00000000 disco5inv
-08000d6c l       .text	00000000 disco6inv
-08000dde l       .text	00000000 disco7inv
+0800072e l       .text	00000000 start
+0800074c l       .text	00000000 select_sequence
+080007ac l       .text	00000000 disco0
+0800080e l       .text	00000000 disco1
+08000870 l       .text	00000000 disco2
+080008d2 l       .text	00000000 disco3
+08000934 l       .text	00000000 disco4
+08000996 l       .text	00000000 disco5
+080009f8 l       .text	00000000 disco6
+08000a5a l       .text	00000000 disco7
+08000abc l       .text	00000000 disco0inv
+08000b2e l       .text	00000000 disco1inv
+08000ba0 l       .text	00000000 disco2inv
+08000c12 l       .text	00000000 disco3inv
+08000c84 l       .text	00000000 disco4inv
+08000cf6 l       .text	00000000 disco5inv
+08000d68 l       .text	00000000 disco6inv
+08000dda l       .text	00000000 disco7inv
 20000000 l       .data	00000000 sequence0
-08000e50 l       .text	00000000 delay
+08000e4c l       .text	00000000 delay
 20000004 l       .data	00000000 sequence1
 20000008 l       .data	00000000 sequence2
 2000000c l       .data	00000000 sequence3
@@ -2575,33 +2579,33 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 impure.c
 20000020 l     O .data	00000060 impure_data
 00000000 l    df *ABS*	00000000 
-08001148 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
-08001148 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
-08001148 l       .sdata2._global_impure_ptr	00000000 __init_array_end
-08001148 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
-08001148 l       .sdata2._global_impure_ptr	00000000 __init_array_start
-08001148 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
+08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
+08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
+08001144 l       .sdata2._global_impure_ptr	00000000 __init_array_end
+08001144 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
+08001144 l       .sdata2._global_impure_ptr	00000000 __init_array_start
+08001144 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
 20000880 g       .data	00000000 __global_pointer$
-08001138 g     F .text	0000000c __errno
+08001134 g     F .text	0000000c __errno
 20000118 g     O .bss	00000004 errno
 00001000 g       *ABS*	00000000 __stack_size
-08000f48 g     F .text	00000016 memcpy
+08000f44 g     F .text	00000016 memcpy
 080004ee  w    F .text	00000038 handle_trap
 08000604  w      .text	00000000 irq_entry
 20007000 g       .stack	00000000 _heap_end
-08001144 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
-08000ede g     F .text	0000006a __libc_init_array
+08001140 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
+08000eda g     F .text	0000006a __libc_init_array
 08000526 g     F .text	0000002c _init
-08000ea6 g     F .text	00000038 __libc_fini_array
+08000ea2 g     F .text	00000038 __libc_fini_array
 080004cc  w    F .text	00000022 handle_nmi
-08000f5e g     F .text	00000018 write
+08000f5a g     F .text	00000018 write
 0800041c g     F .text	0000007c write_hex
 20000088 g     O .bss	00000004 _global_atexit
-0800103c g     F .text	000000c8 __call_exitprocs
+08001038 g     F .text	000000c8 __call_exitprocs
 20008000 g       .stack	00000000 _sp
 0800015c g     F .init	00000000 _start
 0800024c g       .init	00000000 enable_mcycle_minstret
-08000fb0 g     F .text	0000008c __register_exitproc
+08000fac g     F .text	0000008c __register_exitproc
 20000088 g       .bss	00000000 __bss_start
 080006e8 g       .text	00000000 main
 08000580  w      .text	00000000 trap_entry
@@ -2610,15 +2614,15 @@ SYMBOL TABLE:
 080002b4 g     F .text	0000011c SystemInit
 08000552 g     F .text	00000002 _fini
 00000000 g       *ABS*	00000000 __dbg_stack_size
-08000e60 g     F .text	00000010 atexit
-08000f76 g     F .text	0000003a _write_r
+08000e5c g     F .text	00000010 atexit
+08000f72 g     F .text	0000003a _write_r
 20000080 g     O .data	00000004 _impure_ptr
 20000000 g       .dalign	00000000 _data
-08001104 g     F .text	00000034 _write
+08001100 g     F .text	00000034 _write
 20000088 g       .bss	00000000 _edata
 20000120 g       .bss	00000000 _end
-08001148 g       .lalign	00000000 _data_lma
-08000e70 g     F .text	00000036 exit
+08001144 g       .lalign	00000000 _data_lma
+08000e6c g     F .text	00000036 exit
 08000498 g     F .text	00000022 eclic_init
 080003d0 g     F .text	0000004c _exit
 
@@ -2715,7 +2719,7 @@ _start0800:
 	/* Load data section */
 	la a0, _data_lma
  80001c2:	00001517          	auipc	a0,0x1
- 80001c6:	f8650513          	addi	a0,a0,-122 # 8001148 <__fini_array_end>
+ 80001c6:	f8250513          	addi	a0,a0,-126 # 8001144 <__fini_array_end>
 	la a1, _data
  80001ca:	18000597          	auipc	a1,0x18000
  80001ce:	e3658593          	addi	a1,a1,-458 # 20000000 <_data>
@@ -2759,13 +2763,13 @@ _start0800:
 	/* Call global constructors */
 	la a0, __libc_fini_array
  8000210:	00001517          	auipc	a0,0x1
- 8000214:	c9650513          	addi	a0,a0,-874 # 8000ea6 <__libc_fini_array>
+ 8000214:	c9250513          	addi	a0,a0,-878 # 8000ea2 <__libc_fini_array>
 	call atexit
  8000218:	00001097          	auipc	ra,0x1
- 800021c:	c48080e7          	jalr	-952(ra) # 8000e60 <atexit>
+ 800021c:	c44080e7          	jalr	-956(ra) # 8000e5c <atexit>
 	call __libc_init_array
  8000220:	00001097          	auipc	ra,0x1
- 8000224:	cbe080e7          	jalr	-834(ra) # 8000ede <__libc_init_array>
+ 8000224:	cba080e7          	jalr	-838(ra) # 8000eda <__libc_init_array>
 
 
 	/* argc = argv = 0 */
@@ -2781,7 +2785,7 @@ _start0800:
  8000238:	4b4080e7          	jalr	1204(ra) # 80006e8 <main>
 	tail exit
  800023c:	00001317          	auipc	t1,0x1
- 8000240:	c3430067          	jr	-972(t1) # 8000e70 <exit>
+ 8000240:	c3030067          	jr	-976(t1) # 8000e6c <exit>
 
 1:
 	j 1b
@@ -2820,7 +2824,7 @@ Disassembly of section .text:
  8000292:	2064                	fld	fs1,192(s0)
  8000294:	68746977          	0x68746977
  8000298:	6320                	flw	fs0,64(a4)
- 800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x554f8>
+ 800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x554fc>
  800029e:	0000                	unimp
  80002a0:	7830                	flw	fa2,112(s0)
  80002a2:	0000                	unimp
@@ -3063,14 +3067,14 @@ void _exit(int code)
  80003e2:	d606                	sw	ra,44(sp)
   const char message[] = "\nProgram has exited with code:";
  80003e4:	00001097          	auipc	ra,0x1
- 80003e8:	b64080e7          	jalr	-1180(ra) # 8000f48 <memcpy>
+ 80003e8:	b60080e7          	jalr	-1184(ra) # 8000f44 <memcpy>
 
   write(STDERR_FILENO, message, sizeof(message) - 1);
  80003ec:	4679                	li	a2,30
  80003ee:	858a                	mv	a1,sp
  80003f0:	4509                	li	a0,2
  80003f2:	00001097          	auipc	ra,0x1
- 80003f6:	b6c080e7          	jalr	-1172(ra) # 8000f5e <write>
+ 80003f6:	b68080e7          	jalr	-1176(ra) # 8000f5a <write>
   write_hex(STDERR_FILENO, code);
  80003fa:	85a2                	mv	a1,s0
  80003fc:	4509                	li	a0,2
@@ -3082,7 +3086,7 @@ void _exit(int code)
  800040c:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
  8000410:	4509                	li	a0,2
  8000412:	00001097          	auipc	ra,0x1
- 8000416:	b4c080e7          	jalr	-1204(ra) # 8000f5e <write>
+ 8000416:	b48080e7          	jalr	-1208(ra) # 8000f5a <write>
 
   for (;;);
  800041a:	a001                	j	800041a <_exit+0x4a>
@@ -3115,7 +3119,7 @@ void write_hex(int fd, unsigned long int hex)
   write(fd , "0x", 2);
  800043a:	4471                	li	s0,28
  800043c:	00001097          	auipc	ra,0x1
- 8000440:	b22080e7          	jalr	-1246(ra) # 8000f5e <write>
+ 8000440:	b1e080e7          	jalr	-1250(ra) # 8000f5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
     jj = ii - 1;
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
@@ -3142,7 +3146,7 @@ void write_hex(int fd, unsigned long int hex)
  8000470:	00f107a3          	sb	a5,15(sp)
     write(fd, &towrite, 1);
  8000474:	00001097          	auipc	ra,0x1
- 8000478:	aea080e7          	jalr	-1302(ra) # 8000f5e <write>
+ 8000478:	ae6080e7          	jalr	-1306(ra) # 8000f5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
  800047c:	fc9417e3          	bne	s0,s1,800044a <write_hex+0x2e>
   }
@@ -3232,7 +3236,7 @@ __attribute__((weak)) uintptr_t handle_nmi()
  80004da:	c606                	sw	ra,12(sp)
   write(1, "nmi\n", 5);
  80004dc:	00001097          	auipc	ra,0x1
- 80004e0:	a82080e7          	jalr	-1406(ra) # 8000f5e <write>
+ 80004e0:	a7e080e7          	jalr	-1410(ra) # 8000f5a <write>
   _exit(1);
  80004e4:	4505                	li	a0,1
  80004e6:	00000097          	auipc	ra,0x0
@@ -3267,7 +3271,7 @@ __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
  800050e:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
  8000512:	4505                	li	a0,1
  8000514:	00001097          	auipc	ra,0x1
- 8000518:	a4a080e7          	jalr	-1462(ra) # 8000f5e <write>
+ 8000518:	a46080e7          	jalr	-1466(ra) # 8000f5a <write>
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
@@ -3656,8 +3660,10 @@ main:
  8000728:	0685                	addi	a3,a3,1
         bne a3, a4, 1b
  800072a:	fee69be3          	bne	a3,a4,8000720 <main+0x38>
+
+0800072e <start>:
         # Main loop to read switches and control LEDs
-1: li a0, GPIOA
+start:  li a0, GPIOA
  800072e:	40011537          	lui	a0,0x40011
  8000732:	80050513          	addi	a0,a0,-2048 # 40010800 <GPIOA>
         call gpiois # Read switch states
@@ -3672,1173 +3678,1173 @@ main:
  8000742:	862e                	mv	a2,a1
         call select_sequence
  8000744:	00000097          	auipc	ra,0x0
- 8000748:	00a080e7          	jalr	10(ra) # 800074e <select_sequence>
-        j 1b # Repeat forever
- 800074c:	b7cd                	j	800072e <main+0x46>
+ 8000748:	008080e7          	jalr	8(ra) # 800074c <select_sequence>
 
-0800074e <select_sequence>:
+0800074c <select_sequence>:
 # Select LED sequence based on switch state
 # Select LED sequence based on switch state
 select_sequence:
         # Check the switch state
         
         li t1, 0x00
- 800074e:	4301                	li	t1,0
+ 800074c:	4301                	li	t1,0
         li t2, 0x01
- 8000750:	4385                	li	t2,1
+ 800074e:	4385                	li	t2,1
         li t3, 0x02
- 8000752:	4e09                	li	t3,2
+ 8000750:	4e09                	li	t3,2
         li t4, 0x03
- 8000754:	4e8d                	li	t4,3
+ 8000752:	4e8d                	li	t4,3
         li t5, 0x04
- 8000756:	4f11                	li	t5,4
+ 8000754:	4f11                	li	t5,4
         li t6, 0x05
- 8000758:	4f95                	li	t6,5
+ 8000756:	4f95                	li	t6,5
         li s2, 0x06
- 800075a:	4919                	li	s2,6
+ 8000758:	4919                	li	s2,6
         li s3, 0x07
- 800075c:	499d                	li	s3,7
+ 800075a:	499d                	li	s3,7
+        
         li s4, 0x08
- 800075e:	4a21                	li	s4,8
+ 800075c:	4a21                	li	s4,8
         li s5, 0x09
- 8000760:	4aa5                	li	s5,9
+ 800075e:	4aa5                	li	s5,9
         li s6, 0x0A
- 8000762:	4b29                	li	s6,10
+ 8000760:	4b29                	li	s6,10
         li s7, 0x0B
- 8000764:	4bad                	li	s7,11
+ 8000762:	4bad                	li	s7,11
         li s8, 0x0C
- 8000766:	4c31                	li	s8,12
+ 8000764:	4c31                	li	s8,12
         li s9, 0x0D
- 8000768:	4cb5                	li	s9,13
+ 8000766:	4cb5                	li	s9,13
         li s10, 0x0E
- 800076a:	4d39                	li	s10,14
+ 8000768:	4d39                	li	s10,14
         li s11, 0x0F
- 800076c:	4dbd                	li	s11,15
+ 800076a:	4dbd                	li	s11,15
 
         beq a2, t1, disco0
- 800076e:	04660163          	beq	a2,t1,80007b0 <disco0>
+ 800076c:	04660063          	beq	a2,t1,80007ac <disco0>
         beq a2, t2, disco1
- 8000772:	0a760063          	beq	a2,t2,8000812 <disco1>
+ 8000770:	08760f63          	beq	a2,t2,800080e <disco1>
         beq a2, t3, disco2
- 8000776:	0fc60f63          	beq	a2,t3,8000874 <disco2>
+ 8000774:	0fc60e63          	beq	a2,t3,8000870 <disco2>
         beq a2, t4, disco3
- 800077a:	15d60e63          	beq	a2,t4,80008d6 <disco3>
+ 8000778:	15d60d63          	beq	a2,t4,80008d2 <disco3>
         beq a2, t5, disco4
- 800077e:	1be60d63          	beq	a2,t5,8000938 <disco4>
+ 800077c:	1be60c63          	beq	a2,t5,8000934 <disco4>
         beq a2, t6, disco5
- 8000782:	21f60c63          	beq	a2,t6,800099a <disco5>
+ 8000780:	21f60b63          	beq	a2,t6,8000996 <disco5>
         beq a2, s2, disco6
- 8000786:	27260b63          	beq	a2,s2,80009fc <disco6>
+ 8000784:	27260a63          	beq	a2,s2,80009f8 <disco6>
         beq a2, s3, disco7
- 800078a:	2d360a63          	beq	a2,s3,8000a5e <disco7>
+ 8000788:	2d360963          	beq	a2,s3,8000a5a <disco7>
         beq a2, s4, disco0inv
- 800078e:	33460963          	beq	a2,s4,8000ac0 <disco0inv>
+ 800078c:	33460863          	beq	a2,s4,8000abc <disco0inv>
         beq a2, s5, disco1inv
- 8000792:	3b560063          	beq	a2,s5,8000b32 <disco1inv>
+ 8000790:	39560f63          	beq	a2,s5,8000b2e <disco1inv>
         beq a2, s6, disco2inv
- 8000796:	41660763          	beq	a2,s6,8000ba4 <disco2inv>
+ 8000794:	41660663          	beq	a2,s6,8000ba0 <disco2inv>
         beq a2, s7, disco3inv
- 800079a:	47760e63          	beq	a2,s7,8000c16 <disco3inv>
+ 8000798:	47760d63          	beq	a2,s7,8000c12 <disco3inv>
         beq a2, s8, disco4inv
- 800079e:	4f860563          	beq	a2,s8,8000c88 <disco4inv>
+ 800079c:	4f860463          	beq	a2,s8,8000c84 <disco4inv>
         beq a2, s9, disco5inv
- 80007a2:	55960c63          	beq	a2,s9,8000cfa <disco5inv>
+ 80007a0:	55960b63          	beq	a2,s9,8000cf6 <disco5inv>
         beq a2, s10, disco6inv
- 80007a6:	5da60363          	beq	a2,s10,8000d6c <disco6inv>
+ 80007a4:	5da60263          	beq	a2,s10,8000d68 <disco6inv>
         beq a2, s11, disco7inv
- 80007aa:	63b60a63          	beq	a2,s11,8000dde <disco7inv>
+ 80007a8:	63b60963          	beq	a2,s11,8000dda <disco7inv>
 
-        ret # Return to main loop if not the specified switch state
- 80007ae:	8082                	ret
+080007ac <disco0>:
 
-080007b0 <disco0>:
+        #ret # Return to main loop if not the specified switch state
 disco0:
         la t0, sequence0
- 80007b0:	18000297          	auipc	t0,0x18000
- 80007b4:	85028293          	addi	t0,t0,-1968 # 20000000 <_data>
+ 80007ac:	18000297          	auipc	t0,0x18000
+ 80007b0:	85428293          	addi	t0,t0,-1964 # 20000000 <_data>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 80007b8:	40011537          	lui	a0,0x40011
- 80007bc:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 80007b4:	40011537          	lui	a0,0x40011
+ 80007b8:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 80007c0:	00028583          	lb	a1,0(t0)
+ 80007bc:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 80007c4:	00000097          	auipc	ra,0x0
- 80007c8:	ef8080e7          	jalr	-264(ra) # 80006bc <gpiooc>
+ 80007c0:	00000097          	auipc	ra,0x0
+ 80007c4:	efc080e7          	jalr	-260(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 80007cc:	00000097          	auipc	ra,0x0
- 80007d0:	684080e7          	jalr	1668(ra) # 8000e50 <delay>
+ 80007c8:	00000097          	auipc	ra,0x0
+ 80007cc:	684080e7          	jalr	1668(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 80007d4:	00128583          	lb	a1,1(t0)
+ 80007d0:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 80007d8:	00000097          	auipc	ra,0x0
- 80007dc:	ee4080e7          	jalr	-284(ra) # 80006bc <gpiooc>
+ 80007d4:	00000097          	auipc	ra,0x0
+ 80007d8:	ee8080e7          	jalr	-280(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 80007e0:	00000097          	auipc	ra,0x0
- 80007e4:	670080e7          	jalr	1648(ra) # 8000e50 <delay>
+ 80007dc:	00000097          	auipc	ra,0x0
+ 80007e0:	670080e7          	jalr	1648(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 80007e8:	00228583          	lb	a1,2(t0)
+ 80007e4:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 80007ec:	00000097          	auipc	ra,0x0
- 80007f0:	ed0080e7          	jalr	-304(ra) # 80006bc <gpiooc>
+ 80007e8:	00000097          	auipc	ra,0x0
+ 80007ec:	ed4080e7          	jalr	-300(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 80007f4:	00000097          	auipc	ra,0x0
- 80007f8:	65c080e7          	jalr	1628(ra) # 8000e50 <delay>
+ 80007f0:	00000097          	auipc	ra,0x0
+ 80007f4:	65c080e7          	jalr	1628(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 80007fc:	00328583          	lb	a1,3(t0)
+ 80007f8:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000800:	00000097          	auipc	ra,0x0
- 8000804:	ebc080e7          	jalr	-324(ra) # 80006bc <gpiooc>
+ 80007fc:	00000097          	auipc	ra,0x0
+ 8000800:	ec0080e7          	jalr	-320(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000808:	00000097          	auipc	ra,0x0
- 800080c:	648080e7          	jalr	1608(ra) # 8000e50 <delay>
-        j select_sequence # 0 the sequence indefinitely
- 8000810:	bf3d                	j	800074e <select_sequence>
+ 8000804:	00000097          	auipc	ra,0x0
+ 8000808:	648080e7          	jalr	1608(ra) # 8000e4c <delay>
+        
+        j start
+ 800080c:	b70d                	j	800072e <start>
 
-08000812 <disco1>:
+0800080e <disco1>:
 
 disco1:
         la t0, sequence1
- 8000812:	17fff297          	auipc	t0,0x17fff
- 8000816:	7f228293          	addi	t0,t0,2034 # 20000004 <sequence1>
+ 800080e:	17fff297          	auipc	t0,0x17fff
+ 8000812:	7f628293          	addi	t0,t0,2038 # 20000004 <sequence1>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 800081a:	40011537          	lui	a0,0x40011
- 800081e:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000816:	40011537          	lui	a0,0x40011
+ 800081a:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000822:	00028583          	lb	a1,0(t0)
+ 800081e:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000826:	00000097          	auipc	ra,0x0
- 800082a:	e96080e7          	jalr	-362(ra) # 80006bc <gpiooc>
+ 8000822:	00000097          	auipc	ra,0x0
+ 8000826:	e9a080e7          	jalr	-358(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 800082e:	00000097          	auipc	ra,0x0
- 8000832:	622080e7          	jalr	1570(ra) # 8000e50 <delay>
+ 800082a:	00000097          	auipc	ra,0x0
+ 800082e:	622080e7          	jalr	1570(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000836:	00128583          	lb	a1,1(t0)
+ 8000832:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 800083a:	00000097          	auipc	ra,0x0
- 800083e:	e82080e7          	jalr	-382(ra) # 80006bc <gpiooc>
+ 8000836:	00000097          	auipc	ra,0x0
+ 800083a:	e86080e7          	jalr	-378(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000842:	00000097          	auipc	ra,0x0
- 8000846:	60e080e7          	jalr	1550(ra) # 8000e50 <delay>
+ 800083e:	00000097          	auipc	ra,0x0
+ 8000842:	60e080e7          	jalr	1550(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 800084a:	00228583          	lb	a1,2(t0)
+ 8000846:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 800084e:	00000097          	auipc	ra,0x0
- 8000852:	e6e080e7          	jalr	-402(ra) # 80006bc <gpiooc>
+ 800084a:	00000097          	auipc	ra,0x0
+ 800084e:	e72080e7          	jalr	-398(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000856:	00000097          	auipc	ra,0x0
- 800085a:	5fa080e7          	jalr	1530(ra) # 8000e50 <delay>
+ 8000852:	00000097          	auipc	ra,0x0
+ 8000856:	5fa080e7          	jalr	1530(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 800085e:	00328583          	lb	a1,3(t0)
+ 800085a:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000862:	00000097          	auipc	ra,0x0
- 8000866:	e5a080e7          	jalr	-422(ra) # 80006bc <gpiooc>
+ 800085e:	00000097          	auipc	ra,0x0
+ 8000862:	e5e080e7          	jalr	-418(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 800086a:	00000097          	auipc	ra,0x0
- 800086e:	5e6080e7          	jalr	1510(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000872:	bdf1                	j	800074e <select_sequence>
+ 8000866:	00000097          	auipc	ra,0x0
+ 800086a:	5e6080e7          	jalr	1510(ra) # 8000e4c <delay>
+        
+        j start
+ 800086e:	b5c1                	j	800072e <start>
 
-08000874 <disco2>:
+08000870 <disco2>:
 
 disco2:
         la t0, sequence2
- 8000874:	17fff297          	auipc	t0,0x17fff
- 8000878:	79428293          	addi	t0,t0,1940 # 20000008 <sequence2>
+ 8000870:	17fff297          	auipc	t0,0x17fff
+ 8000874:	79828293          	addi	t0,t0,1944 # 20000008 <sequence2>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 800087c:	40011537          	lui	a0,0x40011
- 8000880:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000878:	40011537          	lui	a0,0x40011
+ 800087c:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000884:	00028583          	lb	a1,0(t0)
+ 8000880:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000888:	00000097          	auipc	ra,0x0
- 800088c:	e34080e7          	jalr	-460(ra) # 80006bc <gpiooc>
+ 8000884:	00000097          	auipc	ra,0x0
+ 8000888:	e38080e7          	jalr	-456(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000890:	00000097          	auipc	ra,0x0
- 8000894:	5c0080e7          	jalr	1472(ra) # 8000e50 <delay>
+ 800088c:	00000097          	auipc	ra,0x0
+ 8000890:	5c0080e7          	jalr	1472(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000898:	00128583          	lb	a1,1(t0)
+ 8000894:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 800089c:	00000097          	auipc	ra,0x0
- 80008a0:	e20080e7          	jalr	-480(ra) # 80006bc <gpiooc>
+ 8000898:	00000097          	auipc	ra,0x0
+ 800089c:	e24080e7          	jalr	-476(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 80008a4:	00000097          	auipc	ra,0x0
- 80008a8:	5ac080e7          	jalr	1452(ra) # 8000e50 <delay>
+ 80008a0:	00000097          	auipc	ra,0x0
+ 80008a4:	5ac080e7          	jalr	1452(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 80008ac:	00228583          	lb	a1,2(t0)
+ 80008a8:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 80008b0:	00000097          	auipc	ra,0x0
- 80008b4:	e0c080e7          	jalr	-500(ra) # 80006bc <gpiooc>
+ 80008ac:	00000097          	auipc	ra,0x0
+ 80008b0:	e10080e7          	jalr	-496(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 80008b8:	00000097          	auipc	ra,0x0
- 80008bc:	598080e7          	jalr	1432(ra) # 8000e50 <delay>
+ 80008b4:	00000097          	auipc	ra,0x0
+ 80008b8:	598080e7          	jalr	1432(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 80008c0:	00328583          	lb	a1,3(t0)
+ 80008bc:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 80008c4:	00000097          	auipc	ra,0x0
- 80008c8:	df8080e7          	jalr	-520(ra) # 80006bc <gpiooc>
+ 80008c0:	00000097          	auipc	ra,0x0
+ 80008c4:	dfc080e7          	jalr	-516(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 80008cc:	00000097          	auipc	ra,0x0
- 80008d0:	584080e7          	jalr	1412(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 80008d4:	bdad                	j	800074e <select_sequence>
+ 80008c8:	00000097          	auipc	ra,0x0
+ 80008cc:	584080e7          	jalr	1412(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 80008d0:	bdb9                	j	800072e <start>
 
-080008d6 <disco3>:
+080008d2 <disco3>:
 
 disco3:
         la t0, sequence3
- 80008d6:	17fff297          	auipc	t0,0x17fff
- 80008da:	73628293          	addi	t0,t0,1846 # 2000000c <sequence3>
+ 80008d2:	17fff297          	auipc	t0,0x17fff
+ 80008d6:	73a28293          	addi	t0,t0,1850 # 2000000c <sequence3>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 80008de:	40011537          	lui	a0,0x40011
- 80008e2:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 80008da:	40011537          	lui	a0,0x40011
+ 80008de:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 80008e6:	00028583          	lb	a1,0(t0)
+ 80008e2:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 80008ea:	00000097          	auipc	ra,0x0
- 80008ee:	dd2080e7          	jalr	-558(ra) # 80006bc <gpiooc>
+ 80008e6:	00000097          	auipc	ra,0x0
+ 80008ea:	dd6080e7          	jalr	-554(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 80008f2:	00000097          	auipc	ra,0x0
- 80008f6:	55e080e7          	jalr	1374(ra) # 8000e50 <delay>
+ 80008ee:	00000097          	auipc	ra,0x0
+ 80008f2:	55e080e7          	jalr	1374(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 80008fa:	00128583          	lb	a1,1(t0)
+ 80008f6:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 80008fe:	00000097          	auipc	ra,0x0
- 8000902:	dbe080e7          	jalr	-578(ra) # 80006bc <gpiooc>
+ 80008fa:	00000097          	auipc	ra,0x0
+ 80008fe:	dc2080e7          	jalr	-574(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000906:	00000097          	auipc	ra,0x0
- 800090a:	54a080e7          	jalr	1354(ra) # 8000e50 <delay>
+ 8000902:	00000097          	auipc	ra,0x0
+ 8000906:	54a080e7          	jalr	1354(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 800090e:	00228583          	lb	a1,2(t0)
+ 800090a:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000912:	00000097          	auipc	ra,0x0
- 8000916:	daa080e7          	jalr	-598(ra) # 80006bc <gpiooc>
+ 800090e:	00000097          	auipc	ra,0x0
+ 8000912:	dae080e7          	jalr	-594(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 800091a:	00000097          	auipc	ra,0x0
- 800091e:	536080e7          	jalr	1334(ra) # 8000e50 <delay>
+ 8000916:	00000097          	auipc	ra,0x0
+ 800091a:	536080e7          	jalr	1334(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000922:	00328583          	lb	a1,3(t0)
+ 800091e:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000926:	00000097          	auipc	ra,0x0
- 800092a:	d96080e7          	jalr	-618(ra) # 80006bc <gpiooc>
+ 8000922:	00000097          	auipc	ra,0x0
+ 8000926:	d9a080e7          	jalr	-614(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 800092e:	00000097          	auipc	ra,0x0
- 8000932:	522080e7          	jalr	1314(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000936:	bd21                	j	800074e <select_sequence>
+ 800092a:	00000097          	auipc	ra,0x0
+ 800092e:	522080e7          	jalr	1314(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000932:	bbf5                	j	800072e <start>
 
-08000938 <disco4>:
+08000934 <disco4>:
 
 disco4:
         la t0, sequence4
- 8000938:	17fff297          	auipc	t0,0x17fff
- 800093c:	6d828293          	addi	t0,t0,1752 # 20000010 <sequence4>
+ 8000934:	17fff297          	auipc	t0,0x17fff
+ 8000938:	6dc28293          	addi	t0,t0,1756 # 20000010 <sequence4>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000940:	40011537          	lui	a0,0x40011
- 8000944:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 800093c:	40011537          	lui	a0,0x40011
+ 8000940:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000948:	00028583          	lb	a1,0(t0)
+ 8000944:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 800094c:	00000097          	auipc	ra,0x0
- 8000950:	d70080e7          	jalr	-656(ra) # 80006bc <gpiooc>
+ 8000948:	00000097          	auipc	ra,0x0
+ 800094c:	d74080e7          	jalr	-652(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000954:	00000097          	auipc	ra,0x0
- 8000958:	4fc080e7          	jalr	1276(ra) # 8000e50 <delay>
+ 8000950:	00000097          	auipc	ra,0x0
+ 8000954:	4fc080e7          	jalr	1276(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 800095c:	00128583          	lb	a1,1(t0)
+ 8000958:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 8000960:	00000097          	auipc	ra,0x0
- 8000964:	d5c080e7          	jalr	-676(ra) # 80006bc <gpiooc>
+ 800095c:	00000097          	auipc	ra,0x0
+ 8000960:	d60080e7          	jalr	-672(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000968:	00000097          	auipc	ra,0x0
- 800096c:	4e8080e7          	jalr	1256(ra) # 8000e50 <delay>
+ 8000964:	00000097          	auipc	ra,0x0
+ 8000968:	4e8080e7          	jalr	1256(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000970:	00228583          	lb	a1,2(t0)
+ 800096c:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000974:	00000097          	auipc	ra,0x0
- 8000978:	d48080e7          	jalr	-696(ra) # 80006bc <gpiooc>
+ 8000970:	00000097          	auipc	ra,0x0
+ 8000974:	d4c080e7          	jalr	-692(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 800097c:	00000097          	auipc	ra,0x0
- 8000980:	4d4080e7          	jalr	1236(ra) # 8000e50 <delay>
+ 8000978:	00000097          	auipc	ra,0x0
+ 800097c:	4d4080e7          	jalr	1236(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000984:	00328583          	lb	a1,3(t0)
+ 8000980:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000988:	00000097          	auipc	ra,0x0
- 800098c:	d34080e7          	jalr	-716(ra) # 80006bc <gpiooc>
+ 8000984:	00000097          	auipc	ra,0x0
+ 8000988:	d38080e7          	jalr	-712(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000990:	00000097          	auipc	ra,0x0
- 8000994:	4c0080e7          	jalr	1216(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000998:	bb5d                	j	800074e <select_sequence>
+ 800098c:	00000097          	auipc	ra,0x0
+ 8000990:	4c0080e7          	jalr	1216(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000994:	bb69                	j	800072e <start>
 
-0800099a <disco5>:
+08000996 <disco5>:
 
 disco5:
         la t0, sequence5
- 800099a:	17fff297          	auipc	t0,0x17fff
- 800099e:	67a28293          	addi	t0,t0,1658 # 20000014 <sequence5>
+ 8000996:	17fff297          	auipc	t0,0x17fff
+ 800099a:	67e28293          	addi	t0,t0,1662 # 20000014 <sequence5>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 80009a2:	40011537          	lui	a0,0x40011
- 80009a6:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 800099e:	40011537          	lui	a0,0x40011
+ 80009a2:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 80009aa:	00028583          	lb	a1,0(t0)
+ 80009a6:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 80009ae:	00000097          	auipc	ra,0x0
- 80009b2:	d0e080e7          	jalr	-754(ra) # 80006bc <gpiooc>
+ 80009aa:	00000097          	auipc	ra,0x0
+ 80009ae:	d12080e7          	jalr	-750(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 80009b6:	00000097          	auipc	ra,0x0
- 80009ba:	49a080e7          	jalr	1178(ra) # 8000e50 <delay>
+ 80009b2:	00000097          	auipc	ra,0x0
+ 80009b6:	49a080e7          	jalr	1178(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 80009be:	00128583          	lb	a1,1(t0)
+ 80009ba:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 80009c2:	00000097          	auipc	ra,0x0
- 80009c6:	cfa080e7          	jalr	-774(ra) # 80006bc <gpiooc>
+ 80009be:	00000097          	auipc	ra,0x0
+ 80009c2:	cfe080e7          	jalr	-770(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 80009ca:	00000097          	auipc	ra,0x0
- 80009ce:	486080e7          	jalr	1158(ra) # 8000e50 <delay>
+ 80009c6:	00000097          	auipc	ra,0x0
+ 80009ca:	486080e7          	jalr	1158(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 80009d2:	00228583          	lb	a1,2(t0)
+ 80009ce:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 80009d6:	00000097          	auipc	ra,0x0
- 80009da:	ce6080e7          	jalr	-794(ra) # 80006bc <gpiooc>
+ 80009d2:	00000097          	auipc	ra,0x0
+ 80009d6:	cea080e7          	jalr	-790(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 80009de:	00000097          	auipc	ra,0x0
- 80009e2:	472080e7          	jalr	1138(ra) # 8000e50 <delay>
+ 80009da:	00000097          	auipc	ra,0x0
+ 80009de:	472080e7          	jalr	1138(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 80009e6:	00328583          	lb	a1,3(t0)
+ 80009e2:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 80009ea:	00000097          	auipc	ra,0x0
- 80009ee:	cd2080e7          	jalr	-814(ra) # 80006bc <gpiooc>
+ 80009e6:	00000097          	auipc	ra,0x0
+ 80009ea:	cd6080e7          	jalr	-810(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 80009f2:	00000097          	auipc	ra,0x0
- 80009f6:	45e080e7          	jalr	1118(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 80009fa:	bb91                	j	800074e <select_sequence>
+ 80009ee:	00000097          	auipc	ra,0x0
+ 80009f2:	45e080e7          	jalr	1118(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 80009f6:	bb25                	j	800072e <start>
 
-080009fc <disco6>:
+080009f8 <disco6>:
 
 disco6:
         la t0, sequence6
- 80009fc:	17fff297          	auipc	t0,0x17fff
- 8000a00:	61c28293          	addi	t0,t0,1564 # 20000018 <sequence6>
+ 80009f8:	17fff297          	auipc	t0,0x17fff
+ 80009fc:	62028293          	addi	t0,t0,1568 # 20000018 <sequence6>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000a04:	40011537          	lui	a0,0x40011
- 8000a08:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000a00:	40011537          	lui	a0,0x40011
+ 8000a04:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000a0c:	00028583          	lb	a1,0(t0)
+ 8000a08:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000a10:	00000097          	auipc	ra,0x0
- 8000a14:	cac080e7          	jalr	-852(ra) # 80006bc <gpiooc>
+ 8000a0c:	00000097          	auipc	ra,0x0
+ 8000a10:	cb0080e7          	jalr	-848(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000a18:	00000097          	auipc	ra,0x0
- 8000a1c:	438080e7          	jalr	1080(ra) # 8000e50 <delay>
+ 8000a14:	00000097          	auipc	ra,0x0
+ 8000a18:	438080e7          	jalr	1080(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000a20:	00128583          	lb	a1,1(t0)
+ 8000a1c:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 8000a24:	00000097          	auipc	ra,0x0
- 8000a28:	c98080e7          	jalr	-872(ra) # 80006bc <gpiooc>
+ 8000a20:	00000097          	auipc	ra,0x0
+ 8000a24:	c9c080e7          	jalr	-868(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000a2c:	00000097          	auipc	ra,0x0
- 8000a30:	424080e7          	jalr	1060(ra) # 8000e50 <delay>
+ 8000a28:	00000097          	auipc	ra,0x0
+ 8000a2c:	424080e7          	jalr	1060(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000a34:	00228583          	lb	a1,2(t0)
+ 8000a30:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000a38:	00000097          	auipc	ra,0x0
- 8000a3c:	c84080e7          	jalr	-892(ra) # 80006bc <gpiooc>
+ 8000a34:	00000097          	auipc	ra,0x0
+ 8000a38:	c88080e7          	jalr	-888(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000a40:	00000097          	auipc	ra,0x0
- 8000a44:	410080e7          	jalr	1040(ra) # 8000e50 <delay>
+ 8000a3c:	00000097          	auipc	ra,0x0
+ 8000a40:	410080e7          	jalr	1040(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000a48:	00328583          	lb	a1,3(t0)
+ 8000a44:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000a4c:	00000097          	auipc	ra,0x0
- 8000a50:	c70080e7          	jalr	-912(ra) # 80006bc <gpiooc>
+ 8000a48:	00000097          	auipc	ra,0x0
+ 8000a4c:	c74080e7          	jalr	-908(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000a54:	00000097          	auipc	ra,0x0
- 8000a58:	3fc080e7          	jalr	1020(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000a5c:	b9cd                	j	800074e <select_sequence>
+ 8000a50:	00000097          	auipc	ra,0x0
+ 8000a54:	3fc080e7          	jalr	1020(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000a58:	b9d9                	j	800072e <start>
 
-08000a5e <disco7>:
+08000a5a <disco7>:
 
 disco7:
         la t0, sequence7
- 8000a5e:	17fff297          	auipc	t0,0x17fff
- 8000a62:	5be28293          	addi	t0,t0,1470 # 2000001c <sequence7>
+ 8000a5a:	17fff297          	auipc	t0,0x17fff
+ 8000a5e:	5c228293          	addi	t0,t0,1474 # 2000001c <sequence7>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000a66:	40011537          	lui	a0,0x40011
- 8000a6a:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000a62:	40011537          	lui	a0,0x40011
+ 8000a66:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000a6e:	00028583          	lb	a1,0(t0)
+ 8000a6a:	00028583          	lb	a1,0(t0)
         call gpiooc  # Update LEDs
- 8000a72:	00000097          	auipc	ra,0x0
- 8000a76:	c4a080e7          	jalr	-950(ra) # 80006bc <gpiooc>
+ 8000a6e:	00000097          	auipc	ra,0x0
+ 8000a72:	c4e080e7          	jalr	-946(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000a7a:	00000097          	auipc	ra,0x0
- 8000a7e:	3d6080e7          	jalr	982(ra) # 8000e50 <delay>
+ 8000a76:	00000097          	auipc	ra,0x0
+ 8000a7a:	3d6080e7          	jalr	982(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000a82:	00128583          	lb	a1,1(t0)
+ 8000a7e:	00128583          	lb	a1,1(t0)
         call gpiooc   # Update LEDs
- 8000a86:	00000097          	auipc	ra,0x0
- 8000a8a:	c36080e7          	jalr	-970(ra) # 80006bc <gpiooc>
+ 8000a82:	00000097          	auipc	ra,0x0
+ 8000a86:	c3a080e7          	jalr	-966(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000a8e:	00000097          	auipc	ra,0x0
- 8000a92:	3c2080e7          	jalr	962(ra) # 8000e50 <delay>
+ 8000a8a:	00000097          	auipc	ra,0x0
+ 8000a8e:	3c2080e7          	jalr	962(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000a96:	00228583          	lb	a1,2(t0)
+ 8000a92:	00228583          	lb	a1,2(t0)
         call gpiooc   # Update LEDs
- 8000a9a:	00000097          	auipc	ra,0x0
- 8000a9e:	c22080e7          	jalr	-990(ra) # 80006bc <gpiooc>
+ 8000a96:	00000097          	auipc	ra,0x0
+ 8000a9a:	c26080e7          	jalr	-986(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000aa2:	00000097          	auipc	ra,0x0
- 8000aa6:	3ae080e7          	jalr	942(ra) # 8000e50 <delay>
+ 8000a9e:	00000097          	auipc	ra,0x0
+ 8000aa2:	3ae080e7          	jalr	942(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000aaa:	00328583          	lb	a1,3(t0)
+ 8000aa6:	00328583          	lb	a1,3(t0)
         call gpiooc # Update LEDs
- 8000aae:	00000097          	auipc	ra,0x0
- 8000ab2:	c0e080e7          	jalr	-1010(ra) # 80006bc <gpiooc>
+ 8000aaa:	00000097          	auipc	ra,0x0
+ 8000aae:	c12080e7          	jalr	-1006(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000ab6:	00000097          	auipc	ra,0x0
- 8000aba:	39a080e7          	jalr	922(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000abe:	b941                	j	800074e <select_sequence>
+ 8000ab2:	00000097          	auipc	ra,0x0
+ 8000ab6:	39a080e7          	jalr	922(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000aba:	b995                	j	800072e <start>
 
-08000ac0 <disco0inv>:
+08000abc <disco0inv>:
 
 disco0inv:
         la t0, sequence0
- 8000ac0:	17fff297          	auipc	t0,0x17fff
- 8000ac4:	54028293          	addi	t0,t0,1344 # 20000000 <_data>
+ 8000abc:	17fff297          	auipc	t0,0x17fff
+ 8000ac0:	54428293          	addi	t0,t0,1348 # 20000000 <_data>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000ac8:	40011537          	lui	a0,0x40011
- 8000acc:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000ac4:	40011537          	lui	a0,0x40011
+ 8000ac8:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000ad0:	00028583          	lb	a1,0(t0)
+ 8000acc:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000ad4:	fff5c593          	not	a1,a1
+ 8000ad0:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000ad8:	00000097          	auipc	ra,0x0
- 8000adc:	be4080e7          	jalr	-1052(ra) # 80006bc <gpiooc>
+ 8000ad4:	00000097          	auipc	ra,0x0
+ 8000ad8:	be8080e7          	jalr	-1048(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000ae0:	00000097          	auipc	ra,0x0
- 8000ae4:	370080e7          	jalr	880(ra) # 8000e50 <delay>
+ 8000adc:	00000097          	auipc	ra,0x0
+ 8000ae0:	370080e7          	jalr	880(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000ae8:	00128583          	lb	a1,1(t0)
+ 8000ae4:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000aec:	fff5c593          	not	a1,a1
+ 8000ae8:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000af0:	00000097          	auipc	ra,0x0
- 8000af4:	bcc080e7          	jalr	-1076(ra) # 80006bc <gpiooc>
+ 8000aec:	00000097          	auipc	ra,0x0
+ 8000af0:	bd0080e7          	jalr	-1072(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000af8:	00000097          	auipc	ra,0x0
- 8000afc:	358080e7          	jalr	856(ra) # 8000e50 <delay>
+ 8000af4:	00000097          	auipc	ra,0x0
+ 8000af8:	358080e7          	jalr	856(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000b00:	00228583          	lb	a1,2(t0)
+ 8000afc:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000b04:	fff5c593          	not	a1,a1
+ 8000b00:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000b08:	00000097          	auipc	ra,0x0
- 8000b0c:	bb4080e7          	jalr	-1100(ra) # 80006bc <gpiooc>
+ 8000b04:	00000097          	auipc	ra,0x0
+ 8000b08:	bb8080e7          	jalr	-1096(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000b10:	00000097          	auipc	ra,0x0
- 8000b14:	340080e7          	jalr	832(ra) # 8000e50 <delay>
+ 8000b0c:	00000097          	auipc	ra,0x0
+ 8000b10:	340080e7          	jalr	832(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000b18:	00328583          	lb	a1,3(t0)
+ 8000b14:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000b1c:	fff5c593          	not	a1,a1
+ 8000b18:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000b20:	00000097          	auipc	ra,0x0
- 8000b24:	b9c080e7          	jalr	-1124(ra) # 80006bc <gpiooc>
+ 8000b1c:	00000097          	auipc	ra,0x0
+ 8000b20:	ba0080e7          	jalr	-1120(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000b28:	00000097          	auipc	ra,0x0
- 8000b2c:	328080e7          	jalr	808(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000b30:	b939                	j	800074e <select_sequence>
+ 8000b24:	00000097          	auipc	ra,0x0
+ 8000b28:	328080e7          	jalr	808(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000b2c:	b109                	j	800072e <start>
 
-08000b32 <disco1inv>:
+08000b2e <disco1inv>:
 
 disco1inv:
         la t0, sequence1
- 8000b32:	17fff297          	auipc	t0,0x17fff
- 8000b36:	4d228293          	addi	t0,t0,1234 # 20000004 <sequence1>
+ 8000b2e:	17fff297          	auipc	t0,0x17fff
+ 8000b32:	4d628293          	addi	t0,t0,1238 # 20000004 <sequence1>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000b3a:	40011537          	lui	a0,0x40011
- 8000b3e:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000b36:	40011537          	lui	a0,0x40011
+ 8000b3a:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000b42:	00028583          	lb	a1,0(t0)
+ 8000b3e:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000b46:	fff5c593          	not	a1,a1
+ 8000b42:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000b4a:	00000097          	auipc	ra,0x0
- 8000b4e:	b72080e7          	jalr	-1166(ra) # 80006bc <gpiooc>
+ 8000b46:	00000097          	auipc	ra,0x0
+ 8000b4a:	b76080e7          	jalr	-1162(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000b52:	00000097          	auipc	ra,0x0
- 8000b56:	2fe080e7          	jalr	766(ra) # 8000e50 <delay>
+ 8000b4e:	00000097          	auipc	ra,0x0
+ 8000b52:	2fe080e7          	jalr	766(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000b5a:	00128583          	lb	a1,1(t0)
+ 8000b56:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000b5e:	fff5c593          	not	a1,a1
+ 8000b5a:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000b62:	00000097          	auipc	ra,0x0
- 8000b66:	b5a080e7          	jalr	-1190(ra) # 80006bc <gpiooc>
+ 8000b5e:	00000097          	auipc	ra,0x0
+ 8000b62:	b5e080e7          	jalr	-1186(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000b6a:	00000097          	auipc	ra,0x0
- 8000b6e:	2e6080e7          	jalr	742(ra) # 8000e50 <delay>
+ 8000b66:	00000097          	auipc	ra,0x0
+ 8000b6a:	2e6080e7          	jalr	742(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000b72:	00228583          	lb	a1,2(t0)
+ 8000b6e:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000b76:	fff5c593          	not	a1,a1
+ 8000b72:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000b7a:	00000097          	auipc	ra,0x0
- 8000b7e:	b42080e7          	jalr	-1214(ra) # 80006bc <gpiooc>
+ 8000b76:	00000097          	auipc	ra,0x0
+ 8000b7a:	b46080e7          	jalr	-1210(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000b82:	00000097          	auipc	ra,0x0
- 8000b86:	2ce080e7          	jalr	718(ra) # 8000e50 <delay>
+ 8000b7e:	00000097          	auipc	ra,0x0
+ 8000b82:	2ce080e7          	jalr	718(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000b8a:	00328583          	lb	a1,3(t0)
+ 8000b86:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000b8e:	fff5c593          	not	a1,a1
+ 8000b8a:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000b92:	00000097          	auipc	ra,0x0
- 8000b96:	b2a080e7          	jalr	-1238(ra) # 80006bc <gpiooc>
+ 8000b8e:	00000097          	auipc	ra,0x0
+ 8000b92:	b2e080e7          	jalr	-1234(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000b9a:	00000097          	auipc	ra,0x0
- 8000b9e:	2b6080e7          	jalr	694(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000ba2:	b675                	j	800074e <select_sequence>
+ 8000b96:	00000097          	auipc	ra,0x0
+ 8000b9a:	2b6080e7          	jalr	694(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000b9e:	be41                	j	800072e <start>
 
-08000ba4 <disco2inv>:
+08000ba0 <disco2inv>:
 
 disco2inv:
         la t0, sequence2
- 8000ba4:	17fff297          	auipc	t0,0x17fff
- 8000ba8:	46428293          	addi	t0,t0,1124 # 20000008 <sequence2>
+ 8000ba0:	17fff297          	auipc	t0,0x17fff
+ 8000ba4:	46828293          	addi	t0,t0,1128 # 20000008 <sequence2>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000bac:	40011537          	lui	a0,0x40011
- 8000bb0:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000ba8:	40011537          	lui	a0,0x40011
+ 8000bac:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000bb4:	00028583          	lb	a1,0(t0)
+ 8000bb0:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000bb8:	fff5c593          	not	a1,a1
+ 8000bb4:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000bbc:	00000097          	auipc	ra,0x0
- 8000bc0:	b00080e7          	jalr	-1280(ra) # 80006bc <gpiooc>
+ 8000bb8:	00000097          	auipc	ra,0x0
+ 8000bbc:	b04080e7          	jalr	-1276(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000bc4:	00000097          	auipc	ra,0x0
- 8000bc8:	28c080e7          	jalr	652(ra) # 8000e50 <delay>
+ 8000bc0:	00000097          	auipc	ra,0x0
+ 8000bc4:	28c080e7          	jalr	652(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000bcc:	00128583          	lb	a1,1(t0)
+ 8000bc8:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000bd0:	fff5c593          	not	a1,a1
+ 8000bcc:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000bd4:	00000097          	auipc	ra,0x0
- 8000bd8:	ae8080e7          	jalr	-1304(ra) # 80006bc <gpiooc>
+ 8000bd0:	00000097          	auipc	ra,0x0
+ 8000bd4:	aec080e7          	jalr	-1300(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000bdc:	00000097          	auipc	ra,0x0
- 8000be0:	274080e7          	jalr	628(ra) # 8000e50 <delay>
+ 8000bd8:	00000097          	auipc	ra,0x0
+ 8000bdc:	274080e7          	jalr	628(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000be4:	00228583          	lb	a1,2(t0)
+ 8000be0:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000be8:	fff5c593          	not	a1,a1
+ 8000be4:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000bec:	00000097          	auipc	ra,0x0
- 8000bf0:	ad0080e7          	jalr	-1328(ra) # 80006bc <gpiooc>
+ 8000be8:	00000097          	auipc	ra,0x0
+ 8000bec:	ad4080e7          	jalr	-1324(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000bf4:	00000097          	auipc	ra,0x0
- 8000bf8:	25c080e7          	jalr	604(ra) # 8000e50 <delay>
+ 8000bf0:	00000097          	auipc	ra,0x0
+ 8000bf4:	25c080e7          	jalr	604(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000bfc:	00328583          	lb	a1,3(t0)
+ 8000bf8:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000c00:	fff5c593          	not	a1,a1
+ 8000bfc:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000c04:	00000097          	auipc	ra,0x0
- 8000c08:	ab8080e7          	jalr	-1352(ra) # 80006bc <gpiooc>
+ 8000c00:	00000097          	auipc	ra,0x0
+ 8000c04:	abc080e7          	jalr	-1348(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000c0c:	00000097          	auipc	ra,0x0
- 8000c10:	244080e7          	jalr	580(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000c14:	be2d                	j	800074e <select_sequence>
+ 8000c08:	00000097          	auipc	ra,0x0
+ 8000c0c:	244080e7          	jalr	580(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000c10:	be39                	j	800072e <start>
 
-08000c16 <disco3inv>:
+08000c12 <disco3inv>:
 
 disco3inv:
         la t0, sequence3
- 8000c16:	17fff297          	auipc	t0,0x17fff
- 8000c1a:	3f628293          	addi	t0,t0,1014 # 2000000c <sequence3>
+ 8000c12:	17fff297          	auipc	t0,0x17fff
+ 8000c16:	3fa28293          	addi	t0,t0,1018 # 2000000c <sequence3>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000c1e:	40011537          	lui	a0,0x40011
- 8000c22:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000c1a:	40011537          	lui	a0,0x40011
+ 8000c1e:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000c26:	00028583          	lb	a1,0(t0)
+ 8000c22:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000c2a:	fff5c593          	not	a1,a1
+ 8000c26:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000c2e:	00000097          	auipc	ra,0x0
- 8000c32:	a8e080e7          	jalr	-1394(ra) # 80006bc <gpiooc>
+ 8000c2a:	00000097          	auipc	ra,0x0
+ 8000c2e:	a92080e7          	jalr	-1390(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000c36:	00000097          	auipc	ra,0x0
- 8000c3a:	21a080e7          	jalr	538(ra) # 8000e50 <delay>
+ 8000c32:	00000097          	auipc	ra,0x0
+ 8000c36:	21a080e7          	jalr	538(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000c3e:	00128583          	lb	a1,1(t0)
+ 8000c3a:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000c42:	fff5c593          	not	a1,a1
+ 8000c3e:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000c46:	00000097          	auipc	ra,0x0
- 8000c4a:	a76080e7          	jalr	-1418(ra) # 80006bc <gpiooc>
+ 8000c42:	00000097          	auipc	ra,0x0
+ 8000c46:	a7a080e7          	jalr	-1414(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000c4e:	00000097          	auipc	ra,0x0
- 8000c52:	202080e7          	jalr	514(ra) # 8000e50 <delay>
+ 8000c4a:	00000097          	auipc	ra,0x0
+ 8000c4e:	202080e7          	jalr	514(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000c56:	00228583          	lb	a1,2(t0)
+ 8000c52:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000c5a:	fff5c593          	not	a1,a1
+ 8000c56:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000c5e:	00000097          	auipc	ra,0x0
- 8000c62:	a5e080e7          	jalr	-1442(ra) # 80006bc <gpiooc>
+ 8000c5a:	00000097          	auipc	ra,0x0
+ 8000c5e:	a62080e7          	jalr	-1438(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000c66:	00000097          	auipc	ra,0x0
- 8000c6a:	1ea080e7          	jalr	490(ra) # 8000e50 <delay>
+ 8000c62:	00000097          	auipc	ra,0x0
+ 8000c66:	1ea080e7          	jalr	490(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000c6e:	00328583          	lb	a1,3(t0)
+ 8000c6a:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000c72:	fff5c593          	not	a1,a1
+ 8000c6e:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000c76:	00000097          	auipc	ra,0x0
- 8000c7a:	a46080e7          	jalr	-1466(ra) # 80006bc <gpiooc>
+ 8000c72:	00000097          	auipc	ra,0x0
+ 8000c76:	a4a080e7          	jalr	-1462(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000c7e:	00000097          	auipc	ra,0x0
- 8000c82:	1d2080e7          	jalr	466(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000c86:	b4e1                	j	800074e <select_sequence>
+ 8000c7a:	00000097          	auipc	ra,0x0
+ 8000c7e:	1d2080e7          	jalr	466(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000c82:	b475                	j	800072e <start>
 
-08000c88 <disco4inv>:
+08000c84 <disco4inv>:
 
 disco4inv:
         la t0, sequence4
- 8000c88:	17fff297          	auipc	t0,0x17fff
- 8000c8c:	38828293          	addi	t0,t0,904 # 20000010 <sequence4>
+ 8000c84:	17fff297          	auipc	t0,0x17fff
+ 8000c88:	38c28293          	addi	t0,t0,908 # 20000010 <sequence4>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000c90:	40011537          	lui	a0,0x40011
- 8000c94:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000c8c:	40011537          	lui	a0,0x40011
+ 8000c90:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000c98:	00028583          	lb	a1,0(t0)
+ 8000c94:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000c9c:	fff5c593          	not	a1,a1
+ 8000c98:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000ca0:	00000097          	auipc	ra,0x0
- 8000ca4:	a1c080e7          	jalr	-1508(ra) # 80006bc <gpiooc>
+ 8000c9c:	00000097          	auipc	ra,0x0
+ 8000ca0:	a20080e7          	jalr	-1504(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000ca8:	00000097          	auipc	ra,0x0
- 8000cac:	1a8080e7          	jalr	424(ra) # 8000e50 <delay>
+ 8000ca4:	00000097          	auipc	ra,0x0
+ 8000ca8:	1a8080e7          	jalr	424(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000cb0:	00128583          	lb	a1,1(t0)
+ 8000cac:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000cb4:	fff5c593          	not	a1,a1
+ 8000cb0:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000cb8:	00000097          	auipc	ra,0x0
- 8000cbc:	a04080e7          	jalr	-1532(ra) # 80006bc <gpiooc>
+ 8000cb4:	00000097          	auipc	ra,0x0
+ 8000cb8:	a08080e7          	jalr	-1528(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000cc0:	00000097          	auipc	ra,0x0
- 8000cc4:	190080e7          	jalr	400(ra) # 8000e50 <delay>
+ 8000cbc:	00000097          	auipc	ra,0x0
+ 8000cc0:	190080e7          	jalr	400(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000cc8:	00228583          	lb	a1,2(t0)
+ 8000cc4:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000ccc:	fff5c593          	not	a1,a1
+ 8000cc8:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000cd0:	00000097          	auipc	ra,0x0
- 8000cd4:	9ec080e7          	jalr	-1556(ra) # 80006bc <gpiooc>
+ 8000ccc:	00000097          	auipc	ra,0x0
+ 8000cd0:	9f0080e7          	jalr	-1552(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000cd8:	00000097          	auipc	ra,0x0
- 8000cdc:	178080e7          	jalr	376(ra) # 8000e50 <delay>
+ 8000cd4:	00000097          	auipc	ra,0x0
+ 8000cd8:	178080e7          	jalr	376(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000ce0:	00328583          	lb	a1,3(t0)
+ 8000cdc:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000ce4:	fff5c593          	not	a1,a1
+ 8000ce0:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000ce8:	00000097          	auipc	ra,0x0
- 8000cec:	9d4080e7          	jalr	-1580(ra) # 80006bc <gpiooc>
+ 8000ce4:	00000097          	auipc	ra,0x0
+ 8000ce8:	9d8080e7          	jalr	-1576(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000cf0:	00000097          	auipc	ra,0x0
- 8000cf4:	160080e7          	jalr	352(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely                
- 8000cf8:	bc99                	j	800074e <select_sequence>
+ 8000cec:	00000097          	auipc	ra,0x0
+ 8000cf0:	160080e7          	jalr	352(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely                
+ 8000cf4:	bc2d                	j	800072e <start>
 
-08000cfa <disco5inv>:
+08000cf6 <disco5inv>:
 
 disco5inv:
         la t0, sequence5
- 8000cfa:	17fff297          	auipc	t0,0x17fff
- 8000cfe:	31a28293          	addi	t0,t0,794 # 20000014 <sequence5>
+ 8000cf6:	17fff297          	auipc	t0,0x17fff
+ 8000cfa:	31e28293          	addi	t0,t0,798 # 20000014 <sequence5>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000d02:	40011537          	lui	a0,0x40011
- 8000d06:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000cfe:	40011537          	lui	a0,0x40011
+ 8000d02:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000d0a:	00028583          	lb	a1,0(t0)
+ 8000d06:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000d0e:	fff5c593          	not	a1,a1
+ 8000d0a:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000d12:	00000097          	auipc	ra,0x0
- 8000d16:	9aa080e7          	jalr	-1622(ra) # 80006bc <gpiooc>
+ 8000d0e:	00000097          	auipc	ra,0x0
+ 8000d12:	9ae080e7          	jalr	-1618(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000d1a:	00000097          	auipc	ra,0x0
- 8000d1e:	136080e7          	jalr	310(ra) # 8000e50 <delay>
+ 8000d16:	00000097          	auipc	ra,0x0
+ 8000d1a:	136080e7          	jalr	310(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000d22:	00128583          	lb	a1,1(t0)
+ 8000d1e:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000d26:	fff5c593          	not	a1,a1
+ 8000d22:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000d2a:	00000097          	auipc	ra,0x0
- 8000d2e:	992080e7          	jalr	-1646(ra) # 80006bc <gpiooc>
+ 8000d26:	00000097          	auipc	ra,0x0
+ 8000d2a:	996080e7          	jalr	-1642(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000d32:	00000097          	auipc	ra,0x0
- 8000d36:	11e080e7          	jalr	286(ra) # 8000e50 <delay>
+ 8000d2e:	00000097          	auipc	ra,0x0
+ 8000d32:	11e080e7          	jalr	286(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000d3a:	00228583          	lb	a1,2(t0)
+ 8000d36:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000d3e:	fff5c593          	not	a1,a1
+ 8000d3a:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000d42:	00000097          	auipc	ra,0x0
- 8000d46:	97a080e7          	jalr	-1670(ra) # 80006bc <gpiooc>
+ 8000d3e:	00000097          	auipc	ra,0x0
+ 8000d42:	97e080e7          	jalr	-1666(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000d4a:	00000097          	auipc	ra,0x0
- 8000d4e:	106080e7          	jalr	262(ra) # 8000e50 <delay>
+ 8000d46:	00000097          	auipc	ra,0x0
+ 8000d4a:	106080e7          	jalr	262(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000d52:	00328583          	lb	a1,3(t0)
+ 8000d4e:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000d56:	fff5c593          	not	a1,a1
+ 8000d52:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000d5a:	00000097          	auipc	ra,0x0
- 8000d5e:	962080e7          	jalr	-1694(ra) # 80006bc <gpiooc>
+ 8000d56:	00000097          	auipc	ra,0x0
+ 8000d5a:	966080e7          	jalr	-1690(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000d62:	00000097          	auipc	ra,0x0
- 8000d66:	0ee080e7          	jalr	238(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000d6a:	b2d5                	j	800074e <select_sequence>
+ 8000d5e:	00000097          	auipc	ra,0x0
+ 8000d62:	0ee080e7          	jalr	238(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000d66:	b2e1                	j	800072e <start>
 
-08000d6c <disco6inv>:
+08000d68 <disco6inv>:
 
 disco6inv:
         la t0, sequence6
- 8000d6c:	17fff297          	auipc	t0,0x17fff
- 8000d70:	2ac28293          	addi	t0,t0,684 # 20000018 <sequence6>
+ 8000d68:	17fff297          	auipc	t0,0x17fff
+ 8000d6c:	2b028293          	addi	t0,t0,688 # 20000018 <sequence6>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000d74:	40011537          	lui	a0,0x40011
- 8000d78:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000d70:	40011537          	lui	a0,0x40011
+ 8000d74:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000d7c:	00028583          	lb	a1,0(t0)
+ 8000d78:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000d80:	fff5c593          	not	a1,a1
+ 8000d7c:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000d84:	00000097          	auipc	ra,0x0
- 8000d88:	938080e7          	jalr	-1736(ra) # 80006bc <gpiooc>
+ 8000d80:	00000097          	auipc	ra,0x0
+ 8000d84:	93c080e7          	jalr	-1732(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000d8c:	00000097          	auipc	ra,0x0
- 8000d90:	0c4080e7          	jalr	196(ra) # 8000e50 <delay>
+ 8000d88:	00000097          	auipc	ra,0x0
+ 8000d8c:	0c4080e7          	jalr	196(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000d94:	00128583          	lb	a1,1(t0)
+ 8000d90:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000d98:	fff5c593          	not	a1,a1
+ 8000d94:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000d9c:	00000097          	auipc	ra,0x0
- 8000da0:	920080e7          	jalr	-1760(ra) # 80006bc <gpiooc>
+ 8000d98:	00000097          	auipc	ra,0x0
+ 8000d9c:	924080e7          	jalr	-1756(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000da4:	00000097          	auipc	ra,0x0
- 8000da8:	0ac080e7          	jalr	172(ra) # 8000e50 <delay>
+ 8000da0:	00000097          	auipc	ra,0x0
+ 8000da4:	0ac080e7          	jalr	172(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000dac:	00228583          	lb	a1,2(t0)
+ 8000da8:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000db0:	fff5c593          	not	a1,a1
+ 8000dac:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000db4:	00000097          	auipc	ra,0x0
- 8000db8:	908080e7          	jalr	-1784(ra) # 80006bc <gpiooc>
+ 8000db0:	00000097          	auipc	ra,0x0
+ 8000db4:	90c080e7          	jalr	-1780(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000dbc:	00000097          	auipc	ra,0x0
- 8000dc0:	094080e7          	jalr	148(ra) # 8000e50 <delay>
+ 8000db8:	00000097          	auipc	ra,0x0
+ 8000dbc:	094080e7          	jalr	148(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000dc4:	00328583          	lb	a1,3(t0)
+ 8000dc0:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000dc8:	fff5c593          	not	a1,a1
+ 8000dc4:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000dcc:	00000097          	auipc	ra,0x0
- 8000dd0:	8f0080e7          	jalr	-1808(ra) # 80006bc <gpiooc>
+ 8000dc8:	00000097          	auipc	ra,0x0
+ 8000dcc:	8f4080e7          	jalr	-1804(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000dd4:	00000097          	auipc	ra,0x0
- 8000dd8:	07c080e7          	jalr	124(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely        
- 8000ddc:	ba8d                	j	800074e <select_sequence>
+ 8000dd0:	00000097          	auipc	ra,0x0
+ 8000dd4:	07c080e7          	jalr	124(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely        
+ 8000dd8:	ba99                	j	800072e <start>
 
-08000dde <disco7inv>:
+08000dda <disco7inv>:
 
 disco7inv:
         la t0, sequence7
- 8000dde:	17fff297          	auipc	t0,0x17fff
- 8000de2:	23e28293          	addi	t0,t0,574 # 2000001c <sequence7>
+ 8000dda:	17fff297          	auipc	t0,0x17fff
+ 8000dde:	24228293          	addi	t0,t0,578 # 2000001c <sequence7>
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
- 8000de6:	40011537          	lui	a0,0x40011
- 8000dea:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8000de2:	40011537          	lui	a0,0x40011
+ 8000de6:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
- 8000dee:	00028583          	lb	a1,0(t0)
+ 8000dea:	00028583          	lb	a1,0(t0)
         not a1, a1
- 8000df2:	fff5c593          	not	a1,a1
+ 8000dee:	fff5c593          	not	a1,a1
         call gpiooc  # Update LEDs
- 8000df6:	00000097          	auipc	ra,0x0
- 8000dfa:	8c6080e7          	jalr	-1850(ra) # 80006bc <gpiooc>
+ 8000df2:	00000097          	auipc	ra,0x0
+ 8000df6:	8ca080e7          	jalr	-1846(ra) # 80006bc <gpiooc>
         call delay  # Delay to see the pattern
- 8000dfe:	00000097          	auipc	ra,0x0
- 8000e02:	052080e7          	jalr	82(ra) # 8000e50 <delay>
+ 8000dfa:	00000097          	auipc	ra,0x0
+ 8000dfe:	052080e7          	jalr	82(ra) # 8000e4c <delay>
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
- 8000e06:	00128583          	lb	a1,1(t0)
+ 8000e02:	00128583          	lb	a1,1(t0)
         not a1, a1
- 8000e0a:	fff5c593          	not	a1,a1
+ 8000e06:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000e0e:	00000097          	auipc	ra,0x0
- 8000e12:	8ae080e7          	jalr	-1874(ra) # 80006bc <gpiooc>
+ 8000e0a:	00000097          	auipc	ra,0x0
+ 8000e0e:	8b2080e7          	jalr	-1870(ra) # 80006bc <gpiooc>
         call delay   # Delay to see the pattern
- 8000e16:	00000097          	auipc	ra,0x0
- 8000e1a:	03a080e7          	jalr	58(ra) # 8000e50 <delay>
+ 8000e12:	00000097          	auipc	ra,0x0
+ 8000e16:	03a080e7          	jalr	58(ra) # 8000e4c <delay>
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
- 8000e1e:	00228583          	lb	a1,2(t0)
+ 8000e1a:	00228583          	lb	a1,2(t0)
         not a1, a1
- 8000e22:	fff5c593          	not	a1,a1
+ 8000e1e:	fff5c593          	not	a1,a1
         call gpiooc   # Update LEDs
- 8000e26:	00000097          	auipc	ra,0x0
- 8000e2a:	896080e7          	jalr	-1898(ra) # 80006bc <gpiooc>
+ 8000e22:	00000097          	auipc	ra,0x0
+ 8000e26:	89a080e7          	jalr	-1894(ra) # 80006bc <gpiooc>
         call delay    # Delay to see the pattern
- 8000e2e:	00000097          	auipc	ra,0x0
- 8000e32:	022080e7          	jalr	34(ra) # 8000e50 <delay>
+ 8000e2a:	00000097          	auipc	ra,0x0
+ 8000e2e:	022080e7          	jalr	34(ra) # 8000e4c <delay>
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
- 8000e36:	00328583          	lb	a1,3(t0)
+ 8000e32:	00328583          	lb	a1,3(t0)
         not a1, a1
- 8000e3a:	fff5c593          	not	a1,a1
+ 8000e36:	fff5c593          	not	a1,a1
         call gpiooc # Update LEDs
- 8000e3e:	00000097          	auipc	ra,0x0
- 8000e42:	87e080e7          	jalr	-1922(ra) # 80006bc <gpiooc>
+ 8000e3a:	00000097          	auipc	ra,0x0
+ 8000e3e:	882080e7          	jalr	-1918(ra) # 80006bc <gpiooc>
         call delay # Delay to see the pattern
- 8000e46:	00000097          	auipc	ra,0x0
- 8000e4a:	00a080e7          	jalr	10(ra) # 8000e50 <delay>
-        j select_sequence # Repeat the sequence indefinitely
- 8000e4e:	b201                	j	800074e <select_sequence>
+ 8000e42:	00000097          	auipc	ra,0x0
+ 8000e46:	00a080e7          	jalr	10(ra) # 8000e4c <delay>
+        j start # Repeat the sequence indefinitely
+ 8000e4a:	b0d5                	j	800072e <start>
 
-08000e50 <delay>:
+08000e4c <delay>:
 
 delay:
-        li t1, 25000000 # Delay count, adjust the number based on timing requirements
- 8000e50:	017d8337          	lui	t1,0x17d8
- 8000e54:	84030313          	addi	t1,t1,-1984 # 17d7840 <__stack_size+0x17d6840>
+        li t1, 0x87F513 # Delay count, adjust the number based on timing requirements
+ 8000e4c:	0087f337          	lui	t1,0x87f
+ 8000e50:	51330313          	addi	t1,t1,1299 # 87f513 <__stack_size+0x87e513>
 1: addi t1, t1, -1 # Decrement the delay counter
- 8000e58:	137d                	addi	t1,t1,-1
+ 8000e54:	137d                	addi	t1,t1,-1
         bnez t1, 1b # Keep looping until the counter reaches 0
- 8000e5a:	fe031fe3          	bnez	t1,8000e58 <delay+0x8>
+ 8000e56:	fe031fe3          	bnez	t1,8000e54 <delay+0x8>
         ret # Return to calling function
- 8000e5e:	8082                	ret
+ 8000e5a:	8082                	ret
 
-08000e60 <atexit>:
- 8000e60:	85aa                	mv	a1,a0
- 8000e62:	4681                	li	a3,0
- 8000e64:	4601                	li	a2,0
- 8000e66:	4501                	li	a0,0
- 8000e68:	00000317          	auipc	t1,0x0
- 8000e6c:	14830067          	jr	328(t1) # 8000fb0 <__register_exitproc>
+08000e5c <atexit>:
+ 8000e5c:	85aa                	mv	a1,a0
+ 8000e5e:	4681                	li	a3,0
+ 8000e60:	4601                	li	a2,0
+ 8000e62:	4501                	li	a0,0
+ 8000e64:	00000317          	auipc	t1,0x0
+ 8000e68:	14830067          	jr	328(t1) # 8000fac <__register_exitproc>
 
-08000e70 <exit>:
- 8000e70:	1141                	addi	sp,sp,-16
- 8000e72:	c422                	sw	s0,8(sp)
- 8000e74:	c606                	sw	ra,12(sp)
- 8000e76:	00000797          	auipc	a5,0x0
- 8000e7a:	1c678793          	addi	a5,a5,454 # 800103c <__call_exitprocs>
- 8000e7e:	842a                	mv	s0,a0
- 8000e80:	c791                	beqz	a5,8000e8c <exit+0x1c>
- 8000e82:	4581                	li	a1,0
- 8000e84:	00000097          	auipc	ra,0x0
- 8000e88:	1b8080e7          	jalr	440(ra) # 800103c <__call_exitprocs>
- 8000e8c:	00000797          	auipc	a5,0x0
- 8000e90:	2b878793          	addi	a5,a5,696 # 8001144 <_global_impure_ptr>
- 8000e94:	4388                	lw	a0,0(a5)
- 8000e96:	551c                	lw	a5,40(a0)
- 8000e98:	c391                	beqz	a5,8000e9c <exit+0x2c>
- 8000e9a:	9782                	jalr	a5
- 8000e9c:	8522                	mv	a0,s0
- 8000e9e:	fffff097          	auipc	ra,0xfffff
- 8000ea2:	532080e7          	jalr	1330(ra) # 80003d0 <_exit>
+08000e6c <exit>:
+ 8000e6c:	1141                	addi	sp,sp,-16
+ 8000e6e:	c422                	sw	s0,8(sp)
+ 8000e70:	c606                	sw	ra,12(sp)
+ 8000e72:	00000797          	auipc	a5,0x0
+ 8000e76:	1c678793          	addi	a5,a5,454 # 8001038 <__call_exitprocs>
+ 8000e7a:	842a                	mv	s0,a0
+ 8000e7c:	c791                	beqz	a5,8000e88 <exit+0x1c>
+ 8000e7e:	4581                	li	a1,0
+ 8000e80:	00000097          	auipc	ra,0x0
+ 8000e84:	1b8080e7          	jalr	440(ra) # 8001038 <__call_exitprocs>
+ 8000e88:	00000797          	auipc	a5,0x0
+ 8000e8c:	2b878793          	addi	a5,a5,696 # 8001140 <_global_impure_ptr>
+ 8000e90:	4388                	lw	a0,0(a5)
+ 8000e92:	551c                	lw	a5,40(a0)
+ 8000e94:	c391                	beqz	a5,8000e98 <exit+0x2c>
+ 8000e96:	9782                	jalr	a5
+ 8000e98:	8522                	mv	a0,s0
+ 8000e9a:	fffff097          	auipc	ra,0xfffff
+ 8000e9e:	536080e7          	jalr	1334(ra) # 80003d0 <_exit>
 
-08000ea6 <__libc_fini_array>:
- 8000ea6:	1141                	addi	sp,sp,-16
- 8000ea8:	00000797          	auipc	a5,0x0
- 8000eac:	2a078793          	addi	a5,a5,672 # 8001148 <__fini_array_end>
- 8000eb0:	c422                	sw	s0,8(sp)
- 8000eb2:	00000417          	auipc	s0,0x0
- 8000eb6:	29640413          	addi	s0,s0,662 # 8001148 <__fini_array_end>
- 8000eba:	8c1d                	sub	s0,s0,a5
- 8000ebc:	c226                	sw	s1,4(sp)
- 8000ebe:	c606                	sw	ra,12(sp)
- 8000ec0:	8409                	srai	s0,s0,0x2
- 8000ec2:	84be                	mv	s1,a5
- 8000ec4:	e411                	bnez	s0,8000ed0 <__libc_fini_array+0x2a>
- 8000ec6:	40b2                	lw	ra,12(sp)
- 8000ec8:	4422                	lw	s0,8(sp)
- 8000eca:	4492                	lw	s1,4(sp)
- 8000ecc:	0141                	addi	sp,sp,16
- 8000ece:	8082                	ret
- 8000ed0:	147d                	addi	s0,s0,-1
- 8000ed2:	00241793          	slli	a5,s0,0x2
- 8000ed6:	97a6                	add	a5,a5,s1
- 8000ed8:	439c                	lw	a5,0(a5)
- 8000eda:	9782                	jalr	a5
- 8000edc:	b7e5                	j	8000ec4 <__libc_fini_array+0x1e>
+08000ea2 <__libc_fini_array>:
+ 8000ea2:	1141                	addi	sp,sp,-16
+ 8000ea4:	00000797          	auipc	a5,0x0
+ 8000ea8:	2a078793          	addi	a5,a5,672 # 8001144 <__fini_array_end>
+ 8000eac:	c422                	sw	s0,8(sp)
+ 8000eae:	00000417          	auipc	s0,0x0
+ 8000eb2:	29640413          	addi	s0,s0,662 # 8001144 <__fini_array_end>
+ 8000eb6:	8c1d                	sub	s0,s0,a5
+ 8000eb8:	c226                	sw	s1,4(sp)
+ 8000eba:	c606                	sw	ra,12(sp)
+ 8000ebc:	8409                	srai	s0,s0,0x2
+ 8000ebe:	84be                	mv	s1,a5
+ 8000ec0:	e411                	bnez	s0,8000ecc <__libc_fini_array+0x2a>
+ 8000ec2:	40b2                	lw	ra,12(sp)
+ 8000ec4:	4422                	lw	s0,8(sp)
+ 8000ec6:	4492                	lw	s1,4(sp)
+ 8000ec8:	0141                	addi	sp,sp,16
+ 8000eca:	8082                	ret
+ 8000ecc:	147d                	addi	s0,s0,-1
+ 8000ece:	00241793          	slli	a5,s0,0x2
+ 8000ed2:	97a6                	add	a5,a5,s1
+ 8000ed4:	439c                	lw	a5,0(a5)
+ 8000ed6:	9782                	jalr	a5
+ 8000ed8:	b7e5                	j	8000ec0 <__libc_fini_array+0x1e>
 
-08000ede <__libc_init_array>:
- 8000ede:	1141                	addi	sp,sp,-16
- 8000ee0:	00000797          	auipc	a5,0x0
- 8000ee4:	26878793          	addi	a5,a5,616 # 8001148 <__fini_array_end>
- 8000ee8:	c422                	sw	s0,8(sp)
- 8000eea:	00000417          	auipc	s0,0x0
- 8000eee:	25e40413          	addi	s0,s0,606 # 8001148 <__fini_array_end>
- 8000ef2:	8c1d                	sub	s0,s0,a5
- 8000ef4:	c226                	sw	s1,4(sp)
- 8000ef6:	c04a                	sw	s2,0(sp)
- 8000ef8:	c606                	sw	ra,12(sp)
- 8000efa:	8409                	srai	s0,s0,0x2
- 8000efc:	4481                	li	s1,0
- 8000efe:	893e                	mv	s2,a5
- 8000f00:	02849663          	bne	s1,s0,8000f2c <__libc_init_array+0x4e>
- 8000f04:	00000797          	auipc	a5,0x0
- 8000f08:	24478793          	addi	a5,a5,580 # 8001148 <__fini_array_end>
- 8000f0c:	00000417          	auipc	s0,0x0
- 8000f10:	23c40413          	addi	s0,s0,572 # 8001148 <__fini_array_end>
- 8000f14:	8c1d                	sub	s0,s0,a5
- 8000f16:	8409                	srai	s0,s0,0x2
- 8000f18:	4481                	li	s1,0
- 8000f1a:	893e                	mv	s2,a5
- 8000f1c:	00849f63          	bne	s1,s0,8000f3a <__libc_init_array+0x5c>
- 8000f20:	40b2                	lw	ra,12(sp)
- 8000f22:	4422                	lw	s0,8(sp)
- 8000f24:	4492                	lw	s1,4(sp)
- 8000f26:	4902                	lw	s2,0(sp)
- 8000f28:	0141                	addi	sp,sp,16
- 8000f2a:	8082                	ret
- 8000f2c:	00249793          	slli	a5,s1,0x2
- 8000f30:	97ca                	add	a5,a5,s2
- 8000f32:	439c                	lw	a5,0(a5)
- 8000f34:	0485                	addi	s1,s1,1
- 8000f36:	9782                	jalr	a5
- 8000f38:	b7e1                	j	8000f00 <__libc_init_array+0x22>
- 8000f3a:	00249793          	slli	a5,s1,0x2
- 8000f3e:	97ca                	add	a5,a5,s2
- 8000f40:	439c                	lw	a5,0(a5)
- 8000f42:	0485                	addi	s1,s1,1
- 8000f44:	9782                	jalr	a5
- 8000f46:	bfd9                	j	8000f1c <__libc_init_array+0x3e>
+08000eda <__libc_init_array>:
+ 8000eda:	1141                	addi	sp,sp,-16
+ 8000edc:	00000797          	auipc	a5,0x0
+ 8000ee0:	26878793          	addi	a5,a5,616 # 8001144 <__fini_array_end>
+ 8000ee4:	c422                	sw	s0,8(sp)
+ 8000ee6:	00000417          	auipc	s0,0x0
+ 8000eea:	25e40413          	addi	s0,s0,606 # 8001144 <__fini_array_end>
+ 8000eee:	8c1d                	sub	s0,s0,a5
+ 8000ef0:	c226                	sw	s1,4(sp)
+ 8000ef2:	c04a                	sw	s2,0(sp)
+ 8000ef4:	c606                	sw	ra,12(sp)
+ 8000ef6:	8409                	srai	s0,s0,0x2
+ 8000ef8:	4481                	li	s1,0
+ 8000efa:	893e                	mv	s2,a5
+ 8000efc:	02849663          	bne	s1,s0,8000f28 <__libc_init_array+0x4e>
+ 8000f00:	00000797          	auipc	a5,0x0
+ 8000f04:	24478793          	addi	a5,a5,580 # 8001144 <__fini_array_end>
+ 8000f08:	00000417          	auipc	s0,0x0
+ 8000f0c:	23c40413          	addi	s0,s0,572 # 8001144 <__fini_array_end>
+ 8000f10:	8c1d                	sub	s0,s0,a5
+ 8000f12:	8409                	srai	s0,s0,0x2
+ 8000f14:	4481                	li	s1,0
+ 8000f16:	893e                	mv	s2,a5
+ 8000f18:	00849f63          	bne	s1,s0,8000f36 <__libc_init_array+0x5c>
+ 8000f1c:	40b2                	lw	ra,12(sp)
+ 8000f1e:	4422                	lw	s0,8(sp)
+ 8000f20:	4492                	lw	s1,4(sp)
+ 8000f22:	4902                	lw	s2,0(sp)
+ 8000f24:	0141                	addi	sp,sp,16
+ 8000f26:	8082                	ret
+ 8000f28:	00249793          	slli	a5,s1,0x2
+ 8000f2c:	97ca                	add	a5,a5,s2
+ 8000f2e:	439c                	lw	a5,0(a5)
+ 8000f30:	0485                	addi	s1,s1,1
+ 8000f32:	9782                	jalr	a5
+ 8000f34:	b7e1                	j	8000efc <__libc_init_array+0x22>
+ 8000f36:	00249793          	slli	a5,s1,0x2
+ 8000f3a:	97ca                	add	a5,a5,s2
+ 8000f3c:	439c                	lw	a5,0(a5)
+ 8000f3e:	0485                	addi	s1,s1,1
+ 8000f40:	9782                	jalr	a5
+ 8000f42:	bfd9                	j	8000f18 <__libc_init_array+0x3e>
 
-08000f48 <memcpy>:
- 8000f48:	832a                	mv	t1,a0
- 8000f4a:	ca09                	beqz	a2,8000f5c <memcpy+0x14>
- 8000f4c:	00058383          	lb	t2,0(a1)
- 8000f50:	00730023          	sb	t2,0(t1)
- 8000f54:	167d                	addi	a2,a2,-1
- 8000f56:	0305                	addi	t1,t1,1
- 8000f58:	0585                	addi	a1,a1,1
- 8000f5a:	fa6d                	bnez	a2,8000f4c <memcpy+0x4>
- 8000f5c:	8082                	ret
+08000f44 <memcpy>:
+ 8000f44:	832a                	mv	t1,a0
+ 8000f46:	ca09                	beqz	a2,8000f58 <memcpy+0x14>
+ 8000f48:	00058383          	lb	t2,0(a1)
+ 8000f4c:	00730023          	sb	t2,0(t1)
+ 8000f50:	167d                	addi	a2,a2,-1
+ 8000f52:	0305                	addi	t1,t1,1
+ 8000f54:	0585                	addi	a1,a1,1
+ 8000f56:	fa6d                	bnez	a2,8000f48 <memcpy+0x4>
+ 8000f58:	8082                	ret
 
-08000f5e <write>:
- 8000f5e:	17fff797          	auipc	a5,0x17fff
- 8000f62:	12278793          	addi	a5,a5,290 # 20000080 <_impure_ptr>
- 8000f66:	86b2                	mv	a3,a2
- 8000f68:	862e                	mv	a2,a1
- 8000f6a:	85aa                	mv	a1,a0
- 8000f6c:	4388                	lw	a0,0(a5)
- 8000f6e:	00000317          	auipc	t1,0x0
- 8000f72:	00830067          	jr	8(t1) # 8000f76 <_write_r>
+08000f5a <write>:
+ 8000f5a:	17fff797          	auipc	a5,0x17fff
+ 8000f5e:	12678793          	addi	a5,a5,294 # 20000080 <_impure_ptr>
+ 8000f62:	86b2                	mv	a3,a2
+ 8000f64:	862e                	mv	a2,a1
+ 8000f66:	85aa                	mv	a1,a0
+ 8000f68:	4388                	lw	a0,0(a5)
+ 8000f6a:	00000317          	auipc	t1,0x0
+ 8000f6e:	00830067          	jr	8(t1) # 8000f72 <_write_r>
 
-08000f76 <_write_r>:
- 8000f76:	1141                	addi	sp,sp,-16
- 8000f78:	c422                	sw	s0,8(sp)
- 8000f7a:	842a                	mv	s0,a0
- 8000f7c:	852e                	mv	a0,a1
- 8000f7e:	85b2                	mv	a1,a2
- 8000f80:	8636                	mv	a2,a3
- 8000f82:	17fff797          	auipc	a5,0x17fff
- 8000f86:	1807ab23          	sw	zero,406(a5) # 20000118 <errno>
- 8000f8a:	c606                	sw	ra,12(sp)
- 8000f8c:	00000097          	auipc	ra,0x0
- 8000f90:	178080e7          	jalr	376(ra) # 8001104 <_write>
- 8000f94:	57fd                	li	a5,-1
- 8000f96:	00f51963          	bne	a0,a5,8000fa8 <_write_r+0x32>
- 8000f9a:	17fff797          	auipc	a5,0x17fff
- 8000f9e:	17e78793          	addi	a5,a5,382 # 20000118 <errno>
- 8000fa2:	439c                	lw	a5,0(a5)
- 8000fa4:	c391                	beqz	a5,8000fa8 <_write_r+0x32>
- 8000fa6:	c01c                	sw	a5,0(s0)
- 8000fa8:	40b2                	lw	ra,12(sp)
- 8000faa:	4422                	lw	s0,8(sp)
- 8000fac:	0141                	addi	sp,sp,16
- 8000fae:	8082                	ret
+08000f72 <_write_r>:
+ 8000f72:	1141                	addi	sp,sp,-16
+ 8000f74:	c422                	sw	s0,8(sp)
+ 8000f76:	842a                	mv	s0,a0
+ 8000f78:	852e                	mv	a0,a1
+ 8000f7a:	85b2                	mv	a1,a2
+ 8000f7c:	8636                	mv	a2,a3
+ 8000f7e:	17fff797          	auipc	a5,0x17fff
+ 8000f82:	1807ad23          	sw	zero,410(a5) # 20000118 <errno>
+ 8000f86:	c606                	sw	ra,12(sp)
+ 8000f88:	00000097          	auipc	ra,0x0
+ 8000f8c:	178080e7          	jalr	376(ra) # 8001100 <_write>
+ 8000f90:	57fd                	li	a5,-1
+ 8000f92:	00f51963          	bne	a0,a5,8000fa4 <_write_r+0x32>
+ 8000f96:	17fff797          	auipc	a5,0x17fff
+ 8000f9a:	18278793          	addi	a5,a5,386 # 20000118 <errno>
+ 8000f9e:	439c                	lw	a5,0(a5)
+ 8000fa0:	c391                	beqz	a5,8000fa4 <_write_r+0x32>
+ 8000fa2:	c01c                	sw	a5,0(s0)
+ 8000fa4:	40b2                	lw	ra,12(sp)
+ 8000fa6:	4422                	lw	s0,8(sp)
+ 8000fa8:	0141                	addi	sp,sp,16
+ 8000faa:	8082                	ret
 
-08000fb0 <__register_exitproc>:
- 8000fb0:	17fff797          	auipc	a5,0x17fff
- 8000fb4:	0d878793          	addi	a5,a5,216 # 20000088 <_global_atexit>
- 8000fb8:	439c                	lw	a5,0(a5)
- 8000fba:	8e2a                	mv	t3,a0
- 8000fbc:	e78d                	bnez	a5,8000fe6 <__register_exitproc+0x36>
- 8000fbe:	17fff717          	auipc	a4,0x17fff
- 8000fc2:	0ce70713          	addi	a4,a4,206 # 2000008c <_global_atexit0>
- 8000fc6:	17fff797          	auipc	a5,0x17fff
- 8000fca:	0ce7a123          	sw	a4,194(a5) # 20000088 <_global_atexit>
- 8000fce:	f7fff517          	auipc	a0,0xf7fff
- 8000fd2:	03250513          	addi	a0,a0,50 # 0 <__dbg_stack_size>
- 8000fd6:	87ba                	mv	a5,a4
- 8000fd8:	c519                	beqz	a0,8000fe6 <__register_exitproc+0x36>
- 8000fda:	411c                	lw	a5,0(a0)
- 8000fdc:	17fff517          	auipc	a0,0x17fff
- 8000fe0:	12f52c23          	sw	a5,312(a0) # 20000114 <_global_atexit0+0x88>
- 8000fe4:	87ba                	mv	a5,a4
- 8000fe6:	43d8                	lw	a4,4(a5)
- 8000fe8:	487d                	li	a6,31
- 8000fea:	557d                	li	a0,-1
- 8000fec:	04e84763          	blt	a6,a4,800103a <__register_exitproc+0x8a>
- 8000ff0:	020e0e63          	beqz	t3,800102c <__register_exitproc+0x7c>
- 8000ff4:	0887a803          	lw	a6,136(a5)
- 8000ff8:	04080163          	beqz	a6,800103a <__register_exitproc+0x8a>
- 8000ffc:	00271893          	slli	a7,a4,0x2
- 8001000:	98c2                	add	a7,a7,a6
- 8001002:	00c8a023          	sw	a2,0(a7)
- 8001006:	10082303          	lw	t1,256(a6)
- 800100a:	4605                	li	a2,1
- 800100c:	00e61633          	sll	a2,a2,a4
- 8001010:	00c36333          	or	t1,t1,a2
- 8001014:	10682023          	sw	t1,256(a6)
- 8001018:	08d8a023          	sw	a3,128(a7)
- 800101c:	4689                	li	a3,2
- 800101e:	00de1763          	bne	t3,a3,800102c <__register_exitproc+0x7c>
- 8001022:	10482683          	lw	a3,260(a6)
- 8001026:	8e55                	or	a2,a2,a3
- 8001028:	10c82223          	sw	a2,260(a6)
- 800102c:	00170693          	addi	a3,a4,1
- 8001030:	070a                	slli	a4,a4,0x2
- 8001032:	c3d4                	sw	a3,4(a5)
- 8001034:	97ba                	add	a5,a5,a4
- 8001036:	c78c                	sw	a1,8(a5)
- 8001038:	4501                	li	a0,0
- 800103a:	8082                	ret
+08000fac <__register_exitproc>:
+ 8000fac:	17fff797          	auipc	a5,0x17fff
+ 8000fb0:	0dc78793          	addi	a5,a5,220 # 20000088 <_global_atexit>
+ 8000fb4:	439c                	lw	a5,0(a5)
+ 8000fb6:	8e2a                	mv	t3,a0
+ 8000fb8:	e78d                	bnez	a5,8000fe2 <__register_exitproc+0x36>
+ 8000fba:	17fff717          	auipc	a4,0x17fff
+ 8000fbe:	0d270713          	addi	a4,a4,210 # 2000008c <_global_atexit0>
+ 8000fc2:	17fff797          	auipc	a5,0x17fff
+ 8000fc6:	0ce7a323          	sw	a4,198(a5) # 20000088 <_global_atexit>
+ 8000fca:	f7fff517          	auipc	a0,0xf7fff
+ 8000fce:	03650513          	addi	a0,a0,54 # 0 <__dbg_stack_size>
+ 8000fd2:	87ba                	mv	a5,a4
+ 8000fd4:	c519                	beqz	a0,8000fe2 <__register_exitproc+0x36>
+ 8000fd6:	411c                	lw	a5,0(a0)
+ 8000fd8:	17fff517          	auipc	a0,0x17fff
+ 8000fdc:	12f52e23          	sw	a5,316(a0) # 20000114 <_global_atexit0+0x88>
+ 8000fe0:	87ba                	mv	a5,a4
+ 8000fe2:	43d8                	lw	a4,4(a5)
+ 8000fe4:	487d                	li	a6,31
+ 8000fe6:	557d                	li	a0,-1
+ 8000fe8:	04e84763          	blt	a6,a4,8001036 <__register_exitproc+0x8a>
+ 8000fec:	020e0e63          	beqz	t3,8001028 <__register_exitproc+0x7c>
+ 8000ff0:	0887a803          	lw	a6,136(a5)
+ 8000ff4:	04080163          	beqz	a6,8001036 <__register_exitproc+0x8a>
+ 8000ff8:	00271893          	slli	a7,a4,0x2
+ 8000ffc:	98c2                	add	a7,a7,a6
+ 8000ffe:	00c8a023          	sw	a2,0(a7)
+ 8001002:	10082303          	lw	t1,256(a6)
+ 8001006:	4605                	li	a2,1
+ 8001008:	00e61633          	sll	a2,a2,a4
+ 800100c:	00c36333          	or	t1,t1,a2
+ 8001010:	10682023          	sw	t1,256(a6)
+ 8001014:	08d8a023          	sw	a3,128(a7)
+ 8001018:	4689                	li	a3,2
+ 800101a:	00de1763          	bne	t3,a3,8001028 <__register_exitproc+0x7c>
+ 800101e:	10482683          	lw	a3,260(a6)
+ 8001022:	8e55                	or	a2,a2,a3
+ 8001024:	10c82223          	sw	a2,260(a6)
+ 8001028:	00170693          	addi	a3,a4,1
+ 800102c:	070a                	slli	a4,a4,0x2
+ 800102e:	c3d4                	sw	a3,4(a5)
+ 8001030:	97ba                	add	a5,a5,a4
+ 8001032:	c78c                	sw	a1,8(a5)
+ 8001034:	4501                	li	a0,0
+ 8001036:	8082                	ret
 
-0800103c <__call_exitprocs>:
- 800103c:	7179                	addi	sp,sp,-48
- 800103e:	cc52                	sw	s4,24(sp)
- 8001040:	ca56                	sw	s5,20(sp)
- 8001042:	c85a                	sw	s6,16(sp)
- 8001044:	c65e                	sw	s7,12(sp)
- 8001046:	d606                	sw	ra,44(sp)
- 8001048:	d422                	sw	s0,40(sp)
- 800104a:	d226                	sw	s1,36(sp)
- 800104c:	d04a                	sw	s2,32(sp)
- 800104e:	ce4e                	sw	s3,28(sp)
- 8001050:	c462                	sw	s8,8(sp)
- 8001052:	8b2a                	mv	s6,a0
- 8001054:	8a2e                	mv	s4,a1
- 8001056:	17fffa97          	auipc	s5,0x17fff
- 800105a:	032a8a93          	addi	s5,s5,50 # 20000088 <_global_atexit>
- 800105e:	4b85                	li	s7,1
- 8001060:	000aa403          	lw	s0,0(s5)
- 8001064:	c811                	beqz	s0,8001078 <__call_exitprocs+0x3c>
- 8001066:	4044                	lw	s1,4(s0)
- 8001068:	08842983          	lw	s3,136(s0)
- 800106c:	fff48913          	addi	s2,s1,-1
- 8001070:	048a                	slli	s1,s1,0x2
- 8001072:	94a2                	add	s1,s1,s0
- 8001074:	00095e63          	bgez	s2,8001090 <__call_exitprocs+0x54>
- 8001078:	50b2                	lw	ra,44(sp)
- 800107a:	5422                	lw	s0,40(sp)
- 800107c:	5492                	lw	s1,36(sp)
- 800107e:	5902                	lw	s2,32(sp)
- 8001080:	49f2                	lw	s3,28(sp)
- 8001082:	4a62                	lw	s4,24(sp)
- 8001084:	4ad2                	lw	s5,20(sp)
- 8001086:	4b42                	lw	s6,16(sp)
- 8001088:	4bb2                	lw	s7,12(sp)
- 800108a:	4c22                	lw	s8,8(sp)
- 800108c:	6145                	addi	sp,sp,48
- 800108e:	8082                	ret
- 8001090:	000a0e63          	beqz	s4,80010ac <__call_exitprocs+0x70>
- 8001094:	00099563          	bnez	s3,800109e <__call_exitprocs+0x62>
- 8001098:	197d                	addi	s2,s2,-1
- 800109a:	14f1                	addi	s1,s1,-4
- 800109c:	bfe1                	j	8001074 <__call_exitprocs+0x38>
- 800109e:	00291793          	slli	a5,s2,0x2
- 80010a2:	97ce                	add	a5,a5,s3
- 80010a4:	0807a783          	lw	a5,128(a5)
- 80010a8:	ff4798e3          	bne	a5,s4,8001098 <__call_exitprocs+0x5c>
- 80010ac:	4058                	lw	a4,4(s0)
- 80010ae:	40dc                	lw	a5,4(s1)
- 80010b0:	177d                	addi	a4,a4,-1
- 80010b2:	03271863          	bne	a4,s2,80010e2 <__call_exitprocs+0xa6>
- 80010b6:	01242223          	sw	s2,4(s0)
- 80010ba:	dff9                	beqz	a5,8001098 <__call_exitprocs+0x5c>
- 80010bc:	00442c03          	lw	s8,4(s0)
- 80010c0:	00098863          	beqz	s3,80010d0 <__call_exitprocs+0x94>
- 80010c4:	1009a683          	lw	a3,256(s3)
- 80010c8:	012b9733          	sll	a4,s7,s2
- 80010cc:	8ef9                	and	a3,a3,a4
- 80010ce:	ee89                	bnez	a3,80010e8 <__call_exitprocs+0xac>
- 80010d0:	9782                	jalr	a5
- 80010d2:	4058                	lw	a4,4(s0)
- 80010d4:	000aa783          	lw	a5,0(s5)
- 80010d8:	f98714e3          	bne	a4,s8,8001060 <__call_exitprocs+0x24>
- 80010dc:	faf40ee3          	beq	s0,a5,8001098 <__call_exitprocs+0x5c>
- 80010e0:	b741                	j	8001060 <__call_exitprocs+0x24>
- 80010e2:	0004a223          	sw	zero,4(s1)
- 80010e6:	bfd1                	j	80010ba <__call_exitprocs+0x7e>
- 80010e8:	00291693          	slli	a3,s2,0x2
- 80010ec:	96ce                	add	a3,a3,s3
- 80010ee:	428c                	lw	a1,0(a3)
- 80010f0:	1049a683          	lw	a3,260(s3)
- 80010f4:	8f75                	and	a4,a4,a3
- 80010f6:	e701                	bnez	a4,80010fe <__call_exitprocs+0xc2>
- 80010f8:	855a                	mv	a0,s6
- 80010fa:	9782                	jalr	a5
- 80010fc:	bfd9                	j	80010d2 <__call_exitprocs+0x96>
- 80010fe:	852e                	mv	a0,a1
- 8001100:	9782                	jalr	a5
- 8001102:	bfc1                	j	80010d2 <__call_exitprocs+0x96>
+08001038 <__call_exitprocs>:
+ 8001038:	7179                	addi	sp,sp,-48
+ 800103a:	cc52                	sw	s4,24(sp)
+ 800103c:	ca56                	sw	s5,20(sp)
+ 800103e:	c85a                	sw	s6,16(sp)
+ 8001040:	c65e                	sw	s7,12(sp)
+ 8001042:	d606                	sw	ra,44(sp)
+ 8001044:	d422                	sw	s0,40(sp)
+ 8001046:	d226                	sw	s1,36(sp)
+ 8001048:	d04a                	sw	s2,32(sp)
+ 800104a:	ce4e                	sw	s3,28(sp)
+ 800104c:	c462                	sw	s8,8(sp)
+ 800104e:	8b2a                	mv	s6,a0
+ 8001050:	8a2e                	mv	s4,a1
+ 8001052:	17fffa97          	auipc	s5,0x17fff
+ 8001056:	036a8a93          	addi	s5,s5,54 # 20000088 <_global_atexit>
+ 800105a:	4b85                	li	s7,1
+ 800105c:	000aa403          	lw	s0,0(s5)
+ 8001060:	c811                	beqz	s0,8001074 <__call_exitprocs+0x3c>
+ 8001062:	4044                	lw	s1,4(s0)
+ 8001064:	08842983          	lw	s3,136(s0)
+ 8001068:	fff48913          	addi	s2,s1,-1
+ 800106c:	048a                	slli	s1,s1,0x2
+ 800106e:	94a2                	add	s1,s1,s0
+ 8001070:	00095e63          	bgez	s2,800108c <__call_exitprocs+0x54>
+ 8001074:	50b2                	lw	ra,44(sp)
+ 8001076:	5422                	lw	s0,40(sp)
+ 8001078:	5492                	lw	s1,36(sp)
+ 800107a:	5902                	lw	s2,32(sp)
+ 800107c:	49f2                	lw	s3,28(sp)
+ 800107e:	4a62                	lw	s4,24(sp)
+ 8001080:	4ad2                	lw	s5,20(sp)
+ 8001082:	4b42                	lw	s6,16(sp)
+ 8001084:	4bb2                	lw	s7,12(sp)
+ 8001086:	4c22                	lw	s8,8(sp)
+ 8001088:	6145                	addi	sp,sp,48
+ 800108a:	8082                	ret
+ 800108c:	000a0e63          	beqz	s4,80010a8 <__call_exitprocs+0x70>
+ 8001090:	00099563          	bnez	s3,800109a <__call_exitprocs+0x62>
+ 8001094:	197d                	addi	s2,s2,-1
+ 8001096:	14f1                	addi	s1,s1,-4
+ 8001098:	bfe1                	j	8001070 <__call_exitprocs+0x38>
+ 800109a:	00291793          	slli	a5,s2,0x2
+ 800109e:	97ce                	add	a5,a5,s3
+ 80010a0:	0807a783          	lw	a5,128(a5)
+ 80010a4:	ff4798e3          	bne	a5,s4,8001094 <__call_exitprocs+0x5c>
+ 80010a8:	4058                	lw	a4,4(s0)
+ 80010aa:	40dc                	lw	a5,4(s1)
+ 80010ac:	177d                	addi	a4,a4,-1
+ 80010ae:	03271863          	bne	a4,s2,80010de <__call_exitprocs+0xa6>
+ 80010b2:	01242223          	sw	s2,4(s0)
+ 80010b6:	dff9                	beqz	a5,8001094 <__call_exitprocs+0x5c>
+ 80010b8:	00442c03          	lw	s8,4(s0)
+ 80010bc:	00098863          	beqz	s3,80010cc <__call_exitprocs+0x94>
+ 80010c0:	1009a683          	lw	a3,256(s3)
+ 80010c4:	012b9733          	sll	a4,s7,s2
+ 80010c8:	8ef9                	and	a3,a3,a4
+ 80010ca:	ee89                	bnez	a3,80010e4 <__call_exitprocs+0xac>
+ 80010cc:	9782                	jalr	a5
+ 80010ce:	4058                	lw	a4,4(s0)
+ 80010d0:	000aa783          	lw	a5,0(s5)
+ 80010d4:	f98714e3          	bne	a4,s8,800105c <__call_exitprocs+0x24>
+ 80010d8:	faf40ee3          	beq	s0,a5,8001094 <__call_exitprocs+0x5c>
+ 80010dc:	b741                	j	800105c <__call_exitprocs+0x24>
+ 80010de:	0004a223          	sw	zero,4(s1)
+ 80010e2:	bfd1                	j	80010b6 <__call_exitprocs+0x7e>
+ 80010e4:	00291693          	slli	a3,s2,0x2
+ 80010e8:	96ce                	add	a3,a3,s3
+ 80010ea:	428c                	lw	a1,0(a3)
+ 80010ec:	1049a683          	lw	a3,260(s3)
+ 80010f0:	8f75                	and	a4,a4,a3
+ 80010f2:	e701                	bnez	a4,80010fa <__call_exitprocs+0xc2>
+ 80010f4:	855a                	mv	a0,s6
+ 80010f6:	9782                	jalr	a5
+ 80010f8:	bfd9                	j	80010ce <__call_exitprocs+0x96>
+ 80010fa:	852e                	mv	a0,a1
+ 80010fc:	9782                	jalr	a5
+ 80010fe:	bfc1                	j	80010ce <__call_exitprocs+0x96>
 
-08001104 <_write>:
- 8001104:	1141                	addi	sp,sp,-16
- 8001106:	c606                	sw	ra,12(sp)
- 8001108:	c422                	sw	s0,8(sp)
- 800110a:	4681                	li	a3,0
- 800110c:	4701                	li	a4,0
- 800110e:	4781                	li	a5,0
- 8001110:	04000893          	li	a7,64
- 8001114:	00000073          	ecall
- 8001118:	842a                	mv	s0,a0
- 800111a:	00055a63          	bgez	a0,800112e <_write+0x2a>
- 800111e:	40800433          	neg	s0,s0
- 8001122:	00000097          	auipc	ra,0x0
- 8001126:	016080e7          	jalr	22(ra) # 8001138 <__errno>
- 800112a:	c100                	sw	s0,0(a0)
- 800112c:	547d                	li	s0,-1
- 800112e:	8522                	mv	a0,s0
- 8001130:	40b2                	lw	ra,12(sp)
- 8001132:	4422                	lw	s0,8(sp)
- 8001134:	0141                	addi	sp,sp,16
- 8001136:	8082                	ret
+08001100 <_write>:
+ 8001100:	1141                	addi	sp,sp,-16
+ 8001102:	c606                	sw	ra,12(sp)
+ 8001104:	c422                	sw	s0,8(sp)
+ 8001106:	4681                	li	a3,0
+ 8001108:	4701                	li	a4,0
+ 800110a:	4781                	li	a5,0
+ 800110c:	04000893          	li	a7,64
+ 8001110:	00000073          	ecall
+ 8001114:	842a                	mv	s0,a0
+ 8001116:	00055a63          	bgez	a0,800112a <_write+0x2a>
+ 800111a:	40800433          	neg	s0,s0
+ 800111e:	00000097          	auipc	ra,0x0
+ 8001122:	016080e7          	jalr	22(ra) # 8001134 <__errno>
+ 8001126:	c100                	sw	s0,0(a0)
+ 8001128:	547d                	li	s0,-1
+ 800112a:	8522                	mv	a0,s0
+ 800112c:	40b2                	lw	ra,12(sp)
+ 800112e:	4422                	lw	s0,8(sp)
+ 8001130:	0141                	addi	sp,sp,16
+ 8001132:	8082                	ret
 
-08001138 <__errno>:
- 8001138:	17fff797          	auipc	a5,0x17fff
- 800113c:	f4878793          	addi	a5,a5,-184 # 20000080 <_impure_ptr>
- 8001140:	4388                	lw	a0,0(a5)
- 8001142:	8082                	ret
+08001134 <__errno>:
+ 8001134:	17fff797          	auipc	a5,0x17fff
+ 8001138:	f4c78793          	addi	a5,a5,-180 # 20000080 <_impure_ptr>
+ 800113c:	4388                	lw	a0,0(a5)
+ 800113e:	8082                	ret

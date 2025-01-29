@@ -110,58 +110,59 @@ main:
         addi a3, a3, 1
         bne a3, a4, 1b
         # Main loop to read switches and control LEDs
-1: li a0, GPIOA
+start:  li a0, GPIOA
         call gpiois # Read switch states
         srli a1, a1, 5 # Adjust the bits to match switch positions
-        andi a1, a1, 0x0F # Mask to only consider switches A5 to A8
+        andi a1, a1, 0x0F # Remove unwanted bits left side of the last bit
         # Call a subroutine to select LED sequence based on switch state
-        mv a2, a1 # Pass switch state as an argument
-        call select_sequence
-        j 1b # Repeat forever
+        mv a2, a1 # a2 = switch state
+        call select_sequence # Start the selected LED sequence
+        
 # Select LED sequence based on switch state
 # Select LED sequence based on switch state
 select_sequence:
         # Check the switch state
         
-        li t1, 0x00
-        li t2, 0x01
-        li t3, 0x02
-        li t4, 0x03
-        li t5, 0x04
-        li t6, 0x05
-        li s2, 0x06
-        li s3, 0x07
-        li s4, 0x08
-        li s5, 0x09
-        li s6, 0x0A
-        li s7, 0x0B
-        li s8, 0x0C
-        li s9, 0x0D
-        li s10, 0x0E
-        li s11, 0x0F
+        li t1, 0x00 # Switch state 0
+        li t2, 0x01 # Switch state 1
+        li t3, 0x02 # Switch state 2
+        li t4, 0x03 # Switch state 3
+        li t5, 0x04 # Switch state 4
+        li t6, 0x05 # Switch state 5
+        li s2, 0x06 # Switch state 6
+        li s3, 0x07 # Switch state 7
+        
+        li s4, 0x08 # Switch state 0 inverted
+        li s5, 0x09 # Switch state 1 inverted
+        li s6, 0x0A # Switch state 2 inverted
+        li s7, 0x0B # Switch state 3 inverted
+        li s8, 0x0C # Switch state 4 inverted
+        li s9, 0x0D # Switch state 5 inverted
+        li s10, 0x0E # Switch state 6 inverted
+        li s11, 0x0F # Switch state 7 inverted
 
-        beq a2, t1, disco0
-        beq a2, t2, disco1
-        beq a2, t3, disco2
-        beq a2, t4, disco3
-        beq a2, t5, disco4
-        beq a2, t6, disco5
-        beq a2, s2, disco6
-        beq a2, s3, disco7
-        beq a2, s4, disco0inv
-        beq a2, s5, disco1inv
-        beq a2, s6, disco2inv
-        beq a2, s7, disco3inv
-        beq a2, s8, disco4inv
-        beq a2, s9, disco5inv
-        beq a2, s10, disco6inv
-        beq a2, s11, disco7inv
+        beq a2, t1, disco0 #if a2 = t1, go to disco0
+        beq a2, t2, disco1 #if a2 = t2, go to disco1
+        beq a2, t3, disco2 #if a2 = t3, go to disco2
+        beq a2, t4, disco3 #if a2 = t4, go to disco3
+        beq a2, t5, disco4 #if a2 = t5, go to disco4
+        beq a2, t6, disco5 #if a2 = t6, go to disco5
+        beq a2, s2, disco6 #if a2 = s2, go to disco6
+        beq a2, s3, disco7 #if a2 = s3, go to disco7
+        beq a2, s4, disco0inv #if a2 = s4, go to disco0inv
+        beq a2, s5, disco1inv #if a2 = s5, go to disco1inv
+        beq a2, s6, disco2inv #if a2 = s6, go to disco2inv
+        beq a2, s7, disco3inv #if a2 = s7, go to disco3inv
+        beq a2, s8, disco4inv #if a2 = s8, go to disco4inv
+        beq a2, s9, disco5inv #if a2 = s9, go to disco5inv
+        beq a2, s10, disco6inv #if a2 = s10, go to disco6inv
+        beq a2, s11, disco7inv #if a2 = s11, go to disco7inv
 
-        ret # Return to main loop if not the specified switch state
+        #ret # Return to main loop if not the specified switch state
 disco0:
         la t0, sequence0
         # Cycle through 100 -> 010 -> 001 LED patterns
-        li a0, GPIOB
+        li a0, GPIOB # Set the GPIOB base address
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
         call gpiooc  # Update LEDs
         call delay  # Delay to see the pattern
@@ -174,7 +175,8 @@ disco0:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # 0 the sequence indefinitely
+        
+        j start
 
 disco1:
         la t0, sequence1
@@ -192,7 +194,8 @@ disco1:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        
+        j start
 
 disco2:
         la t0, sequence2
@@ -210,7 +213,7 @@ disco2:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco3:
         la t0, sequence3
@@ -228,7 +231,7 @@ disco3:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco4:
         la t0, sequence4
@@ -246,7 +249,7 @@ disco4:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco5:
         la t0, sequence5
@@ -264,7 +267,7 @@ disco5:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco6:
         la t0, sequence6
@@ -282,7 +285,7 @@ disco6:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco7:
         la t0, sequence7
@@ -300,29 +303,29 @@ disco7:
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco0inv:
         la t0, sequence0
         # Cycle through 100 -> 010 -> 001 LED patterns
         li a0, GPIOB
         lb a1,  0(t0)    # 0x00 Start with 100 (LED B2)
-        not a1, a1
+        not a1, a1 # Invert the pattern
         call gpiooc  # Update LEDs
         call delay  # Delay to see the pattern
         lb a1, 1(t0)  #0x01 Start with 100 (LED B2)
-        not a1, a1
+        not a1, a1 # Invert the pattern
         call gpiooc   # Update LEDs
         call delay   # Delay to see the pattern
         lb a1, 2(t0)  #0x02 Change to 010 (LED B1)
-        not a1, a1
+        not a1, a1 # Invert the pattern
         call gpiooc   # Update LEDs
         call delay    # Delay to see the pattern
         lb a1, 3(t0)   #0x04  Finally 001 (LED B0)
-        not a1, a1
+        not a1, a1 # Invert the pattern
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco1inv:
         la t0, sequence1
@@ -344,7 +347,7 @@ disco1inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco2inv:
         la t0, sequence2
@@ -366,7 +369,7 @@ disco2inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco3inv:
         la t0, sequence3
@@ -388,7 +391,7 @@ disco3inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco4inv:
         la t0, sequence4
@@ -410,7 +413,7 @@ disco4inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely                
+        j start # Repeat the sequence indefinitely                
 
 disco5inv:
         la t0, sequence5
@@ -432,7 +435,7 @@ disco5inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 disco6inv:
         la t0, sequence6
@@ -454,7 +457,7 @@ disco6inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely        
+        j start # Repeat the sequence indefinitely        
 
 disco7inv:
         la t0, sequence7
@@ -476,23 +479,23 @@ disco7inv:
         not a1, a1
         call gpiooc # Update LEDs
         call delay # Delay to see the pattern
-        j select_sequence # Repeat the sequence indefinitely
+        j start # Repeat the sequence indefinitely
 
 delay:
-        li t1, 25000000 # Delay count, adjust the number based on timing requirements
+        li t1, 0x87F513 # Delay count, adjust the number based on timing requirements
 1: addi t1, t1, -1 # Decrement the delay counter
         bnez t1, 1b # Keep looping until the counter reaches 0
         ret # Return to calling function
 
 
 .data
-sequence0: .byte 0x00, 0x01, 0x02, 0x04  # sequence och adrress   0,1,2,4
-sequence1: .byte 0x04, 0x02, 0x01, 0x00  # sequence och adrress   0, 1, 2, 3
-sequence2: .byte 0x01, 0x02, 0x03, 0x04  # sequence och address   4, 3 , 2, 1
-sequence3: .byte 0x01, 0x04, 0x03, 0x02  # sequence och address   2, 3, 4, 1
-sequence4: .byte 0x02, 0x03, 0x01, 0x00  # sequence och address   0, 1, 3, 2
-sequence5: .byte 0x02, 0x01, 0x00, 0x03  # sequence och address   3, 0, 1, 2
-sequence6: .byte 0x03, 0x00, 0x01, 0x02  # sequence och address   2, 1, 0, 3
-sequence7: .byte 0x03, 0x02, 0x01, 0x00  # sequence och address   0, 1, 2, 3
+sequence0: .byte 0x00, 0x01, 0x02, 0x04  # sequence och adrress   0, 1, 2, 4
+sequence1: .byte 0x04, 0x02, 0x01, 0x00  # sequence och adrress   4, 2, 1, 0
+sequence2: .byte 0x01, 0x02, 0x03, 0x04  # sequence och address   1, 2, 3, 4
+sequence3: .byte 0x04, 0x03, 0x02, 0x01  # sequence och address   4, 3, 2, 1
+sequence4: .byte 0x01, 0x04, 0x02, 0x07  # sequence och address   1, 4, 3, 7
+sequence5: .byte 0x07, 0x02, 0x04, 0x01  # sequence och address   7, 2, 4, 1
+sequence6: .byte 0x07, 0x03, 0x05, 0x01  # sequence och address   7, 3, 5, 1
+sequence7: .byte 0x01, 0x05, 0x03, 0x07  # sequence och address   1, 5, 3, 7
 
 .end

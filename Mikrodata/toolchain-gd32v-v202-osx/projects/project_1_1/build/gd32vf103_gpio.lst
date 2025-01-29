@@ -1,4 +1,4 @@
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 1
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 1
 
 
    1              		.file	"gd32vf103_gpio.c"
@@ -58,7 +58,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
   41:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_POSITION_MASK                  ((uint32_t)0x000F0000U)  /*!< AFIO_PCF register position
   42:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_SWJCFG_MASK                    ((uint32_t)0xF0FFFFFFU)  /*!< AFIO_PCF register SWJCFG m
   43:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_LOCATION1_MASK                 ((uint32_t)0x00200000U)  /*!< AFIO_PCF register location
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 2
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 2
 
 
   44:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_LOCATION2_MASK                 ((uint32_t)0x00100000U)  /*!< AFIO_PCF register location
@@ -118,7 +118,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
   78:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         /* reset GPIOE */
   79:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOERST);
   80:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 3
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 3
 
 
   81:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         break;
@@ -178,7 +178,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
   80:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         break;
   77              		.loc 1 80 9
   78 0060 17030000 		tail	rcu_periph_reset_disable
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 4
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 4
 
 
   78      67000300 
@@ -238,7 +238,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
   91:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \retval     none
   92:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** */
   93:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** void gpio_afio_deinit(void)
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 5
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 5
 
 
   94:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** {
@@ -298,7 +298,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  107:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_IPU: pull-up input mode
  108:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_OD: GPIO output with open-drain
  109:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_PP: GPIO output with push-pull
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 6
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 6
 
 
  110:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AF_OD: AFIO output with open-drain
@@ -358,7 +358,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  126:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     uint16_t i;
  178              		.loc 1 126 1 is_stmt 0
  179 000e 8147     		li	a5,0
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 7
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 7
 
 
  142:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
@@ -418,7 +418,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  146:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
  209              		.loc 1 146 17
  210 0036 33785800 		and	a6,a6,t0
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 8
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 8
 
 
  211              	.LVL22:
@@ -478,7 +478,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  238              		.loc 1 175 16
  239 0054 130F8002 		li	t5,40
  176:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 9
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 9
 
 
  177:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
@@ -538,7 +538,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  274              		.loc 1 175 13 is_stmt 1
  175:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
  275              		.loc 1 175 16 is_stmt 0
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 10
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 10
 
 
  276 0084 639CE501 		bne	a1,t5,.L20
@@ -598,7 +598,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  312              		.section	.text.gpio_bit_set,"ax",@progbits
  313              		.align	1
  314              		.globl	gpio_bit_set
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 11
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 11
 
 
  316              	gpio_bit_set:
@@ -658,7 +658,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  344              	.LFE6:
  346              		.section	.text.gpio_bit_write,"ax",@progbits
  347              		.align	1
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 12
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 12
 
 
  348              		.globl	gpio_bit_write
@@ -718,7 +718,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  245:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \retval     none
  246:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** */
  247:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** void gpio_port_write(uint32_t gpio_periph, uint16_t data)
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 13
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 13
 
 
  248:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** {
@@ -778,7 +778,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  414              	.LFB10:
  269:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** 
  270:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** /*!
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 14
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 14
 
 
  271:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \brief      get GPIO port input status
@@ -838,7 +838,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  444              		.loc 1 297 1
  445 0004 3335A000 		snez	a0,a0
  446 0008 8280     		ret
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 15
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 15
 
 
  447              		.cfi_endproc
@@ -898,7 +898,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  327:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_TIMER3_REMAP: TIMER3 remapping
  328:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_PARTIAL_REMAP: CAN0 partial remapping
  329:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_FULL_REMAP: CAN0 full remapping
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 16
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 16
 
 
  330:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_PD01_REMAP: PD01 remapping
@@ -958,7 +958,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  355:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
  498              		.loc 1 355 12
  499 0016 4183     		srli	a4,a4,16
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 17
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 17
 
 
  500              	.LVL47:
@@ -1018,7 +1018,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  376:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     if (AFIO_PCF1_FIELDS == (remap & AFIO_PCF1_FIELDS)) {
  535              		.loc 1 376 5 is_stmt 1
  377:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         /* set AFIO_PCF1 regiter value */
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 18
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 18
 
 
  378:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         AFIO_PCF1 = temp_reg;
@@ -1078,7 +1078,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  575              		.loc 1 368 18 is_stmt 0
  576 006e B706000F 		li	a3,251658240
  577 0072 D58F     		or	a5,a5,a3
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 19
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 19
 
 
  578              	.LVL58:
@@ -1138,7 +1138,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  400:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     uint32_t source = 0U;
  609              		.loc 1 400 5
  401:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     source = ((uint32_t) 0x0FU)
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 20
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 20
 
 
  610              		.loc 1 401 5
@@ -1198,7 +1198,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  650              		.loc 1 414 9 is_stmt 1
  651              		.loc 1 414 22 is_stmt 0
  652 003c D847     		lw	a4,12(a5)
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 21
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 21
 
 
  653 003e 598D     		or	a0,a4,a0
@@ -1258,7 +1258,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  692              		.globl	gpio_event_output_config
  694              	gpio_event_output_config:
  695              	.LFB15:
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 22
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 22
 
 
  431:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** 
@@ -1318,7 +1318,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  720              		.loc 1 458 13 is_stmt 0
  721 0010 0CC3     		sw	a1,0(a4)
  459:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 23
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 23
 
 
  722              		.loc 1 459 1
@@ -1378,7 +1378,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  759 000a 1CC3     		sw	a5,0(a4)
  481:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
  760              		.loc 1 481 1
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 24
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 24
 
 
  761 000c 8280     		ret
@@ -1438,7 +1438,7 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  503:../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
  796              		.loc 1 503 1
  797 000e 8280     		ret
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 25
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 25
 
 
  798              		.cfi_endproc
@@ -1451,637 +1451,637 @@ GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page
  806              		.file 5 "../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  807              		.file 6 "../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
  808              		.file 7 "../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 26
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_gpio.c
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:13     .text.gpio_deinit:0000000000000000 gpio_deinit
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:17     .text.gpio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:19     .text.gpio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:20     .text.gpio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:21     .text.gpio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:23     .text.gpio_deinit:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:25     .text.gpio_deinit:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:27     .text.gpio_deinit:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:36     .text.gpio_deinit:0000000000000020 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:37     .text.gpio_deinit:0000000000000022 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:38     .text.gpio_deinit:0000000000000022 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:41     .text.gpio_deinit:0000000000000024 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:45     .text.gpio_deinit:0000000000000026 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:47     .text.gpio_deinit:0000000000000026 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:53     .text.gpio_deinit:000000000000003a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:58     .text.gpio_deinit:0000000000000046 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:63     .text.gpio_deinit:000000000000004c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:68     .text.gpio_deinit:0000000000000058 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:71     .text.gpio_deinit:000000000000005c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:72     .text.gpio_deinit:000000000000005e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:73     .text.gpio_deinit:000000000000005e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:76     .text.gpio_deinit:0000000000000060 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:78     .text.gpio_deinit:0000000000000060 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:82     .text.gpio_deinit:0000000000000068 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:84     .text.gpio_deinit:0000000000000068 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:89     .text.gpio_deinit:0000000000000074 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:94     .text.gpio_deinit:000000000000007a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:99     .text.gpio_deinit:0000000000000086 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:104    .text.gpio_deinit:000000000000008c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:109    .text.gpio_deinit:0000000000000098 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:111    .text.gpio_deinit:000000000000009e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:118    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:121    .text.gpio_afio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:122    .text.gpio_afio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:123    .text.gpio_afio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:124    .text.gpio_afio_deinit:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:126    .text.gpio_afio_deinit:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:128    .text.gpio_afio_deinit:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:130    .text.gpio_afio_deinit:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:131    .text.gpio_afio_deinit:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:133    .text.gpio_afio_deinit:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:136    .text.gpio_afio_deinit:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:137    .text.gpio_afio_deinit:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:138    .text.gpio_afio_deinit:0000000000000012 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:140    .text.gpio_afio_deinit:0000000000000012 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:142    .text.gpio_afio_deinit:0000000000000016 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:144    .text.gpio_afio_deinit:0000000000000018 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:146    .text.gpio_afio_deinit:0000000000000018 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:148    .text.gpio_afio_deinit:0000000000000020 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:155    .text.gpio_init:0000000000000000 gpio_init
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:158    .text.gpio_init:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:160    .text.gpio_init:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:161    .text.gpio_init:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:162    .text.gpio_init:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:163    .text.gpio_init:0000000000000000 .L0 
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 27
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:13     .text.gpio_deinit:0000000000000000 gpio_deinit
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:17     .text.gpio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:19     .text.gpio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:20     .text.gpio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:21     .text.gpio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:23     .text.gpio_deinit:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:25     .text.gpio_deinit:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:27     .text.gpio_deinit:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:36     .text.gpio_deinit:0000000000000020 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:37     .text.gpio_deinit:0000000000000022 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:38     .text.gpio_deinit:0000000000000022 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:41     .text.gpio_deinit:0000000000000024 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:45     .text.gpio_deinit:0000000000000026 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:47     .text.gpio_deinit:0000000000000026 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:53     .text.gpio_deinit:000000000000003a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:58     .text.gpio_deinit:0000000000000046 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:63     .text.gpio_deinit:000000000000004c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:68     .text.gpio_deinit:0000000000000058 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:71     .text.gpio_deinit:000000000000005c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:72     .text.gpio_deinit:000000000000005e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:73     .text.gpio_deinit:000000000000005e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:76     .text.gpio_deinit:0000000000000060 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:78     .text.gpio_deinit:0000000000000060 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:82     .text.gpio_deinit:0000000000000068 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:84     .text.gpio_deinit:0000000000000068 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:89     .text.gpio_deinit:0000000000000074 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:94     .text.gpio_deinit:000000000000007a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:99     .text.gpio_deinit:0000000000000086 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:104    .text.gpio_deinit:000000000000008c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:109    .text.gpio_deinit:0000000000000098 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:111    .text.gpio_deinit:000000000000009e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:118    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:121    .text.gpio_afio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:122    .text.gpio_afio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:123    .text.gpio_afio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:124    .text.gpio_afio_deinit:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:126    .text.gpio_afio_deinit:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:128    .text.gpio_afio_deinit:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:130    .text.gpio_afio_deinit:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:131    .text.gpio_afio_deinit:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:133    .text.gpio_afio_deinit:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:136    .text.gpio_afio_deinit:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:137    .text.gpio_afio_deinit:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:138    .text.gpio_afio_deinit:0000000000000012 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:140    .text.gpio_afio_deinit:0000000000000012 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:142    .text.gpio_afio_deinit:0000000000000016 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:144    .text.gpio_afio_deinit:0000000000000018 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:146    .text.gpio_afio_deinit:0000000000000018 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:148    .text.gpio_afio_deinit:0000000000000020 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:155    .text.gpio_init:0000000000000000 gpio_init
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:158    .text.gpio_init:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:160    .text.gpio_init:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:161    .text.gpio_init:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:162    .text.gpio_init:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:163    .text.gpio_init:0000000000000000 .L0 
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 27
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:164    .text.gpio_init:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:165    .text.gpio_init:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:167    .text.gpio_init:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:170    .text.gpio_init:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:171    .text.gpio_init:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:173    .text.gpio_init:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:174    .text.gpio_init:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:178    .text.gpio_init:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:179    .text.gpio_init:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:181    .text.gpio_init:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:183    .text.gpio_init:0000000000000012 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:185    .text.gpio_init:0000000000000014 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:187    .text.gpio_init:0000000000000018 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:189    .text.gpio_init:000000000000001c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:193    .text.gpio_init:000000000000001e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:194    .text.gpio_init:000000000000001e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:196    .text.gpio_init:0000000000000022 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:198    .text.gpio_init:0000000000000024 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:200    .text.gpio_init:0000000000000026 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:202    .text.gpio_init:000000000000002a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:205    .text.gpio_init:000000000000002e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:206    .text.gpio_init:000000000000002e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:208    .text.gpio_init:0000000000000032 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:210    .text.gpio_init:0000000000000036 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:213    .text.gpio_init:000000000000003a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:214    .text.gpio_init:000000000000003a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:216    .text.gpio_init:000000000000003e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:219    .text.gpio_init:0000000000000042 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:220    .text.gpio_init:0000000000000042 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:222    .text.gpio_init:0000000000000046 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:223    .text.gpio_init:0000000000000046 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:226    .text.gpio_init:0000000000000048 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:227    .text.gpio_init:0000000000000048 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:233    .text.gpio_init:000000000000004c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:235    .text.gpio_init:0000000000000050 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:237    .text.gpio_init:0000000000000052 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:239    .text.gpio_init:0000000000000054 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:241    .text.gpio_init:0000000000000058 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:243    .text.gpio_init:000000000000005c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:247    .text.gpio_init:000000000000005e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:248    .text.gpio_init:000000000000005e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:250    .text.gpio_init:0000000000000062 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:252    .text.gpio_init:0000000000000064 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:254    .text.gpio_init:0000000000000066 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:255    .text.gpio_init:0000000000000066 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:258    .text.gpio_init:000000000000006c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:261    .text.gpio_init:0000000000000070 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:262    .text.gpio_init:0000000000000070 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:264    .text.gpio_init:0000000000000074 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:266    .text.gpio_init:0000000000000078 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:269    .text.gpio_init:000000000000007c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:270    .text.gpio_init:000000000000007c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:272    .text.gpio_init:0000000000000080 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:275    .text.gpio_init:0000000000000084 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:276    .text.gpio_init:0000000000000084 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:278    .text.gpio_init:0000000000000088 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:279    .text.gpio_init:0000000000000088 .L0 
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 28
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:164    .text.gpio_init:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:165    .text.gpio_init:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:167    .text.gpio_init:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:170    .text.gpio_init:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:171    .text.gpio_init:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:173    .text.gpio_init:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:174    .text.gpio_init:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:178    .text.gpio_init:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:179    .text.gpio_init:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:181    .text.gpio_init:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:183    .text.gpio_init:0000000000000012 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:185    .text.gpio_init:0000000000000014 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:187    .text.gpio_init:0000000000000018 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:189    .text.gpio_init:000000000000001c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:193    .text.gpio_init:000000000000001e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:194    .text.gpio_init:000000000000001e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:196    .text.gpio_init:0000000000000022 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:198    .text.gpio_init:0000000000000024 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:200    .text.gpio_init:0000000000000026 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:202    .text.gpio_init:000000000000002a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:205    .text.gpio_init:000000000000002e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:206    .text.gpio_init:000000000000002e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:208    .text.gpio_init:0000000000000032 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:210    .text.gpio_init:0000000000000036 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:213    .text.gpio_init:000000000000003a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:214    .text.gpio_init:000000000000003a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:216    .text.gpio_init:000000000000003e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:219    .text.gpio_init:0000000000000042 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:220    .text.gpio_init:0000000000000042 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:222    .text.gpio_init:0000000000000046 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:223    .text.gpio_init:0000000000000046 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:226    .text.gpio_init:0000000000000048 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:227    .text.gpio_init:0000000000000048 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:233    .text.gpio_init:000000000000004c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:235    .text.gpio_init:0000000000000050 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:237    .text.gpio_init:0000000000000052 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:239    .text.gpio_init:0000000000000054 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:241    .text.gpio_init:0000000000000058 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:243    .text.gpio_init:000000000000005c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:247    .text.gpio_init:000000000000005e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:248    .text.gpio_init:000000000000005e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:250    .text.gpio_init:0000000000000062 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:252    .text.gpio_init:0000000000000064 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:254    .text.gpio_init:0000000000000066 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:255    .text.gpio_init:0000000000000066 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:258    .text.gpio_init:000000000000006c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:261    .text.gpio_init:0000000000000070 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:262    .text.gpio_init:0000000000000070 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:264    .text.gpio_init:0000000000000074 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:266    .text.gpio_init:0000000000000078 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:269    .text.gpio_init:000000000000007c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:270    .text.gpio_init:000000000000007c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:272    .text.gpio_init:0000000000000080 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:275    .text.gpio_init:0000000000000084 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:276    .text.gpio_init:0000000000000084 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:278    .text.gpio_init:0000000000000088 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:279    .text.gpio_init:0000000000000088 .L0 
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 28
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:282    .text.gpio_init:000000000000008a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:283    .text.gpio_init:000000000000008a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:289    .text.gpio_init:000000000000008e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:291    .text.gpio_init:0000000000000092 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:295    .text.gpio_init:0000000000000094 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:296    .text.gpio_init:0000000000000094 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:298    .text.gpio_init:0000000000000098 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:299    .text.gpio_init:0000000000000098 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:303    .text.gpio_init:000000000000009c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:304    .text.gpio_init:000000000000009c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:306    .text.gpio_init:00000000000000a0 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:307    .text.gpio_init:00000000000000a0 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:309    .text.gpio_init:00000000000000a4 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:316    .text.gpio_bit_set:0000000000000000 gpio_bit_set
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:319    .text.gpio_bit_set:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:321    .text.gpio_bit_set:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:322    .text.gpio_bit_set:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:323    .text.gpio_bit_set:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:325    .text.gpio_bit_set:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:326    .text.gpio_bit_set:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:333    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:336    .text.gpio_bit_reset:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:338    .text.gpio_bit_reset:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:339    .text.gpio_bit_reset:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:340    .text.gpio_bit_reset:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:342    .text.gpio_bit_reset:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:343    .text.gpio_bit_reset:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:350    .text.gpio_bit_write:0000000000000000 gpio_bit_write
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:353    .text.gpio_bit_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:355    .text.gpio_bit_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:356    .text.gpio_bit_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:357    .text.gpio_bit_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:359    .text.gpio_bit_write:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:360    .text.gpio_bit_write:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:364    .text.gpio_bit_write:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:365    .text.gpio_bit_write:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:367    .text.gpio_bit_write:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:368    .text.gpio_bit_write:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:375    .text.gpio_port_write:0000000000000000 gpio_port_write
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:378    .text.gpio_port_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:380    .text.gpio_port_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:381    .text.gpio_port_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:382    .text.gpio_port_write:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:384    .text.gpio_port_write:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:385    .text.gpio_port_write:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:392    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:395    .text.gpio_input_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:397    .text.gpio_input_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:398    .text.gpio_input_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:399    .text.gpio_input_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:402    .text.gpio_input_bit_get:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:404    .text.gpio_input_bit_get:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:406    .text.gpio_input_bit_get:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:413    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:416    .text.gpio_input_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:418    .text.gpio_input_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:419    .text.gpio_input_port_get:0000000000000000 .L0 
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 29
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:282    .text.gpio_init:000000000000008a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:283    .text.gpio_init:000000000000008a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:289    .text.gpio_init:000000000000008e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:291    .text.gpio_init:0000000000000092 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:295    .text.gpio_init:0000000000000094 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:296    .text.gpio_init:0000000000000094 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:298    .text.gpio_init:0000000000000098 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:299    .text.gpio_init:0000000000000098 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:303    .text.gpio_init:000000000000009c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:304    .text.gpio_init:000000000000009c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:306    .text.gpio_init:00000000000000a0 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:307    .text.gpio_init:00000000000000a0 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:309    .text.gpio_init:00000000000000a4 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:316    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:319    .text.gpio_bit_set:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:321    .text.gpio_bit_set:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:322    .text.gpio_bit_set:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:323    .text.gpio_bit_set:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:325    .text.gpio_bit_set:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:326    .text.gpio_bit_set:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:333    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:336    .text.gpio_bit_reset:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:338    .text.gpio_bit_reset:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:339    .text.gpio_bit_reset:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:340    .text.gpio_bit_reset:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:342    .text.gpio_bit_reset:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:343    .text.gpio_bit_reset:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:350    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:353    .text.gpio_bit_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:355    .text.gpio_bit_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:356    .text.gpio_bit_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:357    .text.gpio_bit_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:359    .text.gpio_bit_write:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:360    .text.gpio_bit_write:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:364    .text.gpio_bit_write:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:365    .text.gpio_bit_write:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:367    .text.gpio_bit_write:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:368    .text.gpio_bit_write:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:375    .text.gpio_port_write:0000000000000000 gpio_port_write
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:378    .text.gpio_port_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:380    .text.gpio_port_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:381    .text.gpio_port_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:382    .text.gpio_port_write:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:384    .text.gpio_port_write:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:385    .text.gpio_port_write:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:392    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:395    .text.gpio_input_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:397    .text.gpio_input_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:398    .text.gpio_input_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:399    .text.gpio_input_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:402    .text.gpio_input_bit_get:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:404    .text.gpio_input_bit_get:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:406    .text.gpio_input_bit_get:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:413    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:416    .text.gpio_input_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:418    .text.gpio_input_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:419    .text.gpio_input_port_get:0000000000000000 .L0 
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 29
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:420    .text.gpio_input_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:423    .text.gpio_input_port_get:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:426    .text.gpio_input_port_get:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:433    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:436    .text.gpio_output_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:438    .text.gpio_output_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:439    .text.gpio_output_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:440    .text.gpio_output_bit_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:443    .text.gpio_output_bit_get:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:445    .text.gpio_output_bit_get:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:447    .text.gpio_output_bit_get:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:454    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:457    .text.gpio_output_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:459    .text.gpio_output_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:460    .text.gpio_output_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:461    .text.gpio_output_port_get:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:464    .text.gpio_output_port_get:0000000000000002 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:467    .text.gpio_output_port_get:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:474    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:477    .text.gpio_pin_remap_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:479    .text.gpio_pin_remap_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:480    .text.gpio_pin_remap_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:481    .text.gpio_pin_remap_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:482    .text.gpio_pin_remap_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:484    .text.gpio_pin_remap_config:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:486    .text.gpio_pin_remap_config:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:487    .text.gpio_pin_remap_config:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:491    .text.gpio_pin_remap_config:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:492    .text.gpio_pin_remap_config:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:493    .text.gpio_pin_remap_config:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:495    .text.gpio_pin_remap_config:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:497    .text.gpio_pin_remap_config:0000000000000012 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:499    .text.gpio_pin_remap_config:0000000000000016 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:502    .text.gpio_pin_remap_config:0000000000000018 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:503    .text.gpio_pin_remap_config:0000000000000018 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:505    .text.gpio_pin_remap_config:000000000000001c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:506    .text.gpio_pin_remap_config:000000000000001c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:509    .text.gpio_pin_remap_config:0000000000000022 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:511    .text.gpio_pin_remap_config:0000000000000026 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:514    .text.gpio_pin_remap_config:000000000000002a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:515    .text.gpio_pin_remap_config:000000000000002a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:521    .text.gpio_pin_remap_config:0000000000000034 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:522    .text.gpio_pin_remap_config:0000000000000034 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:524    .text.gpio_pin_remap_config:0000000000000036 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:525    .text.gpio_pin_remap_config:0000000000000036 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:527    .text.gpio_pin_remap_config:000000000000003a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:529    .text.gpio_pin_remap_config:000000000000003c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:532    .text.gpio_pin_remap_config:0000000000000040 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:536    .text.gpio_pin_remap_config:0000000000000042 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:537    .text.gpio_pin_remap_config:0000000000000042 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:539    .text.gpio_pin_remap_config:0000000000000046 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:541    .text.gpio_pin_remap_config:000000000000004a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:542    .text.gpio_pin_remap_config:000000000000004a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:547    .text.gpio_pin_remap_config:000000000000004e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:548    .text.gpio_pin_remap_config:000000000000004e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:554    .text.gpio_pin_remap_config:0000000000000052 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:555    .text.gpio_pin_remap_config:0000000000000052 .L0 
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 30
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:420    .text.gpio_input_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:423    .text.gpio_input_port_get:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:426    .text.gpio_input_port_get:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:433    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:436    .text.gpio_output_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:438    .text.gpio_output_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:439    .text.gpio_output_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:440    .text.gpio_output_bit_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:443    .text.gpio_output_bit_get:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:445    .text.gpio_output_bit_get:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:447    .text.gpio_output_bit_get:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:454    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:457    .text.gpio_output_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:459    .text.gpio_output_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:460    .text.gpio_output_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:461    .text.gpio_output_port_get:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:464    .text.gpio_output_port_get:0000000000000002 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:467    .text.gpio_output_port_get:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:474    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:477    .text.gpio_pin_remap_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:479    .text.gpio_pin_remap_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:480    .text.gpio_pin_remap_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:481    .text.gpio_pin_remap_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:482    .text.gpio_pin_remap_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:484    .text.gpio_pin_remap_config:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:486    .text.gpio_pin_remap_config:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:487    .text.gpio_pin_remap_config:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:491    .text.gpio_pin_remap_config:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:492    .text.gpio_pin_remap_config:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:493    .text.gpio_pin_remap_config:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:495    .text.gpio_pin_remap_config:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:497    .text.gpio_pin_remap_config:0000000000000012 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:499    .text.gpio_pin_remap_config:0000000000000016 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:502    .text.gpio_pin_remap_config:0000000000000018 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:503    .text.gpio_pin_remap_config:0000000000000018 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:505    .text.gpio_pin_remap_config:000000000000001c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:506    .text.gpio_pin_remap_config:000000000000001c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:509    .text.gpio_pin_remap_config:0000000000000022 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:511    .text.gpio_pin_remap_config:0000000000000026 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:514    .text.gpio_pin_remap_config:000000000000002a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:515    .text.gpio_pin_remap_config:000000000000002a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:521    .text.gpio_pin_remap_config:0000000000000034 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:522    .text.gpio_pin_remap_config:0000000000000034 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:524    .text.gpio_pin_remap_config:0000000000000036 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:525    .text.gpio_pin_remap_config:0000000000000036 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:527    .text.gpio_pin_remap_config:000000000000003a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:529    .text.gpio_pin_remap_config:000000000000003c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:532    .text.gpio_pin_remap_config:0000000000000040 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:536    .text.gpio_pin_remap_config:0000000000000042 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:537    .text.gpio_pin_remap_config:0000000000000042 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:539    .text.gpio_pin_remap_config:0000000000000046 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:541    .text.gpio_pin_remap_config:000000000000004a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:542    .text.gpio_pin_remap_config:000000000000004a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:547    .text.gpio_pin_remap_config:000000000000004e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:548    .text.gpio_pin_remap_config:000000000000004e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:554    .text.gpio_pin_remap_config:0000000000000052 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:555    .text.gpio_pin_remap_config:0000000000000052 .L0 
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 30
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:559    .text.gpio_pin_remap_config:000000000000005a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:560    .text.gpio_pin_remap_config:000000000000005a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:561    .text.gpio_pin_remap_config:000000000000005a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:563    .text.gpio_pin_remap_config:000000000000005e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:565    .text.gpio_pin_remap_config:0000000000000062 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:570    .text.gpio_pin_remap_config:0000000000000068 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:572    .text.gpio_pin_remap_config:000000000000006c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:575    .text.gpio_pin_remap_config:000000000000006e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:576    .text.gpio_pin_remap_config:000000000000006e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:583    .text.gpio_pin_remap_config:0000000000000076 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:584    .text.gpio_pin_remap_config:0000000000000076 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:586    .text.gpio_pin_remap_config:000000000000007a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:588    .text.gpio_pin_remap_config:000000000000007c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:593    .text.gpio_pin_remap_config:0000000000000082 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:594    .text.gpio_pin_remap_config:0000000000000082 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:596    .text.gpio_pin_remap_config:0000000000000084 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:597    .text.gpio_pin_remap_config:0000000000000086 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:604    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:607    .text.gpio_exti_source_select:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:609    .text.gpio_exti_source_select:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:610    .text.gpio_exti_source_select:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:611    .text.gpio_exti_source_select:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:612    .text.gpio_exti_source_select:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:614    .text.gpio_exti_source_select:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:617    .text.gpio_exti_source_select:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:618    .text.gpio_exti_source_select:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:623    .text.gpio_exti_source_select:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:628    .text.gpio_exti_source_select:000000000000001a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:629    .text.gpio_exti_source_select:000000000000001a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:634    .text.gpio_exti_source_select:0000000000000024 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:635    .text.gpio_exti_source_select:0000000000000024 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:641    .text.gpio_exti_source_select:000000000000002c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:642    .text.gpio_exti_source_select:000000000000002c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:645    .text.gpio_exti_source_select:0000000000000032 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:646    .text.gpio_exti_source_select:0000000000000032 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:651    .text.gpio_exti_source_select:000000000000003c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:652    .text.gpio_exti_source_select:000000000000003c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:658    .text.gpio_exti_source_select:0000000000000044 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:659    .text.gpio_exti_source_select:0000000000000044 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:662    .text.gpio_exti_source_select:000000000000004a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:663    .text.gpio_exti_source_select:000000000000004a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:668    .text.gpio_exti_source_select:0000000000000054 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:669    .text.gpio_exti_source_select:0000000000000054 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:675    .text.gpio_exti_source_select:000000000000005c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:676    .text.gpio_exti_source_select:000000000000005c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:681    .text.gpio_exti_source_select:0000000000000066 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:682    .text.gpio_exti_source_select:0000000000000066 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:686    .text.gpio_exti_source_select:000000000000006c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:687    .text.gpio_exti_source_select:000000000000006e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:694    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:697    .text.gpio_event_output_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:699    .text.gpio_event_output_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:700    .text.gpio_event_output_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:701    .text.gpio_event_output_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:702    .text.gpio_event_output_config:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:706    .text.gpio_event_output_config:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:707    .text.gpio_event_output_config:0000000000000006 .L0 
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 31
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:559    .text.gpio_pin_remap_config:000000000000005a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:560    .text.gpio_pin_remap_config:000000000000005a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:561    .text.gpio_pin_remap_config:000000000000005a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:563    .text.gpio_pin_remap_config:000000000000005e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:565    .text.gpio_pin_remap_config:0000000000000062 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:570    .text.gpio_pin_remap_config:0000000000000068 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:572    .text.gpio_pin_remap_config:000000000000006c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:575    .text.gpio_pin_remap_config:000000000000006e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:576    .text.gpio_pin_remap_config:000000000000006e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:583    .text.gpio_pin_remap_config:0000000000000076 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:584    .text.gpio_pin_remap_config:0000000000000076 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:586    .text.gpio_pin_remap_config:000000000000007a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:588    .text.gpio_pin_remap_config:000000000000007c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:593    .text.gpio_pin_remap_config:0000000000000082 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:594    .text.gpio_pin_remap_config:0000000000000082 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:596    .text.gpio_pin_remap_config:0000000000000084 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:597    .text.gpio_pin_remap_config:0000000000000086 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:604    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:607    .text.gpio_exti_source_select:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:609    .text.gpio_exti_source_select:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:610    .text.gpio_exti_source_select:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:611    .text.gpio_exti_source_select:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:612    .text.gpio_exti_source_select:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:614    .text.gpio_exti_source_select:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:617    .text.gpio_exti_source_select:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:618    .text.gpio_exti_source_select:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:623    .text.gpio_exti_source_select:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:628    .text.gpio_exti_source_select:000000000000001a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:629    .text.gpio_exti_source_select:000000000000001a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:634    .text.gpio_exti_source_select:0000000000000024 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:635    .text.gpio_exti_source_select:0000000000000024 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:641    .text.gpio_exti_source_select:000000000000002c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:642    .text.gpio_exti_source_select:000000000000002c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:645    .text.gpio_exti_source_select:0000000000000032 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:646    .text.gpio_exti_source_select:0000000000000032 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:651    .text.gpio_exti_source_select:000000000000003c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:652    .text.gpio_exti_source_select:000000000000003c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:658    .text.gpio_exti_source_select:0000000000000044 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:659    .text.gpio_exti_source_select:0000000000000044 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:662    .text.gpio_exti_source_select:000000000000004a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:663    .text.gpio_exti_source_select:000000000000004a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:668    .text.gpio_exti_source_select:0000000000000054 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:669    .text.gpio_exti_source_select:0000000000000054 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:675    .text.gpio_exti_source_select:000000000000005c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:676    .text.gpio_exti_source_select:000000000000005c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:681    .text.gpio_exti_source_select:0000000000000066 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:682    .text.gpio_exti_source_select:0000000000000066 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:686    .text.gpio_exti_source_select:000000000000006c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:687    .text.gpio_exti_source_select:000000000000006e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:694    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:697    .text.gpio_event_output_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:699    .text.gpio_event_output_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:700    .text.gpio_event_output_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:701    .text.gpio_event_output_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:702    .text.gpio_event_output_config:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:706    .text.gpio_event_output_config:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:707    .text.gpio_event_output_config:0000000000000006 .L0 
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 31
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:708    .text.gpio_event_output_config:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:709    .text.gpio_event_output_config:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:712    .text.gpio_event_output_config:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:717    .text.gpio_event_output_config:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:720    .text.gpio_event_output_config:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:721    .text.gpio_event_output_config:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:723    .text.gpio_event_output_config:0000000000000012 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:724    .text.gpio_event_output_config:0000000000000014 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:731    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:734    .text.gpio_event_output_enable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:735    .text.gpio_event_output_enable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:736    .text.gpio_event_output_enable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:737    .text.gpio_event_output_enable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:742    .text.gpio_event_output_enable:000000000000000c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:743    .text.gpio_event_output_enable:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:750    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:753    .text.gpio_event_output_disable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:754    .text.gpio_event_output_disable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:755    .text.gpio_event_output_disable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:756    .text.gpio_event_output_disable:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:761    .text.gpio_event_output_disable:000000000000000c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:762    .text.gpio_event_output_disable:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:769    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:772    .text.gpio_pin_lock:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:774    .text.gpio_pin_lock:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:775    .text.gpio_pin_lock:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:776    .text.gpio_pin_lock:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:777    .text.gpio_pin_lock:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:781    .text.gpio_pin_lock:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:782    .text.gpio_pin_lock:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:784    .text.gpio_pin_lock:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:785    .text.gpio_pin_lock:0000000000000006 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:787    .text.gpio_pin_lock:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:788    .text.gpio_pin_lock:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:790    .text.gpio_pin_lock:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:791    .text.gpio_pin_lock:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:794    .text.gpio_pin_lock:000000000000000c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:795    .text.gpio_pin_lock:000000000000000c .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:797    .text.gpio_pin_lock:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:798    .text.gpio_pin_lock:0000000000000010 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:114    .text.gpio_deinit:000000000000009e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:151    .text.gpio_afio_deinit:0000000000000020 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:312    .text.gpio_init:00000000000000a4 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:329    .text.gpio_bit_set:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:346    .text.gpio_bit_reset:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:371    .text.gpio_bit_write:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:388    .text.gpio_port_write:0000000000000004 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:409    .text.gpio_input_bit_get:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:429    .text.gpio_input_port_get:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:450    .text.gpio_output_bit_get:000000000000000a .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:470    .text.gpio_output_port_get:0000000000000008 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:600    .text.gpio_pin_remap_config:0000000000000086 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:690    .text.gpio_exti_source_select:000000000000006e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:727    .text.gpio_event_output_config:0000000000000014 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:746    .text.gpio_event_output_enable:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:765    .text.gpio_event_output_disable:000000000000000e .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:801    .text.gpio_pin_lock:0000000000000010 .L0 
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 32
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:708    .text.gpio_event_output_config:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:709    .text.gpio_event_output_config:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:712    .text.gpio_event_output_config:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:717    .text.gpio_event_output_config:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:720    .text.gpio_event_output_config:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:721    .text.gpio_event_output_config:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:723    .text.gpio_event_output_config:0000000000000012 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:724    .text.gpio_event_output_config:0000000000000014 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:731    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:734    .text.gpio_event_output_enable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:735    .text.gpio_event_output_enable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:736    .text.gpio_event_output_enable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:737    .text.gpio_event_output_enable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:742    .text.gpio_event_output_enable:000000000000000c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:743    .text.gpio_event_output_enable:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:750    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:753    .text.gpio_event_output_disable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:754    .text.gpio_event_output_disable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:755    .text.gpio_event_output_disable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:756    .text.gpio_event_output_disable:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:761    .text.gpio_event_output_disable:000000000000000c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:762    .text.gpio_event_output_disable:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:769    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:772    .text.gpio_pin_lock:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:774    .text.gpio_pin_lock:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:775    .text.gpio_pin_lock:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:776    .text.gpio_pin_lock:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:777    .text.gpio_pin_lock:0000000000000000 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:781    .text.gpio_pin_lock:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:782    .text.gpio_pin_lock:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:784    .text.gpio_pin_lock:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:785    .text.gpio_pin_lock:0000000000000006 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:787    .text.gpio_pin_lock:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:788    .text.gpio_pin_lock:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:790    .text.gpio_pin_lock:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:791    .text.gpio_pin_lock:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:794    .text.gpio_pin_lock:000000000000000c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:795    .text.gpio_pin_lock:000000000000000c .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:797    .text.gpio_pin_lock:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:798    .text.gpio_pin_lock:0000000000000010 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:114    .text.gpio_deinit:000000000000009e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:151    .text.gpio_afio_deinit:0000000000000020 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:312    .text.gpio_init:00000000000000a4 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:329    .text.gpio_bit_set:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:346    .text.gpio_bit_reset:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:371    .text.gpio_bit_write:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:388    .text.gpio_port_write:0000000000000004 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:409    .text.gpio_input_bit_get:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:429    .text.gpio_input_port_get:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:450    .text.gpio_output_bit_get:000000000000000a .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:470    .text.gpio_output_port_get:0000000000000008 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:600    .text.gpio_pin_remap_config:0000000000000086 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:690    .text.gpio_exti_source_select:000000000000006e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:727    .text.gpio_event_output_config:0000000000000014 .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:746    .text.gpio_event_output_enable:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:765    .text.gpio_event_output_disable:000000000000000e .L0 
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:801    .text.gpio_pin_lock:0000000000000010 .L0 
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 32
 
 
                      .debug_frame:0000000000000000 .L0 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:92     .text.gpio_deinit:000000000000007a .L2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:43     .text.gpio_deinit:0000000000000026 .L3
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:61     .text.gpio_deinit:000000000000004c .L4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:80     .text.gpio_deinit:0000000000000068 .L5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:102    .text.gpio_deinit:000000000000008c .L7
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:34     .text.gpio_deinit:0000000000000020 .L1
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:69     .text.gpio_deinit:000000000000005c .L10
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:176    .text.gpio_init:000000000000000e .L14
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:229    .text.gpio_init:000000000000004a .L15
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:293    .text.gpio_init:0000000000000094 .L16
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:191    .text.gpio_init:000000000000001e .L18
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:285    .text.gpio_init:000000000000008c .L19
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:301    .text.gpio_init:000000000000009c .L20
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:244    .text.gpio_init:000000000000005e .L22
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:224    .text.gpio_init:0000000000000048 .L17
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:280    .text.gpio_init:000000000000008a .L21
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:362    .text.gpio_bit_write:0000000000000006 .L37
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:545    .text.gpio_pin_remap_config:000000000000004e .L45
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:552    .text.gpio_pin_remap_config:0000000000000052 .L47
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:534    .text.gpio_pin_remap_config:0000000000000042 .L50
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:591    .text.gpio_pin_remap_config:0000000000000082 .L51
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:489    .text.gpio_pin_remap_config:000000000000000a .L46
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:581    .text.gpio_pin_remap_config:0000000000000076 .L49
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:519    .text.gpio_pin_remap_config:0000000000000034 .L48
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:568    .text.gpio_pin_remap_config:0000000000000068 .L56
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:639    .text.gpio_exti_source_select:000000000000002c .L58
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:656    .text.gpio_exti_source_select:0000000000000044 .L60
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:673    .text.gpio_exti_source_select:000000000000005c .L61
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2855   .debug_str:0000000000000021 .LASF89
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2859   .debug_str:00000000000000b6 .LASF90
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2865   .debug_str:0000000000000115 .LASF91
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2811   .debug_ranges:0000000000000000 .Ldebug_ranges0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2849   .debug_line:0000000000000000 .Ldebug_line0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2949   .debug_str:0000000000000385 .LASF0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2937   .debug_str:000000000000032b .LASF1
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2913   .debug_str:0000000000000292 .LASF4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2929   .debug_str:00000000000002ef .LASF2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2891   .debug_str:0000000000000214 .LASF3
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2885   .debug_str:00000000000001e5 .LASF5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2963   .debug_str:00000000000003d6 .LASF6
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2907   .debug_str:0000000000000271 .LASF7
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2877   .debug_str:00000000000001be .LASF8
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2993   .debug_str:00000000000004a8 .LASF9
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2905   .debug_str:0000000000000263 .LASF10
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2941   .debug_str:0000000000000342 .LASF11
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2893   .debug_str:000000000000021e .LASF12
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2951   .debug_str:0000000000000392 .LASF13
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2945   .debug_str:0000000000000366 .LASF14
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2983   .debug_str:0000000000000462 .LASF92
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2895   .debug_str:0000000000000226 .LASF15
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3031   .debug_str:0000000000000599 .LASF16
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2969   .debug_str:000000000000040b .LASF17
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3009   .debug_str:0000000000000510 .LASF18
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3027   .debug_str:0000000000000582 .LASF19
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2857   .debug_str:00000000000000a9 .LASF20
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 33
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:92     .text.gpio_deinit:000000000000007a .L2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:43     .text.gpio_deinit:0000000000000026 .L3
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:61     .text.gpio_deinit:000000000000004c .L4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:80     .text.gpio_deinit:0000000000000068 .L5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:102    .text.gpio_deinit:000000000000008c .L7
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:34     .text.gpio_deinit:0000000000000020 .L1
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:69     .text.gpio_deinit:000000000000005c .L10
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:176    .text.gpio_init:000000000000000e .L14
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:229    .text.gpio_init:000000000000004a .L15
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:293    .text.gpio_init:0000000000000094 .L16
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:191    .text.gpio_init:000000000000001e .L18
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:285    .text.gpio_init:000000000000008c .L19
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:301    .text.gpio_init:000000000000009c .L20
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:244    .text.gpio_init:000000000000005e .L22
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:224    .text.gpio_init:0000000000000048 .L17
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:280    .text.gpio_init:000000000000008a .L21
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:362    .text.gpio_bit_write:0000000000000006 .L37
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:545    .text.gpio_pin_remap_config:000000000000004e .L45
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:552    .text.gpio_pin_remap_config:0000000000000052 .L47
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:534    .text.gpio_pin_remap_config:0000000000000042 .L50
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:591    .text.gpio_pin_remap_config:0000000000000082 .L51
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:489    .text.gpio_pin_remap_config:000000000000000a .L46
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:581    .text.gpio_pin_remap_config:0000000000000076 .L49
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:519    .text.gpio_pin_remap_config:0000000000000034 .L48
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:568    .text.gpio_pin_remap_config:0000000000000068 .L56
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:639    .text.gpio_exti_source_select:000000000000002c .L58
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:656    .text.gpio_exti_source_select:0000000000000044 .L60
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:673    .text.gpio_exti_source_select:000000000000005c .L61
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2855   .debug_str:0000000000000021 .LASF89
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2859   .debug_str:00000000000000b6 .LASF90
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2865   .debug_str:0000000000000115 .LASF91
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2811   .debug_ranges:0000000000000000 .Ldebug_ranges0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2849   .debug_line:0000000000000000 .Ldebug_line0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2949   .debug_str:0000000000000385 .LASF0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2937   .debug_str:000000000000032b .LASF1
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2913   .debug_str:0000000000000292 .LASF4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2929   .debug_str:00000000000002ef .LASF2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2891   .debug_str:0000000000000214 .LASF3
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2885   .debug_str:00000000000001e5 .LASF5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2963   .debug_str:00000000000003d6 .LASF6
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2907   .debug_str:0000000000000271 .LASF7
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2877   .debug_str:00000000000001be .LASF8
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2993   .debug_str:00000000000004a8 .LASF9
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2905   .debug_str:0000000000000263 .LASF10
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2941   .debug_str:0000000000000342 .LASF11
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2893   .debug_str:000000000000021e .LASF12
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2951   .debug_str:0000000000000392 .LASF13
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2945   .debug_str:0000000000000366 .LASF14
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2983   .debug_str:0000000000000462 .LASF92
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2895   .debug_str:0000000000000226 .LASF15
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3031   .debug_str:0000000000000599 .LASF16
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2969   .debug_str:000000000000040b .LASF17
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3009   .debug_str:0000000000000510 .LASF18
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3027   .debug_str:0000000000000582 .LASF19
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2857   .debug_str:00000000000000a9 .LASF20
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 33
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2971   .debug_str:0000000000000419 .LASF21
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2897   .debug_str:000000000000022e .LASF22
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2921   .debug_str:00000000000002b7 .LASF23
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2917   .debug_str:00000000000002a3 .LASF24
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2981   .debug_str:0000000000000454 .LASF25
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3025   .debug_str:0000000000000574 .LASF26
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3035   .debug_str:00000000000005ae .LASF27
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2871   .debug_str:0000000000000180 .LASF28
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2911   .debug_str:0000000000000286 .LASF29
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2989   .debug_str:0000000000000486 .LASF30
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3033   .debug_str:00000000000005a0 .LASF31
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2995   .debug_str:00000000000004ba .LASF32
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2861   .debug_str:00000000000000fb .LASF33
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3029   .debug_str:000000000000058d .LASF34
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3003   .debug_str:00000000000004ef .LASF35
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3021   .debug_str:0000000000000550 .LASF36
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2901   .debug_str:0000000000000249 .LASF37
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2869   .debug_str:0000000000000174 .LASF38
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3005   .debug_str:00000000000004fb .LASF39
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2939   .debug_str:0000000000000337 .LASF40
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2931   .debug_str:00000000000002fd .LASF41
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2943   .debug_str:0000000000000359 .LASF42
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2999   .debug_str:00000000000004d8 .LASF43
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2863   .debug_str:0000000000000108 .LASF44
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2899   .debug_str:000000000000023c .LASF45
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2953   .debug_str:000000000000039b .LASF46
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2959   .debug_str:00000000000003b5 .LASF47
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3011   .debug_str:0000000000000516 .LASF48
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2853   .debug_str:0000000000000013 .LASF49
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3015   .debug_str:000000000000052e .LASF50
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2925   .debug_str:00000000000002d5 .LASF51
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2927   .debug_str:00000000000002e3 .LASF52
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2867   .debug_str:0000000000000169 .LASF53
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2903   .debug_str:0000000000000255 .LASF57
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:770    .text.gpio_pin_lock:0000000000000000 .LFB18
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:799    .text.gpio_pin_lock:0000000000000010 .LFE18
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2933   .debug_str:0000000000000307 .LASF54
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2979   .debug_str:000000000000044f .LASF61
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2235   .debug_loc:0000000000000000 .LLST20
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2889   .debug_str:00000000000001fa .LASF55
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:751    .text.gpio_event_output_disable:0000000000000000 .LFB17
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:763    .text.gpio_event_output_disable:000000000000000e .LFE17
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2875   .debug_str:00000000000001a5 .LASF56
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:732    .text.gpio_event_output_enable:0000000000000000 .LFB16
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:744    .text.gpio_event_output_enable:000000000000000e .LFE16
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2967   .debug_str:00000000000003f2 .LASF58
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:695    .text.gpio_event_output_config:0000000000000000 .LFB15
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:725    .text.gpio_event_output_config:0000000000000014 .LFE15
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2909   .debug_str:000000000000027a .LASF59
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2249   .debug_loc:0000000000000021 .LLST17
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2973   .debug_str:0000000000000427 .LASF60
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2263   .debug_loc:0000000000000042 .LLST18
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2277   .debug_loc:0000000000000063 .LLST19
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2935   .debug_str:0000000000000313 .LASF62
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:605    .text.gpio_exti_source_select:0000000000000000 .LFB14
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:688    .text.gpio_exti_source_select:000000000000006e .LFE14
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2324   .debug_loc:00000000000000b3 .LLST15
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 34
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2971   .debug_str:0000000000000419 .LASF21
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2897   .debug_str:000000000000022e .LASF22
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2921   .debug_str:00000000000002b7 .LASF23
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2917   .debug_str:00000000000002a3 .LASF24
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2981   .debug_str:0000000000000454 .LASF25
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3025   .debug_str:0000000000000574 .LASF26
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3035   .debug_str:00000000000005ae .LASF27
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2871   .debug_str:0000000000000180 .LASF28
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2911   .debug_str:0000000000000286 .LASF29
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2989   .debug_str:0000000000000486 .LASF30
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3033   .debug_str:00000000000005a0 .LASF31
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2995   .debug_str:00000000000004ba .LASF32
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2861   .debug_str:00000000000000fb .LASF33
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3029   .debug_str:000000000000058d .LASF34
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3003   .debug_str:00000000000004ef .LASF35
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3021   .debug_str:0000000000000550 .LASF36
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2901   .debug_str:0000000000000249 .LASF37
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2869   .debug_str:0000000000000174 .LASF38
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3005   .debug_str:00000000000004fb .LASF39
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2939   .debug_str:0000000000000337 .LASF40
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2931   .debug_str:00000000000002fd .LASF41
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2943   .debug_str:0000000000000359 .LASF42
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2999   .debug_str:00000000000004d8 .LASF43
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2863   .debug_str:0000000000000108 .LASF44
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2899   .debug_str:000000000000023c .LASF45
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2953   .debug_str:000000000000039b .LASF46
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2959   .debug_str:00000000000003b5 .LASF47
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3011   .debug_str:0000000000000516 .LASF48
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2853   .debug_str:0000000000000013 .LASF49
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3015   .debug_str:000000000000052e .LASF50
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2925   .debug_str:00000000000002d5 .LASF51
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2927   .debug_str:00000000000002e3 .LASF52
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2867   .debug_str:0000000000000169 .LASF53
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2903   .debug_str:0000000000000255 .LASF57
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:770    .text.gpio_pin_lock:0000000000000000 .LFB18
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:799    .text.gpio_pin_lock:0000000000000010 .LFE18
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2933   .debug_str:0000000000000307 .LASF54
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2979   .debug_str:000000000000044f .LASF61
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2235   .debug_loc:0000000000000000 .LLST20
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2889   .debug_str:00000000000001fa .LASF55
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:751    .text.gpio_event_output_disable:0000000000000000 .LFB17
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:763    .text.gpio_event_output_disable:000000000000000e .LFE17
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2875   .debug_str:00000000000001a5 .LASF56
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:732    .text.gpio_event_output_enable:0000000000000000 .LFB16
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:744    .text.gpio_event_output_enable:000000000000000e .LFE16
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2967   .debug_str:00000000000003f2 .LASF58
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:695    .text.gpio_event_output_config:0000000000000000 .LFB15
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:725    .text.gpio_event_output_config:0000000000000014 .LFE15
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2909   .debug_str:000000000000027a .LASF59
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2249   .debug_loc:0000000000000021 .LLST17
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2973   .debug_str:0000000000000427 .LASF60
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2263   .debug_loc:0000000000000042 .LLST18
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2277   .debug_loc:0000000000000063 .LLST19
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2935   .debug_str:0000000000000313 .LASF62
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:605    .text.gpio_exti_source_select:0000000000000000 .LFB14
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:688    .text.gpio_exti_source_select:000000000000006e .LFE14
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2324   .debug_loc:00000000000000b3 .LLST15
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 34
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2915   .debug_str:000000000000029c .LASF63
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2338   .debug_loc:00000000000000d4 .LLST16
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2947   .debug_str:000000000000036f .LASF64
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:475    .text.gpio_pin_remap_config:0000000000000000 .LFB13
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:598    .text.gpio_pin_remap_config:0000000000000086 .LFE13
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2919   .debug_str:00000000000002b1 .LASF65
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2965   .debug_str:00000000000003e9 .LASF66
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3019   .debug_str:0000000000000549 .LASF67
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2366   .debug_loc:000000000000010a .LLST11
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2957   .debug_str:00000000000003ae .LASF68
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2407   .debug_loc:0000000000000162 .LLST12
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2975   .debug_str:0000000000000432 .LASF69
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2437   .debug_loc:00000000000001a1 .LLST13
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3007   .debug_str:0000000000000506 .LASF70
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2474   .debug_loc:0000000000000203 .LLST14
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2961   .debug_str:00000000000003c1 .LASF71
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:455    .text.gpio_output_port_get:0000000000000000 .LFB12
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:468    .text.gpio_output_port_get:0000000000000008 .LFE12
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2507   .debug_loc:0000000000000245 .LLST10
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2977   .debug_str:000000000000043b .LASF72
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:434    .text.gpio_output_bit_get:0000000000000000 .LFB11
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:448    .text.gpio_output_bit_get:000000000000000a .LFE11
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2521   .debug_loc:0000000000000266 .LLST9
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2991   .debug_str:0000000000000494 .LASF73
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:414    .text.gpio_input_port_get:0000000000000000 .LFB10
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:427    .text.gpio_input_port_get:0000000000000008 .LFE10
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2535   .debug_loc:0000000000000287 .LLST8
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2851   .debug_str:0000000000000000 .LASF74
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:393    .text.gpio_input_bit_get:0000000000000000 .LFB9
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:407    .text.gpio_input_bit_get:000000000000000a .LFE9
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2549   .debug_loc:00000000000002a8 .LLST7
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2923   .debug_str:00000000000002c5 .LASF75
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:376    .text.gpio_port_write:0000000000000000 .LFB8
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:386    .text.gpio_port_write:0000000000000004 .LFE8
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2987   .debug_str:0000000000000481 .LASF76
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3017   .debug_str:000000000000053a .LASF77
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:351    .text.gpio_bit_write:0000000000000000 .LFB7
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:369    .text.gpio_bit_write:000000000000000a .LFE7
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2887   .debug_str:00000000000001f0 .LASF78
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2985   .debug_str:0000000000000472 .LASF79
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:334    .text.gpio_bit_reset:0000000000000000 .LFB6
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:344    .text.gpio_bit_reset:0000000000000004 .LFE6
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2879   .debug_str:00000000000001c9 .LASF80
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:317    .text.gpio_bit_set:0000000000000000 .LFB5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:327    .text.gpio_bit_set:0000000000000004 .LFE5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3001   .debug_str:00000000000004e5 .LASF81
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:156    .text.gpio_init:0000000000000000 .LFB4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:310    .text.gpio_init:00000000000000a4 .LFE4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2881   .debug_str:00000000000001d6 .LASF82
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2955   .debug_str:00000000000003a8 .LASF83
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2563   .debug_loc:00000000000002c9 .LLST3
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2577   .debug_loc:00000000000002ea .LLST4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2883   .debug_str:00000000000001db .LASF84
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2609   .debug_loc:0000000000000339 .LLST5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2621   .debug_loc:0000000000000358 .LLST6
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2997   .debug_str:00000000000004c7 .LASF85
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:119    .text.gpio_afio_deinit:0000000000000000 .LFB3
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 35
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2915   .debug_str:000000000000029c .LASF63
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2338   .debug_loc:00000000000000d4 .LLST16
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2947   .debug_str:000000000000036f .LASF64
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:475    .text.gpio_pin_remap_config:0000000000000000 .LFB13
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:598    .text.gpio_pin_remap_config:0000000000000086 .LFE13
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2919   .debug_str:00000000000002b1 .LASF65
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2965   .debug_str:00000000000003e9 .LASF66
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3019   .debug_str:0000000000000549 .LASF67
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2366   .debug_loc:000000000000010a .LLST11
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2957   .debug_str:00000000000003ae .LASF68
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2407   .debug_loc:0000000000000162 .LLST12
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2975   .debug_str:0000000000000432 .LASF69
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2437   .debug_loc:00000000000001a1 .LLST13
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3007   .debug_str:0000000000000506 .LASF70
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2474   .debug_loc:0000000000000203 .LLST14
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2961   .debug_str:00000000000003c1 .LASF71
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:455    .text.gpio_output_port_get:0000000000000000 .LFB12
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:468    .text.gpio_output_port_get:0000000000000008 .LFE12
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2507   .debug_loc:0000000000000245 .LLST10
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2977   .debug_str:000000000000043b .LASF72
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:434    .text.gpio_output_bit_get:0000000000000000 .LFB11
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:448    .text.gpio_output_bit_get:000000000000000a .LFE11
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2521   .debug_loc:0000000000000266 .LLST9
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2991   .debug_str:0000000000000494 .LASF73
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:414    .text.gpio_input_port_get:0000000000000000 .LFB10
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:427    .text.gpio_input_port_get:0000000000000008 .LFE10
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2535   .debug_loc:0000000000000287 .LLST8
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2851   .debug_str:0000000000000000 .LASF74
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:393    .text.gpio_input_bit_get:0000000000000000 .LFB9
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:407    .text.gpio_input_bit_get:000000000000000a .LFE9
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2549   .debug_loc:00000000000002a8 .LLST7
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2923   .debug_str:00000000000002c5 .LASF75
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:376    .text.gpio_port_write:0000000000000000 .LFB8
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:386    .text.gpio_port_write:0000000000000004 .LFE8
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2987   .debug_str:0000000000000481 .LASF76
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3017   .debug_str:000000000000053a .LASF77
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:351    .text.gpio_bit_write:0000000000000000 .LFB7
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:369    .text.gpio_bit_write:000000000000000a .LFE7
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2887   .debug_str:00000000000001f0 .LASF78
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2985   .debug_str:0000000000000472 .LASF79
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:334    .text.gpio_bit_reset:0000000000000000 .LFB6
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:344    .text.gpio_bit_reset:0000000000000004 .LFE6
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2879   .debug_str:00000000000001c9 .LASF80
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:317    .text.gpio_bit_set:0000000000000000 .LFB5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:327    .text.gpio_bit_set:0000000000000004 .LFE5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3001   .debug_str:00000000000004e5 .LASF81
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:156    .text.gpio_init:0000000000000000 .LFB4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:310    .text.gpio_init:00000000000000a4 .LFE4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2881   .debug_str:00000000000001d6 .LASF82
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2955   .debug_str:00000000000003a8 .LASF83
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2563   .debug_loc:00000000000002c9 .LLST3
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2577   .debug_loc:00000000000002ea .LLST4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2883   .debug_str:00000000000001db .LASF84
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2609   .debug_loc:0000000000000339 .LLST5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2621   .debug_loc:0000000000000358 .LLST6
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2997   .debug_str:00000000000004c7 .LASF85
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:119    .text.gpio_afio_deinit:0000000000000000 .LFB3
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 35
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:149    .text.gpio_afio_deinit:0000000000000020 .LFE3
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2657   .debug_loc:00000000000003b9 .LLST2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:134    .text.gpio_afio_deinit:0000000000000010 .LVL15
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:147    .text.gpio_afio_deinit:0000000000000020 .LVL16
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3013   .debug_str:0000000000000522 .LASF86
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:14     .text.gpio_deinit:0000000000000000 .LFB2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:112    .text.gpio_deinit:000000000000009e .LFE2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2675   .debug_loc:00000000000003e5 .LLST0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2708   .debug_loc:0000000000000435 .LLST1
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:56     .text.gpio_deinit:0000000000000046 .LVL2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:66     .text.gpio_deinit:0000000000000058 .LVL5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:79     .text.gpio_deinit:0000000000000068 .LVL6
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:87     .text.gpio_deinit:0000000000000074 .LVL8
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:97     .text.gpio_deinit:0000000000000086 .LVL11
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:107    .text.gpio_deinit:0000000000000098 .LVL14
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:3023   .debug_str:000000000000055c .LASF87
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:2873   .debug_str:000000000000018c .LASF88
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:773    .text.gpio_pin_lock:0000000000000000 .LVL71
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:779    .text.gpio_pin_lock:0000000000000004 .LVL72
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:792    .text.gpio_pin_lock:000000000000000c .LVL73
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:698    .text.gpio_event_output_config:0000000000000000 .LVL65
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:710    .text.gpio_event_output_config:0000000000000008 .LVL67
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:715    .text.gpio_event_output_config:000000000000000e .LVL69
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:704    .text.gpio_event_output_config:0000000000000006 .LVL66
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:713    .text.gpio_event_output_config:000000000000000c .LVL68
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:718    .text.gpio_event_output_config:0000000000000010 .LVL70
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:608    .text.gpio_exti_source_select:0000000000000000 .LVL61
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:621    .text.gpio_exti_source_select:0000000000000010 .LVL63
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:615    .text.gpio_exti_source_select:0000000000000006 .LVL62
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:624    .text.gpio_exti_source_select:0000000000000012 .LVL64
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:478    .text.gpio_pin_remap_config:0000000000000000 .LVL45
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:500    .text.gpio_pin_remap_config:0000000000000018 .LVL47
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:530    .text.gpio_pin_remap_config:0000000000000040 .LVL50
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:544    .text.gpio_pin_remap_config:000000000000004e .LVL52
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:551    .text.gpio_pin_remap_config:0000000000000052 .LVL54
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:590    .text.gpio_pin_remap_config:0000000000000082 .LVL60
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:518    .text.gpio_pin_remap_config:0000000000000034 .LVL49
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:558    .text.gpio_pin_remap_config:000000000000005a .LVL55
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:567    .text.gpio_pin_remap_config:0000000000000068 .LVL56
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:580    .text.gpio_pin_remap_config:0000000000000076 .LVL59
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:488    .text.gpio_pin_remap_config:000000000000000a .LVL46
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:512    .text.gpio_pin_remap_config:000000000000002a .LVL48
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:549    .text.gpio_pin_remap_config:0000000000000050 .LVL53
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:573    .text.gpio_pin_remap_config:000000000000006e .LVL57
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:458    .text.gpio_output_port_get:0000000000000000 .LVL43
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:462    .text.gpio_output_port_get:0000000000000002 .LVL44
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:437    .text.gpio_output_bit_get:0000000000000000 .LVL41
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:441    .text.gpio_output_bit_get:0000000000000002 .LVL42
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:417    .text.gpio_input_port_get:0000000000000000 .LVL39
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:421    .text.gpio_input_port_get:0000000000000002 .LVL40
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:396    .text.gpio_input_bit_get:0000000000000000 .LVL37
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:400    .text.gpio_input_bit_get:0000000000000002 .LVL38
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:159    .text.gpio_init:0000000000000000 .LVL17
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:190    .text.gpio_init:000000000000001e .LVL20
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:175    .text.gpio_init:000000000000000e .LVL19
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:228    .text.gpio_init:000000000000004a .LVL24
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:231    .text.gpio_init:000000000000004c .LVL25
-GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s 			page 36
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:149    .text.gpio_afio_deinit:0000000000000020 .LFE3
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2657   .debug_loc:00000000000003b9 .LLST2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:134    .text.gpio_afio_deinit:0000000000000010 .LVL15
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:147    .text.gpio_afio_deinit:0000000000000020 .LVL16
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3013   .debug_str:0000000000000522 .LASF86
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:14     .text.gpio_deinit:0000000000000000 .LFB2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:112    .text.gpio_deinit:000000000000009e .LFE2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2675   .debug_loc:00000000000003e5 .LLST0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2708   .debug_loc:0000000000000435 .LLST1
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:56     .text.gpio_deinit:0000000000000046 .LVL2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:66     .text.gpio_deinit:0000000000000058 .LVL5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:79     .text.gpio_deinit:0000000000000068 .LVL6
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:87     .text.gpio_deinit:0000000000000074 .LVL8
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:97     .text.gpio_deinit:0000000000000086 .LVL11
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:107    .text.gpio_deinit:0000000000000098 .LVL14
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:3023   .debug_str:000000000000055c .LASF87
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:2873   .debug_str:000000000000018c .LASF88
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:773    .text.gpio_pin_lock:0000000000000000 .LVL71
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:779    .text.gpio_pin_lock:0000000000000004 .LVL72
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:792    .text.gpio_pin_lock:000000000000000c .LVL73
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:698    .text.gpio_event_output_config:0000000000000000 .LVL65
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:710    .text.gpio_event_output_config:0000000000000008 .LVL67
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:715    .text.gpio_event_output_config:000000000000000e .LVL69
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:704    .text.gpio_event_output_config:0000000000000006 .LVL66
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:713    .text.gpio_event_output_config:000000000000000c .LVL68
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:718    .text.gpio_event_output_config:0000000000000010 .LVL70
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:608    .text.gpio_exti_source_select:0000000000000000 .LVL61
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:621    .text.gpio_exti_source_select:0000000000000010 .LVL63
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:615    .text.gpio_exti_source_select:0000000000000006 .LVL62
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:624    .text.gpio_exti_source_select:0000000000000012 .LVL64
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:478    .text.gpio_pin_remap_config:0000000000000000 .LVL45
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:500    .text.gpio_pin_remap_config:0000000000000018 .LVL47
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:530    .text.gpio_pin_remap_config:0000000000000040 .LVL50
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:544    .text.gpio_pin_remap_config:000000000000004e .LVL52
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:551    .text.gpio_pin_remap_config:0000000000000052 .LVL54
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:590    .text.gpio_pin_remap_config:0000000000000082 .LVL60
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:518    .text.gpio_pin_remap_config:0000000000000034 .LVL49
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:558    .text.gpio_pin_remap_config:000000000000005a .LVL55
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:567    .text.gpio_pin_remap_config:0000000000000068 .LVL56
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:580    .text.gpio_pin_remap_config:0000000000000076 .LVL59
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:488    .text.gpio_pin_remap_config:000000000000000a .LVL46
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:512    .text.gpio_pin_remap_config:000000000000002a .LVL48
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:549    .text.gpio_pin_remap_config:0000000000000050 .LVL53
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:573    .text.gpio_pin_remap_config:000000000000006e .LVL57
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:458    .text.gpio_output_port_get:0000000000000000 .LVL43
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:462    .text.gpio_output_port_get:0000000000000002 .LVL44
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:437    .text.gpio_output_bit_get:0000000000000000 .LVL41
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:441    .text.gpio_output_bit_get:0000000000000002 .LVL42
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:417    .text.gpio_input_port_get:0000000000000000 .LVL39
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:421    .text.gpio_input_port_get:0000000000000002 .LVL40
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:396    .text.gpio_input_bit_get:0000000000000000 .LVL37
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:400    .text.gpio_input_bit_get:0000000000000002 .LVL38
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:159    .text.gpio_init:0000000000000000 .LVL17
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:190    .text.gpio_init:000000000000001e .LVL20
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:175    .text.gpio_init:000000000000000e .LVL19
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:228    .text.gpio_init:000000000000004a .LVL24
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:231    .text.gpio_init:000000000000004c .LVL25
+GAS LISTING /var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s 			page 36
 
 
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:245    .text.gpio_init:000000000000005e .LVL26
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:284    .text.gpio_init:000000000000008c .LVL30
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:287    .text.gpio_init:000000000000008e .LVL31
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:292    .text.gpio_init:0000000000000094 .LVL32
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:168    .text.gpio_init:0000000000000008 .LVL18
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:203    .text.gpio_init:000000000000002e .LVL21
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:211    .text.gpio_init:000000000000003a .LVL22
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:217    .text.gpio_init:0000000000000042 .LVL23
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:259    .text.gpio_init:0000000000000070 .LVL27
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:267    .text.gpio_init:000000000000007c .LVL28
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:273    .text.gpio_init:0000000000000084 .LVL29
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:125    .text.gpio_afio_deinit:0000000000000002 .LCFI5
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:143    .text.gpio_afio_deinit:0000000000000018 .LCFI6
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:22     .text.gpio_deinit:0000000000000002 .LCFI0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:40     .text.gpio_deinit:0000000000000024 .LCFI1
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:44     .text.gpio_deinit:0000000000000026 .LCFI2
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:75     .text.gpio_deinit:0000000000000060 .LCFI3
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:81     .text.gpio_deinit:0000000000000068 .LCFI4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:18     .text.gpio_deinit:0000000000000000 .LVL0
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:54     .text.gpio_deinit:000000000000003e .LVL1
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:60     .text.gpio_deinit:000000000000004c .LVL3
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:64     .text.gpio_deinit:0000000000000050 .LVL4
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:85     .text.gpio_deinit:000000000000006c .LVL7
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:91     .text.gpio_deinit:000000000000007a .LVL9
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:95     .text.gpio_deinit:000000000000007e .LVL10
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:101    .text.gpio_deinit:000000000000008c .LVL12
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:105    .text.gpio_deinit:0000000000000090 .LVL13
-/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//ccMIMCIK.s:810    .debug_info:0000000000000000 .Ldebug_info0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:245    .text.gpio_init:000000000000005e .LVL26
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:284    .text.gpio_init:000000000000008c .LVL30
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:287    .text.gpio_init:000000000000008e .LVL31
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:292    .text.gpio_init:0000000000000094 .LVL32
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:168    .text.gpio_init:0000000000000008 .LVL18
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:203    .text.gpio_init:000000000000002e .LVL21
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:211    .text.gpio_init:000000000000003a .LVL22
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:217    .text.gpio_init:0000000000000042 .LVL23
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:259    .text.gpio_init:0000000000000070 .LVL27
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:267    .text.gpio_init:000000000000007c .LVL28
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:273    .text.gpio_init:0000000000000084 .LVL29
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:125    .text.gpio_afio_deinit:0000000000000002 .LCFI5
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:143    .text.gpio_afio_deinit:0000000000000018 .LCFI6
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:22     .text.gpio_deinit:0000000000000002 .LCFI0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:40     .text.gpio_deinit:0000000000000024 .LCFI1
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:44     .text.gpio_deinit:0000000000000026 .LCFI2
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:75     .text.gpio_deinit:0000000000000060 .LCFI3
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:81     .text.gpio_deinit:0000000000000068 .LCFI4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:18     .text.gpio_deinit:0000000000000000 .LVL0
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:54     .text.gpio_deinit:000000000000003e .LVL1
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:60     .text.gpio_deinit:000000000000004c .LVL3
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:64     .text.gpio_deinit:0000000000000050 .LVL4
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:85     .text.gpio_deinit:000000000000006c .LVL7
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:91     .text.gpio_deinit:000000000000007a .LVL9
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:95     .text.gpio_deinit:000000000000007e .LVL10
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:101    .text.gpio_deinit:000000000000008c .LVL12
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:105    .text.gpio_deinit:0000000000000090 .LVL13
+/var/folders/46/ql4w1ss91p1__kn5sm1ndyt40000gn/T//cc38i430.s:810    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable
