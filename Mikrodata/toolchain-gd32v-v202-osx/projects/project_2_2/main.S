@@ -435,6 +435,6 @@ main:   call t5omsi         // Initialize timer 5 to count milliseconds!
          blt a0,t0, 1b       //ifall a0 < 14 i decimal så går vi tillbaka till 1
          andi a7, a0, 0xF    // sparar knapp 1 så att det loopar igen.
 
-         j 1b                // ...and loop again!
+         j 1b                // ...and loop again
 
 .end
