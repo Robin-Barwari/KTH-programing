@@ -3,7 +3,7 @@
 // GPIO General Purpose I/0 Subroutine package                         0.91 AC
 /////////////////////////////////////////////////////////////////////////////////////
 .equ GPIOA,  0x40010800     // GPIOB Base address.
-.equ GPIOB,  0x40010C00     // GPIOB Base address.      0-2 är rad 8-15 är column
+.equ GPIOB,  0x40010C00     // GPIOB Base address.
 .equ CTR0,   0x00           // Port control register 0 offset
 .equ ISTAT,  0x08           // Port input status register
 .equ OCTL,   0x0C           // Port output control register
@@ -48,8 +48,7 @@ gpioi:  mv t0, a0           // t0 points to GPIOX...
 // a1 Targeted pattern
 // a2 Targeted pin(s)
 
-gpiobo: and a1, a1, a2      // (Clear all pattern bits that are not target bits)
-        xor a2, a2, a1      // Find zeros in targeted bits...
+gpiobo: xor a2, a2, a1      // Find zeros in targeted bits...
         slli a2, a2, 16     // ...position clear requests...
         or a1, a1, a2       // ...add set requests...
         sw a1, BOP(a0)      // ...then execute...
@@ -108,27 +107,27 @@ rcu2en: li t0,RCU           // t0 points to RCU...
 .equ CAR,    0x2C
 .equ CNT,    0x24
 // T5OMSI Initialize T5 to overflow each millisecond /////////////////// 1.0 / AC ///
-.global t5omsi
+.global t5omsi 
 t5omsi: addi sp, sp, -4
         sw ra, 0(sp)
 
         li a0, T5EN         // Prepare to turn on Timer 5...
-        call rcu1en         // ..do the set-up!
+        call rcu1en         // ..do the set-up! 
 
         li t0, TIMER5       // Prepare to configur Timer 5...
-        li t1, 0x06B        // ...set prescaler to
-        sw t1,PSC(t0)       //    divide by 108, thus count 0..107...
-        li t1, 0x3E7        // ...and then counter auto reload to
-        sw t1, CAR(t0)      //    reload at 999 for a 1ms counter..
+        li t1, 0x036        // ...set prescaler to
+        sw t1,PSC(t0)       //    divide by 54...
+        li t1, 0x3E8        // ...and then counter auto reload to
+        sw t1, CAR(t0)      //    reload at 1000 for a 1ms counter..
         sw zero,UPIF(t0)    // ...then clear the Interrupt Flag...
         li t1,0x01          // ...and start the counting!
         sw t1,T5CTR0(t0)
 
         lw ra, 0(sp)        // Restore return address...
         addi sp, sp, 4      // ...then the stack pointer...
-        ret                 // ...and return to caller!  
+        ret                 // ...and return to caller!   
 .global t5expq
-t5expq: li t0, TIMER5       // Prepare to, and then read, Timer 5...
+t5expq: li t0, TIMER5       // Prepare to, and then read, Timer 5... 
         lw a0, UPIF(t0)     // ...counter overflow flag...
         beqz a0, 1f         // ...done if not overflow...
         sw zero,UPIF(t0)    // ...else reset flag...
@@ -145,10 +144,10 @@ column:  .word 7
 .global colinit
 colinit:addi sp, sp, -4     // Make room on the stack...
         sw ra, 0(sp)        // ...for another return adress!
-       
+        
         li a0, PBEN         // Prepare to turn on GPIOB...
         call rcu2en         // ..do the set-up!  
-       
+        
         li a0, GPIOB        // Prepare to init GPIOB...
         li a1, GPIO_PP      // ...as Push-Pull Output...
         li a2, GPIO_50      // ...with max 50MHz rate...
@@ -173,7 +172,7 @@ colget: la t0, column       // Prepare to read the column state...
 .global colset
 colset: addi sp, sp, -4     // Make room on the stack...
         sw ra, 0(sp)        // ...for another return adress!
-       
+        
         li a0, GPIOB        // Prepare to com with GPIOB0..2 attached hw
         la t0, column       // as well as to read the column state...
         lb a1, 0(t0)        // ...do the read...
@@ -182,12 +181,12 @@ colset: addi sp, sp, -4     // Make room on the stack...
         li a1, 7            // ...fix wrap around...
 1:      sb a1, 0(t0)        // ...and store the new value...
         li a2, 0x07         // ...then point out the relevant bits...
-        call gpiobo         // ...and set/reset corresponing I/O bits...
-        lb a0, 0(t0)        // ...read back the return value...
+        call gpiooc         // ...and set/reset corresponing I/O bits...
+        mv a0, a1
 
         lw ra, 0(sp)        // ...and return to caller!
         addi sp, sp, 4
-        ret                
+        ret                 
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 8*8LED hw driver Subroutine package                                   0.9 AC
@@ -196,14 +195,14 @@ colset: addi sp, sp, -4     // Make room on the stack...
 l88mmat: .word l88mmap
 l88mmap: .word 0x00000000
          .word 0x00000000
-         .byte 0xAA
+         .byte 0x00
 .section .text
 // l88init Initialize the 8*8LED matrix row hw driver ////////////////// 1.0 / AC ///
 // (The 8*8LED matrix column part is managed through the Column hw driver package)
 .global l88init
 l88init:addi sp, sp, -4
         sw ra, 0(sp)
-       
+        
         li a0, PBEN         // Prepare to turn on GPIOB...
         call rcu2en         // ..do the set-up!  
 
@@ -214,7 +213,7 @@ l88init:addi sp, sp, -4
         li a4, 16           // ...to pin 15...
 1:      call gpioi          // ...do the set-up!
         addi a3,a3,1        // ...advance to next pin...
-        bne a3,a4, 1b       // ...continue, if not done!
+        bne a3,a4, 1b       // ...continue, if not done! 
 
         lw ra, 0(sp)
         addi sp, sp, 4
@@ -225,7 +224,7 @@ l88init:addi sp, sp, -4
 .global l88row
 l88row: addi sp, sp, -4     // Push: Make room on the stack...
         sw ra, 0(sp)        // ...for another return address!
-       
+        
         la t0, l88mmat      // Load memory map base address...
         lw t0, 0(t0)        // ...stored in l88mmat...
         add t0,t0,a0        // ...add offset to right row...
@@ -268,13 +267,13 @@ keyinit:addi sp, sp, -4     // Push: Make room on the stack...
         li a4, 9            // ...to pin 8...
 1:      call gpioi          // ...do the set-up!
         addi a3,a3,1        // ...advance to next pin...
-        bne a3,a4, 1b       // ...continue, if not done!
+        bne a3,a4, 1b       // ...continue, if not done! 
 
         lw ra, 0(sp)        // Pop: Read back last stored return address...
         addi sp, sp, 4      // ...and reclame used stack space...
         ret                 // ...then return to caller!  
 // keyscan Analyze row feedb. from act. col. to check for key pressed / 1.0 / AC ///  
-// a0 returns key code if a key is pressed else -1      
+// a0 returns key code if a key is pressed else -1       
 .global keyscan
 keyscan:addi sp, sp, -4     // Push: Make room on the stack...
         sw ra, 0(sp)        // ...for another return address!
@@ -308,14 +307,14 @@ keyscan:addi sp, sp, -4     // Push: Make room on the stack...
         or t3,t1,a0         // ...and combind it with row data!
 
         li t1,0x200         // Reload repeat counter...
-        sw t1,0(t4)         // ...with max value.
+        sw t1,0(t4)          // ...with max value.
 
 1:      mv a0,t3            // Get the return value, -1 or key.
 
         lw ra, 0(sp)        // Pop: Read back last stored return address...
         addi sp, sp, 4      // ...and reclame used stack space...
-        ret                 // ...then return to caller!      
-/// END ////////////////////////////////////////////////////////////////////
+        ret                 // ...then return to caller!       
+/// END ///////////////////////////////////////////////////////////////////////////// 
 
 /////////////////////////////////////////////////////////////////////////////////////
 // BCD 4 Digits Counter Subroutine package                                   0.9 AC
@@ -363,7 +362,7 @@ bcd4dc_read:
         la t0,bcd4dc        // t0 points to counter...
         lhu a0, 0(t0)       // ...read counter...
         ret                 // ...and go home!
-/// END /////////////////////////////////////////////////////////////////////////////
+/// END ///////////////////////////////////////////////////////////////////////////// 
 
 .section .data
 fcounter:.word 0x00008F
@@ -389,74 +388,54 @@ main:   call t5omsi         // Initialize timer 5 to count milliseconds!
         call colinit        // Initialize the Column driver!
         call l88init        // Initialize the 8*8 LED matrix driver!
         call keyinit        // Initialize the 4*4 keyboard driver!
+        call bcd4dc_reset   // Reset the 4 digit bcd counter!
+        li a6, 1            // kolumnen som vi börjar med, genom att börja från 1 och vi ger den value 
 
 1:      nop                 // Main loop async tasks >-----------------------
 
         call t5expq         // Check if Timer 5 have expired?
-        beqz a0,1b          // Main loop sync tasks >------------------------
-
- //        call flow           // !!!!!!!!!!!! TIP FOR LEVEL 2 !!!!!!!!!!!!!!!!
-       
-4:      call colset         // Activate "next" column...
-        call l88row         // ...present related Row data...
-        call keyscan
-       
-        la t1, l88mmap           #nollställ
-        sb zero, 0(t1)          // store byte 0 at address 0
-        sb zero, 1(t1)          // store byte 0 at address 1
-        sb zero, 2(t1)          // store byte 0 at address 2
-        sb zero, 3(t1)          // store byte 0 at address 3
-        call bcd4dc_reset
-                       
-        li t0, 0x04
-        beq a0, t0, 5f
-
-        j 4b
-
-5:      nop                 // Main loop async tasks >-----------------------
-
-        call t5expq         // Check if Timer 5 have expired?
-        beqz a0, 5b          // Main loop sync tasks >------------------------
-
-        call bcd4dc_tick    // !!!!!!!!!!!! TIP FOR LEVEL 1 !!!!!!!!!!!!!!!!
-        call bcd4dc_read
-        la t0,l88mmap
-        andi t1, a0, 0xF
-        sb t1, 0(t0)
-        srli a0, a0, 4
-        andi t1, a0, 0xF
-        sb t1, 1(t0)
-        srli a0, a0, 4
-        andi t1, a0, 0xF
-        sb t1, 2(t0)
-        srli a0, a0, 4
-        andi t1, a0, 0xF
-        sb t1, 3(t0)
-
-        call keyscan         //if 1 är tryckt
-        li t0, 0x00                #sicka till start
-        beq a0, t0, 4b
-
-        li t0, 0x08
-        beq a0,t0, 6f
-
+        beqz a0, 1b         // Main loop sync tasks >------------------------
         call colset         // Activate "next" column...
         call l88row         // ...present related Row data...
-
-        j 5b                // ...again, forever!
-
-6:      call colset         // Activate "next" column...
-        call l88row         // ...present related Row data...
         call keyscan
-        li t0, 0x04
-        bne t0, a0, 7f    
-        j 5b
 
-7:      call colset         // Activate "next" column...
-        call l88row         // ...present related Row data...
-        call keyscan
-        li t4, 0x00
-        bne t4, a0, 6b
+
+
+        li t3, 0x0000000F   //nummer 1 motsvarar F i tangentbordet och är reset 
+        li t4, 0x0000000E   //nummer 2 motsvarar E i tangentbordet och är räkna
+        li t5, 0x0000000D   //nummer 3 motsvarar D i tangentbordet och är stanna
+
+        beq a0, t3, reset   //jämför om vi får i a0 något som stämmer med t3(reset) då gå til reset etikett
+        beq a0, t4, count   //jämför om vi får i a0 något som stämmer med t4(räkna) då gå til räkna etikett
+        beq a0, t5, stop    //jämför om vi får i a0 något som stämmer med t5(stanna) då gå til stanna etikett
+        beqz a6, 1b         // stanna i loopen sålänge den inte är 0 vilket inte kan bli då a6 har redan 1 tills den gåt till stop
+        bltz a0, fwd        // om a0 är mindre än 0 gå till fwd vilket gör att den alltid är på.
+        
+
+reset:  call bcd4dc_reset
+        j fwd
+
+count:  li a6, 1
+        j fwd
+
+stop:   li a6, 0
         j 1b
 
+fwd:    call bcd4dc_tick    // !!!!!!!!!!!! TIP FOR LEVEL 1 !!!!!!!!!!!!!!!!
+        call bcd4dc_read
+        la t0, l88mmap
+        andi t1, a0, 0xF
+        sb t1, 4(t0)
+        srli a0, a0, 4
+        andi t1, a0, 0xF
+        sb t1, 5(t0)
+        srli a0, a0, 4
+        andi t1, a0, 0xF
+        sb t1, 6(t0)
+        srli a0, a0, 4
+        andi t1, a0, 0xF
+        sb t1, 7(t0)
+
+        j 1b                // ...again, forever!
+end:
 .end

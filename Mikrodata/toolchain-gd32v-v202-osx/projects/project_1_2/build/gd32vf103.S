@@ -7,44 +7,72 @@ start address 0x0800015c
 
 Program Header:
     LOAD off    0x00001000 vaddr 0x08000000 paddr 0x08000000 align 2**12
+<<<<<<< HEAD
+         filesz 0x00000a88 memsz 0x00000a88 flags r-x
+    LOAD off    0x00002000 vaddr 0x20000000 paddr 0x08000a88 align 2**12
+=======
          filesz 0x00001144 memsz 0x00001144 flags r-x
     LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001144 align 2**12
+>>>>>>> 9da4b36 (s)
          filesz 0x00000088 memsz 0x00000088 flags rw-
-    LOAD off    0x00003088 vaddr 0x20000088 paddr 0x20000088 align 2**12
+    LOAD off    0x00002088 vaddr 0x20000088 paddr 0x20000088 align 2**12
          filesz 0x00000000 memsz 0x00000094 flags rw-
-    LOAD off    0x00004000 vaddr 0x20007000 paddr 0x2000011c align 2**12
+    LOAD off    0x00003000 vaddr 0x20007000 paddr 0x2000011c align 2**12
          filesz 0x00000000 memsz 0x00001000 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .init         00000254  08000000  08000000  00001000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .ilalign      00000000  08000254  08000254  00003088  2**0
+  1 .ilalign      00000000  08000254  08000254  00002088  2**0
                   CONTENTS
+<<<<<<< HEAD
+  2 .text         00000802  08000280  08000280  00001280  2**6
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .sdata2._global_impure_ptr 00000004  08000a84  08000a84  00001a84  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .lalign       00000000  08000a88  08000a88  00002088  2**0
+=======
   2 .text         00000ec0  08000280  08000280  00001280  2**6
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   3 .sdata2._global_impure_ptr 00000004  08001140  08001140  00002140  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   4 .lalign       00000000  08001144  08001144  00003088  2**0
+>>>>>>> 9da4b36 (s)
                   CONTENTS
-  5 .dalign       00000000  20000000  20000000  00003088  2**0
+  5 .dalign       00000000  20000000  20000000  00002088  2**0
                   CONTENTS
+<<<<<<< HEAD
+  6 .data         00000088  20000000  08000a88  00002000  2**2
+=======
   6 .data         00000088  20000000  08001144  00003000  2**2
+>>>>>>> 9da4b36 (s)
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .bss          00000094  20000088  20000088  00003088  2**2
+  7 .bss          00000094  20000088  20000088  00002088  2**2
                   ALLOC
-  8 .stack        00001000  20007000  2000011c  00004000  2**0
+  8 .stack        00001000  20007000  2000011c  00003000  2**0
                   ALLOC
-  9 .debug_info   000036a0  00000000  00000000  00003088  2**0
+  9 .debug_info   000036a0  00000000  00000000  00002088  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00000c3a  00000000  00000000  00006728  2**0
+ 10 .debug_abbrev 00000c3a  00000000  00000000  00005728  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000d7a  00000000  00000000  00007362  2**0
+ 11 .debug_loc    00000d7a  00000000  00000000  00006362  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 00000260  00000000  00000000  000080e0  2**3
+ 12 .debug_aranges 00000260  00000000  00000000  000070e0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 000002e8  00000000  00000000  00008340  2**3
+ 13 .debug_ranges 000002e8  00000000  00000000  00007340  2**3
                   CONTENTS, READONLY, DEBUGGING
+<<<<<<< HEAD
+ 14 .debug_line   0000285d  00000000  00000000  00007628  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_str    00000efa  00000000  00000000  00009e85  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .comment      00000028  00000000  00000000  0000ad7f  2**0
+                  CONTENTS, READONLY
+ 17 .riscv.attributes 0000002b  00000000  00000000  0000ada7  2**0
+                  CONTENTS, READONLY
+ 18 .debug_frame  00000408  00000000  00000000  0000add4  2**2
+=======
  14 .debug_line   00002e18  00000000  00000000  00008628  2**0
                   CONTENTS, READONLY, DEBUGGING
  15 .debug_str    00000ee9  00000000  00000000  0000b440  2**0
@@ -54,13 +82,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
  17 .riscv.attributes 0000002b  00000000  00000000  0000c351  2**0
                   CONTENTS, READONLY
  18 .debug_frame  00000408  00000000  00000000  0000c37c  2**2
+>>>>>>> 9da4b36 (s)
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
 08000254 l    d  .ilalign	00000000 .ilalign
 08000280 l    d  .text	00000000 .text
+<<<<<<< HEAD
+08000a84 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
+08000a88 l    d  .lalign	00000000 .lalign
+=======
 08001140 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
 08001144 l    d  .lalign	00000000 .lalign
+>>>>>>> 9da4b36 (s)
 20000000 l    d  .dalign	00000000 .dalign
 20000000 l    d  .data	00000000 .data
 20000088 l    d  .bss	00000000 .bss
@@ -113,6 +147,13 @@ SYMBOL TABLE:
 00000008 l       *ABS*	00000000 PBEN
 080006c4 l       .text	00000000 rcu1en
 080006d6 l       .text	00000000 rcu2en
+<<<<<<< HEAD
+20000000 l       .data	00000000 patterns
+08000752 l       .text	00000000 pattern_loop
+08000768 l       .text	00000000 no_invert
+0800078e l       .text	00000000 delay
+08000796 l       .text	00000000 delay_loop
+=======
 0800072e l       .text	00000000 start
 0800074c l       .text	00000000 select_sequence
 080007ac l       .text	00000000 disco0
@@ -140,6 +181,7 @@ SYMBOL TABLE:
 20000014 l       .data	00000000 sequence5
 20000018 l       .data	00000000 sequence6
 2000001c l       .data	00000000 sequence7
+>>>>>>> 9da4b36 (s)
 00000000 l    df *ABS*	00000000 atexit.c
 00000000 l    df *ABS*	00000000 exit.c
 00000000 l    df *ABS*	00000000 fini.c
@@ -154,6 +196,35 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 impure.c
 20000020 l     O .data	00000060 impure_data
 00000000 l    df *ABS*	00000000 
+<<<<<<< HEAD
+08000a88 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
+08000a88 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
+08000a88 l       .sdata2._global_impure_ptr	00000000 __init_array_end
+08000a88 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
+08000a88 l       .sdata2._global_impure_ptr	00000000 __init_array_start
+08000a88 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
+20000880 g       .data	00000000 __global_pointer$
+08000a76 g     F .text	0000000c __errno
+20000118 g     O .bss	00000004 errno
+00001000 g       *ABS*	00000000 __stack_size
+08000886 g     F .text	00000016 memcpy
+080004ee  w    F .text	00000038 handle_trap
+08000604  w      .text	00000000 irq_entry
+20007000 g       .stack	00000000 _heap_end
+08000a84 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
+0800081c g     F .text	0000006a __libc_init_array
+08000526 g     F .text	0000002c _init
+080007e4 g     F .text	00000038 __libc_fini_array
+080004cc  w    F .text	00000022 handle_nmi
+0800089c g     F .text	00000018 write
+0800041c g     F .text	0000007c write_hex
+20000088 g     O .bss	00000004 _global_atexit
+0800097a g     F .text	000000c8 __call_exitprocs
+20008000 g       .stack	00000000 _sp
+0800015c g     F .init	00000000 _start
+0800024c g       .init	00000000 enable_mcycle_minstret
+080008ee g     F .text	0000008c __register_exitproc
+=======
 08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
 08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
 08001144 l       .sdata2._global_impure_ptr	00000000 __init_array_end
@@ -181,6 +252,7 @@ SYMBOL TABLE:
 0800015c g     F .init	00000000 _start
 0800024c g       .init	00000000 enable_mcycle_minstret
 08000fac g     F .text	0000008c __register_exitproc
+>>>>>>> 9da4b36 (s)
 20000088 g       .bss	00000000 __bss_start
 080006e8 g       .text	00000000 main
 08000580  w      .text	00000000 trap_entry
@@ -189,6 +261,17 @@ SYMBOL TABLE:
 080002b4 g     F .text	0000011c SystemInit
 08000552 g     F .text	00000002 _fini
 00000000 g       *ABS*	00000000 __dbg_stack_size
+<<<<<<< HEAD
+0800079e g     F .text	00000010 atexit
+080008b4 g     F .text	0000003a _write_r
+20000080 g     O .data	00000004 _impure_ptr
+20000000 g       .dalign	00000000 _data
+08000a42 g     F .text	00000034 _write
+20000088 g       .bss	00000000 _edata
+20000120 g       .bss	00000000 _end
+08000a88 g       .lalign	00000000 _data_lma
+080007ae g     F .text	00000036 exit
+=======
 08000e5c g     F .text	00000010 atexit
 08000f72 g     F .text	0000003a _write_r
 20000080 g     O .data	00000004 _impure_ptr
@@ -198,6 +281,7 @@ SYMBOL TABLE:
 20000120 g       .bss	00000000 _end
 08001144 g       .lalign	00000000 _data_lma
 08000e6c g     F .text	00000036 exit
+>>>>>>> 9da4b36 (s)
 08000498 g     F .text	00000022 eclic_init
 080003d0 g     F .text	0000004c _exit
 
@@ -294,7 +378,11 @@ _start0800:
 	/* Load data section */
 	la a0, _data_lma
  80001c2:	00001517          	auipc	a0,0x1
+<<<<<<< HEAD
+ 80001c6:	8c650513          	addi	a0,a0,-1850 # 8000a88 <__fini_array_end>
+=======
  80001c6:	f8250513          	addi	a0,a0,-126 # 8001144 <__fini_array_end>
+>>>>>>> 9da4b36 (s)
 	la a1, _data
  80001ca:	18000597          	auipc	a1,0x18000
  80001ce:	e3658593          	addi	a1,a1,-458 # 20000000 <_data>
@@ -337,6 +425,16 @@ _start0800:
  800020c:	3202f073          	csrci	mucounteren,5
 	/* Call global constructors */
 	la a0, __libc_fini_array
+<<<<<<< HEAD
+ 8000210:	00000517          	auipc	a0,0x0
+ 8000214:	5d450513          	addi	a0,a0,1492 # 80007e4 <__libc_fini_array>
+	call atexit
+ 8000218:	00000097          	auipc	ra,0x0
+ 800021c:	586080e7          	jalr	1414(ra) # 800079e <atexit>
+	call __libc_init_array
+ 8000220:	00000097          	auipc	ra,0x0
+ 8000224:	5fc080e7          	jalr	1532(ra) # 800081c <__libc_init_array>
+=======
  8000210:	00001517          	auipc	a0,0x1
  8000214:	c9250513          	addi	a0,a0,-878 # 8000ea2 <__libc_fini_array>
 	call atexit
@@ -345,6 +443,7 @@ _start0800:
 	call __libc_init_array
  8000220:	00001097          	auipc	ra,0x1
  8000224:	cba080e7          	jalr	-838(ra) # 8000eda <__libc_init_array>
+>>>>>>> 9da4b36 (s)
 
 
 	/* argc = argv = 0 */
@@ -359,8 +458,13 @@ _start0800:
  8000234:	00000097          	auipc	ra,0x0
  8000238:	4b4080e7          	jalr	1204(ra) # 80006e8 <main>
 	tail exit
+<<<<<<< HEAD
+ 800023c:	00000317          	auipc	t1,0x0
+ 8000240:	57230067          	jr	1394(t1) # 80007ae <exit>
+=======
  800023c:	00001317          	auipc	t1,0x1
  8000240:	c3030067          	jr	-976(t1) # 8000e6c <exit>
+>>>>>>> 9da4b36 (s)
 
 1:
 	j 1b
@@ -399,7 +503,11 @@ Disassembly of section .text:
  8000292:	2064                	fld	fs1,192(s0)
  8000294:	68746977          	0x68746977
  8000298:	6320                	flw	fs0,64(a4)
+<<<<<<< HEAD
+ 800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x55bb8>
+=======
  800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x554fc>
+>>>>>>> 9da4b36 (s)
  800029e:	0000                	unimp
  80002a0:	7830                	flw	fa2,112(s0)
  80002a2:	0000                	unimp
@@ -641,15 +749,25 @@ void _exit(int code)
 {
  80003e2:	d606                	sw	ra,44(sp)
   const char message[] = "\nProgram has exited with code:";
+<<<<<<< HEAD
+ 80003e4:	00000097          	auipc	ra,0x0
+ 80003e8:	4a2080e7          	jalr	1186(ra) # 8000886 <memcpy>
+=======
  80003e4:	00001097          	auipc	ra,0x1
  80003e8:	b60080e7          	jalr	-1184(ra) # 8000f44 <memcpy>
+>>>>>>> 9da4b36 (s)
 
   write(STDERR_FILENO, message, sizeof(message) - 1);
  80003ec:	4679                	li	a2,30
  80003ee:	858a                	mv	a1,sp
  80003f0:	4509                	li	a0,2
+<<<<<<< HEAD
+ 80003f2:	00000097          	auipc	ra,0x0
+ 80003f6:	4aa080e7          	jalr	1194(ra) # 800089c <write>
+=======
  80003f2:	00001097          	auipc	ra,0x1
  80003f6:	b68080e7          	jalr	-1176(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   write_hex(STDERR_FILENO, code);
  80003fa:	85a2                	mv	a1,s0
  80003fc:	4509                	li	a0,2
@@ -660,8 +778,13 @@ void _exit(int code)
  800040a:	4605                	li	a2,1
  800040c:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
  8000410:	4509                	li	a0,2
+<<<<<<< HEAD
+ 8000412:	00000097          	auipc	ra,0x0
+ 8000416:	48a080e7          	jalr	1162(ra) # 800089c <write>
+=======
  8000412:	00001097          	auipc	ra,0x1
  8000416:	b48080e7          	jalr	-1208(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
 
   for (;;);
  800041a:	a001                	j	800041a <_exit+0x4a>
@@ -693,8 +816,13 @@ void write_hex(int fd, unsigned long int hex)
  8000438:	892a                	mv	s2,a0
   write(fd , "0x", 2);
  800043a:	4471                	li	s0,28
+<<<<<<< HEAD
+ 800043c:	00000097          	auipc	ra,0x0
+ 8000440:	460080e7          	jalr	1120(ra) # 800089c <write>
+=======
  800043c:	00001097          	auipc	ra,0x1
  8000440:	b1e080e7          	jalr	-1250(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
     jj = ii - 1;
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
@@ -720,8 +848,13 @@ void write_hex(int fd, unsigned long int hex)
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
  8000470:	00f107a3          	sb	a5,15(sp)
     write(fd, &towrite, 1);
+<<<<<<< HEAD
+ 8000474:	00000097          	auipc	ra,0x0
+ 8000478:	428080e7          	jalr	1064(ra) # 800089c <write>
+=======
  8000474:	00001097          	auipc	ra,0x1
  8000478:	ae6080e7          	jalr	-1306(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
  800047c:	fc9417e3          	bne	s0,s1,800044a <write_hex+0x2e>
   }
@@ -810,8 +943,13 @@ __attribute__((weak)) uintptr_t handle_nmi()
 {
  80004da:	c606                	sw	ra,12(sp)
   write(1, "nmi\n", 5);
+<<<<<<< HEAD
+ 80004dc:	00000097          	auipc	ra,0x0
+ 80004e0:	3c0080e7          	jalr	960(ra) # 800089c <write>
+=======
  80004dc:	00001097          	auipc	ra,0x1
  80004e0:	a7e080e7          	jalr	-1410(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   _exit(1);
  80004e4:	4505                	li	a0,1
  80004e6:	00000097          	auipc	ra,0x0
@@ -845,8 +983,13 @@ __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
  800050c:	4615                	li	a2,5
  800050e:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
  8000512:	4505                	li	a0,1
+<<<<<<< HEAD
+ 8000514:	00000097          	auipc	ra,0x0
+ 8000518:	388080e7          	jalr	904(ra) # 800089c <write>
+=======
  8000514:	00001097          	auipc	ra,0x1
  8000518:	a46080e7          	jalr	-1466(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
@@ -1070,182 +1213,565 @@ service_loop:
  8000672:	30200073          	mret
 
 08000676 <gpioi>:
-// GPIOI Initialize /////////////////////////////////////////////// 1.0 / AC ////
+// GPIOI Initialize ////////////////////////////////////////////////// 1.0 / AC ////
 // a0 Targeted GPIO-module
 // a1 Configuration bits (<<2)
 // a2 Mode bits
 // a3 Targeted pin
-gpioi: mv t0, a0 // t0 points to GPIOX...
+gpioi:  mv t0, a0           // t0 points to GPIOX...
  8000676:	82aa                	mv	t0,a0
-        mv t4, a3 // t4 marks selected pin...
+        mv t4, a3           //    t4 marks selected pin...
  8000678:	8eb6                	mv	t4,a3
-        li t1,0x8 // Use port control register 0 or 1,
+        li t1,0x8           //    Use port control register 0 or 1,
  800067a:	4321                	li	t1,8
-        blt t4,t1, 1f // thus is pin > 7?
+        blt t4,t1, 1f       //    thus is pin > 7?
  800067c:	006ec463          	blt	t4,t1,8000684 <gpioi+0xe>
-        addi t0, t0, 4 // Yes, adjust base address,
+        addi t0, t0, 4      //       Yes, adjust base address,
  8000680:	0291                	addi	t0,t0,4
-        addi t4,t4,-8 // and adjust selected pin.
+        addi t4,t4,-8       //            and adjust selected pin.
  8000682:	1ee1                	addi	t4,t4,-8
-1: slli t4,t4,2 // Multiply pin nb by 4 to get steps to shift!
+
+1:      slli t4,t4,2        //    Multiply pin nb by 4 to get steps to shift!
  8000684:	0e8a                	slli	t4,t4,0x2
-        li t1, 0xF // Create inverted configuration mask...
+        li t1, 0xF          //    Create inverted configuration mask...
  8000686:	433d                	li	t1,15
-        sll t1, t1, t4 // ...and move it into right position.
+        sll t1, t1, t4      //    ...and move it into right position.
  8000688:	01d31333          	sll	t1,t1,t4
-        not t1, t1 // ...invert it back, then...
+        not t1, t1          //    ...invert it back, then...
  800068c:	fff34313          	not	t1,t1
-        mv t2, a1 // Create configuration bits...
+        mv t2, a1           //    Create configuration bits...
  8000690:	83ae                	mv	t2,a1
-        or t2, t2, a2 //
+        or t2, t2, a2       //    
  8000692:	00c3e3b3          	or	t2,t2,a2
-        sll t2, t2, t4 // ...and move it into right position.
+        sll t2, t2, t4      //    ...and move it into right position.
  8000696:	01d393b3          	sll	t2,t2,t4
-        lw t3,CTR0(t0) // retreive port control register 0(/1)...
+
+        lw t3,CTR0(t0)      //    retreive port control register 0(/1)...
  800069a:	0002ae03          	lw	t3,0(t0)
-        and t3,t3,t1 // ...clear out selected pin's config/mode bits...
+        and t3,t3,t1        //    ...clear out selected pin's config/mode bits...
  800069e:	006e7e33          	and	t3,t3,t1
-        or t3, t3, t2 // ...configure new config/mode bits...
+        or t3, t3, t2       //    ...configure new config/mode bits...
  80006a2:	007e6e33          	or	t3,t3,t2
-        sw t3,CTR0(t0) // ...and write it back.
+        sw t3,CTR0(t0)      //    ...and write it back.
  80006a6:	01c2a023          	sw	t3,0(t0)
-        ret // then go home!
+        ret                 //  then go home!
  80006aa:	8082                	ret
 
 080006ac <gpiobo>:
+
 // GPIOBO Bit Operations ///////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 Targeted pattern
 // a2 Targeted pin(s)
-gpiobo: and a1, a1, a2 // (Clear all patterns bits that are not target bits)
+gpiobo: and a1, a1, a2      // (Clear all patterns bits that are not target bits)
  80006ac:	8df1                	and	a1,a1,a2
-        xor a2, a2, a1 // Find zeros in targeted bits...
+        xor a2, a2, a1      // Find zeros in targeted bits...
  80006ae:	8e2d                	xor	a2,a2,a1
-        slli a2, a2, 16 // ...position clear requests...
+        slli a2, a2, 16     // ...position clear requests...
  80006b0:	0642                	slli	a2,a2,0x10
-        or a1, a1, a2 // ...add set requests...
+        or a1, a1, a2       // ...add set requests...
  80006b2:	8dd1                	or	a1,a1,a2
-        sw a1, BOP(a0) // ...then execute...
+        sw a1, BOP(a0)      // ...then execute...
  80006b4:	c90c                	sw	a1,16(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006b6:	8082                	ret
 
 080006b8 <gpiobc>:
+
 // GPIBC Bit Clear /////////////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 Targeted pin(s)
-gpiobc: sw a1, BC(a0) // Execute request...
+gpiobc: sw a1, BC(a0)       // Execute request...
  80006b8:	c94c                	sw	a1,20(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006ba:	8082                	ret
 
 080006bc <gpiooc>:
+
 // GPIOC Output Control ////////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 value
-gpiooc: sw a1, OCTL(a0) // Execute request...
+gpiooc: sw a1, OCTL(a0)      // Execute request...
  80006bc:	c54c                	sw	a1,12(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006be:	8082                	ret
 
 080006c0 <gpiois>:
+
 // GPIOIS Input Status //////////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 read value
-gpiois: lw a1, ISTAT(a0) // Execute request...
+gpiois: lw a1, ISTAT(a0)    // Execute request...
  80006c0:	450c                	lw	a1,8(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006c2:	8082                	ret
 
 080006c4 <rcu1en>:
-.equ T5EN, 0x10
+.equ T5EN,   0x10
 .equ APB2EN, 0x18
-.equ PAEN, 0x4
-.equ PBEN, 0x8
+.equ PAEN,   0x4
+.equ PBEN,   0x8
 // RCU1EN Enabel APB1 bus devices //////////////////////////////////// 1.0 / AC ///
-rcu1en: li t0,RCU // t0 points to RCU...
+rcu1en: li t0,RCU           // t0 points to RCU...
  80006c4:	400212b7          	lui	t0,0x40021
-        lw t1,APB1EN(t0) // ...retrieve current configuration...
+        lw t1,APB1EN(t0)    // ...retrieve current configuration...
  80006c8:	01c2a303          	lw	t1,28(t0) # 4002101c <RCU+0x1c>
-        or t1,t1,a0 // ...and update the configuration...
+        or t1,t1,a0         // ...and update the configuration...
  80006cc:	00a36333          	or	t1,t1,a0
-        sw t1,APB1EN(t0) // ...then save back the updated config...
+        sw t1,APB1EN(t0)    // ...then save back the updated config...
  80006d0:	0062ae23          	sw	t1,28(t0)
-        ret // and go home!
+        ret                 // and go home!
  80006d4:	8082                	ret
 
 080006d6 <rcu2en>:
+
 // RCU2EN Enabel APB2 bus devices //////////////////////////////////// 1.0 / AC ///
-rcu2en: li t0,RCU // t0 points to RCU...
+rcu2en: li t0,RCU           // t0 points to RCU...
  80006d6:	400212b7          	lui	t0,0x40021
-        lw t1,APB2EN(t0) // ...retrieve current configuration...
+        lw t1,APB2EN(t0)    // ...retrieve current configuration...
  80006da:	0182a303          	lw	t1,24(t0) # 40021018 <RCU+0x18>
-        or t1,t1,a0 // ...and update the configuration...
+        or t1,t1,a0         // ...and update the configuration...
  80006de:	00a36333          	or	t1,t1,a0
-        sw t1,APB2EN(t0) // ...then save back the updated config...
+        sw t1,APB2EN(t0)    // ...then save back the updated config...
  80006e2:	0062ac23          	sw	t1,24(t0)
-        ret // and go home!
+        ret                 // and go home!
  80006e6:	8082                	ret
 
 080006e8 <main>:
+       
 // RCU Reset and Clock Unit Subroutine package ////////////////////////// END ///////
+
 .global main
-main:
-        # Enable GPIOB and GPIOA
-        li a0, PBEN + PAEN
+main:   li a0, PBEN+PAEN    // Prepare to turn on GPIOB...
  80006e8:	4531                	li	a0,12
-        call rcu2en
+        call rcu2en         // ...do the set-up!
  80006ea:	00000097          	auipc	ra,0x0
  80006ee:	fec080e7          	jalr	-20(ra) # 80006d6 <rcu2en>
-        # Initialize GPIOB (LEDs) as output
-        li a0, GPIOB
+
+        li a0, GPIOB        // Prepare to init GPIOB...
  80006f2:	40011537          	lui	a0,0x40011
  80006f6:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
-        li a1, GPIO_PP
+        li a1, GPIO_PP      // ...as Push-Pull Output...
  80006fa:	4581                	li	a1,0
-        li a2, GPIO_50
+        li a2, GPIO_50      // ...with max 50MHz rate...
  80006fc:	460d                	li	a2,3
-        li a3, 0
+        li a3, 0            // ...for pin 0...
  80006fe:	4681                	li	a3,0
-        li a4, 3
+        li a4, 3            // ...to pin 2...
  8000700:	470d                	li	a4,3
-1: call gpioi
+1:      call gpioi          // ...do the set-up!
  8000702:	00000097          	auipc	ra,0x0
  8000706:	f74080e7          	jalr	-140(ra) # 8000676 <gpioi>
-        addi a3, a3, 1
+        addi a3,a3,1        // ...advance to next pin...
  800070a:	0685                	addi	a3,a3,1
-        bne a3, a4, 1b
+        bne a3,a4, 1b       // ...continue, if not done!  
  800070c:	fee69be3          	bne	a3,a4,8000702 <main+0x1a>
-        # Initialize GPIOA (switches) as input
-        li a0, GPIOA
+
+        li a0, GPIOA        // Prepare to init GPIOA...
  8000710:	40011537          	lui	a0,0x40011
  8000714:	80050513          	addi	a0,a0,-2048 # 40010800 <GPIOA>
-        li a1, GPIO_AM
+        li a1, GPIO_AM      // ...in Analoge mode...
  8000718:	4581                	li	a1,0
-        li a2, GPIO_FI
+        li a2, GPIO_FI      // ...with High-Z...
  800071a:	4611                	li	a2,4
-        li a3, 5
+        li a3, 5            // ...for pin 5...
  800071c:	4695                	li	a3,5
-        li a4, 9
+        li a4, 9            // ...to pin 8...
  800071e:	4725                	li	a4,9
-1: call gpioi
+1:      call gpioi          // ...do the set-up!
  8000720:	00000097          	auipc	ra,0x0
  8000724:	f56080e7          	jalr	-170(ra) # 8000676 <gpioi>
-        addi a3, a3, 1
+        addi a3,a3,1        // ...advance to next pin...
  8000728:	0685                	addi	a3,a3,1
-        bne a3, a4, 1b
+        bne a3,a4, 1b       // ...continue, if not done!  
  800072a:	fee69be3          	bne	a3,a4,8000720 <main+0x38>
 
+<<<<<<< HEAD
+
+1:
+        li a0, GPIOA         // Prepare to read GPIOA...
+=======
 0800072e <start>:
         # Main loop to read switches and control LEDs
 start:  li a0, GPIOA
+>>>>>>> 9da4b36 (s)
  800072e:	40011537          	lui	a0,0x40011
  8000732:	80050513          	addi	a0,a0,-2048 # 40010800 <GPIOA>
-        call gpiois # Read switch states
+        call gpiois         // ...and get the value!
  8000736:	00000097          	auipc	ra,0x0
  800073a:	f8a080e7          	jalr	-118(ra) # 80006c0 <gpiois>
-        srli a1, a1, 5 # Adjust the bits to match switch positions
+        srli a1,a1,5        // ...shift it down 5 steps...
  800073e:	8195                	srli	a1,a1,0x5
+<<<<<<< HEAD
+        andi t0,a1,0x07     // ...mask out 3 switchs
+ 8000740:	0075f293          	andi	t0,a1,7
+
+        slli t0, t0, 2      //ränka start address skiftar 2. mot vänster
+ 8000744:	028a                	slli	t0,t0,0x2
+        la t1, patterns     //ladda basadressen med mönster
+ 8000746:	18000317          	auipc	t1,0x18000
+ 800074a:	8ba30313          	addi	t1,t1,-1862 # 20000000 <_data>
+        add t1, t1, t0      //hämta startadressen för vald sekvens
+ 800074e:	9316                	add	t1,t1,t0
+        li t4, 4            //antal mönster i en sekvens
+ 8000750:	4e91                	li	t4,4
+
+08000752 <pattern_loop>:
+
+pattern_loop:
+
+        lb t5, 0(t1)        //hämta nästa pattern
+ 8000752:	00030f03          	lb	t5,0(t1)
+        srli t2, a1, 3      //flytta mikrobrytare 4 till bit 0
+ 8000756:	0035d393          	srli	t2,a1,0x3
+        andi t2, t2, 0x01   //maskera mikrobytare 4 (=1 om invertering)
+ 800075a:	0013f393          	andi	t2,t2,1
+        beq t2, zero, no_invert //hoppa till no_invert om t2 == 0
+ 800075e:	00038563          	beqz	t2,8000768 <no_invert>
+        li t3, 0x07         //mask för inversion (endast 3 lysdioder)
+ 8000762:	4e1d                	li	t3,7
+        xor t5, t5, t3      //invertera mönstret
+ 8000764:	01cf4f33          	xor	t5,t5,t3
+
+08000768 <no_invert>:
+
+no_invert:
+        li a0, GPIOB        //förbered GPIOB för utskrift
+ 8000768:	40011537          	lui	a0,0x40011
+ 800076c:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+        mv a1, t5           //flytta mönstret till a1
+ 8000770:	85fa                	mv	a1,t5
+        li a2, 0x07         // ...the 3 lsb...
+ 8000772:	461d                	li	a2,7
+        call gpiobo         //skriv mönstret till lysdioderna
+ 8000774:	00000097          	auipc	ra,0x0
+ 8000778:	f38080e7          	jalr	-200(ra) # 80006ac <gpiobo>
+
+        addi t1, t1, 1      //gå till nästa mönster
+ 800077c:	0305                	addi	t1,t1,1
+        call delay          //vänta 0.25 sekunder
+ 800077e:	00000097          	auipc	ra,0x0
+ 8000782:	010080e7          	jalr	16(ra) # 800078e <delay>
+2:      addi t4, t4, -1     //loop counter
+ 8000786:	1efd                	addi	t4,t4,-1
+        bnez t4, pattern_loop   //gå tillbaka till nästa mönster
+ 8000788:	fc0e95e3          	bnez	t4,8000752 <pattern_loop>
+
+        j 1b                // Repeat loop
+ 800078c:	b74d                	j	800072e <main+0x46>
+
+0800078e <delay>:
+
+delay:  li t0, 25000000      //(tiden 0.25)
+ 800078e:	017d82b7          	lui	t0,0x17d8
+ 8000792:	84028293          	addi	t0,t0,-1984 # 17d7840 <__stack_size+0x17d6840>
+
+08000796 <delay_loop>:
+
+delay_loop:
+        addi t0, t0, -1
+ 8000796:	12fd                	addi	t0,t0,-1
+        bnez t0, delay_loop
+ 8000798:	fe029fe3          	bnez	t0,8000796 <delay_loop>
+        j 2b
+ 800079c:	b7ed                	j	8000786 <no_invert+0x1e>
+
+0800079e <atexit>:
+ 800079e:	85aa                	mv	a1,a0
+ 80007a0:	4681                	li	a3,0
+ 80007a2:	4601                	li	a2,0
+ 80007a4:	4501                	li	a0,0
+ 80007a6:	00000317          	auipc	t1,0x0
+ 80007aa:	14830067          	jr	328(t1) # 80008ee <__register_exitproc>
+
+080007ae <exit>:
+ 80007ae:	1141                	addi	sp,sp,-16
+ 80007b0:	c422                	sw	s0,8(sp)
+ 80007b2:	c606                	sw	ra,12(sp)
+ 80007b4:	00000797          	auipc	a5,0x0
+ 80007b8:	1c678793          	addi	a5,a5,454 # 800097a <__call_exitprocs>
+ 80007bc:	842a                	mv	s0,a0
+ 80007be:	c791                	beqz	a5,80007ca <exit+0x1c>
+ 80007c0:	4581                	li	a1,0
+ 80007c2:	00000097          	auipc	ra,0x0
+ 80007c6:	1b8080e7          	jalr	440(ra) # 800097a <__call_exitprocs>
+ 80007ca:	00000797          	auipc	a5,0x0
+ 80007ce:	2ba78793          	addi	a5,a5,698 # 8000a84 <_global_impure_ptr>
+ 80007d2:	4388                	lw	a0,0(a5)
+ 80007d4:	551c                	lw	a5,40(a0)
+ 80007d6:	c391                	beqz	a5,80007da <exit+0x2c>
+ 80007d8:	9782                	jalr	a5
+ 80007da:	8522                	mv	a0,s0
+ 80007dc:	00000097          	auipc	ra,0x0
+ 80007e0:	bf4080e7          	jalr	-1036(ra) # 80003d0 <_exit>
+
+080007e4 <__libc_fini_array>:
+ 80007e4:	1141                	addi	sp,sp,-16
+ 80007e6:	00000797          	auipc	a5,0x0
+ 80007ea:	2a278793          	addi	a5,a5,674 # 8000a88 <__fini_array_end>
+ 80007ee:	c422                	sw	s0,8(sp)
+ 80007f0:	00000417          	auipc	s0,0x0
+ 80007f4:	29840413          	addi	s0,s0,664 # 8000a88 <__fini_array_end>
+ 80007f8:	8c1d                	sub	s0,s0,a5
+ 80007fa:	c226                	sw	s1,4(sp)
+ 80007fc:	c606                	sw	ra,12(sp)
+ 80007fe:	8409                	srai	s0,s0,0x2
+ 8000800:	84be                	mv	s1,a5
+ 8000802:	e411                	bnez	s0,800080e <__libc_fini_array+0x2a>
+ 8000804:	40b2                	lw	ra,12(sp)
+ 8000806:	4422                	lw	s0,8(sp)
+ 8000808:	4492                	lw	s1,4(sp)
+ 800080a:	0141                	addi	sp,sp,16
+ 800080c:	8082                	ret
+ 800080e:	147d                	addi	s0,s0,-1
+ 8000810:	00241793          	slli	a5,s0,0x2
+ 8000814:	97a6                	add	a5,a5,s1
+ 8000816:	439c                	lw	a5,0(a5)
+ 8000818:	9782                	jalr	a5
+ 800081a:	b7e5                	j	8000802 <__libc_fini_array+0x1e>
+
+0800081c <__libc_init_array>:
+ 800081c:	1141                	addi	sp,sp,-16
+ 800081e:	00000797          	auipc	a5,0x0
+ 8000822:	26a78793          	addi	a5,a5,618 # 8000a88 <__fini_array_end>
+ 8000826:	c422                	sw	s0,8(sp)
+ 8000828:	00000417          	auipc	s0,0x0
+ 800082c:	26040413          	addi	s0,s0,608 # 8000a88 <__fini_array_end>
+ 8000830:	8c1d                	sub	s0,s0,a5
+ 8000832:	c226                	sw	s1,4(sp)
+ 8000834:	c04a                	sw	s2,0(sp)
+ 8000836:	c606                	sw	ra,12(sp)
+ 8000838:	8409                	srai	s0,s0,0x2
+ 800083a:	4481                	li	s1,0
+ 800083c:	893e                	mv	s2,a5
+ 800083e:	02849663          	bne	s1,s0,800086a <__libc_init_array+0x4e>
+ 8000842:	00000797          	auipc	a5,0x0
+ 8000846:	24678793          	addi	a5,a5,582 # 8000a88 <__fini_array_end>
+ 800084a:	00000417          	auipc	s0,0x0
+ 800084e:	23e40413          	addi	s0,s0,574 # 8000a88 <__fini_array_end>
+ 8000852:	8c1d                	sub	s0,s0,a5
+ 8000854:	8409                	srai	s0,s0,0x2
+ 8000856:	4481                	li	s1,0
+ 8000858:	893e                	mv	s2,a5
+ 800085a:	00849f63          	bne	s1,s0,8000878 <__libc_init_array+0x5c>
+ 800085e:	40b2                	lw	ra,12(sp)
+ 8000860:	4422                	lw	s0,8(sp)
+ 8000862:	4492                	lw	s1,4(sp)
+ 8000864:	4902                	lw	s2,0(sp)
+ 8000866:	0141                	addi	sp,sp,16
+ 8000868:	8082                	ret
+ 800086a:	00249793          	slli	a5,s1,0x2
+ 800086e:	97ca                	add	a5,a5,s2
+ 8000870:	439c                	lw	a5,0(a5)
+ 8000872:	0485                	addi	s1,s1,1
+ 8000874:	9782                	jalr	a5
+ 8000876:	b7e1                	j	800083e <__libc_init_array+0x22>
+ 8000878:	00249793          	slli	a5,s1,0x2
+ 800087c:	97ca                	add	a5,a5,s2
+ 800087e:	439c                	lw	a5,0(a5)
+ 8000880:	0485                	addi	s1,s1,1
+ 8000882:	9782                	jalr	a5
+ 8000884:	bfd9                	j	800085a <__libc_init_array+0x3e>
+
+08000886 <memcpy>:
+ 8000886:	832a                	mv	t1,a0
+ 8000888:	ca09                	beqz	a2,800089a <memcpy+0x14>
+ 800088a:	00058383          	lb	t2,0(a1)
+ 800088e:	00730023          	sb	t2,0(t1)
+ 8000892:	167d                	addi	a2,a2,-1
+ 8000894:	0305                	addi	t1,t1,1
+ 8000896:	0585                	addi	a1,a1,1
+ 8000898:	fa6d                	bnez	a2,800088a <memcpy+0x4>
+ 800089a:	8082                	ret
+
+0800089c <write>:
+ 800089c:	17fff797          	auipc	a5,0x17fff
+ 80008a0:	7e478793          	addi	a5,a5,2020 # 20000080 <_impure_ptr>
+ 80008a4:	86b2                	mv	a3,a2
+ 80008a6:	862e                	mv	a2,a1
+ 80008a8:	85aa                	mv	a1,a0
+ 80008aa:	4388                	lw	a0,0(a5)
+ 80008ac:	00000317          	auipc	t1,0x0
+ 80008b0:	00830067          	jr	8(t1) # 80008b4 <_write_r>
+
+080008b4 <_write_r>:
+ 80008b4:	1141                	addi	sp,sp,-16
+ 80008b6:	c422                	sw	s0,8(sp)
+ 80008b8:	842a                	mv	s0,a0
+ 80008ba:	852e                	mv	a0,a1
+ 80008bc:	85b2                	mv	a1,a2
+ 80008be:	8636                	mv	a2,a3
+ 80008c0:	18000797          	auipc	a5,0x18000
+ 80008c4:	8407ac23          	sw	zero,-1960(a5) # 20000118 <errno>
+ 80008c8:	c606                	sw	ra,12(sp)
+ 80008ca:	00000097          	auipc	ra,0x0
+ 80008ce:	178080e7          	jalr	376(ra) # 8000a42 <_write>
+ 80008d2:	57fd                	li	a5,-1
+ 80008d4:	00f51963          	bne	a0,a5,80008e6 <_write_r+0x32>
+ 80008d8:	18000797          	auipc	a5,0x18000
+ 80008dc:	84078793          	addi	a5,a5,-1984 # 20000118 <errno>
+ 80008e0:	439c                	lw	a5,0(a5)
+ 80008e2:	c391                	beqz	a5,80008e6 <_write_r+0x32>
+ 80008e4:	c01c                	sw	a5,0(s0)
+ 80008e6:	40b2                	lw	ra,12(sp)
+ 80008e8:	4422                	lw	s0,8(sp)
+ 80008ea:	0141                	addi	sp,sp,16
+ 80008ec:	8082                	ret
+
+080008ee <__register_exitproc>:
+ 80008ee:	17fff797          	auipc	a5,0x17fff
+ 80008f2:	79a78793          	addi	a5,a5,1946 # 20000088 <_global_atexit>
+ 80008f6:	439c                	lw	a5,0(a5)
+ 80008f8:	8e2a                	mv	t3,a0
+ 80008fa:	e78d                	bnez	a5,8000924 <__register_exitproc+0x36>
+ 80008fc:	17fff717          	auipc	a4,0x17fff
+ 8000900:	79070713          	addi	a4,a4,1936 # 2000008c <_global_atexit0>
+ 8000904:	17fff797          	auipc	a5,0x17fff
+ 8000908:	78e7a223          	sw	a4,1924(a5) # 20000088 <_global_atexit>
+ 800090c:	f7fff517          	auipc	a0,0xf7fff
+ 8000910:	6f450513          	addi	a0,a0,1780 # 0 <__dbg_stack_size>
+ 8000914:	87ba                	mv	a5,a4
+ 8000916:	c519                	beqz	a0,8000924 <__register_exitproc+0x36>
+ 8000918:	411c                	lw	a5,0(a0)
+ 800091a:	17fff517          	auipc	a0,0x17fff
+ 800091e:	7ef52d23          	sw	a5,2042(a0) # 20000114 <_global_atexit0+0x88>
+ 8000922:	87ba                	mv	a5,a4
+ 8000924:	43d8                	lw	a4,4(a5)
+ 8000926:	487d                	li	a6,31
+ 8000928:	557d                	li	a0,-1
+ 800092a:	04e84763          	blt	a6,a4,8000978 <__register_exitproc+0x8a>
+ 800092e:	020e0e63          	beqz	t3,800096a <__register_exitproc+0x7c>
+ 8000932:	0887a803          	lw	a6,136(a5)
+ 8000936:	04080163          	beqz	a6,8000978 <__register_exitproc+0x8a>
+ 800093a:	00271893          	slli	a7,a4,0x2
+ 800093e:	98c2                	add	a7,a7,a6
+ 8000940:	00c8a023          	sw	a2,0(a7)
+ 8000944:	10082303          	lw	t1,256(a6)
+ 8000948:	4605                	li	a2,1
+ 800094a:	00e61633          	sll	a2,a2,a4
+ 800094e:	00c36333          	or	t1,t1,a2
+ 8000952:	10682023          	sw	t1,256(a6)
+ 8000956:	08d8a023          	sw	a3,128(a7)
+ 800095a:	4689                	li	a3,2
+ 800095c:	00de1763          	bne	t3,a3,800096a <__register_exitproc+0x7c>
+ 8000960:	10482683          	lw	a3,260(a6)
+ 8000964:	8e55                	or	a2,a2,a3
+ 8000966:	10c82223          	sw	a2,260(a6)
+ 800096a:	00170693          	addi	a3,a4,1
+ 800096e:	070a                	slli	a4,a4,0x2
+ 8000970:	c3d4                	sw	a3,4(a5)
+ 8000972:	97ba                	add	a5,a5,a4
+ 8000974:	c78c                	sw	a1,8(a5)
+ 8000976:	4501                	li	a0,0
+ 8000978:	8082                	ret
+
+0800097a <__call_exitprocs>:
+ 800097a:	7179                	addi	sp,sp,-48
+ 800097c:	cc52                	sw	s4,24(sp)
+ 800097e:	ca56                	sw	s5,20(sp)
+ 8000980:	c85a                	sw	s6,16(sp)
+ 8000982:	c65e                	sw	s7,12(sp)
+ 8000984:	d606                	sw	ra,44(sp)
+ 8000986:	d422                	sw	s0,40(sp)
+ 8000988:	d226                	sw	s1,36(sp)
+ 800098a:	d04a                	sw	s2,32(sp)
+ 800098c:	ce4e                	sw	s3,28(sp)
+ 800098e:	c462                	sw	s8,8(sp)
+ 8000990:	8b2a                	mv	s6,a0
+ 8000992:	8a2e                	mv	s4,a1
+ 8000994:	17fffa97          	auipc	s5,0x17fff
+ 8000998:	6f4a8a93          	addi	s5,s5,1780 # 20000088 <_global_atexit>
+ 800099c:	4b85                	li	s7,1
+ 800099e:	000aa403          	lw	s0,0(s5)
+ 80009a2:	c811                	beqz	s0,80009b6 <__call_exitprocs+0x3c>
+ 80009a4:	4044                	lw	s1,4(s0)
+ 80009a6:	08842983          	lw	s3,136(s0)
+ 80009aa:	fff48913          	addi	s2,s1,-1
+ 80009ae:	048a                	slli	s1,s1,0x2
+ 80009b0:	94a2                	add	s1,s1,s0
+ 80009b2:	00095e63          	bgez	s2,80009ce <__call_exitprocs+0x54>
+ 80009b6:	50b2                	lw	ra,44(sp)
+ 80009b8:	5422                	lw	s0,40(sp)
+ 80009ba:	5492                	lw	s1,36(sp)
+ 80009bc:	5902                	lw	s2,32(sp)
+ 80009be:	49f2                	lw	s3,28(sp)
+ 80009c0:	4a62                	lw	s4,24(sp)
+ 80009c2:	4ad2                	lw	s5,20(sp)
+ 80009c4:	4b42                	lw	s6,16(sp)
+ 80009c6:	4bb2                	lw	s7,12(sp)
+ 80009c8:	4c22                	lw	s8,8(sp)
+ 80009ca:	6145                	addi	sp,sp,48
+ 80009cc:	8082                	ret
+ 80009ce:	000a0e63          	beqz	s4,80009ea <__call_exitprocs+0x70>
+ 80009d2:	00099563          	bnez	s3,80009dc <__call_exitprocs+0x62>
+ 80009d6:	197d                	addi	s2,s2,-1
+ 80009d8:	14f1                	addi	s1,s1,-4
+ 80009da:	bfe1                	j	80009b2 <__call_exitprocs+0x38>
+ 80009dc:	00291793          	slli	a5,s2,0x2
+ 80009e0:	97ce                	add	a5,a5,s3
+ 80009e2:	0807a783          	lw	a5,128(a5)
+ 80009e6:	ff4798e3          	bne	a5,s4,80009d6 <__call_exitprocs+0x5c>
+ 80009ea:	4058                	lw	a4,4(s0)
+ 80009ec:	40dc                	lw	a5,4(s1)
+ 80009ee:	177d                	addi	a4,a4,-1
+ 80009f0:	03271863          	bne	a4,s2,8000a20 <__call_exitprocs+0xa6>
+ 80009f4:	01242223          	sw	s2,4(s0)
+ 80009f8:	dff9                	beqz	a5,80009d6 <__call_exitprocs+0x5c>
+ 80009fa:	00442c03          	lw	s8,4(s0)
+ 80009fe:	00098863          	beqz	s3,8000a0e <__call_exitprocs+0x94>
+ 8000a02:	1009a683          	lw	a3,256(s3)
+ 8000a06:	012b9733          	sll	a4,s7,s2
+ 8000a0a:	8ef9                	and	a3,a3,a4
+ 8000a0c:	ee89                	bnez	a3,8000a26 <__call_exitprocs+0xac>
+ 8000a0e:	9782                	jalr	a5
+ 8000a10:	4058                	lw	a4,4(s0)
+ 8000a12:	000aa783          	lw	a5,0(s5)
+ 8000a16:	f98714e3          	bne	a4,s8,800099e <__call_exitprocs+0x24>
+ 8000a1a:	faf40ee3          	beq	s0,a5,80009d6 <__call_exitprocs+0x5c>
+ 8000a1e:	b741                	j	800099e <__call_exitprocs+0x24>
+ 8000a20:	0004a223          	sw	zero,4(s1)
+ 8000a24:	bfd1                	j	80009f8 <__call_exitprocs+0x7e>
+ 8000a26:	00291693          	slli	a3,s2,0x2
+ 8000a2a:	96ce                	add	a3,a3,s3
+ 8000a2c:	428c                	lw	a1,0(a3)
+ 8000a2e:	1049a683          	lw	a3,260(s3)
+ 8000a32:	8f75                	and	a4,a4,a3
+ 8000a34:	e701                	bnez	a4,8000a3c <__call_exitprocs+0xc2>
+ 8000a36:	855a                	mv	a0,s6
+ 8000a38:	9782                	jalr	a5
+ 8000a3a:	bfd9                	j	8000a10 <__call_exitprocs+0x96>
+ 8000a3c:	852e                	mv	a0,a1
+ 8000a3e:	9782                	jalr	a5
+ 8000a40:	bfc1                	j	8000a10 <__call_exitprocs+0x96>
+
+08000a42 <_write>:
+ 8000a42:	1141                	addi	sp,sp,-16
+ 8000a44:	c606                	sw	ra,12(sp)
+ 8000a46:	c422                	sw	s0,8(sp)
+ 8000a48:	4681                	li	a3,0
+ 8000a4a:	4701                	li	a4,0
+ 8000a4c:	4781                	li	a5,0
+ 8000a4e:	04000893          	li	a7,64
+ 8000a52:	00000073          	ecall
+ 8000a56:	842a                	mv	s0,a0
+ 8000a58:	00055a63          	bgez	a0,8000a6c <_write+0x2a>
+ 8000a5c:	40800433          	neg	s0,s0
+ 8000a60:	00000097          	auipc	ra,0x0
+ 8000a64:	016080e7          	jalr	22(ra) # 8000a76 <__errno>
+ 8000a68:	c100                	sw	s0,0(a0)
+ 8000a6a:	547d                	li	s0,-1
+ 8000a6c:	8522                	mv	a0,s0
+ 8000a6e:	40b2                	lw	ra,12(sp)
+ 8000a70:	4422                	lw	s0,8(sp)
+ 8000a72:	0141                	addi	sp,sp,16
+ 8000a74:	8082                	ret
+
+08000a76 <__errno>:
+ 8000a76:	17fff797          	auipc	a5,0x17fff
+ 8000a7a:	60a78793          	addi	a5,a5,1546 # 20000080 <_impure_ptr>
+ 8000a7e:	4388                	lw	a0,0(a5)
+ 8000a80:	8082                	ret
+=======
         andi a1, a1, 0x0F # Mask to only consider switches A5 to A8
  8000740:	89bd                	andi	a1,a1,15
         # Call a subroutine to select LED sequence based on switch state
@@ -2423,6 +2949,7 @@ delay:
  8001138:	f4c78793          	addi	a5,a5,-180 # 20000080 <_impure_ptr>
  800113c:	4388                	lw	a0,0(a5)
  800113e:	8082                	ret
+>>>>>>> 9da4b36 (s)
 
 build/gd32vf103.elf:     file format elf32-littleriscv
 build/gd32vf103.elf
@@ -2432,44 +2959,72 @@ start address 0x0800015c
 
 Program Header:
     LOAD off    0x00001000 vaddr 0x08000000 paddr 0x08000000 align 2**12
+<<<<<<< HEAD
+         filesz 0x00000a88 memsz 0x00000a88 flags r-x
+    LOAD off    0x00002000 vaddr 0x20000000 paddr 0x08000a88 align 2**12
+=======
          filesz 0x00001144 memsz 0x00001144 flags r-x
     LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001144 align 2**12
+>>>>>>> 9da4b36 (s)
          filesz 0x00000088 memsz 0x00000088 flags rw-
-    LOAD off    0x00003088 vaddr 0x20000088 paddr 0x20000088 align 2**12
+    LOAD off    0x00002088 vaddr 0x20000088 paddr 0x20000088 align 2**12
          filesz 0x00000000 memsz 0x00000094 flags rw-
-    LOAD off    0x00004000 vaddr 0x20007000 paddr 0x2000011c align 2**12
+    LOAD off    0x00003000 vaddr 0x20007000 paddr 0x2000011c align 2**12
          filesz 0x00000000 memsz 0x00001000 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .init         00000254  08000000  08000000  00001000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .ilalign      00000000  08000254  08000254  00003088  2**0
+  1 .ilalign      00000000  08000254  08000254  00002088  2**0
                   CONTENTS
+<<<<<<< HEAD
+  2 .text         00000802  08000280  08000280  00001280  2**6
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .sdata2._global_impure_ptr 00000004  08000a84  08000a84  00001a84  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .lalign       00000000  08000a88  08000a88  00002088  2**0
+=======
   2 .text         00000ec0  08000280  08000280  00001280  2**6
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   3 .sdata2._global_impure_ptr 00000004  08001140  08001140  00002140  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   4 .lalign       00000000  08001144  08001144  00003088  2**0
+>>>>>>> 9da4b36 (s)
                   CONTENTS
-  5 .dalign       00000000  20000000  20000000  00003088  2**0
+  5 .dalign       00000000  20000000  20000000  00002088  2**0
                   CONTENTS
+<<<<<<< HEAD
+  6 .data         00000088  20000000  08000a88  00002000  2**2
+=======
   6 .data         00000088  20000000  08001144  00003000  2**2
+>>>>>>> 9da4b36 (s)
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .bss          00000094  20000088  20000088  00003088  2**2
+  7 .bss          00000094  20000088  20000088  00002088  2**2
                   ALLOC
-  8 .stack        00001000  20007000  2000011c  00004000  2**0
+  8 .stack        00001000  20007000  2000011c  00003000  2**0
                   ALLOC
-  9 .debug_info   000036a0  00000000  00000000  00003088  2**0
+  9 .debug_info   000036a0  00000000  00000000  00002088  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00000c3a  00000000  00000000  00006728  2**0
+ 10 .debug_abbrev 00000c3a  00000000  00000000  00005728  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000d7a  00000000  00000000  00007362  2**0
+ 11 .debug_loc    00000d7a  00000000  00000000  00006362  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 00000260  00000000  00000000  000080e0  2**3
+ 12 .debug_aranges 00000260  00000000  00000000  000070e0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 000002e8  00000000  00000000  00008340  2**3
+ 13 .debug_ranges 000002e8  00000000  00000000  00007340  2**3
                   CONTENTS, READONLY, DEBUGGING
+<<<<<<< HEAD
+ 14 .debug_line   0000285d  00000000  00000000  00007628  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_str    00000efa  00000000  00000000  00009e85  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .comment      00000028  00000000  00000000  0000ad7f  2**0
+                  CONTENTS, READONLY
+ 17 .riscv.attributes 0000002b  00000000  00000000  0000ada7  2**0
+                  CONTENTS, READONLY
+ 18 .debug_frame  00000408  00000000  00000000  0000add4  2**2
+=======
  14 .debug_line   00002e18  00000000  00000000  00008628  2**0
                   CONTENTS, READONLY, DEBUGGING
  15 .debug_str    00000ee9  00000000  00000000  0000b440  2**0
@@ -2479,13 +3034,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
  17 .riscv.attributes 0000002b  00000000  00000000  0000c351  2**0
                   CONTENTS, READONLY
  18 .debug_frame  00000408  00000000  00000000  0000c37c  2**2
+>>>>>>> 9da4b36 (s)
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
 08000254 l    d  .ilalign	00000000 .ilalign
 08000280 l    d  .text	00000000 .text
+<<<<<<< HEAD
+08000a84 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
+08000a88 l    d  .lalign	00000000 .lalign
+=======
 08001140 l    d  .sdata2._global_impure_ptr	00000000 .sdata2._global_impure_ptr
 08001144 l    d  .lalign	00000000 .lalign
+>>>>>>> 9da4b36 (s)
 20000000 l    d  .dalign	00000000 .dalign
 20000000 l    d  .data	00000000 .data
 20000088 l    d  .bss	00000000 .bss
@@ -2538,6 +3099,13 @@ SYMBOL TABLE:
 00000008 l       *ABS*	00000000 PBEN
 080006c4 l       .text	00000000 rcu1en
 080006d6 l       .text	00000000 rcu2en
+<<<<<<< HEAD
+20000000 l       .data	00000000 patterns
+08000752 l       .text	00000000 pattern_loop
+08000768 l       .text	00000000 no_invert
+0800078e l       .text	00000000 delay
+08000796 l       .text	00000000 delay_loop
+=======
 0800072e l       .text	00000000 start
 0800074c l       .text	00000000 select_sequence
 080007ac l       .text	00000000 disco0
@@ -2565,6 +3133,7 @@ SYMBOL TABLE:
 20000014 l       .data	00000000 sequence5
 20000018 l       .data	00000000 sequence6
 2000001c l       .data	00000000 sequence7
+>>>>>>> 9da4b36 (s)
 00000000 l    df *ABS*	00000000 atexit.c
 00000000 l    df *ABS*	00000000 exit.c
 00000000 l    df *ABS*	00000000 fini.c
@@ -2579,6 +3148,35 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 impure.c
 20000020 l     O .data	00000060 impure_data
 00000000 l    df *ABS*	00000000 
+<<<<<<< HEAD
+08000a88 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
+08000a88 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
+08000a88 l       .sdata2._global_impure_ptr	00000000 __init_array_end
+08000a88 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
+08000a88 l       .sdata2._global_impure_ptr	00000000 __init_array_start
+08000a88 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
+20000880 g       .data	00000000 __global_pointer$
+08000a76 g     F .text	0000000c __errno
+20000118 g     O .bss	00000004 errno
+00001000 g       *ABS*	00000000 __stack_size
+08000886 g     F .text	00000016 memcpy
+080004ee  w    F .text	00000038 handle_trap
+08000604  w      .text	00000000 irq_entry
+20007000 g       .stack	00000000 _heap_end
+08000a84 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
+0800081c g     F .text	0000006a __libc_init_array
+08000526 g     F .text	0000002c _init
+080007e4 g     F .text	00000038 __libc_fini_array
+080004cc  w    F .text	00000022 handle_nmi
+0800089c g     F .text	00000018 write
+0800041c g     F .text	0000007c write_hex
+20000088 g     O .bss	00000004 _global_atexit
+0800097a g     F .text	000000c8 __call_exitprocs
+20008000 g       .stack	00000000 _sp
+0800015c g     F .init	00000000 _start
+0800024c g       .init	00000000 enable_mcycle_minstret
+080008ee g     F .text	0000008c __register_exitproc
+=======
 08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_end
 08001144 l       .sdata2._global_impure_ptr	00000000 __fini_array_start
 08001144 l       .sdata2._global_impure_ptr	00000000 __init_array_end
@@ -2606,6 +3204,7 @@ SYMBOL TABLE:
 0800015c g     F .init	00000000 _start
 0800024c g       .init	00000000 enable_mcycle_minstret
 08000fac g     F .text	0000008c __register_exitproc
+>>>>>>> 9da4b36 (s)
 20000088 g       .bss	00000000 __bss_start
 080006e8 g       .text	00000000 main
 08000580  w      .text	00000000 trap_entry
@@ -2614,6 +3213,17 @@ SYMBOL TABLE:
 080002b4 g     F .text	0000011c SystemInit
 08000552 g     F .text	00000002 _fini
 00000000 g       *ABS*	00000000 __dbg_stack_size
+<<<<<<< HEAD
+0800079e g     F .text	00000010 atexit
+080008b4 g     F .text	0000003a _write_r
+20000080 g     O .data	00000004 _impure_ptr
+20000000 g       .dalign	00000000 _data
+08000a42 g     F .text	00000034 _write
+20000088 g       .bss	00000000 _edata
+20000120 g       .bss	00000000 _end
+08000a88 g       .lalign	00000000 _data_lma
+080007ae g     F .text	00000036 exit
+=======
 08000e5c g     F .text	00000010 atexit
 08000f72 g     F .text	0000003a _write_r
 20000080 g     O .data	00000004 _impure_ptr
@@ -2623,6 +3233,7 @@ SYMBOL TABLE:
 20000120 g       .bss	00000000 _end
 08001144 g       .lalign	00000000 _data_lma
 08000e6c g     F .text	00000036 exit
+>>>>>>> 9da4b36 (s)
 08000498 g     F .text	00000022 eclic_init
 080003d0 g     F .text	0000004c _exit
 
@@ -2719,7 +3330,11 @@ _start0800:
 	/* Load data section */
 	la a0, _data_lma
  80001c2:	00001517          	auipc	a0,0x1
+<<<<<<< HEAD
+ 80001c6:	8c650513          	addi	a0,a0,-1850 # 8000a88 <__fini_array_end>
+=======
  80001c6:	f8250513          	addi	a0,a0,-126 # 8001144 <__fini_array_end>
+>>>>>>> 9da4b36 (s)
 	la a1, _data
  80001ca:	18000597          	auipc	a1,0x18000
  80001ce:	e3658593          	addi	a1,a1,-458 # 20000000 <_data>
@@ -2762,6 +3377,16 @@ _start0800:
  800020c:	3202f073          	csrci	mucounteren,5
 	/* Call global constructors */
 	la a0, __libc_fini_array
+<<<<<<< HEAD
+ 8000210:	00000517          	auipc	a0,0x0
+ 8000214:	5d450513          	addi	a0,a0,1492 # 80007e4 <__libc_fini_array>
+	call atexit
+ 8000218:	00000097          	auipc	ra,0x0
+ 800021c:	586080e7          	jalr	1414(ra) # 800079e <atexit>
+	call __libc_init_array
+ 8000220:	00000097          	auipc	ra,0x0
+ 8000224:	5fc080e7          	jalr	1532(ra) # 800081c <__libc_init_array>
+=======
  8000210:	00001517          	auipc	a0,0x1
  8000214:	c9250513          	addi	a0,a0,-878 # 8000ea2 <__libc_fini_array>
 	call atexit
@@ -2770,6 +3395,7 @@ _start0800:
 	call __libc_init_array
  8000220:	00001097          	auipc	ra,0x1
  8000224:	cba080e7          	jalr	-838(ra) # 8000eda <__libc_init_array>
+>>>>>>> 9da4b36 (s)
 
 
 	/* argc = argv = 0 */
@@ -2784,8 +3410,13 @@ _start0800:
  8000234:	00000097          	auipc	ra,0x0
  8000238:	4b4080e7          	jalr	1204(ra) # 80006e8 <main>
 	tail exit
+<<<<<<< HEAD
+ 800023c:	00000317          	auipc	t1,0x0
+ 8000240:	57230067          	jr	1394(t1) # 80007ae <exit>
+=======
  800023c:	00001317          	auipc	t1,0x1
  8000240:	c3030067          	jr	-976(t1) # 8000e6c <exit>
+>>>>>>> 9da4b36 (s)
 
 1:
 	j 1b
@@ -2824,7 +3455,11 @@ Disassembly of section .text:
  8000292:	2064                	fld	fs1,192(s0)
  8000294:	68746977          	0x68746977
  8000298:	6320                	flw	fs0,64(a4)
+<<<<<<< HEAD
+ 800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x55bb8>
+=======
  800029a:	3a65646f          	jal	s0,8056640 <__fini_array_end+0x554fc>
+>>>>>>> 9da4b36 (s)
  800029e:	0000                	unimp
  80002a0:	7830                	flw	fa2,112(s0)
  80002a2:	0000                	unimp
@@ -3066,15 +3701,25 @@ void _exit(int code)
 {
  80003e2:	d606                	sw	ra,44(sp)
   const char message[] = "\nProgram has exited with code:";
+<<<<<<< HEAD
+ 80003e4:	00000097          	auipc	ra,0x0
+ 80003e8:	4a2080e7          	jalr	1186(ra) # 8000886 <memcpy>
+=======
  80003e4:	00001097          	auipc	ra,0x1
  80003e8:	b60080e7          	jalr	-1184(ra) # 8000f44 <memcpy>
+>>>>>>> 9da4b36 (s)
 
   write(STDERR_FILENO, message, sizeof(message) - 1);
  80003ec:	4679                	li	a2,30
  80003ee:	858a                	mv	a1,sp
  80003f0:	4509                	li	a0,2
+<<<<<<< HEAD
+ 80003f2:	00000097          	auipc	ra,0x0
+ 80003f6:	4aa080e7          	jalr	1194(ra) # 800089c <write>
+=======
  80003f2:	00001097          	auipc	ra,0x1
  80003f6:	b68080e7          	jalr	-1176(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   write_hex(STDERR_FILENO, code);
  80003fa:	85a2                	mv	a1,s0
  80003fc:	4509                	li	a0,2
@@ -3085,8 +3730,13 @@ void _exit(int code)
  800040a:	4605                	li	a2,1
  800040c:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
  8000410:	4509                	li	a0,2
+<<<<<<< HEAD
+ 8000412:	00000097          	auipc	ra,0x0
+ 8000416:	48a080e7          	jalr	1162(ra) # 800089c <write>
+=======
  8000412:	00001097          	auipc	ra,0x1
  8000416:	b48080e7          	jalr	-1208(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
 
   for (;;);
  800041a:	a001                	j	800041a <_exit+0x4a>
@@ -3118,8 +3768,13 @@ void write_hex(int fd, unsigned long int hex)
  8000438:	892a                	mv	s2,a0
   write(fd , "0x", 2);
  800043a:	4471                	li	s0,28
+<<<<<<< HEAD
+ 800043c:	00000097          	auipc	ra,0x0
+ 8000440:	460080e7          	jalr	1120(ra) # 800089c <write>
+=======
  800043c:	00001097          	auipc	ra,0x1
  8000440:	b1e080e7          	jalr	-1250(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
     jj = ii - 1;
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
@@ -3145,8 +3800,13 @@ void write_hex(int fd, unsigned long int hex)
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
  8000470:	00f107a3          	sb	a5,15(sp)
     write(fd, &towrite, 1);
+<<<<<<< HEAD
+ 8000474:	00000097          	auipc	ra,0x0
+ 8000478:	428080e7          	jalr	1064(ra) # 800089c <write>
+=======
  8000474:	00001097          	auipc	ra,0x1
  8000478:	ae6080e7          	jalr	-1306(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
  800047c:	fc9417e3          	bne	s0,s1,800044a <write_hex+0x2e>
   }
@@ -3235,8 +3895,13 @@ __attribute__((weak)) uintptr_t handle_nmi()
 {
  80004da:	c606                	sw	ra,12(sp)
   write(1, "nmi\n", 5);
+<<<<<<< HEAD
+ 80004dc:	00000097          	auipc	ra,0x0
+ 80004e0:	3c0080e7          	jalr	960(ra) # 800089c <write>
+=======
  80004dc:	00001097          	auipc	ra,0x1
  80004e0:	a7e080e7          	jalr	-1410(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   _exit(1);
  80004e4:	4505                	li	a0,1
  80004e6:	00000097          	auipc	ra,0x0
@@ -3270,8 +3935,13 @@ __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
  800050c:	4615                	li	a2,5
  800050e:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
  8000512:	4505                	li	a0,1
+<<<<<<< HEAD
+ 8000514:	00000097          	auipc	ra,0x0
+ 8000518:	388080e7          	jalr	904(ra) # 800089c <write>
+=======
  8000514:	00001097          	auipc	ra,0x1
  8000518:	a46080e7          	jalr	-1466(ra) # 8000f5a <write>
+>>>>>>> 9da4b36 (s)
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
@@ -3495,182 +4165,565 @@ service_loop:
  8000672:	30200073          	mret
 
 08000676 <gpioi>:
-// GPIOI Initialize /////////////////////////////////////////////// 1.0 / AC ////
+// GPIOI Initialize ////////////////////////////////////////////////// 1.0 / AC ////
 // a0 Targeted GPIO-module
 // a1 Configuration bits (<<2)
 // a2 Mode bits
 // a3 Targeted pin
-gpioi: mv t0, a0 // t0 points to GPIOX...
+gpioi:  mv t0, a0           // t0 points to GPIOX...
  8000676:	82aa                	mv	t0,a0
-        mv t4, a3 // t4 marks selected pin...
+        mv t4, a3           //    t4 marks selected pin...
  8000678:	8eb6                	mv	t4,a3
-        li t1,0x8 // Use port control register 0 or 1,
+        li t1,0x8           //    Use port control register 0 or 1,
  800067a:	4321                	li	t1,8
-        blt t4,t1, 1f // thus is pin > 7?
+        blt t4,t1, 1f       //    thus is pin > 7?
  800067c:	006ec463          	blt	t4,t1,8000684 <gpioi+0xe>
-        addi t0, t0, 4 // Yes, adjust base address,
+        addi t0, t0, 4      //       Yes, adjust base address,
  8000680:	0291                	addi	t0,t0,4
-        addi t4,t4,-8 // and adjust selected pin.
+        addi t4,t4,-8       //            and adjust selected pin.
  8000682:	1ee1                	addi	t4,t4,-8
-1: slli t4,t4,2 // Multiply pin nb by 4 to get steps to shift!
+
+1:      slli t4,t4,2        //    Multiply pin nb by 4 to get steps to shift!
  8000684:	0e8a                	slli	t4,t4,0x2
-        li t1, 0xF // Create inverted configuration mask...
+        li t1, 0xF          //    Create inverted configuration mask...
  8000686:	433d                	li	t1,15
-        sll t1, t1, t4 // ...and move it into right position.
+        sll t1, t1, t4      //    ...and move it into right position.
  8000688:	01d31333          	sll	t1,t1,t4
-        not t1, t1 // ...invert it back, then...
+        not t1, t1          //    ...invert it back, then...
  800068c:	fff34313          	not	t1,t1
-        mv t2, a1 // Create configuration bits...
+        mv t2, a1           //    Create configuration bits...
  8000690:	83ae                	mv	t2,a1
-        or t2, t2, a2 //
+        or t2, t2, a2       //    
  8000692:	00c3e3b3          	or	t2,t2,a2
-        sll t2, t2, t4 // ...and move it into right position.
+        sll t2, t2, t4      //    ...and move it into right position.
  8000696:	01d393b3          	sll	t2,t2,t4
-        lw t3,CTR0(t0) // retreive port control register 0(/1)...
+
+        lw t3,CTR0(t0)      //    retreive port control register 0(/1)...
  800069a:	0002ae03          	lw	t3,0(t0)
-        and t3,t3,t1 // ...clear out selected pin's config/mode bits...
+        and t3,t3,t1        //    ...clear out selected pin's config/mode bits...
  800069e:	006e7e33          	and	t3,t3,t1
-        or t3, t3, t2 // ...configure new config/mode bits...
+        or t3, t3, t2       //    ...configure new config/mode bits...
  80006a2:	007e6e33          	or	t3,t3,t2
-        sw t3,CTR0(t0) // ...and write it back.
+        sw t3,CTR0(t0)      //    ...and write it back.
  80006a6:	01c2a023          	sw	t3,0(t0)
-        ret // then go home!
+        ret                 //  then go home!
  80006aa:	8082                	ret
 
 080006ac <gpiobo>:
+
 // GPIOBO Bit Operations ///////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 Targeted pattern
 // a2 Targeted pin(s)
-gpiobo: and a1, a1, a2 // (Clear all patterns bits that are not target bits)
+gpiobo: and a1, a1, a2      // (Clear all patterns bits that are not target bits)
  80006ac:	8df1                	and	a1,a1,a2
-        xor a2, a2, a1 // Find zeros in targeted bits...
+        xor a2, a2, a1      // Find zeros in targeted bits...
  80006ae:	8e2d                	xor	a2,a2,a1
-        slli a2, a2, 16 // ...position clear requests...
+        slli a2, a2, 16     // ...position clear requests...
  80006b0:	0642                	slli	a2,a2,0x10
-        or a1, a1, a2 // ...add set requests...
+        or a1, a1, a2       // ...add set requests...
  80006b2:	8dd1                	or	a1,a1,a2
-        sw a1, BOP(a0) // ...then execute...
+        sw a1, BOP(a0)      // ...then execute...
  80006b4:	c90c                	sw	a1,16(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006b6:	8082                	ret
 
 080006b8 <gpiobc>:
+
 // GPIBC Bit Clear /////////////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 Targeted pin(s)
-gpiobc: sw a1, BC(a0) // Execute request...
+gpiobc: sw a1, BC(a0)       // Execute request...
  80006b8:	c94c                	sw	a1,20(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006ba:	8082                	ret
 
 080006bc <gpiooc>:
+
 // GPIOC Output Control ////////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 value
-gpiooc: sw a1, OCTL(a0) // Execute request...
+gpiooc: sw a1, OCTL(a0)      // Execute request...
  80006bc:	c54c                	sw	a1,12(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006be:	8082                	ret
 
 080006c0 <gpiois>:
+
 // GPIOIS Input Status //////////////////////////////////////////////// 1.0 / AC ///
 // a0 Targeted GPIO-module
 // a1 read value
-gpiois: lw a1, ISTAT(a0) // Execute request...
+gpiois: lw a1, ISTAT(a0)    // Execute request...
  80006c0:	450c                	lw	a1,8(a0)
-        ret // ...and return to caller!
+        ret                 // ...and return to caller!
  80006c2:	8082                	ret
 
 080006c4 <rcu1en>:
-.equ T5EN, 0x10
+.equ T5EN,   0x10
 .equ APB2EN, 0x18
-.equ PAEN, 0x4
-.equ PBEN, 0x8
+.equ PAEN,   0x4
+.equ PBEN,   0x8
 // RCU1EN Enabel APB1 bus devices //////////////////////////////////// 1.0 / AC ///
-rcu1en: li t0,RCU // t0 points to RCU...
+rcu1en: li t0,RCU           // t0 points to RCU...
  80006c4:	400212b7          	lui	t0,0x40021
-        lw t1,APB1EN(t0) // ...retrieve current configuration...
+        lw t1,APB1EN(t0)    // ...retrieve current configuration...
  80006c8:	01c2a303          	lw	t1,28(t0) # 4002101c <RCU+0x1c>
-        or t1,t1,a0 // ...and update the configuration...
+        or t1,t1,a0         // ...and update the configuration...
  80006cc:	00a36333          	or	t1,t1,a0
-        sw t1,APB1EN(t0) // ...then save back the updated config...
+        sw t1,APB1EN(t0)    // ...then save back the updated config...
  80006d0:	0062ae23          	sw	t1,28(t0)
-        ret // and go home!
+        ret                 // and go home!
  80006d4:	8082                	ret
 
 080006d6 <rcu2en>:
+
 // RCU2EN Enabel APB2 bus devices //////////////////////////////////// 1.0 / AC ///
-rcu2en: li t0,RCU // t0 points to RCU...
+rcu2en: li t0,RCU           // t0 points to RCU...
  80006d6:	400212b7          	lui	t0,0x40021
-        lw t1,APB2EN(t0) // ...retrieve current configuration...
+        lw t1,APB2EN(t0)    // ...retrieve current configuration...
  80006da:	0182a303          	lw	t1,24(t0) # 40021018 <RCU+0x18>
-        or t1,t1,a0 // ...and update the configuration...
+        or t1,t1,a0         // ...and update the configuration...
  80006de:	00a36333          	or	t1,t1,a0
-        sw t1,APB2EN(t0) // ...then save back the updated config...
+        sw t1,APB2EN(t0)    // ...then save back the updated config...
  80006e2:	0062ac23          	sw	t1,24(t0)
-        ret // and go home!
+        ret                 // and go home!
  80006e6:	8082                	ret
 
 080006e8 <main>:
+       
 // RCU Reset and Clock Unit Subroutine package ////////////////////////// END ///////
+
 .global main
-main:
-        # Enable GPIOB and GPIOA
-        li a0, PBEN + PAEN
+main:   li a0, PBEN+PAEN    // Prepare to turn on GPIOB...
  80006e8:	4531                	li	a0,12
-        call rcu2en
+        call rcu2en         // ...do the set-up!
  80006ea:	00000097          	auipc	ra,0x0
  80006ee:	fec080e7          	jalr	-20(ra) # 80006d6 <rcu2en>
-        # Initialize GPIOB (LEDs) as output
-        li a0, GPIOB
+
+        li a0, GPIOB        // Prepare to init GPIOB...
  80006f2:	40011537          	lui	a0,0x40011
  80006f6:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
-        li a1, GPIO_PP
+        li a1, GPIO_PP      // ...as Push-Pull Output...
  80006fa:	4581                	li	a1,0
-        li a2, GPIO_50
+        li a2, GPIO_50      // ...with max 50MHz rate...
  80006fc:	460d                	li	a2,3
-        li a3, 0
+        li a3, 0            // ...for pin 0...
  80006fe:	4681                	li	a3,0
-        li a4, 3
+        li a4, 3            // ...to pin 2...
  8000700:	470d                	li	a4,3
-1: call gpioi
+1:      call gpioi          // ...do the set-up!
  8000702:	00000097          	auipc	ra,0x0
  8000706:	f74080e7          	jalr	-140(ra) # 8000676 <gpioi>
-        addi a3, a3, 1
+        addi a3,a3,1        // ...advance to next pin...
  800070a:	0685                	addi	a3,a3,1
-        bne a3, a4, 1b
+        bne a3,a4, 1b       // ...continue, if not done!  
  800070c:	fee69be3          	bne	a3,a4,8000702 <main+0x1a>
-        # Initialize GPIOA (switches) as input
-        li a0, GPIOA
+
+        li a0, GPIOA        // Prepare to init GPIOA...
  8000710:	40011537          	lui	a0,0x40011
  8000714:	80050513          	addi	a0,a0,-2048 # 40010800 <GPIOA>
-        li a1, GPIO_AM
+        li a1, GPIO_AM      // ...in Analoge mode...
  8000718:	4581                	li	a1,0
-        li a2, GPIO_FI
+        li a2, GPIO_FI      // ...with High-Z...
  800071a:	4611                	li	a2,4
-        li a3, 5
+        li a3, 5            // ...for pin 5...
  800071c:	4695                	li	a3,5
-        li a4, 9
+        li a4, 9            // ...to pin 8...
  800071e:	4725                	li	a4,9
-1: call gpioi
+1:      call gpioi          // ...do the set-up!
  8000720:	00000097          	auipc	ra,0x0
  8000724:	f56080e7          	jalr	-170(ra) # 8000676 <gpioi>
-        addi a3, a3, 1
+        addi a3,a3,1        // ...advance to next pin...
  8000728:	0685                	addi	a3,a3,1
-        bne a3, a4, 1b
+        bne a3,a4, 1b       // ...continue, if not done!  
  800072a:	fee69be3          	bne	a3,a4,8000720 <main+0x38>
 
+<<<<<<< HEAD
+
+1:
+        li a0, GPIOA         // Prepare to read GPIOA...
+=======
 0800072e <start>:
         # Main loop to read switches and control LEDs
 start:  li a0, GPIOA
+>>>>>>> 9da4b36 (s)
  800072e:	40011537          	lui	a0,0x40011
  8000732:	80050513          	addi	a0,a0,-2048 # 40010800 <GPIOA>
-        call gpiois # Read switch states
+        call gpiois         // ...and get the value!
  8000736:	00000097          	auipc	ra,0x0
  800073a:	f8a080e7          	jalr	-118(ra) # 80006c0 <gpiois>
-        srli a1, a1, 5 # Adjust the bits to match switch positions
+        srli a1,a1,5        // ...shift it down 5 steps...
  800073e:	8195                	srli	a1,a1,0x5
+<<<<<<< HEAD
+        andi t0,a1,0x07     // ...mask out 3 switchs
+ 8000740:	0075f293          	andi	t0,a1,7
+
+        slli t0, t0, 2      //ränka start address skiftar 2. mot vänster
+ 8000744:	028a                	slli	t0,t0,0x2
+        la t1, patterns     //ladda basadressen med mönster
+ 8000746:	18000317          	auipc	t1,0x18000
+ 800074a:	8ba30313          	addi	t1,t1,-1862 # 20000000 <_data>
+        add t1, t1, t0      //hämta startadressen för vald sekvens
+ 800074e:	9316                	add	t1,t1,t0
+        li t4, 4            //antal mönster i en sekvens
+ 8000750:	4e91                	li	t4,4
+
+08000752 <pattern_loop>:
+
+pattern_loop:
+
+        lb t5, 0(t1)        //hämta nästa pattern
+ 8000752:	00030f03          	lb	t5,0(t1)
+        srli t2, a1, 3      //flytta mikrobrytare 4 till bit 0
+ 8000756:	0035d393          	srli	t2,a1,0x3
+        andi t2, t2, 0x01   //maskera mikrobytare 4 (=1 om invertering)
+ 800075a:	0013f393          	andi	t2,t2,1
+        beq t2, zero, no_invert //hoppa till no_invert om t2 == 0
+ 800075e:	00038563          	beqz	t2,8000768 <no_invert>
+        li t3, 0x07         //mask för inversion (endast 3 lysdioder)
+ 8000762:	4e1d                	li	t3,7
+        xor t5, t5, t3      //invertera mönstret
+ 8000764:	01cf4f33          	xor	t5,t5,t3
+
+08000768 <no_invert>:
+
+no_invert:
+        li a0, GPIOB        //förbered GPIOB för utskrift
+ 8000768:	40011537          	lui	a0,0x40011
+ 800076c:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+        mv a1, t5           //flytta mönstret till a1
+ 8000770:	85fa                	mv	a1,t5
+        li a2, 0x07         // ...the 3 lsb...
+ 8000772:	461d                	li	a2,7
+        call gpiobo         //skriv mönstret till lysdioderna
+ 8000774:	00000097          	auipc	ra,0x0
+ 8000778:	f38080e7          	jalr	-200(ra) # 80006ac <gpiobo>
+
+        addi t1, t1, 1      //gå till nästa mönster
+ 800077c:	0305                	addi	t1,t1,1
+        call delay          //vänta 0.25 sekunder
+ 800077e:	00000097          	auipc	ra,0x0
+ 8000782:	010080e7          	jalr	16(ra) # 800078e <delay>
+2:      addi t4, t4, -1     //loop counter
+ 8000786:	1efd                	addi	t4,t4,-1
+        bnez t4, pattern_loop   //gå tillbaka till nästa mönster
+ 8000788:	fc0e95e3          	bnez	t4,8000752 <pattern_loop>
+
+        j 1b                // Repeat loop
+ 800078c:	b74d                	j	800072e <main+0x46>
+
+0800078e <delay>:
+
+delay:  li t0, 25000000      //(tiden 0.25)
+ 800078e:	017d82b7          	lui	t0,0x17d8
+ 8000792:	84028293          	addi	t0,t0,-1984 # 17d7840 <__stack_size+0x17d6840>
+
+08000796 <delay_loop>:
+
+delay_loop:
+        addi t0, t0, -1
+ 8000796:	12fd                	addi	t0,t0,-1
+        bnez t0, delay_loop
+ 8000798:	fe029fe3          	bnez	t0,8000796 <delay_loop>
+        j 2b
+ 800079c:	b7ed                	j	8000786 <no_invert+0x1e>
+
+0800079e <atexit>:
+ 800079e:	85aa                	mv	a1,a0
+ 80007a0:	4681                	li	a3,0
+ 80007a2:	4601                	li	a2,0
+ 80007a4:	4501                	li	a0,0
+ 80007a6:	00000317          	auipc	t1,0x0
+ 80007aa:	14830067          	jr	328(t1) # 80008ee <__register_exitproc>
+
+080007ae <exit>:
+ 80007ae:	1141                	addi	sp,sp,-16
+ 80007b0:	c422                	sw	s0,8(sp)
+ 80007b2:	c606                	sw	ra,12(sp)
+ 80007b4:	00000797          	auipc	a5,0x0
+ 80007b8:	1c678793          	addi	a5,a5,454 # 800097a <__call_exitprocs>
+ 80007bc:	842a                	mv	s0,a0
+ 80007be:	c791                	beqz	a5,80007ca <exit+0x1c>
+ 80007c0:	4581                	li	a1,0
+ 80007c2:	00000097          	auipc	ra,0x0
+ 80007c6:	1b8080e7          	jalr	440(ra) # 800097a <__call_exitprocs>
+ 80007ca:	00000797          	auipc	a5,0x0
+ 80007ce:	2ba78793          	addi	a5,a5,698 # 8000a84 <_global_impure_ptr>
+ 80007d2:	4388                	lw	a0,0(a5)
+ 80007d4:	551c                	lw	a5,40(a0)
+ 80007d6:	c391                	beqz	a5,80007da <exit+0x2c>
+ 80007d8:	9782                	jalr	a5
+ 80007da:	8522                	mv	a0,s0
+ 80007dc:	00000097          	auipc	ra,0x0
+ 80007e0:	bf4080e7          	jalr	-1036(ra) # 80003d0 <_exit>
+
+080007e4 <__libc_fini_array>:
+ 80007e4:	1141                	addi	sp,sp,-16
+ 80007e6:	00000797          	auipc	a5,0x0
+ 80007ea:	2a278793          	addi	a5,a5,674 # 8000a88 <__fini_array_end>
+ 80007ee:	c422                	sw	s0,8(sp)
+ 80007f0:	00000417          	auipc	s0,0x0
+ 80007f4:	29840413          	addi	s0,s0,664 # 8000a88 <__fini_array_end>
+ 80007f8:	8c1d                	sub	s0,s0,a5
+ 80007fa:	c226                	sw	s1,4(sp)
+ 80007fc:	c606                	sw	ra,12(sp)
+ 80007fe:	8409                	srai	s0,s0,0x2
+ 8000800:	84be                	mv	s1,a5
+ 8000802:	e411                	bnez	s0,800080e <__libc_fini_array+0x2a>
+ 8000804:	40b2                	lw	ra,12(sp)
+ 8000806:	4422                	lw	s0,8(sp)
+ 8000808:	4492                	lw	s1,4(sp)
+ 800080a:	0141                	addi	sp,sp,16
+ 800080c:	8082                	ret
+ 800080e:	147d                	addi	s0,s0,-1
+ 8000810:	00241793          	slli	a5,s0,0x2
+ 8000814:	97a6                	add	a5,a5,s1
+ 8000816:	439c                	lw	a5,0(a5)
+ 8000818:	9782                	jalr	a5
+ 800081a:	b7e5                	j	8000802 <__libc_fini_array+0x1e>
+
+0800081c <__libc_init_array>:
+ 800081c:	1141                	addi	sp,sp,-16
+ 800081e:	00000797          	auipc	a5,0x0
+ 8000822:	26a78793          	addi	a5,a5,618 # 8000a88 <__fini_array_end>
+ 8000826:	c422                	sw	s0,8(sp)
+ 8000828:	00000417          	auipc	s0,0x0
+ 800082c:	26040413          	addi	s0,s0,608 # 8000a88 <__fini_array_end>
+ 8000830:	8c1d                	sub	s0,s0,a5
+ 8000832:	c226                	sw	s1,4(sp)
+ 8000834:	c04a                	sw	s2,0(sp)
+ 8000836:	c606                	sw	ra,12(sp)
+ 8000838:	8409                	srai	s0,s0,0x2
+ 800083a:	4481                	li	s1,0
+ 800083c:	893e                	mv	s2,a5
+ 800083e:	02849663          	bne	s1,s0,800086a <__libc_init_array+0x4e>
+ 8000842:	00000797          	auipc	a5,0x0
+ 8000846:	24678793          	addi	a5,a5,582 # 8000a88 <__fini_array_end>
+ 800084a:	00000417          	auipc	s0,0x0
+ 800084e:	23e40413          	addi	s0,s0,574 # 8000a88 <__fini_array_end>
+ 8000852:	8c1d                	sub	s0,s0,a5
+ 8000854:	8409                	srai	s0,s0,0x2
+ 8000856:	4481                	li	s1,0
+ 8000858:	893e                	mv	s2,a5
+ 800085a:	00849f63          	bne	s1,s0,8000878 <__libc_init_array+0x5c>
+ 800085e:	40b2                	lw	ra,12(sp)
+ 8000860:	4422                	lw	s0,8(sp)
+ 8000862:	4492                	lw	s1,4(sp)
+ 8000864:	4902                	lw	s2,0(sp)
+ 8000866:	0141                	addi	sp,sp,16
+ 8000868:	8082                	ret
+ 800086a:	00249793          	slli	a5,s1,0x2
+ 800086e:	97ca                	add	a5,a5,s2
+ 8000870:	439c                	lw	a5,0(a5)
+ 8000872:	0485                	addi	s1,s1,1
+ 8000874:	9782                	jalr	a5
+ 8000876:	b7e1                	j	800083e <__libc_init_array+0x22>
+ 8000878:	00249793          	slli	a5,s1,0x2
+ 800087c:	97ca                	add	a5,a5,s2
+ 800087e:	439c                	lw	a5,0(a5)
+ 8000880:	0485                	addi	s1,s1,1
+ 8000882:	9782                	jalr	a5
+ 8000884:	bfd9                	j	800085a <__libc_init_array+0x3e>
+
+08000886 <memcpy>:
+ 8000886:	832a                	mv	t1,a0
+ 8000888:	ca09                	beqz	a2,800089a <memcpy+0x14>
+ 800088a:	00058383          	lb	t2,0(a1)
+ 800088e:	00730023          	sb	t2,0(t1)
+ 8000892:	167d                	addi	a2,a2,-1
+ 8000894:	0305                	addi	t1,t1,1
+ 8000896:	0585                	addi	a1,a1,1
+ 8000898:	fa6d                	bnez	a2,800088a <memcpy+0x4>
+ 800089a:	8082                	ret
+
+0800089c <write>:
+ 800089c:	17fff797          	auipc	a5,0x17fff
+ 80008a0:	7e478793          	addi	a5,a5,2020 # 20000080 <_impure_ptr>
+ 80008a4:	86b2                	mv	a3,a2
+ 80008a6:	862e                	mv	a2,a1
+ 80008a8:	85aa                	mv	a1,a0
+ 80008aa:	4388                	lw	a0,0(a5)
+ 80008ac:	00000317          	auipc	t1,0x0
+ 80008b0:	00830067          	jr	8(t1) # 80008b4 <_write_r>
+
+080008b4 <_write_r>:
+ 80008b4:	1141                	addi	sp,sp,-16
+ 80008b6:	c422                	sw	s0,8(sp)
+ 80008b8:	842a                	mv	s0,a0
+ 80008ba:	852e                	mv	a0,a1
+ 80008bc:	85b2                	mv	a1,a2
+ 80008be:	8636                	mv	a2,a3
+ 80008c0:	18000797          	auipc	a5,0x18000
+ 80008c4:	8407ac23          	sw	zero,-1960(a5) # 20000118 <errno>
+ 80008c8:	c606                	sw	ra,12(sp)
+ 80008ca:	00000097          	auipc	ra,0x0
+ 80008ce:	178080e7          	jalr	376(ra) # 8000a42 <_write>
+ 80008d2:	57fd                	li	a5,-1
+ 80008d4:	00f51963          	bne	a0,a5,80008e6 <_write_r+0x32>
+ 80008d8:	18000797          	auipc	a5,0x18000
+ 80008dc:	84078793          	addi	a5,a5,-1984 # 20000118 <errno>
+ 80008e0:	439c                	lw	a5,0(a5)
+ 80008e2:	c391                	beqz	a5,80008e6 <_write_r+0x32>
+ 80008e4:	c01c                	sw	a5,0(s0)
+ 80008e6:	40b2                	lw	ra,12(sp)
+ 80008e8:	4422                	lw	s0,8(sp)
+ 80008ea:	0141                	addi	sp,sp,16
+ 80008ec:	8082                	ret
+
+080008ee <__register_exitproc>:
+ 80008ee:	17fff797          	auipc	a5,0x17fff
+ 80008f2:	79a78793          	addi	a5,a5,1946 # 20000088 <_global_atexit>
+ 80008f6:	439c                	lw	a5,0(a5)
+ 80008f8:	8e2a                	mv	t3,a0
+ 80008fa:	e78d                	bnez	a5,8000924 <__register_exitproc+0x36>
+ 80008fc:	17fff717          	auipc	a4,0x17fff
+ 8000900:	79070713          	addi	a4,a4,1936 # 2000008c <_global_atexit0>
+ 8000904:	17fff797          	auipc	a5,0x17fff
+ 8000908:	78e7a223          	sw	a4,1924(a5) # 20000088 <_global_atexit>
+ 800090c:	f7fff517          	auipc	a0,0xf7fff
+ 8000910:	6f450513          	addi	a0,a0,1780 # 0 <__dbg_stack_size>
+ 8000914:	87ba                	mv	a5,a4
+ 8000916:	c519                	beqz	a0,8000924 <__register_exitproc+0x36>
+ 8000918:	411c                	lw	a5,0(a0)
+ 800091a:	17fff517          	auipc	a0,0x17fff
+ 800091e:	7ef52d23          	sw	a5,2042(a0) # 20000114 <_global_atexit0+0x88>
+ 8000922:	87ba                	mv	a5,a4
+ 8000924:	43d8                	lw	a4,4(a5)
+ 8000926:	487d                	li	a6,31
+ 8000928:	557d                	li	a0,-1
+ 800092a:	04e84763          	blt	a6,a4,8000978 <__register_exitproc+0x8a>
+ 800092e:	020e0e63          	beqz	t3,800096a <__register_exitproc+0x7c>
+ 8000932:	0887a803          	lw	a6,136(a5)
+ 8000936:	04080163          	beqz	a6,8000978 <__register_exitproc+0x8a>
+ 800093a:	00271893          	slli	a7,a4,0x2
+ 800093e:	98c2                	add	a7,a7,a6
+ 8000940:	00c8a023          	sw	a2,0(a7)
+ 8000944:	10082303          	lw	t1,256(a6)
+ 8000948:	4605                	li	a2,1
+ 800094a:	00e61633          	sll	a2,a2,a4
+ 800094e:	00c36333          	or	t1,t1,a2
+ 8000952:	10682023          	sw	t1,256(a6)
+ 8000956:	08d8a023          	sw	a3,128(a7)
+ 800095a:	4689                	li	a3,2
+ 800095c:	00de1763          	bne	t3,a3,800096a <__register_exitproc+0x7c>
+ 8000960:	10482683          	lw	a3,260(a6)
+ 8000964:	8e55                	or	a2,a2,a3
+ 8000966:	10c82223          	sw	a2,260(a6)
+ 800096a:	00170693          	addi	a3,a4,1
+ 800096e:	070a                	slli	a4,a4,0x2
+ 8000970:	c3d4                	sw	a3,4(a5)
+ 8000972:	97ba                	add	a5,a5,a4
+ 8000974:	c78c                	sw	a1,8(a5)
+ 8000976:	4501                	li	a0,0
+ 8000978:	8082                	ret
+
+0800097a <__call_exitprocs>:
+ 800097a:	7179                	addi	sp,sp,-48
+ 800097c:	cc52                	sw	s4,24(sp)
+ 800097e:	ca56                	sw	s5,20(sp)
+ 8000980:	c85a                	sw	s6,16(sp)
+ 8000982:	c65e                	sw	s7,12(sp)
+ 8000984:	d606                	sw	ra,44(sp)
+ 8000986:	d422                	sw	s0,40(sp)
+ 8000988:	d226                	sw	s1,36(sp)
+ 800098a:	d04a                	sw	s2,32(sp)
+ 800098c:	ce4e                	sw	s3,28(sp)
+ 800098e:	c462                	sw	s8,8(sp)
+ 8000990:	8b2a                	mv	s6,a0
+ 8000992:	8a2e                	mv	s4,a1
+ 8000994:	17fffa97          	auipc	s5,0x17fff
+ 8000998:	6f4a8a93          	addi	s5,s5,1780 # 20000088 <_global_atexit>
+ 800099c:	4b85                	li	s7,1
+ 800099e:	000aa403          	lw	s0,0(s5)
+ 80009a2:	c811                	beqz	s0,80009b6 <__call_exitprocs+0x3c>
+ 80009a4:	4044                	lw	s1,4(s0)
+ 80009a6:	08842983          	lw	s3,136(s0)
+ 80009aa:	fff48913          	addi	s2,s1,-1
+ 80009ae:	048a                	slli	s1,s1,0x2
+ 80009b0:	94a2                	add	s1,s1,s0
+ 80009b2:	00095e63          	bgez	s2,80009ce <__call_exitprocs+0x54>
+ 80009b6:	50b2                	lw	ra,44(sp)
+ 80009b8:	5422                	lw	s0,40(sp)
+ 80009ba:	5492                	lw	s1,36(sp)
+ 80009bc:	5902                	lw	s2,32(sp)
+ 80009be:	49f2                	lw	s3,28(sp)
+ 80009c0:	4a62                	lw	s4,24(sp)
+ 80009c2:	4ad2                	lw	s5,20(sp)
+ 80009c4:	4b42                	lw	s6,16(sp)
+ 80009c6:	4bb2                	lw	s7,12(sp)
+ 80009c8:	4c22                	lw	s8,8(sp)
+ 80009ca:	6145                	addi	sp,sp,48
+ 80009cc:	8082                	ret
+ 80009ce:	000a0e63          	beqz	s4,80009ea <__call_exitprocs+0x70>
+ 80009d2:	00099563          	bnez	s3,80009dc <__call_exitprocs+0x62>
+ 80009d6:	197d                	addi	s2,s2,-1
+ 80009d8:	14f1                	addi	s1,s1,-4
+ 80009da:	bfe1                	j	80009b2 <__call_exitprocs+0x38>
+ 80009dc:	00291793          	slli	a5,s2,0x2
+ 80009e0:	97ce                	add	a5,a5,s3
+ 80009e2:	0807a783          	lw	a5,128(a5)
+ 80009e6:	ff4798e3          	bne	a5,s4,80009d6 <__call_exitprocs+0x5c>
+ 80009ea:	4058                	lw	a4,4(s0)
+ 80009ec:	40dc                	lw	a5,4(s1)
+ 80009ee:	177d                	addi	a4,a4,-1
+ 80009f0:	03271863          	bne	a4,s2,8000a20 <__call_exitprocs+0xa6>
+ 80009f4:	01242223          	sw	s2,4(s0)
+ 80009f8:	dff9                	beqz	a5,80009d6 <__call_exitprocs+0x5c>
+ 80009fa:	00442c03          	lw	s8,4(s0)
+ 80009fe:	00098863          	beqz	s3,8000a0e <__call_exitprocs+0x94>
+ 8000a02:	1009a683          	lw	a3,256(s3)
+ 8000a06:	012b9733          	sll	a4,s7,s2
+ 8000a0a:	8ef9                	and	a3,a3,a4
+ 8000a0c:	ee89                	bnez	a3,8000a26 <__call_exitprocs+0xac>
+ 8000a0e:	9782                	jalr	a5
+ 8000a10:	4058                	lw	a4,4(s0)
+ 8000a12:	000aa783          	lw	a5,0(s5)
+ 8000a16:	f98714e3          	bne	a4,s8,800099e <__call_exitprocs+0x24>
+ 8000a1a:	faf40ee3          	beq	s0,a5,80009d6 <__call_exitprocs+0x5c>
+ 8000a1e:	b741                	j	800099e <__call_exitprocs+0x24>
+ 8000a20:	0004a223          	sw	zero,4(s1)
+ 8000a24:	bfd1                	j	80009f8 <__call_exitprocs+0x7e>
+ 8000a26:	00291693          	slli	a3,s2,0x2
+ 8000a2a:	96ce                	add	a3,a3,s3
+ 8000a2c:	428c                	lw	a1,0(a3)
+ 8000a2e:	1049a683          	lw	a3,260(s3)
+ 8000a32:	8f75                	and	a4,a4,a3
+ 8000a34:	e701                	bnez	a4,8000a3c <__call_exitprocs+0xc2>
+ 8000a36:	855a                	mv	a0,s6
+ 8000a38:	9782                	jalr	a5
+ 8000a3a:	bfd9                	j	8000a10 <__call_exitprocs+0x96>
+ 8000a3c:	852e                	mv	a0,a1
+ 8000a3e:	9782                	jalr	a5
+ 8000a40:	bfc1                	j	8000a10 <__call_exitprocs+0x96>
+
+08000a42 <_write>:
+ 8000a42:	1141                	addi	sp,sp,-16
+ 8000a44:	c606                	sw	ra,12(sp)
+ 8000a46:	c422                	sw	s0,8(sp)
+ 8000a48:	4681                	li	a3,0
+ 8000a4a:	4701                	li	a4,0
+ 8000a4c:	4781                	li	a5,0
+ 8000a4e:	04000893          	li	a7,64
+ 8000a52:	00000073          	ecall
+ 8000a56:	842a                	mv	s0,a0
+ 8000a58:	00055a63          	bgez	a0,8000a6c <_write+0x2a>
+ 8000a5c:	40800433          	neg	s0,s0
+ 8000a60:	00000097          	auipc	ra,0x0
+ 8000a64:	016080e7          	jalr	22(ra) # 8000a76 <__errno>
+ 8000a68:	c100                	sw	s0,0(a0)
+ 8000a6a:	547d                	li	s0,-1
+ 8000a6c:	8522                	mv	a0,s0
+ 8000a6e:	40b2                	lw	ra,12(sp)
+ 8000a70:	4422                	lw	s0,8(sp)
+ 8000a72:	0141                	addi	sp,sp,16
+ 8000a74:	8082                	ret
+
+08000a76 <__errno>:
+ 8000a76:	17fff797          	auipc	a5,0x17fff
+ 8000a7a:	60a78793          	addi	a5,a5,1546 # 20000080 <_impure_ptr>
+ 8000a7e:	4388                	lw	a0,0(a5)
+ 8000a80:	8082                	ret
+=======
         andi a1, a1, 0x0F # Mask to only consider switches A5 to A8
  8000740:	89bd                	andi	a1,a1,15
         # Call a subroutine to select LED sequence based on switch state
@@ -4848,3 +5901,4 @@ delay:
  8001138:	f4c78793          	addi	a5,a5,-180 # 20000080 <_impure_ptr>
  800113c:	4388                	lw	a0,0(a5)
  800113e:	8082                	ret
+>>>>>>> 9da4b36 (s)
