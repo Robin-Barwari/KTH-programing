@@ -48,7 +48,7 @@ gpioi:  mv t0, a0           // t0 points to GPIOX...
 // a1 Targeted pattern
 // a2 Targeted pin(s)
 
-gpiobo: xor a2, a2, a1      // Find zeros in targeted bits...
+gpiobo: and a2, a2, a1      // Find zeros in targeted bits...
         slli a2, a2, 16     // ...position clear requests...
         or a1, a1, a2       // ...add set requests...
         sw a1, BOP(a0)      // ...then execute...
@@ -193,7 +193,7 @@ colset: addi sp, sp, -4     // Make room on the stack...
 /////////////////////////////////////////////////////////////////////////////////////
 .section .data
 l88mmat: .word l88mmap
-l88mmap:
+l88mmap:                                        // 63 bytes totalt
 
         .word 0x00000000        //Empty
         .word 0x00000000
@@ -201,8 +201,14 @@ l88mmap:
         .word 0x82FE0000        //0
         .word 0x0000FE82
         
-        .word 0x82FE0000        //0      
-        .word 0x0000FE82
+        .word 0x92929200        //3      
+        .word 0x000000FE        
+
+        .word 0x00000000        //1
+        .word 0x0000FE00
+
+        .word 0x9292F200        //2
+        .word 0x0000009E
 
         .word 0x82FE0000        //0
         .word 0x0000FE82
@@ -210,13 +216,7 @@ l88mmap:
         .word 0x92FE0000        //6
         .word 0x0000F292
 
-        .word 0x04000000        //1
-        .word 0x0000FE02
-
-        .word 0x82FE0000        //0
-        .word 0x0000FE82
-
-        .word 0x00000000
+        .word 0x00000000        //Empty
         .word 0x00000000
          
 .section .text
@@ -398,12 +398,12 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
         li t1, 0x0000FF     // ...reload the counter...
         sw t1,0(t0)         // ...and save the new value...
         la t0,l88mmat       // ...time to shake up 8*8LED image...
-        lw t1,0(t0)         // ...load the memory map base adress...
-        addi t1,t1,0x1      //shifta den alltid med 1 steg så att den snurrar 
+        lw t1,0(t0)         // ...get the first value...
+        addi t1,t1,0x1      //
         andi t2,t1,0xFF     //vi maskar ut de minst segnifikatna bitar
-        li t3,63            //allt som är räknas då för att det kommer en tom sida sen kommer siffror igen 
-        bne t3, t2, 2f
-        addi t1, t1 ,-52    //shiftar allt som är sparad för att shifta dem igen så att det kommer upp
+        li t3,63            //laddar in 63 som är max antal bytes 
+        bne t3, t2, 2f      //om t3 inte är lika med t2 så ska den gå till 2 forward
+        addi t1, t1 ,-52    //Den stänger inte sekvensen (den börjar inte om med 00 i personnumret)
 2:      sw t1,0(t0)         // ...then store it back!
 1:      ret                 // and return to caller!
 
@@ -415,7 +415,7 @@ main:   call t5omsi         // Initialize timer 5 to count milliseconds!
         call colinit        // Initialize the Column driver!
         call l88init        // Initialize the 8*8 LED matrix driver!
         call keyinit        // Initialize the 4*4 keyboard driver!
-        call bcd4dc_reset   // Reset the 4 digit bcd counter!
+        li a7, 0
 
 1:      nop                 // Main loop async tasks >-----------------------
 
@@ -423,18 +423,18 @@ main:   call t5omsi         // Initialize timer 5 to count milliseconds!
         beqz a0,1b          // Main loop sync tasks >------------------------
         call colset         // Activate "next" column...
         call l88row         // ...present related Row data...
-        call keyscan        
-        li t0,0xF           //vi ger value till t0 och betyder att nummer 1 år tryckt
-        bne a7,t0,2f        //så länge knappen inte är tryckt då hoppar vi över nästa raden 
-        call flow
+        call keyscan        // ...and check for key pressed!
+        li t0,0xF           // Start when number 1 is pressed
+        bne a7,t0,2f        // ...else continue! 
+        call flow           // ...and do the flow!
 
 
-2:       bltz a0,1b          // Again, if not any key pressed?
+2:       bltz a0,1b          // a0<0, no key pressed, loop again!
          
          li t0,0xE           //om 2 är tryckt så ska den stanna
-         blt a0,t0, 1b       //tar bort alla knappar och bara tänder alla som är över 12 vilket är EF
-         andi a7, a0, 0xF    // sparar knapp 1 så att det loopar igen.   
+         blt a0,t0, 1b       //ifall a0 < 14 i decimal så går vi tillbaka till 1
+         andi a7, a0, 0xF    // sparar knapp 1 så att det loopar igen.
 
-         j 1b
+         j 1b                // ...and loop again!
 
 .end

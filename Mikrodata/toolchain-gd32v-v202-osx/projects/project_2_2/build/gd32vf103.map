@@ -1678,7 +1678,7 @@ END GROUP
 .ialign         0x0000000008000254        0x0
                 [!provide]                        PROVIDE (_ilm = .)
 
-.text           0x0000000008000280      0xa32
+.text           0x0000000008000280      0xa2c
  *(.rodata .rodata.*)
  .rodata._exit.str1.4
                 0x0000000008000280       0x1f build/_exit.o
@@ -1726,7 +1726,7 @@ END GROUP
  *fill*         0x0000000008000602        0x2 
  .text.irq      0x0000000008000604       0x72 build/entry.o
                 0x0000000008000604                irq_entry
- .text          0x0000000008000676      0x358 build/main.o
+ .text          0x0000000008000676      0x352 build/main.o
                 0x00000000080006e6                t5omsi
                 0x0000000008000718                t5expq
                 0x0000000008000728                colinit
@@ -1737,82 +1737,82 @@ END GROUP
                 0x000000000800081a                keyinit
                 0x000000000800084c                keyscan
                 0x0000000008000964                main
- .text.atexit   0x00000000080009ce       0x10 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-atexit.o)
-                0x00000000080009ce                atexit
- .text.exit     0x00000000080009de       0x36 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-exit.o)
-                0x00000000080009de                exit
+ .text.atexit   0x00000000080009c8       0x10 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-atexit.o)
+                0x00000000080009c8                atexit
+ .text.exit     0x00000000080009d8       0x36 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-exit.o)
+                0x00000000080009d8                exit
  .text.__libc_fini_array
-                0x0000000008000a14       0x38 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-fini.o)
-                0x0000000008000a14                __libc_fini_array
+                0x0000000008000a0e       0x38 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-fini.o)
+                0x0000000008000a0e                __libc_fini_array
  .text.__libc_init_array
-                0x0000000008000a4c       0x6a /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-init.o)
-                0x0000000008000a4c                __libc_init_array
- .text          0x0000000008000ab6       0x16 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-memcpy-asm.o)
-                0x0000000008000ab6                memcpy
- .text.write    0x0000000008000acc       0x18 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-syswrite.o)
-                0x0000000008000acc                write
+                0x0000000008000a46       0x6a /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-init.o)
+                0x0000000008000a46                __libc_init_array
+ .text          0x0000000008000ab0       0x16 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-memcpy-asm.o)
+                0x0000000008000ab0                memcpy
+ .text.write    0x0000000008000ac6       0x18 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-syswrite.o)
+                0x0000000008000ac6                write
  .text._write_r
-                0x0000000008000ae4       0x3a /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-writer.o)
-                0x0000000008000ae4                _write_r
+                0x0000000008000ade       0x3a /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-writer.o)
+                0x0000000008000ade                _write_r
  .text.__register_exitproc
-                0x0000000008000b1e       0x8c /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-__atexit.o)
-                0x0000000008000b1e                __register_exitproc
+                0x0000000008000b18       0x8c /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-__atexit.o)
+                0x0000000008000b18                __register_exitproc
  .text.__call_exitprocs
-                0x0000000008000baa       0xc8 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-__call_atexit.o)
-                0x0000000008000baa                __call_exitprocs
- .text._write   0x0000000008000c72       0x34 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libgloss_nano.a(sys_write.o)
-                0x0000000008000c72                _write
- .text.__errno  0x0000000008000ca6        0xc /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-errno.o)
-                0x0000000008000ca6                __errno
+                0x0000000008000ba4       0xc8 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-__call_atexit.o)
+                0x0000000008000ba4                __call_exitprocs
+ .text._write   0x0000000008000c6c       0x34 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libgloss_nano.a(sys_write.o)
+                0x0000000008000c6c                _write
+ .text.__errno  0x0000000008000ca0        0xc /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-errno.o)
+                0x0000000008000ca0                __errno
  *(.gnu.linkonce.t.*)
 
 .sdata2._global_impure_ptr
-                0x0000000008000cb4        0x4
+                0x0000000008000cac        0x4
  .sdata2._global_impure_ptr
-                0x0000000008000cb4        0x4 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-impure.o)
-                0x0000000008000cb4                _global_impure_ptr
+                0x0000000008000cac        0x4 /Users/robin/KTH-programing/Mikrodata/toolchain-gd32v-v202-osx/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32/libc_nano.a(lib_a-impure.o)
+                0x0000000008000cac                _global_impure_ptr
 
-.rela.dyn       0x0000000008000cb8        0x0
+.rela.dyn       0x0000000008000cb0        0x0
  .rela.text.handle_trap
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
- .rela.init     0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
+ .rela.init     0x0000000008000cb0        0x0 build/system_gd32vf103.o
  .rela.text.trap
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
  .rela.text.__libc_fini_array
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
  .rela.data.impure_data
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
  .rela.text.__libc_init_array
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
  .rela.text._write_r
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
  .rela.text.__register_exitproc
-                0x0000000008000cb8        0x0 build/system_gd32vf103.o
+                0x0000000008000cb0        0x0 build/system_gd32vf103.o
 
 .fini
  *(SORT_NONE(.fini))
-                0x0000000008000cb8                . = ALIGN (0x4)
+                0x0000000008000cb0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__etext = .)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (etext = .)
                 [!provide]                        PROVIDE (_eilm = .)
 
-.preinit_array  0x0000000008000cb8        0x0
-                0x0000000008000cb8                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008000cb0        0x0
+                0x0000000008000cb0                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x0000000008000cb8                PROVIDE (__preinit_array_end = .)
+                0x0000000008000cb0                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008000cb8        0x0
-                0x0000000008000cb8                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008000cb0        0x0
+                0x0000000008000cb0                PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
-                0x0000000008000cb8                PROVIDE (__init_array_end = .)
+                0x0000000008000cb0                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008000cb8        0x0
-                0x0000000008000cb8                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008000cb0        0x0
+                0x0000000008000cb0                PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
-                0x0000000008000cb8                PROVIDE (__fini_array_end = .)
+                0x0000000008000cb0                PROVIDE (__fini_array_end = .)
 
 .ctors
  *crtbegin.o(.ctors)
@@ -1827,18 +1827,18 @@ END GROUP
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x0000000008000cb8                . = ALIGN (0x4)
+                0x0000000008000cb0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_eilm = .)
 
-.lalign         0x0000000008000cb8        0x0
-                0x0000000008000cb8                . = ALIGN (0x4)
-                0x0000000008000cb8                PROVIDE (_data_lma = .)
+.lalign         0x0000000008000cb0        0x0
+                0x0000000008000cb0                . = ALIGN (0x4)
+                0x0000000008000cb0                PROVIDE (_data_lma = .)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000008000cb8
+.dalign         0x0000000020000000        0x0 load address 0x0000000008000cb0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data = .)
 
-.data           0x0000000020000000       0xc0 load address 0x0000000008000cb8
+.data           0x0000000020000000       0xc0 load address 0x0000000008000cb0
  *(.rdata)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
