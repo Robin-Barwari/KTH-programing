@@ -384,47 +384,4 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
 .section .data
 index:  .word 0x7
 .section .text
-/*.global main
-main:   call t5omsi         // Initialize timer 5 to count milliseconds!
-        call colinit        // Initialize the Column driver!
-        call l88init        // Initialize the 8*8 LED matrix driver!
-        call keyinit        // Initialize the 4*4 keyboard driver!
-
-1:      nop                 // Main loop async tasks >-----------------------
-
-        call t5expq         // Check if Timer 5 have expired?
-        beqz a0,1b          // Main loop sync tasks >------------------------
-//        call flow           // !!!!!!!!!!!! TIP FOR LEVEL 2 !!!!!!!!!!!!!!!!*/
-/*
-        call bcd4dc_tick    // !!!!!!!!!!!! TIP FOR LEVEL 1 !!!!!!!!!!!!!!!!
-        call bcd4dc_read
-        la t0,l88mmap
-        andi t1, a0, 0xF
-        sb t1, 0(t0)
-        srli a0, a0, 4
-        andi t1, a0, 0xF
-        sb t1, 1(t0)
-        srli a0, a0, 4
-        andi t1, a0, 0xF
-        sb t1, 2(t0)
-        srli a0, a0, 4
-        andi t1, a0, 0xF
-        sb t1, 3(t0)
-*/
-/*        call colset         // Activate "next" column...
-        call l88row         // ...present related Row data...
-        call keyscan
-
-        bltz a0,1b          // Again, if not any key pressed?
-
-        la t0,index         // Key pressed, use 8*8 to trace value!
-        lw t1,0(t0)
-        addi t2,t1,-1
-        bgez t2,2f
-        li t2,7
-2:      sw t2,0(t0)
-        la t0,l88mmap
-        add t0,t0,t1
-        sb a0, 0(t0)
-        j 1b                // ...again, forever! */
 .end
