@@ -62,6 +62,10 @@ void T1setPWMch2(int value){
     timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_2,value);
 }
 
+void T1setPWMch0(int value){
+    timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_0,(value/100.0)*16000);
+}
+
 void T1setPWMmotorB(int throttel){
     if (throttel>0) {
        timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_2,(throttel/100.0)*16000);
