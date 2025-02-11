@@ -99,81 +99,6 @@ rcu2en: li t0,RCU           // t0 points to RCU...
 // RCU Reset and Clock Unit Subroutine package ////////////////////////// END ///////
 
 .global main
-<<<<<<< HEAD
-main:   li a0, PBEN+PAEN    // Prepare to turn on GPIOB...
-        call rcu2en         // ...do the set-up!
-
-        li a0, GPIOB        // Prepare to init GPIOB...
-        li a1, GPIO_PP      // ...as Push-Pull Output...
-        li a2, GPIO_50      // ...with max 50MHz rate...
-        li a3, 0            // ...for pin 0...
-        li a4, 3            // ...to pin 2...
-1:      call gpioi          // ...do the set-up!
-        addi a3,a3,1        // ...advance to next pin...
-        bne a3,a4, 1b       // ...continue, if not done!  
-
-        li a0, GPIOA        // Prepare to init GPIOA...
-        li a1, GPIO_AM      // ...in Analoge mode...
-        li a2, GPIO_FI      // ...with High-Z...
-        li a3, 5            // ...for pin 5...
-        li a4, 9            // ...to pin 8...
-1:      call gpioi          // ...do the set-up!
-        addi a3,a3,1        // ...advance to next pin...
-        bne a3,a4, 1b       // ...continue, if not done!  
-
-
-1:
-        li a0, GPIOA         // Prepare to read GPIOA...
-        call gpiois         // ...and get the value!
-        srli a1,a1,5        // ...shift it down 5 steps...
-        andi t0,a1,0x07     // ...mask out 3 switchs
-
-        slli t0, t0, 2      //ränka start address skiftar 2. mot vänster
-        la t1, patterns     //ladda basadressen med mönster
-        add t1, t1, t0      //hämta startadressen för vald sekvens
-        li t4, 4            //antal mönster i en sekvens
-
-pattern_loop:
-
-        lb t5, 0(t1)        //hämta nästa pattern
-        srli t2, a1, 3      //flytta mikrobrytare 4 till bit 0
-        andi t2, t2, 0x01   //maskera mikrobytare 4 (=1 om invertering)
-        beq t2, zero, no_invert //hoppa till no_invert om t2 == 0
-        li t3, 0x07         //mask för inversion (endast 3 lysdioder)
-        xor t5, t5, t3      //invertera mönstret
-
-no_invert:
-        li a0, GPIOB        //förbered GPIOB för utskrift
-        mv a1, t5           //flytta mönstret till a1
-        li a2, 0x07         // ...the 3 lsb...
-        call gpiobo         //skriv mönstret till lysdioderna
-
-        addi t1, t1, 1      //gå till nästa mönster
-        call delay          //vänta 0.25 sekunder
-2:      addi t4, t4, -1     //loop counter
-        bnez t4, pattern_loop   //gå tillbaka till nästa mönster
-
-        j 1b                // Repeat loop
-
-delay:  li t0, 25000000      //(tiden 0.25)
-
-delay_loop:
-        addi t0, t0, -1
-        bnez t0, delay_loop
-        j 2b
-
-
-.data
-patterns:
-    .byte 0b000, 0b001, 0b010, 0b100    #pattern 0, 1, 2, 4
-    .byte 0b100, 0b010, 0b001, 0b000    #pattern 4, 2, 1, 0
-    .byte 0b001, 0b010, 0b011, 0b100    #pattern 1, 2, 3, 4
-    .byte 0b100, 0b011, 0b010, 0b001    #pattern 4, 3, 2, 1
-    .byte 0b001, 0b100, 0b011, 0b111    #pattern 1, 4, 3, 7
-    .byte 0b111, 0b011, 0b100, 0b001    #pattern 7, 3, 4, 1
-    .byte 0b001, 0b101, 0b011, 0b111    #pattern 1, 5, 3, 7
-    .byte 0b111, 0b110, 0b100, 0b000    #pattern 7, 3, 5, 1
-=======
 main:
         # Enable GPIOB and GPIOA
         li a0, PBEN + PAEN
@@ -585,5 +510,4 @@ sequence5: .byte 0x07, 0x02, 0x04, 0x01  # sequence och address   7, 2, 4, 1
 sequence6: .byte 0x07, 0x03, 0x05, 0x01  # sequence och address   7, 3, 5, 1
 sequence7: .byte 0x01, 0x05, 0x03, 0x07  # sequence och address   1, 5, 3, 7
 
->>>>>>> 9da4b36 (s)
 .end
