@@ -1,69 +1,54 @@
+#include "gd32vf103.h"
 #include "drivers.h"
-#include "dac.h"
+#include "adc.h"
 #include "pwm.h"
-#include <stdio.h>
 
-int main(void)
-{
-  int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
-  int lookUpTbl[16] = {15, 11, 0, 14, 2, 9, 8, 7, 3, 6, 5, 4, 10, 3, 2, 1}; // alla tangentbord i ordning
-  int percentage[4] = {0};                                                  // för att lägga in / spara värdet från keyboard
-  int dac = 0, speed = -100, counter = 0, sum = 0;
+int main(void){
+    int ms=0, s=0, key, pKey=-1, c=0, idle=0, adcr, tmpr;
+    int lookUpTbl[16]={1,4,7,14,2,5,8,0,3,6,9,15,10,11,12,13};
 
-  t5omsi();  // Initialize timer5 1kHz
-  colinit(); // Initialize column toolbox
-  l88init(); // Initialize 8*8 led toolbox
-  keyinit(); // Initialize keyboard toolbox
-  T1powerUpInitPWM(0x1); // får den första lampan att lysa            // Timer #1, Ch #2 PWM
-  while (1)
-  {
-    idle++; // Manage Async events
+    t5omsi();                                     // Initialize timer5 1kHz
+    colinit();                                    // Initialize column toolbox
+    l88init();                                    // Initialize 8*8 led toolbox
+    keyinit();                                    // Initialize keyboard toolbox
+    ADC3powerUpInit(0);                           // Initialize ADC0, Ch3
+    //T1powerUpInitPWM(0x4);                      // Timer #1, Ch #2 PWM
+    //T1powerUpInitPWM(0xC);                      // Timer #1, Ch #2 & 3 PWM
 
-    if (t5expq())
-    {                   // Manage periodic tasks
-      l88row(colset()); // sätter igång tangentbordet så varje kolumn fungerar
+    while (1) {
+        idle++;                                   // Manage Async events
 
-      key = keyscan(); // läser av tangenten och sparar i key
-      if (key >= 0)
-      { // kollar om använder har tryckt något
-
-        if (lookUpTbl[key] <= 9 && key >= 1)
-        {                                       // om mellan 1-9
-          percentage[counter] = lookUpTbl[key]; // percentage är en array som innehåller 3 platser. T.ex. 5,7,D
-          counter++;                            // till nästa tillstånd (plats i array)
-        }
-        else if (key == 3)
-        { // stjärna = 3
-          if (counter > 0)
-          {            // counter plussas alltid på
-            counter--; // ett steg bak för att radera counter (ett steg i arrayen)
+        if (adc_flag_get(ADC0,ADC_FLAG_EOC)==SET) { // ...ADC done?
+          if (adc_flag_get(ADC0,ADC_FLAG_EOIC)==SET) { //...ch3 or ch16?
+            tmpr = adc_inserted_data_read(ADC0, ADC_INSERTED_CHANNEL_0);
+            //l88mem(6,((0x680-tmpr)/5)+25);
+            //l88mem(6,tmpr>>8);                  // ......move data
+            //l88mem(7,tmpr);                     // ......(view each ms)
+            adc_flag_clear(ADC0, ADC_FLAG_EOC);
+            adc_flag_clear(ADC0, ADC_FLAG_EOIC);
+          } else {
+            adcr = adc_regular_data_read(ADC0);   // ......get data
+            l88mem(4,adcr&0xFF);                  // ......move data
+            l88mem(5,adcr>>8);                    // ......(view each ms)
+            adc_flag_clear(ADC0, ADC_FLAG_EOC);   // ......clear IF
           }
         }
-        else if (key == 1)
-        {              // fyrkant = 1
-          counter = 0; // raderar allt, börjar om
-          sum = 0;     // summan ställs till 0
-        }
-        else if (key == 0)
-        {                           // D = 0, uträkningen för dimmingen utförs
-          percentage[counter] = 16; // Tredje platsen i arrayen blir 16
-          for (int i = 0; percentage[i] != 16; i++)
-          {
-            if (counter == 2)
-            {
-              percentage[0] = percentage[0] * 10;
+ 
+        if (t5expq()) {                           // Manage periodic tasks
+            l88row(colset());                     // ...8*8LED and Keyboard
+            ms++;                                 // ...One second heart beat
+            if (ms==1000){
+              ms=0;
+              l88mem(0,s++);
             }
-            else if (counter == 3)
-            {
-              percentage[0] = percentage[0] * 100;
+            if ((key=keyscan())>=0) {             // ...Any key pressed?
+              if (pKey==key) c++; else {c=0; pKey=key;}
+              l88mem(1,lookUpTbl[key]+(c<<4));
             }
-            sum = sum + percentage[i]; // summerar ihop det skrivna talet för att få rätt procent
-          }
-          T1setPWMmotorB(sum); // gör att lamporna lyser som den procent som sum visar
-          counter = 0;
-          sum = 0;
+            l88mem(2,idle>>8);                    // ...Performance monitor
+            l88mem(3,idle); idle=0;
+            adc_software_trigger_enable(ADC0,     //Trigger another ADC conversion!
+                                        ADC_REGULAR_CHANNEL);
         }
-      }
     }
-  }
 }

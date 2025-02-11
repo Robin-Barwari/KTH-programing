@@ -48,7 +48,8 @@ gpioi:  mv t0, a0           // t0 points to GPIOX...
 // a1 Targeted pattern
 // a2 Targeted pin(s)
 
-gpiobo: xor a2, a2, a1      // Find zeros in targeted bits...
+gpiobo: and a1, a1, a2      // (Clear all pattern bits that are not target bits)
+        xor a2, a2, a1      // Find zeros in targeted bits...
         slli a2, a2, 16     // ...position clear requests...
         or a1, a1, a2       // ...add set requests...
         sw a1, BOP(a0)      // ...then execute...
@@ -115,10 +116,10 @@ t5omsi: addi sp, sp, -4
         call rcu1en         // ..do the set-up! 
 
         li t0, TIMER5       // Prepare to configur Timer 5...
-        li t1, 0x036        // ...set prescaler to
-        sw t1,PSC(t0)       //    divide by 54...
-        li t1, 0x3E8        // ...and then counter auto reload to
-        sw t1, CAR(t0)      //    reload at 1000 for a 1ms counter..
+        li t1, 0x06B        // ...set prescaler to
+        sw t1,PSC(t0)       //    divide by 108, thus count 0..107...
+        li t1, 0x3E7        // ...and then counter auto reload to
+        sw t1, CAR(t0)      //    reload at 999 for a 1ms counter..
         sw zero,UPIF(t0)    // ...then clear the Interrupt Flag...
         li t1,0x01          // ...and start the counting!
         sw t1,T5CTR0(t0)
@@ -181,8 +182,8 @@ colset: addi sp, sp, -4     // Make room on the stack...
         li a1, 7            // ...fix wrap around...
 1:      sb a1, 0(t0)        // ...and store the new value...
         li a2, 0x07         // ...then point out the relevant bits...
-        call gpiooc         // ...and set/reset corresponing I/O bits...
-        mv a0, a1
+        call gpiobo         // ...and set/reset corresponing I/O bits...
+        lb a0, 0(t0)        // ...read back the return value...
 
         lw ra, 0(sp)        // ...and return to caller!
         addi sp, sp, 4
@@ -193,8 +194,8 @@ colset: addi sp, sp, -4     // Make room on the stack...
 /////////////////////////////////////////////////////////////////////////////////////
 .section .data
 l88mmat: .word l88mmap
-l88mmap: .word 0x0//55AA55AA
-         .word 0x0//55AA55AA
+l88mmap: .word 0x55AA55AA
+         .word 0x55AA55AA
          .byte 0xAA
 .section .text
 // l88init Initialize the 8*8LED matrix row hw driver ////////////////// 1.0 / AC ///
@@ -307,7 +308,7 @@ keyscan:addi sp, sp, -4     // Push: Make room on the stack...
         or t3,t1,a0         // ...and combind it with row data!
 
         li t1,0x200         // Reload repeat counter...
-        sw t1,0(t4)          // ...with max value.
+        sw t1,0(t4)         // ...with max value.
 
 1:      mv a0,t3            // Get the return value, -1 or key.
 
@@ -315,6 +316,54 @@ keyscan:addi sp, sp, -4     // Push: Make room on the stack...
         addi sp, sp, 4      // ...and reclame used stack space...
         ret                 // ...then return to caller!       
 /// END //////////////////////////////////////////////////////////////////// 
+
+/////////////////////////////////////////////////////////////////////////////////////
+// BCD 4 Digits Counter Subroutine package                                   0.9 AC
+/////////////////////////////////////////////////////////////////////////////////////
+.section .data
+bcd4dc: .half 0xFFFF        // Counter (uninitialized)
+.section .text
+// bcd4dc_reset //////////////////////////////////////////////////////// 1.0 / AC ///
+bcd4dc_reset:
+        la t0,bcd4dc        // t0 points to counter...
+        sh zero, 0(t0)      // ...clear counter...
+        ret                 // ...and go home!
+
+// bcd4dc_tick ///////////////////////////////////////////////////////// 1.0 / AC ///
+bcd4dc_tick:
+        la t0,bcd4dc        // t0 points to counter...
+        lhu t1, 0(t0)       // ...read counter...
+        li t2, 0x9          // ...overflow constant...
+
+        addi t1, t1, 1      // ...add 1 (tick)
+
+        andi t3, t1, 0xF    // ...mask out one's...
+        ble t3, t2, 1f      // ...done if one's didn't overflow?
+        addi t1, t1, 0x6    // ...they did, add 0x6...
+
+        srli t3, t1, 4      // ...position the ten's...
+        andi t3, t3, 0xF    // ...mask out ten's...
+        ble t3, t2, 1f      // ...done if ten's didn't overflow?
+        addi t1, t1, 0x60   // ...they did, add 0x60...
+
+        srli t3, t1, 8      // ...position the 100's...
+        andi t3, t3, 0xF    // ...mask out 100's...
+        ble t3, t2, 1f      // ...done if 100's didn't overflow?
+        addi t1, t1, 0x600  // ...they did, add 0x600...
+
+        srli t3, t1, 12     // ...position the 1000's...
+        ble t3, t2, 1f      // ...done if 1000's didn't overflow?
+        li t1, 0            // ...they did, reset the counter!
+
+1:      sh t1,0(t0)         // ...save the new value...
+        ret                 // ...and go home!
+
+// bcd4dc_read ///////////////////////////////////////////////////////// 1.0 / AC ///
+bcd4dc_read:
+        la t0,bcd4dc        // t0 points to counter...
+        lhu a0, 0(t0)       // ...read counter...
+        ret                 // ...and go home!
+/// END ///////////////////////////////////////////////////////////////////////////// 
 
 .section .data
 fcounter:.word 0x00008F
@@ -335,7 +384,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
 .section .data
 index:  .word 0x7
 .section .text
-//.global main
+/*.global main
 main:   call t5omsi         // Initialize timer 5 to count milliseconds!
         call colinit        // Initialize the Column driver!
         call l88init        // Initialize the 8*8 LED matrix driver!
@@ -345,7 +394,24 @@ main:   call t5omsi         // Initialize timer 5 to count milliseconds!
 
         call t5expq         // Check if Timer 5 have expired?
         beqz a0,1b          // Main loop sync tasks >------------------------
-        call colset         // Activate "next" column...
+//        call flow           // !!!!!!!!!!!! TIP FOR LEVEL 2 !!!!!!!!!!!!!!!!*/
+/*
+        call bcd4dc_tick    // !!!!!!!!!!!! TIP FOR LEVEL 1 !!!!!!!!!!!!!!!!
+        call bcd4dc_read
+        la t0,l88mmap
+        andi t1, a0, 0xF
+        sb t1, 0(t0)
+        srli a0, a0, 4
+        andi t1, a0, 0xF
+        sb t1, 1(t0)
+        srli a0, a0, 4
+        andi t1, a0, 0xF
+        sb t1, 2(t0)
+        srli a0, a0, 4
+        andi t1, a0, 0xF
+        sb t1, 3(t0)
+*/
+/*        call colset         // Activate "next" column...
         call l88row         // ...present related Row data...
         call keyscan
 
@@ -360,6 +426,5 @@ main:   call t5omsi         // Initialize timer 5 to count milliseconds!
         la t0,l88mmap
         add t0,t0,t1
         sb a0, 0(t0)
-        //call flow           // Run 8*8LED matrix pattern task!
-        j 1b                // ...again, forever!
+        j 1b                // ...again, forever! */
 .end

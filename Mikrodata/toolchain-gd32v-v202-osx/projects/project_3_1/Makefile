@@ -1,17 +1,16 @@
 ###### GD32V Makefile ######
--include $(wildcard .deps/*.d)
 
 
 ######################################
 # target
 ######################################
 TARGET = gd32vf103
-
+DEBUG_TARGET = gd32vf103_debug
 ######################################
 # Flashing
 ######################################
 
-DFU_DIR = ./../../programmer/
+DFU_DIR = 
 
 
 ######################################
@@ -20,7 +19,7 @@ DFU_DIR = ./../../programmer/
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -O2 #-flto
+OPT = -Os #-flto
 
 # Build path
 BUILD_DIR = build
@@ -46,19 +45,22 @@ $(wildcard ./*.c)
 ASM_SOURCES =  \
 $(FIRMWARE_DIR)/RISCV/env_Eclipse/start.S \
 $(FIRMWARE_DIR)/RISCV/env_Eclipse/entry.S \
-$(wildcard ./*.S)
+$(wildcard ./*.S) \
+$(wildcard lib/*/src/*.S) \
+$(wildcard src/*S)
 
-######################################
-# firmware library
-######################################
-PERIFLIB_SOURCES = \
-# $(wildcard Lib/*.a)
+DEBUG_C_SOURCES = \
+$(wildcard $(FIRMWARE_DIR)/debugger/*.c) \
+$(wildcard $(FIRMWARE_DIR)/debugger/lib/*/src/*.c) \
+$(wildcard $(FIRMWARE_DIR)/debugger/src/*.c)
+
+DEBUG_ASM_SOURCES = $(wildcard $(FIRMWARE_DIR)/debugger/*.S)
 
 #######################################
 # binaries
 #######################################
 
-COMPILER_DIR = ../../compiler/bin/
+COMPILER_DIR = ./../../compiler/bin/
 PREFIX = $(COMPILER_DIR)riscv64-unknown-elf-
 CC = $(PREFIX)gcc
 AS = $(PREFIX)gcc -x assembler-with-cpp
@@ -87,21 +89,30 @@ C_DEFS =  \
 # AS includes
 AS_INCLUDES = 
 
-LIB_DIRS = $(wildcard lib/*/include)
 
+LIB_DIRS = $(wildcard lib/*/include)
+DEBUG_LIB_DIRS = \
+$(wildcard $(FIRMWARE_DIR)/debugger/lib/*/include) \
+$(wildcard $(FIRMWARE_DIR)/debugger/)
 # C includes
 C_INCLUDES =  \
 -I. \
 -I$(FIRMWARE_DIR)/GD32VF103_standard_peripheral/Include \
 -I$(FIRMWARE_DIR)/GD32VF103_standard_peripheral \
 -I$(FIRMWARE_DIR)/RISCV/drivers \
-$(patsubst %, -I%, $(LIB_DIRS))
+-I$(FIRMWARE_DIR)/RISCV/stubs/ \
+-Iinclude \
+$(patsubst %, -I% , $(LIB_DIRS))
+
+# Don't link debugger files unless they are needed (keeps code size down since IRQs get linked even of they aren't used)
+debug: C_INCLUDES += -Idebugger
+debug: C_INCLUDES += $(patsubst %, -I% , $(DEBUG_LIB_DIRS))
 
 
 # compile gcc flags
-ASFLAGS := $(CFLAGS) $(ARCH) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wl,-Bstatic#, -ffreestanding -nostdlib
+ASFLAGS = $(CFLAGS) $(ARCH) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wl,-Bstatic#, -ffreestanding -nostdlib
 
-CFLAGS := $(CFLAGS) $(ARCH) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wl,-Bstatic  -ffunction-sections -fdata-sections # -ffreestanding -nostdlib
+CFLAGS = $(ARCH) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wl,-Bstatic  -ffunction-sections -fdata-sections -fshort-wchar # -ffreestanding -nostdlib
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2
@@ -109,7 +120,7 @@ endif
 
 # Generate dependency information
 CFLAGS += -std=gnu11 -MMD -MP #.deps/$(notdir $(<:.c=.d)) -MF$(@:%.o=%.d) -MT$(@:%.o=%.d)
-
+debug: CFLAGS += -DUSE_SOFTWARE_DEBUGGER #-Xlinker --defsym=__dbg_stack_size=4096
 #######################################
 # LDFLAGS
 #######################################
@@ -119,11 +130,14 @@ LDSCRIPT = $(FIRMWARE_DIR)/RISCV/env_Eclipse/GD32VF103xB.lds
 # libraries
 #LIBS = -lc_nano -lm
 LIBDIR = 
-LDFLAGS = $(OPT) $(ARCH) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) $(PERIFLIB_SOURCES) -Wl,--cref -Wl,--no-relax -Wl,--gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map -nostartfiles #-ffreestanding -nostdlib
-
+LDFLAGS =  
+#Debugger relies on "-Wl,--no-relax" since an uncorrupted global pointer register is not guaranteed
+LDFLAGS += $(OPT) $(ARCH) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) $(PERIFLIB_SOURCES) -Wl,--cref -Wl,--no-relax -Wl,--gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map -nostartfiles --specs=nano.specs  #-ffreestanding -nostdlib
+debug: LDFLAGS := -Xlinker --defsym=__dbg_stack_size=4K $(LDFLAGS)
+#all: LDFLAGS := -Xlinker --defsym=__dbg_stack_size=1K $(LDFLAGS)
 # default action: build all
-all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
-
+all: debug_clean $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+debug: debug_clean $(BUILD_DIR)/$(DEBUG_TARGET).elf $(BUILD_DIR)/$(DEBUG_TARGET).hex $(BUILD_DIR)/$(DEBUG_TARGET).bin
 #######################################
 # build the application
 #######################################
@@ -133,6 +147,16 @@ vpath %.c $(sort $(dir $(C_SOURCES)))
 # list of ASM program objects
 OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.S=.o)))
 vpath %.S $(sort $(dir $(ASM_SOURCES)))
+
+# Same for debug objects
+DEBUG_OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(DEBUG_C_SOURCES:.c=.o)))
+vpath %.c $(sort $(dir $(DEBUG_C_SOURCES)))
+
+DEBUG_OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(DEBUG_ASM_SOURCES:.S=.o)))
+vpath %.S $(sort $(dir $(DEBUG_ASM_SOURCES)))
+
+# Debug object list
+DEBUG_OBJECTS += $(OBJECTS)
 
 $(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR) .deps
 	@echo "CC $<"
@@ -149,9 +173,18 @@ $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
 	@echo "LD $@"
 	@$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 	@echo "OD $@"
-	-$(OD) $(BUILD_DIR)/$(TARGET).elf -xS > $(BUILD_DIR)/$(TARGET).S $@ 
+	@$(OD) $(BUILD_DIR)/$(TARGET).elf -xS > $(BUILD_DIR)/$(TARGET).S $@
 	@echo "SIZE $@"
 	@$(SZ) $@
+
+$(BUILD_DIR)/$(DEBUG_TARGET).elf: $(DEBUG_OBJECTS) Makefile
+	@echo "LD $@"
+	@$(CC) $(DEBUG_OBJECTS) $(LDFLAGS) -o $@
+	@echo "OD $@"
+	@$(OD) $(BUILD_DIR)/$(DEBUG_TARGET).elf -xS > $(BUILD_DIR)/$(DEBUG_TARGET).S $@
+	@echo "SIZE $@"
+	@$(SZ) $@
+	
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
 	@echo "OBJCOPY $@"
@@ -172,20 +205,38 @@ $(BUILD_DIR):
 #######################################
 
 clean:
-	-del /Q .deps
-	-del /Q $(BUILD_DIR)
-flash: all
-	-openocd -f ./openocd_ft2232.cfg -c init -c " flash protect 0 0 last off; \
-			program {$(BUILD_DIR)/$(TARGET).elf} verify; mww 0xe004200c 0x4b5a6978; mww 0xe0042008 0x01; resume; exit 0;"
+	-rm -fR .deps $(BUILD_DIR)
+
+.PHONY: debug_clean
+debug_clean:
+	-touch $(FIRMWARE_DIR)/RISCV/env_Eclipse/init.c
 
 dfu: all
 	-$(DFU_DIR)dfu-suffix -v 0x28e9 -p 0x0189 -d 0xffff -a $(BUILD_DIR)/$(TARGET).bin
-	$(DFU_DIR)dfu-util-static -d :0189 -a 0 --dfuse-address 0x08000000:leave -D $(BUILD_DIR)/$(TARGET).bin
-#The line above uses kind of a hotfix for a bug in dfu-util-static compiled for windows for next version add option -d 28e9:0189
-#Remove ':leave', the microcontroller will not boot to application when finished programming.
+	$(DFU_DIR)dfu-util -d 28e9:0189 -a 0 --dfuse-address 0x08000000:leave -D $(BUILD_DIR)/$(TARGET).bin
+
+download: debug
+	-$(DFU_DIR)dfu-suffix -v 0x28e9 -p 0x0189 -d 0xffff -a $(BUILD_DIR)/$(DEBUG_TARGET).bin
+	$(DFU_DIR)dfu-util -d 28e9:0189 -a 0 --dfuse-address 0x08000000:leave -D $(BUILD_DIR)/$(DEBUG_TARGET).bin
+
+# Run once to clear the compiler binaries for running, and installing the programming tool
+install:
+	xattr -d com.apple.quarantine ../../compiler/bin/riscv64-unknown-elf-gcc
+	xattr -d com.apple.quarantine ../../compiler/libexec/gcc/riscv64-unknown-elf/8.3.0/cc1
+	xattr -d com.apple.quarantine ../../compiler/riscv64-unknown-elf/bin/as
+	xattr -d com.apple.quarantine ../../compiler/libexec/gcc/riscv64-unknown-elf/8.3.0/collect2
+	xattr -d com.apple.quarantine ../../compiler/riscv64-unknown-elf/bin/ld
+	xattr -d com.apple.quarantine ../../compiler/libexec/gcc/riscv64-unknown-elf/8.3.0/liblto_plugin.so
+	xattr -d com.apple.quarantine ../../compiler/bin/riscv64-unknown-elf-gdb
+	xattr -d com.apple.quarantine ../../compiler/bin/riscv64-unknown-elf-objdump
+	xattr -d com.apple.quarantine ../../compiler/bin/riscv64-unknown-elf-objcopy
+	xattr -d com.apple.quarantine ../../compiler/bin/riscv64-unknown-elf-size
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	brew install dfu-util
 
 #######################################
 # dependencies
 #######################################
+-include $(shell mkdir .deps 2>/dev/null) $(wildcard .deps/*)
 
 # *** EOF ***
