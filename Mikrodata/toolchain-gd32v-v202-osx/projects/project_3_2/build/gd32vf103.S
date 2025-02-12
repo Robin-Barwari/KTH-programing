@@ -47,13 +47,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_line   00006860  00000000  00000000  0000e990  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    000022ad  00000000  00000000  000151f0  2**0
+ 15 .debug_str    000022ae  00000000  00000000  000151f0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0001749d  2**0
+ 16 .comment      00000028  00000000  00000000  0001749e  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  000174c5  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  000174c6  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00000b84  00000000  00000000  000174f0  2**2
+ 18 .debug_frame  00000b84  00000000  00000000  000174f4  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -444,17 +444,15 @@ Disassembly of section .text:
  80002b6:	0000                	unimp
  80002b8:	0001                	nop
  80002ba:	0000                	unimp
- 80002bc:	0001                	nop
- 80002be:	0000                	unimp
- 80002c0:	0001                	nop
- 80002c2:	0000                	unimp
+ 80002bc:	0000000f          	fence	unknown,unknown
+ 80002c0:	0000000f          	fence	unknown,unknown
  80002c4:	0002                	c.slli64	zero
  80002c6:	0000                	unimp
  80002c8:	0002                	c.slli64	zero
  80002ca:	0000                	unimp
- 80002cc:	0002                	c.slli64	zero
+ 80002cc:	00e0                	addi	s0,sp,76
  80002ce:	0000                	unimp
- 80002d0:	0002                	c.slli64	zero
+ 80002d0:	00e0                	addi	s0,sp,76
  80002d2:	0000                	unimp
  80002d4:	0004                	0x4
  80002d6:	0000                	unimp
@@ -562,7 +560,7 @@ int main(void)
   int arr[40] = {/// this for map
  80003ac:	00001097          	auipc	ra,0x1
  80003b0:	f16080e7          	jalr	-234(ra) # 80012c2 <memcpy>
-                 1, 1, 1, 1, 2, 2, 2, 2, 4, 4,
+                 1, 1, 15, 15, 2, 2, 224, 224, 4, 4,
                  7, 7, 7, 7, 1, 1, 64, 54, 64, 64,
                  5, 1, 1, 1, 1, 1, 1, 125, 1, 200,
                  1, 40, 60, 1, 120, 1, 7, 2, 4, 7};
@@ -605,31 +603,31 @@ int main(void)
 
   while (1)
   {
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  8000400:	6985                	lui	s3,0x1
   ADC3powerUpInit(1);
  8000402:	00000097          	auipc	ra,0x0
  8000406:	7a2080e7          	jalr	1954(ra) # 8000ba4 <ADC3powerUpInit>
   int ms = 0, end = 1, item = 0, sum = 0, target = 0, point = 0;
  800040a:	4901                	li	s2,0
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  800040c:	4a1d                	li	s4,7
  800040e:	fdb98993          	addi	s3,s3,-37 # fdb <CAR+0xfaf>
       if (end)
       {
         ms++;
-        target = path[ratt];
-        l88mem(7, path[ratt]); // the target
+        target = path[wheel];
+        l88mem(7, path[wheel]); // the target
         if (ms == 500)
  8000412:	1f400a93          	li	s5,500
+          ms = 0;
+        }
       }
       else
       {
-
-        // Sad face in end
         for (int i = 0; i < 8; i++)
  8000416:	4b21                	li	s6,8
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  8000418:	00001097          	auipc	ra,0x1
  800041c:	8de080e7          	jalr	-1826(ra) # 8000cf6 <read_adc>
  8000420:	842a                	mv	s0,a0
@@ -645,20 +643,20 @@ int main(void)
       if (end)
  800043c:	44c2                	lw	s1,16(sp)
  800043e:	c0a1                	beqz	s1,800047e <main+0x106>
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  8000440:	03440433          	mul	s0,s0,s4
-        target = path[ratt];
+        target = path[wheel];
  8000444:	021c                	addi	a5,sp,256
-        l88mem(7, path[ratt]); // the target
+        l88mem(7, path[wheel]); // the target
  8000446:	451d                	li	a0,7
  8000448:	0905                	addi	s2,s2,1
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  800044a:	03344433          	div	s0,s0,s3
-        target = path[ratt];
+        target = path[wheel];
  800044e:	040a                	slli	s0,s0,0x2
  8000450:	943e                	add	s0,s0,a5
  8000452:	f3c42683          	lw	a3,-196(s0)
-        l88mem(7, path[ratt]); // the target
+        l88mem(7, path[wheel]); // the target
  8000456:	85b6                	mv	a1,a3
  8000458:	c636                	sw	a3,12(sp)
  800045a:	00001097          	auipc	ra,0x1
@@ -2249,7 +2247,7 @@ int read_adc() {
 void run(int stuff[], int *item, int row[], int target, int *end, int *point)
 {
 
-  if (*item == 40)
+  if (*item == 40) // om map är
  8000d3c:	0005a803          	lw	a6,0(a1)
 {
  8000d40:	1101                	addi	sp,sp,-32
@@ -2258,10 +2256,10 @@ void run(int stuff[], int *item, int row[], int target, int *end, int *point)
  8000d46:	842e                	mv	s0,a1
  8000d48:	ca26                	sw	s1,20(sp)
  8000d4a:	c84a                	sw	s2,16(sp)
-  if (*item == 40)
+  if (*item == 40) // om map är
  8000d4c:	02800593          	li	a1,40
  8000d50:	00b81463          	bne	a6,a1,8000d58 <run+0x1c>
-  { /// make array looper på sig själv
+  {                /// make array looper på sig själv
     *item = 0;
  8000d54:	00042023          	sw	zero,0(s0)
  8000d58:	01c60593          	addi	a1,a2,28 # e001c <__stack_size+0xdf01c>
@@ -3470,13 +3468,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_line   00006860  00000000  00000000  0000e990  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    000022ad  00000000  00000000  000151f0  2**0
+ 15 .debug_str    000022ae  00000000  00000000  000151f0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0001749d  2**0
+ 16 .comment      00000028  00000000  00000000  0001749e  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  000174c5  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  000174c6  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00000b84  00000000  00000000  000174f0  2**2
+ 18 .debug_frame  00000b84  00000000  00000000  000174f4  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -3867,17 +3865,15 @@ Disassembly of section .text:
  80002b6:	0000                	unimp
  80002b8:	0001                	nop
  80002ba:	0000                	unimp
- 80002bc:	0001                	nop
- 80002be:	0000                	unimp
- 80002c0:	0001                	nop
- 80002c2:	0000                	unimp
+ 80002bc:	0000000f          	fence	unknown,unknown
+ 80002c0:	0000000f          	fence	unknown,unknown
  80002c4:	0002                	c.slli64	zero
  80002c6:	0000                	unimp
  80002c8:	0002                	c.slli64	zero
  80002ca:	0000                	unimp
- 80002cc:	0002                	c.slli64	zero
+ 80002cc:	00e0                	addi	s0,sp,76
  80002ce:	0000                	unimp
- 80002d0:	0002                	c.slli64	zero
+ 80002d0:	00e0                	addi	s0,sp,76
  80002d2:	0000                	unimp
  80002d4:	0004                	0x4
  80002d6:	0000                	unimp
@@ -3985,7 +3981,7 @@ int main(void)
   int arr[40] = {/// this for map
  80003ac:	00001097          	auipc	ra,0x1
  80003b0:	f16080e7          	jalr	-234(ra) # 80012c2 <memcpy>
-                 1, 1, 1, 1, 2, 2, 2, 2, 4, 4,
+                 1, 1, 15, 15, 2, 2, 224, 224, 4, 4,
                  7, 7, 7, 7, 1, 1, 64, 54, 64, 64,
                  5, 1, 1, 1, 1, 1, 1, 125, 1, 200,
                  1, 40, 60, 1, 120, 1, 7, 2, 4, 7};
@@ -4028,31 +4024,31 @@ int main(void)
 
   while (1)
   {
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  8000400:	6985                	lui	s3,0x1
   ADC3powerUpInit(1);
  8000402:	00000097          	auipc	ra,0x0
  8000406:	7a2080e7          	jalr	1954(ra) # 8000ba4 <ADC3powerUpInit>
   int ms = 0, end = 1, item = 0, sum = 0, target = 0, point = 0;
  800040a:	4901                	li	s2,0
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  800040c:	4a1d                	li	s4,7
  800040e:	fdb98993          	addi	s3,s3,-37 # fdb <CAR+0xfaf>
       if (end)
       {
         ms++;
-        target = path[ratt];
-        l88mem(7, path[ratt]); // the target
+        target = path[wheel];
+        l88mem(7, path[wheel]); // the target
         if (ms == 500)
  8000412:	1f400a93          	li	s5,500
+          ms = 0;
+        }
       }
       else
       {
-
-        // Sad face in end
         for (int i = 0; i < 8; i++)
  8000416:	4b21                	li	s6,8
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  8000418:	00001097          	auipc	ra,0x1
  800041c:	8de080e7          	jalr	-1826(ra) # 8000cf6 <read_adc>
  8000420:	842a                	mv	s0,a0
@@ -4068,20 +4064,20 @@ int main(void)
       if (end)
  800043c:	44c2                	lw	s1,16(sp)
  800043e:	c0a1                	beqz	s1,800047e <main+0x106>
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  8000440:	03440433          	mul	s0,s0,s4
-        target = path[ratt];
+        target = path[wheel];
  8000444:	021c                	addi	a5,sp,256
-        l88mem(7, path[ratt]); // the target
+        l88mem(7, path[wheel]); // the target
  8000446:	451d                	li	a0,7
  8000448:	0905                	addi	s2,s2,1
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
  800044a:	03344433          	div	s0,s0,s3
-        target = path[ratt];
+        target = path[wheel];
  800044e:	040a                	slli	s0,s0,0x2
  8000450:	943e                	add	s0,s0,a5
  8000452:	f3c42683          	lw	a3,-196(s0)
-        l88mem(7, path[ratt]); // the target
+        l88mem(7, path[wheel]); // the target
  8000456:	85b6                	mv	a1,a3
  8000458:	c636                	sw	a3,12(sp)
  800045a:	00001097          	auipc	ra,0x1
@@ -5672,7 +5668,7 @@ int read_adc() {
 void run(int stuff[], int *item, int row[], int target, int *end, int *point)
 {
 
-  if (*item == 40)
+  if (*item == 40) // om map är
  8000d3c:	0005a803          	lw	a6,0(a1)
 {
  8000d40:	1101                	addi	sp,sp,-32
@@ -5681,10 +5677,10 @@ void run(int stuff[], int *item, int row[], int target, int *end, int *point)
  8000d46:	842e                	mv	s0,a1
  8000d48:	ca26                	sw	s1,20(sp)
  8000d4a:	c84a                	sw	s2,16(sp)
-  if (*item == 40)
+  if (*item == 40) // om map är
  8000d4c:	02800593          	li	a1,40
  8000d50:	00b81463          	bne	a6,a1,8000d58 <run+0x1c>
-  { /// make array looper på sig själv
+  {                /// make array looper på sig själv
     *item = 0;
  8000d54:	00042023          	sw	zero,0(s0)
  8000d58:	01c60593          	addi	a1,a2,28 # e001c <__stack_size+0xdf01c>

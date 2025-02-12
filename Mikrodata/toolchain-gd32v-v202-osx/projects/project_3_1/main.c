@@ -37,11 +37,11 @@ int main(void)
         }
         else if (lookUpTbl[key] == 10) // if A pressed
         {
-          displayNum = 100;
+          T1setPWMch0(100);
         }
         else if (lookUpTbl[key] == 12) // if C pressed
         {
-          displayNum = 0;
+          T1setPWMch0(0);
         }
         else if (lookUpTbl[key] == 13) // if D pressed
         {

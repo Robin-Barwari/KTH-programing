@@ -9,14 +9,14 @@ int main(void)
 {
 
   int arr[40] = {/// this for map
-                 1, 1, 1, 1, 2, 2, 2, 2, 4, 4,
+                 1, 1, 15, 15, 2, 2, 224, 224, 4, 4,
                  7, 7, 7, 7, 1, 1, 64, 54, 64, 64,
                  5, 1, 1, 1, 1, 1, 1, 125, 1, 200,
                  1, 40, 60, 1, 120, 1, 7, 2, 4, 7};
 
-  int ms = 0, end = 1, item = 0, sum = 0, target = 0, point = 0;
+  int ms = 0, end = 1, item = 0, target = 0, point = 0;
   int lookUpTbl[16] = {15, 11, 0, 14, 10, 9, 8, 7, 10, 6, 5, 4, 10, 3, 2, 1}; // alla tangentbord i ordning
-  int path[] = {1, 2, 4, 8, 16, 32, 64, 128, 256};                            // 8x8 data
+  int path[] = {1, 2, 4, 8, 16, 32, 64, 128};                                 // 8x8 data
   int row[8] = {0};                                                           // will make the flow uppdate
 
   t5omsi();  // Initialize timer5 1kHz
@@ -27,8 +27,7 @@ int main(void)
 
   while (1)
   {
-    int ratt = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
-    /// read_adc()///  Den function kommer att omvandla analog till digital genom adc.c
+    int wheel = (read_adc() * 7) / 4059; // 0... 4059 I will make it 0 till 7
 
     if (t5expq())
     {
@@ -37,8 +36,8 @@ int main(void)
       if (end)
       {
         ms++;
-        target = path[ratt];
-        l88mem(7, path[ratt]); // the target
+        target = path[wheel];
+        l88mem(7, path[wheel]); // the target
         if (ms == 500)
         { // this will make the map flow
           run(arr, &item, row, target, &end, &point);
@@ -47,8 +46,6 @@ int main(void)
       }
       else
       {
-
-        // Sad face in end
         for (int i = 0; i < 8; i++)
         {
           l88mem(i, 0); // clear the map
@@ -63,8 +60,8 @@ int main(void)
 void run(int stuff[], int *item, int row[], int target, int *end, int *point)
 {
 
-  if (*item == 40)
-  { /// make array looper på sig själv
+  if (*item == 40) // om map är
+  {                /// make array looper på sig själv
     *item = 0;
   }
 
