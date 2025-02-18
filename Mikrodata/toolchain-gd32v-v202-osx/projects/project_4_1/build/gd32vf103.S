@@ -35,25 +35,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   8 .stack        00001000  20007000  2000052c  00005000  2**0
                   ALLOC
-  9 .debug_info   0000dc10  00000000  00000000  00004088  2**0
+  9 .debug_info   0000dc1b  00000000  00000000  00004088  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00002b8d  00000000  00000000  00011c98  2**0
+ 10 .debug_abbrev 00002b8d  00000000  00000000  00011ca3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00006b49  00000000  00000000  00014825  2**0
+ 11 .debug_loc    00006b5f  00000000  00000000  00014830  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 000007b0  00000000  00000000  0001b370  2**3
+ 12 .debug_aranges 000007b0  00000000  00000000  0001b390  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000c50  00000000  00000000  0001bb20  2**3
+ 13 .debug_ranges 00000c50  00000000  00000000  0001bb40  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0000b0c0  00000000  00000000  0001c770  2**0
+ 14 .debug_line   0000b0c0  00000000  00000000  0001c790  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00002c7f  00000000  00000000  00027830  2**0
+ 15 .debug_str    00002c7f  00000000  00000000  00027850  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0002a4af  2**0
+ 16 .comment      00000028  00000000  00000000  0002a4cf  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  0002a4d7  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  0002a4f7  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  000011e0  00000000  00000000  0002a504  2**2
+ 18 .debug_frame  000011e0  00000000  00000000  0002a524  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -165,25 +165,25 @@ SYMBOL TABLE:
 08002e44 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
 08002e44 l       .sdata2._global_impure_ptr	00000000 __init_array_start
 08002e44 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
-080019a2 g     F .text	000000de LCD_ShowChar
-0800197e g     F .text	00000024 LCD_DrawPoint
+0800198a g     F .text	000000de LCD_ShowChar
+08001966 g     F .text	00000024 LCD_DrawPoint
 08002af6 g     F .text	0000002a .hidden __ashldi3
-08000e58 g     F .text	0000001a spi_struct_para_init
+08000e40 g     F .text	0000001a spi_struct_para_init
 20000524 g     O .bss	00000004 BACK_COLOR
 20000880 g       .data	00000000 __global_pointer$
 08002e34 g     F .text	0000000c __errno
-08001938 g     F .text	00000046 LCD_Clear
+08001920 g     F .text	00000046 LCD_Clear
 20000528 g     O .bss	00000004 errno
 00001000 g       *ABS*	00000000 __stack_size
-0800130c g     F .text	00000030 LCD_Wait_On_Queue
+080012f4 g     F .text	00000030 LCD_Wait_On_Queue
 08002c44 g     F .text	00000016 memcpy
 08002420 g     F .text	000000a4 .hidden __ltdf2
-08000e38 g     F .text	00000004 gpio_bit_set
+08000e20 g     F .text	00000004 gpio_bit_set
 08001d8a g       .text	00000000 l88mem
 20000080 g     O .data	00000004 SystemCoreClock
 20000098 g     O .bss	00000400 queue
-08000e72 g     F .text	00000036 spi_init
-08001116  w    F .text	00000038 handle_trap
+08000e5a g     F .text	00000036 spi_init
+080010fe  w    F .text	00000038 handle_trap
 08001b84  w      .text	00000000 irq_entry
 20000090 g     O .bss	00000004 w
 08001c68 g       .text	00000000 t5omsi
@@ -191,70 +191,70 @@ SYMBOL TABLE:
 08002e40 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
 08002bda g     F .text	0000006a __libc_init_array
 08002910 g     F .text	00000056 .hidden __floatunsidf
-0800114e g     F .text	0000002c _init
+08001136 g     F .text	0000002c _init
 08002ba2 g     F .text	00000038 __libc_fini_array
-080010f4  w    F .text	00000022 handle_nmi
-08000eb2 g     F .text	00000004 spi_i2s_data_transmit
+080010dc  w    F .text	00000022 handle_nmi
+08000e9a g     F .text	00000004 spi_i2s_data_transmit
 2000008c g     O .bss	00000004 r
-08001394 g     F .text	0000002c LCD_WR_DATA
+0800137c g     F .text	0000002c LCD_WR_DATA
 08002c5a g     F .text	00000018 write
 08002acc g     F .text	0000002a .hidden __lshrdi3
 08002420 g     F .text	000000a4 .hidden __ledf2
-08001034 g     F .text	0000007c write_hex
+0800101c g     F .text	0000007c write_hex
 08002b20 g     F .text	0000003c .hidden __clzsi2
-08000e3c g     F .text	00000004 gpio_bit_reset
+08000e24 g     F .text	00000004 gpio_bit_reset
 20000094 g     O .bss	00000004 _global_atexit
 08002d38 g     F .text	000000c8 __call_exitprocs
 20008000 g       .stack	00000000 _sp
 20000088 g     O .bss	00000004 lcd_conf
 0800015c g     F .init	00000000 _start
-08000e40 g     F .text	00000018 rcu_periph_clock_enable
+08000e28 g     F .text	00000018 rcu_periph_clock_enable
 08002966 g     F .text	00000166 .hidden __floatundidf
 08001c9a g       .text	00000000 t5expq
 08001cea g       .text	00000000 colset
 0800024c g       .init	00000000 enable_mcycle_minstret
 08002cac g     F .text	0000008c __register_exitproc
-0800133c g     F .text	00000058 LCD_Write_Bus
+08001324 g     F .text	00000058 LCD_Write_Bus
 08001caa g       .text	00000000 colinit
-080010b0 g     F .text	00000010 get_timer_value
+08001098 g     F .text	00000010 get_timer_value
 08001d9e g       .text	00000000 keyinit
 08001d22 g       .text	00000000 l88init
-08001442 g     F .text	0000006c spi_config
+0800142a g     F .text	0000006c spi_config
 08001dd0 g       .text	00000000 keyscan
-08000ea8 g     F .text	0000000a spi_enable
-08000eb6 g     F .text	0000000c spi_crc_polynomial_set
+08000e90 g     F .text	0000000a spi_enable
+08000e9e g     F .text	0000000c spi_crc_polynomial_set
 08001eda g     F .text	00000546 .hidden __divdf3
 080024c4 g     F .text	0000044c .hidden __muldf3
 20000088 g       .bss	00000000 __bss_start
-08000b90 g     F .text	00000204 main
+08000b78 g     F .text	00000204 main
 080002b4 g     O .text	00000630 asc2_1608
 08001b00  w      .text	00000000 trap_entry
 08000246 g       .init	00000000 disable_mcycle_minstret
-080010e2 g     F .text	00000012 eclic_mode_enable
-08000ecc g     F .text	0000011c SystemInit
-0800117a g     F .text	00000002 _fini
+080010ca g     F .text	00000012 eclic_mode_enable
+08000eb4 g     F .text	0000011c SystemInit
+08001162 g     F .text	00000002 _fini
 00000000 g       *ABS*	00000000 __dbg_stack_size
-08000a90 g     O .text	00000100 .hidden __clz_tab
+08000a78 g     O .text	00000100 .hidden __clz_tab
 08002b5c g     F .text	00000010 atexit
 08002c72 g     F .text	0000003a _write_r
-080013c0 g     F .text	00000082 LCD_Address_Set
+080013a8 g     F .text	00000082 LCD_Address_Set
 20000084 g     O .data	00000004 _impure_ptr
 20000000 g       .dalign	00000000 _data
-080014d4 g     F .text	00000464 Lcd_Init
+080014bc g     F .text	00000464 Lcd_Init
 08002e00 g     F .text	00000034 _write
 20000088 g       .bss	00000000 _edata
 20000530 g       .bss	00000000 _end
 08001d54 g       .text	00000000 l88row
 08002e44 g       .lalign	00000000 _data_lma
-080014ae g     F .text	00000026 Lcd_SetType
-0800117c g     F .text	000000ce lcd_delay_1ms
+08001496 g     F .text	00000026 Lcd_SetType
+08001164 g     F .text	000000ce lcd_delay_1ms
 08002b6c g     F .text	00000036 exit
-08000ec2 g     F .text	0000000a spi_i2s_flag_get
-080010c0 g     F .text	00000022 eclic_init
-0800124a g     F .text	000000c2 LCD_WR_Queue
-08000fe8 g     F .text	0000004c _exit
-08000d94 g     F .text	000000a4 gpio_init
-08001a80 g     F .text	00000060 LCD_ShowStr
+08000eaa g     F .text	0000000a spi_i2s_flag_get
+080010a8 g     F .text	00000022 eclic_init
+08001232 g     F .text	000000c2 LCD_WR_Queue
+08000fd0 g     F .text	0000004c _exit
+08000d7c g     F .text	000000a4 gpio_init
+08001a68 g     F .text	00000060 LCD_ShowStr
 
 
 
@@ -405,14 +405,14 @@ _start0800:
 	/* argc = argv = 0 */
 	call _init
  8000228:	00001097          	auipc	ra,0x1
- 800022c:	f26080e7          	jalr	-218(ra) # 800114e <_init>
+ 800022c:	f0e080e7          	jalr	-242(ra) # 8001136 <_init>
 	li a0, 0
  8000230:	4501                	li	a0,0
 	li a1, 0
  8000232:	4581                	li	a1,0
 	call main
  8000234:	00001097          	auipc	ra,0x1
- 8000238:	95c080e7          	jalr	-1700(ra) # 8000b90 <main>
+ 8000238:	944080e7          	jalr	-1724(ra) # 8000b78 <main>
 	tail exit
  800023c:	00003317          	auipc	t1,0x3
  8000240:	93030067          	jr	-1744(t1) # 8002b6c <exit>
@@ -562,2207 +562,2206 @@ Disassembly of section .text:
  8000858:	0000 7e00 1022 0808 7e44 0000 c000 2020     ...~"...D~....  
  8000868:	2020 1020 2020 2020 2020 00c0 1010 1010        .      ......
  8000878:	1010 1010 1010 1010 1010 1010 0600 0808     ................
- 8000888:	0808 1008 0808 0808 0808 0006 1800 423c     ..............<B
- 8000898:	5a5a 5a5a 5a5a 5a5a 7e42 0000 1800 423c     ZZZZZZZZB~....<B
- 80008a8:	4242 5a5a 5a5a 5a5a 7e42 0000 1800 423c     BBZZZZZZB~....<B
- 80008b8:	4242 4242 5a5a 5a5a 7e42 0000 1800 423c     BBBBZZZZB~....<B
- 80008c8:	4242 4242 4242 5a5a 7e42 0000 1800 423c     BBBBBBZZB~....<B
- 80008d8:	4242 4242 4242 4242 7e42 0000 0000 0000     BBBBBBBBB~......
+ 8000888:	0808 1008 0808 0808 0808 0006 1818 7e3c     ..............<~
+ 8000898:	c3c3 c3c3 c3c3 c3c3 c3c3 ffc3 1818 7e3c     ..............<~
+ 80008a8:	c3c3 c3c3 c3c3 c3c3 bdbd ffbd 1818 7e3c     ..............<~
+ 80008b8:	c3c3 c3c3 bdc3 c3bd bdbd ffbd 1818 ff3c     ..............<.
+ 80008c8:	c3c3 bdbd bdc3 c3bd bdbd ffbd 1818 ff3c     ..............<.
+ 80008d8:	c3bd bdbd bdc3 c3bd bdbd ffbd 0000 0000     ................
  80008e8:	0000 0000 4000 40af 000d 0000 000e 0000     .....@.@........
  80008f8:	0000 0000 000f 0000 000c 0000 0009 0000     ................
  8000908:	0008 0000 0007 0000 000b 0000 0006 0000     ................
  8000918:	0005 0000 0004 0000 000a 0000 0003 0000     ................
- 8000928:	0002 0000 0001 0000 6142 7474 7265 2079     ........Battery 
- 8000938:	7566 6c6c 0000 0000 6142 7474 7265 2079     full....Battery 
- 8000948:	6863 7261 6967 676e 2020 2020 2020 2020     charging        
- 8000958:	2020 3537 0025 0000 6142 7474 7265 2079       75%...Battery 
- 8000968:	6863 7261 6967 676e 2020 2020 2020 2020     charging        
- 8000978:	2020 3035 0025 0000 6f4c 2077 6142 7474       50%...Low Batt
- 8000988:	7265 2c79 6320 6168 6772 6e69 2067 2020     ery, charging   
- 8000998:	2020 2020 2020 3220 2535 0000 6f4c 2077            25%..Low 
- 80009a8:	6142 7474 7265 2079 6863 7261 6567 6e20     Battery charge n
- 80009b8:	776f 7020 7a6c 2020 2020 2020 2020 2020     ow plz          
- 80009c8:	2020 2530 0000 0000 7257 6e6f 2067 7562       0%....Wrong bu
- 80009d8:	7474 6e6f 2020 2020 2020 7020 6572 7373     tton       press
- 80009e8:	6465 2020 2020 2020 2020 2020 2020 5020     ed             P
- 80009f8:	6572 7373 6120 796e 6b20 7965 2020 2020     ress any key    
- 8000a08:	2020 6220 7465 6577 6e65 3020 342d 0000        between 0-4..
- 8000a18:	19f0 0000 1940 0000 1946 0000 1940 0000     ....@...F...@...
- 8000a28:	19e2 0000 1940 0000 1946 0000 19f0 0000     ....@...F.......
- 8000a38:	19f0 0000 19e2 0000 1946 0000 1926 0000     ........F...&...
- 8000a48:	1926 0000 1926 0000 194a 0000 1df6 0000     &...&...J.......
- 8000a58:	1df6 0000 1e0e 0000 1df0 0000 1df0 0000     ................
- 8000a68:	1e9c 0000 1e0e 0000 1df0 0000 1e9c 0000     ................
- 8000a78:	1df0 0000 1e0e 0000 1dee 0000 1dee 0000     ................
- 8000a88:	1dee 0000 1e9c 0000                         ........
+ 8000928:	0002 0000 0001 0000 4843 5241 4547 4120     ........CHARGE A
+ 8000938:	4153 0050 6142 7474 7265 2079 6f6c 2077     SAP.Battery low 
+ 8000948:	2020 2020 2020 2020 3220 2535 0000 0000              25%....
+ 8000958:	6142 7474 7265 2079 6863 7261 6967 676e     Battery charging
+ 8000968:	2020 2020 2020 2020 2020 3035 0025 0000               50%...
+ 8000978:	6142 7474 7265 2079 6863 7261 6967 676e     Battery charging
+ 8000988:	2020 2020 2020 2020 2020 3537 0025 0000               75%...
+ 8000998:	6142 7474 7265 2079 7566 6c6c 2020 2020     Battery full    
+ 80009a8:	2020 2020 2020 2020 3031 2530 0000 0000             100%....
+ 80009b8:	7257 6e6f 2067 7562 7474 6e6f 2020 2020     Wrong button    
+ 80009c8:	2020 7020 6572 7373 6465 2020 2020 2020        pressed      
+ 80009d8:	2020 2020 2020 5020 6572 7373 6120 796e            Press any
+ 80009e8:	6b20 7965 2020 2020 2020 6220 7465 6577      key       betwe
+ 80009f8:	6e65 3020 342d 0000 1a08 0000 1958 0000     en 0-4......X...
+ 8000a08:	195e 0000 1958 0000 19fa 0000 1958 0000     ^...X.......X...
+ 8000a18:	195e 0000 1a08 0000 1a08 0000 19fa 0000     ^...............
+ 8000a28:	195e 0000 193e 0000 193e 0000 193e 0000     ^...>...>...>...
+ 8000a38:	1962 0000 1e0e 0000 1e0e 0000 1e26 0000     b...........&...
+ 8000a48:	1e08 0000 1e08 0000 1eb4 0000 1e26 0000     ............&...
+ 8000a58:	1e08 0000 1eb4 0000 1e08 0000 1e26 0000     ............&...
+ 8000a68:	1e06 0000 1e06 0000 1e06 0000 1eb4 0000     ................
 
-08000a90 <__clz_tab>:
- 8000a90:	0100 0202 0303 0303 0404 0404 0404 0404     ................
- 8000aa0:	0505 0505 0505 0505 0505 0505 0505 0505     ................
- 8000ab0:	0606 0606 0606 0606 0606 0606 0606 0606     ................
- 8000ac0:	0606 0606 0606 0606 0606 0606 0606 0606     ................
- 8000ad0:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000ae0:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000af0:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000b00:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000b10:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b20:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b30:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b40:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b50:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b60:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b70:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b80:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+08000a78 <__clz_tab>:
+ 8000a78:	0100 0202 0303 0303 0404 0404 0404 0404     ................
+ 8000a88:	0505 0505 0505 0505 0505 0505 0505 0505     ................
+ 8000a98:	0606 0606 0606 0606 0606 0606 0606 0606     ................
+ 8000aa8:	0606 0606 0606 0606 0606 0606 0606 0606     ................
+ 8000ab8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000ac8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000ad8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000ae8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000af8:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b08:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b18:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b28:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b38:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b48:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b58:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b68:	0808 0808 0808 0808 0808 0808 0808 0808     ................
 
-08000b90 <main>:
+08000b78 <main>:
 #include "gd32vf103.h"
 #include "drivers.h"
 #include "lcd.h"
 
 int main(void)
 {
- 8000b90:	7119                	addi	sp,sp,-128
+ 8000b78:	7119                	addi	sp,sp,-128
     int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
     int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1}; // A = 10, B = 11, C = 12, D = 13, # = 14, * = 15
- 8000b92:	080015b7          	lui	a1,0x8001
- 8000b96:	04000613          	li	a2,64
- 8000b9a:	8f058593          	addi	a1,a1,-1808 # 80008f0 <asc2_1608+0x63c>
- 8000b9e:	850a                	mv	a0,sp
+ 8000b7a:	080015b7          	lui	a1,0x8001
+ 8000b7e:	04000613          	li	a2,64
+ 8000b82:	8f058593          	addi	a1,a1,-1808 # 80008f0 <asc2_1608+0x63c>
+ 8000b86:	850a                	mv	a0,sp
 {
- 8000ba0:	de86                	sw	ra,124(sp)
- 8000ba2:	dca2                	sw	s0,120(sp)
- 8000ba4:	d6ce                	sw	s3,108(sp)
- 8000ba6:	d4d2                	sw	s4,104(sp)
- 8000ba8:	d2d6                	sw	s5,100(sp)
- 8000baa:	d0da                	sw	s6,96(sp)
- 8000bac:	cede                	sw	s7,92(sp)
- 8000bae:	cce2                	sw	s8,88(sp)
- 8000bb0:	cae6                	sw	s9,84(sp)
- 8000bb2:	c8ea                	sw	s10,80(sp)
- 8000bb4:	c6ee                	sw	s11,76(sp)
- 8000bb6:	daa6                	sw	s1,116(sp)
- 8000bb8:	d8ca                	sw	s2,112(sp)
+ 8000b88:	de86                	sw	ra,124(sp)
+ 8000b8a:	daa6                	sw	s1,116(sp)
+ 8000b8c:	d6ce                	sw	s3,108(sp)
+ 8000b8e:	d4d2                	sw	s4,104(sp)
+ 8000b90:	d2d6                	sw	s5,100(sp)
+ 8000b92:	d0da                	sw	s6,96(sp)
+ 8000b94:	cede                	sw	s7,92(sp)
+ 8000b96:	cce2                	sw	s8,88(sp)
+ 8000b98:	cae6                	sw	s9,84(sp)
+ 8000b9a:	c8ea                	sw	s10,80(sp)
+ 8000b9c:	c6ee                	sw	s11,76(sp)
+ 8000b9e:	dca2                	sw	s0,120(sp)
+ 8000ba0:	d8ca                	sw	s2,112(sp)
     int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1}; // A = 10, B = 11, C = 12, D = 13, # = 14, * = 15
- 8000bba:	00002097          	auipc	ra,0x2
- 8000bbe:	08a080e7          	jalr	138(ra) # 8002c44 <memcpy>
+ 8000ba2:	00002097          	auipc	ra,0x2
+ 8000ba6:	0a2080e7          	jalr	162(ra) # 8002c44 <memcpy>
     int dac = 0, speed = -100;
     int adcr, tmpr;
 
     t5omsi();                  // Initialize timer5 1kHz
- 8000bc2:	00001097          	auipc	ra,0x1
- 8000bc6:	0a6080e7          	jalr	166(ra) # 8001c68 <t5omsi>
+ 8000baa:	00001097          	auipc	ra,0x1
+ 8000bae:	0be080e7          	jalr	190(ra) # 8001c68 <t5omsi>
     colinit();                 // Initialize column toolbox
- 8000bca:	00001097          	auipc	ra,0x1
- 8000bce:	0e0080e7          	jalr	224(ra) # 8001caa <colinit>
+ 8000bb2:	00001097          	auipc	ra,0x1
+ 8000bb6:	0f8080e7          	jalr	248(ra) # 8001caa <colinit>
     l88init();                 // Initialize 8*8 led toolbox
- 8000bd2:	00001097          	auipc	ra,0x1
- 8000bd6:	150080e7          	jalr	336(ra) # 8001d22 <l88init>
+ 8000bba:	00001097          	auipc	ra,0x1
+ 8000bbe:	168080e7          	jalr	360(ra) # 8001d22 <l88init>
     keyinit();                 // Initialize keyboard toolbox
- 8000bda:	00001097          	auipc	ra,0x1
- 8000bde:	1c4080e7          	jalr	452(ra) # 8001d9e <keyinit>
+ 8000bc2:	00001097          	auipc	ra,0x1
+ 8000bc6:	1dc080e7          	jalr	476(ra) # 8001d9e <keyinit>
     Lcd_SetType(LCD_INVERTED); // or use LCD_INVERTED!
- 8000be2:	4505                	li	a0,1
- 8000be4:	00001097          	auipc	ra,0x1
- 8000be8:	8ca080e7          	jalr	-1846(ra) # 80014ae <Lcd_SetType>
+ 8000bca:	4505                	li	a0,1
+ 8000bcc:	00001097          	auipc	ra,0x1
+ 8000bd0:	8ca080e7          	jalr	-1846(ra) # 8001496 <Lcd_SetType>
     Lcd_Init();
- 8000bec:	00001097          	auipc	ra,0x1
- 8000bf0:	8e8080e7          	jalr	-1816(ra) # 80014d4 <Lcd_Init>
+ 8000bd4:	00001097          	auipc	ra,0x1
+ 8000bd8:	8e8080e7          	jalr	-1816(ra) # 80014bc <Lcd_Init>
     LCD_Clear(BLACK);
- 8000bf4:	4501                	li	a0,0
-                    LCD_ShowChar(75, 50, 130, 0, RED);
+ 8000bdc:	4501                	li	a0,0
+                    LCD_ShowChar(75, 50, 130, 0, GREEN);
                 }
                 else if (lookUpTbl[key] != 0 || 1 || 2 || 3 || 4)
                 {
                     LCD_Clear(BLACK);
                     LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
- 8000bf6:	6441                	lui	s0,0x10
+ 8000bde:	6a41                	lui	s4,0x10
     LCD_Clear(BLACK);
- 8000bf8:	00001097          	auipc	ra,0x1
- 8000bfc:	d40080e7          	jalr	-704(ra) # 8001938 <LCD_Clear>
+ 8000be0:	00001097          	auipc	ra,0x1
+ 8000be4:	d40080e7          	jalr	-704(ra) # 8001920 <LCD_Clear>
     int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
- 8000c00:	4981                	li	s3,0
- 8000c02:	5afd                	li	s5,-1
+ 8000be8:	4981                	li	s3,0
+ 8000bea:	5afd                	li	s5,-1
                     LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
- 8000c04:	80040a13          	addi	s4,s0,-2048 # f800 <__stack_size+0xe800>
- 8000c08:	08001b37          	lui	s6,0x8001
-                    LCD_ShowStr(32, 1, "Low Battery charge now plz            0%", RED, TRANSPARENT);
- 8000c0c:	08001bb7          	lui	s7,0x8001
-                    LCD_ShowStr(15, 1, "Low Battery, charging          25%", WHITE, TRANSPARENT);
- 8000c10:	08001c37          	lui	s8,0x8001
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
- 8000c14:	08001cb7          	lui	s9,0x8001
+ 8000bec:	800a0493          	addi	s1,s4,-2048 # f800 <__stack_size+0xe800>
+ 8000bf0:	08001b37          	lui	s6,0x8001
+                    LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
+ 8000bf4:	08001bb7          	lui	s7,0x8001
                     LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
- 8000c18:	08001d37          	lui	s10,0x8001
-                    LCD_ShowStr(1, 1, "Battery full", WHITE, TRANSPARENT); // Skriver texten rött
- 8000c1c:	08001db7          	lui	s11,0x8001
+ 8000bf8:	08001c37          	lui	s8,0x8001
+                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+ 8000bfc:	08001cb7          	lui	s9,0x8001
+                    LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
+ 8000c00:	08001d37          	lui	s10,0x8001
+                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+ 8000c04:	08001db7          	lui	s11,0x8001
         LCD_WR_Queue(); // Manage LCD com queue!
- 8000c20:	00000097          	auipc	ra,0x0
- 8000c24:	62a080e7          	jalr	1578(ra) # 800124a <LCD_WR_Queue>
+ 8000c08:	00000097          	auipc	ra,0x0
+ 8000c0c:	62a080e7          	jalr	1578(ra) # 8001232 <LCD_WR_Queue>
         if (t5expq())
- 8000c28:	00001097          	auipc	ra,0x1
- 8000c2c:	072080e7          	jalr	114(ra) # 8001c9a <t5expq>
- 8000c30:	d965                	beqz	a0,8000c20 <main+0x90>
+ 8000c10:	00001097          	auipc	ra,0x1
+ 8000c14:	08a080e7          	jalr	138(ra) # 8001c9a <t5expq>
+ 8000c18:	d965                	beqz	a0,8000c08 <main+0x90>
             l88row(colset()); // ...8*8LED and Keyboard
- 8000c32:	00001097          	auipc	ra,0x1
- 8000c36:	0b8080e7          	jalr	184(ra) # 8001cea <colset>
- 8000c3a:	00001097          	auipc	ra,0x1
- 8000c3e:	11a080e7          	jalr	282(ra) # 8001d54 <l88row>
+ 8000c1a:	00001097          	auipc	ra,0x1
+ 8000c1e:	0d0080e7          	jalr	208(ra) # 8001cea <colset>
+ 8000c22:	00001097          	auipc	ra,0x1
+ 8000c26:	132080e7          	jalr	306(ra) # 8001d54 <l88row>
             if ((key = keyscan()) >= 0)
- 8000c42:	00001097          	auipc	ra,0x1
- 8000c46:	18e080e7          	jalr	398(ra) # 8001dd0 <keyscan>
- 8000c4a:	892a                	mv	s2,a0
- 8000c4c:	fc054ae3          	bltz	a0,8000c20 <main+0x90>
-                if (lookUpTbl[key] == 4) // Om tangent 0 är tryckt
- 8000c50:	00251793          	slli	a5,a0,0x2
- 8000c54:	0098                	addi	a4,sp,64
- 8000c56:	97ba                	add	a5,a5,a4
- 8000c58:	fc07a483          	lw	s1,-64(a5)
- 8000c5c:	4791                	li	a5,4
- 8000c5e:	04f49d63          	bne	s1,a5,8000cb8 <main+0x128>
-                    LCD_Clear(BLACK);                                      // Rensar displayen
- 8000c62:	4501                	li	a0,0
- 8000c64:	00001097          	auipc	ra,0x1
- 8000c68:	cd4080e7          	jalr	-812(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(1, 1, "Battery full", WHITE, TRANSPARENT); // Skriver texten rött
- 8000c6c:	4705                	li	a4,1
- 8000c6e:	fff40693          	addi	a3,s0,-1
- 8000c72:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
- 8000c76:	4585                	li	a1,1
- 8000c78:	4505                	li	a0,1
- 8000c7a:	00001097          	auipc	ra,0x1
- 8000c7e:	e06080e7          	jalr	-506(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 126, 0, GREEN);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
- 8000c82:	7e000713          	li	a4,2016
- 8000c86:	4681                	li	a3,0
- 8000c88:	07e00613          	li	a2,126
-                    LCD_ShowChar(75, 50, 127, 0, WHITE);
- 8000c8c:	03200593          	li	a1,50
- 8000c90:	04b00513          	li	a0,75
- 8000c94:	00001097          	auipc	ra,0x1
- 8000c98:	d0e080e7          	jalr	-754(ra) # 80019a2 <LCD_ShowChar>
+ 8000c2a:	00001097          	auipc	ra,0x1
+ 8000c2e:	1a6080e7          	jalr	422(ra) # 8001dd0 <keyscan>
+ 8000c32:	892a                	mv	s2,a0
+ 8000c34:	fc054ae3          	bltz	a0,8000c08 <main+0x90>
+                if (lookUpTbl[key] == 0) // Om tangent 0 är tryckt
+ 8000c38:	00251793          	slli	a5,a0,0x2
+ 8000c3c:	0098                	addi	a4,sp,64
+ 8000c3e:	97ba                	add	a5,a5,a4
+ 8000c40:	fc07a403          	lw	s0,-64(a5)
+ 8000c44:	e831                	bnez	s0,8000c98 <main+0x120>
+                    LCD_Clear(BLACK);                                   // Rensar displayen
+ 8000c46:	4501                	li	a0,0
+ 8000c48:	00001097          	auipc	ra,0x1
+ 8000c4c:	cd8080e7          	jalr	-808(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+ 8000c50:	4705                	li	a4,1
+ 8000c52:	86a6                	mv	a3,s1
+ 8000c54:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
+ 8000c58:	4585                	li	a1,1
+ 8000c5a:	4505                	li	a0,1
+ 8000c5c:	00001097          	auipc	ra,0x1
+ 8000c60:	e0c080e7          	jalr	-500(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 126, 0, RED);                  // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+ 8000c64:	8726                	mv	a4,s1
+ 8000c66:	4681                	li	a3,0
+ 8000c68:	07e00613          	li	a2,126
+                    LCD_ShowChar(75, 50, 127, 0, RED);
+ 8000c6c:	03200593          	li	a1,50
+ 8000c70:	04b00513          	li	a0,75
+ 8000c74:	00001097          	auipc	ra,0x1
+ 8000c78:	d16080e7          	jalr	-746(ra) # 800198a <LCD_ShowChar>
                 }
 
                 if (pKey == key)
                     c++;
- 8000c9c:	0985                	addi	s3,s3,1
+ 8000c7c:	0985                	addi	s3,s3,1
                 if (pKey == key)
- 8000c9e:	01590363          	beq	s2,s5,8000ca4 <main+0x114>
+ 8000c7e:	01590363          	beq	s2,s5,8000c84 <main+0x10c>
                 else
                 {
                     c = 0;
- 8000ca2:	4981                	li	s3,0
+ 8000c82:	4981                	li	s3,0
                     pKey = key;
                 }
                 l88mem(1, lookUpTbl[key] + (c << 4));
- 8000ca4:	00499593          	slli	a1,s3,0x4
- 8000ca8:	95a6                	add	a1,a1,s1
- 8000caa:	4505                	li	a0,1
- 8000cac:	00001097          	auipc	ra,0x1
- 8000cb0:	0de080e7          	jalr	222(ra) # 8001d8a <l88mem>
- 8000cb4:	8aca                	mv	s5,s2
- 8000cb6:	b7ad                	j	8000c20 <main+0x90>
-                else if (lookUpTbl[key] == 3)
- 8000cb8:	478d                	li	a5,3
- 8000cba:	02f49863          	bne	s1,a5,8000cea <main+0x15a>
+ 8000c84:	00499593          	slli	a1,s3,0x4
+ 8000c88:	95a2                	add	a1,a1,s0
+ 8000c8a:	4505                	li	a0,1
+ 8000c8c:	00001097          	auipc	ra,0x1
+ 8000c90:	0fe080e7          	jalr	254(ra) # 8001d8a <l88mem>
+ 8000c94:	8aca                	mv	s5,s2
+ 8000c96:	bf8d                	j	8000c08 <main+0x90>
+                else if (lookUpTbl[key] == 1)
+ 8000c98:	4785                	li	a5,1
+ 8000c9a:	02f41663          	bne	s0,a5,8000cc6 <main+0x14e>
                     LCD_Clear(BLACK);
- 8000cbe:	4501                	li	a0,0
- 8000cc0:	00001097          	auipc	ra,0x1
- 8000cc4:	c78080e7          	jalr	-904(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
- 8000cc8:	4705                	li	a4,1
- 8000cca:	fff40693          	addi	a3,s0,-1
- 8000cce:	940d0613          	addi	a2,s10,-1728 # 8000940 <asc2_1608+0x68c>
- 8000cd2:	4585                	li	a1,1
- 8000cd4:	453d                	li	a0,15
- 8000cd6:	00001097          	auipc	ra,0x1
- 8000cda:	daa080e7          	jalr	-598(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 127, 0, WHITE);
- 8000cde:	fff40713          	addi	a4,s0,-1
- 8000ce2:	4681                	li	a3,0
- 8000ce4:	07f00613          	li	a2,127
- 8000ce8:	b755                	j	8000c8c <main+0xfc>
+ 8000c9e:	4501                	li	a0,0
+ 8000ca0:	00001097          	auipc	ra,0x1
+ 8000ca4:	c80080e7          	jalr	-896(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
+ 8000ca8:	4705                	li	a4,1
+ 8000caa:	86a6                	mv	a3,s1
+ 8000cac:	93cd0613          	addi	a2,s10,-1732 # 800093c <asc2_1608+0x688>
+ 8000cb0:	4585                	li	a1,1
+ 8000cb2:	453d                	li	a0,15
+ 8000cb4:	00001097          	auipc	ra,0x1
+ 8000cb8:	db4080e7          	jalr	-588(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 127, 0, RED);
+ 8000cbc:	8726                	mv	a4,s1
+ 8000cbe:	4681                	li	a3,0
+ 8000cc0:	07f00613          	li	a2,127
+ 8000cc4:	b765                	j	8000c6c <main+0xf4>
                 else if (lookUpTbl[key] == 2)
- 8000cea:	4789                	li	a5,2
- 8000cec:	02f49863          	bne	s1,a5,8000d1c <main+0x18c>
+ 8000cc6:	4789                	li	a5,2
+ 8000cc8:	02f41863          	bne	s0,a5,8000cf8 <main+0x180>
                     LCD_Clear(BLACK);
- 8000cf0:	4501                	li	a0,0
- 8000cf2:	00001097          	auipc	ra,0x1
- 8000cf6:	c46080e7          	jalr	-954(ra) # 8001938 <LCD_Clear>
+ 8000ccc:	4501                	li	a0,0
+ 8000cce:	00001097          	auipc	ra,0x1
+ 8000cd2:	c52080e7          	jalr	-942(ra) # 8001920 <LCD_Clear>
                     LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
- 8000cfa:	4705                	li	a4,1
- 8000cfc:	fff40693          	addi	a3,s0,-1
- 8000d00:	960c8613          	addi	a2,s9,-1696 # 8000960 <asc2_1608+0x6ac>
- 8000d04:	4585                	li	a1,1
- 8000d06:	453d                	li	a0,15
- 8000d08:	00001097          	auipc	ra,0x1
- 8000d0c:	d78080e7          	jalr	-648(ra) # 8001a80 <LCD_ShowStr>
+ 8000cd6:	4705                	li	a4,1
+ 8000cd8:	fffa0693          	addi	a3,s4,-1
+ 8000cdc:	958c8613          	addi	a2,s9,-1704 # 8000958 <asc2_1608+0x6a4>
+ 8000ce0:	4585                	li	a1,1
+ 8000ce2:	453d                	li	a0,15
+ 8000ce4:	00001097          	auipc	ra,0x1
+ 8000ce8:	d84080e7          	jalr	-636(ra) # 8001a68 <LCD_ShowStr>
                     LCD_ShowChar(75, 50, 128, 0, YELLOW);
- 8000d10:	fe040713          	addi	a4,s0,-32
- 8000d14:	4681                	li	a3,0
- 8000d16:	08000613          	li	a2,128
- 8000d1a:	bf8d                	j	8000c8c <main+0xfc>
-                else if (lookUpTbl[key] == 1)
- 8000d1c:	4785                	li	a5,1
+ 8000cec:	fe0a0713          	addi	a4,s4,-32
+ 8000cf0:	4681                	li	a3,0
+ 8000cf2:	08000613          	li	a2,128
+ 8000cf6:	bf9d                	j	8000c6c <main+0xf4>
+                else if (lookUpTbl[key] == 3)
+ 8000cf8:	478d                	li	a5,3
+ 8000cfa:	02f41863          	bne	s0,a5,8000d2a <main+0x1b2>
                     LCD_Clear(BLACK);
- 8000d1e:	4501                	li	a0,0
-                else if (lookUpTbl[key] == 1)
- 8000d20:	02f49663          	bne	s1,a5,8000d4c <main+0x1bc>
+ 8000cfe:	4501                	li	a0,0
+ 8000d00:	00001097          	auipc	ra,0x1
+ 8000d04:	c20080e7          	jalr	-992(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
+ 8000d08:	4705                	li	a4,1
+ 8000d0a:	fffa0693          	addi	a3,s4,-1
+ 8000d0e:	978c0613          	addi	a2,s8,-1672 # 8000978 <asc2_1608+0x6c4>
+ 8000d12:	4585                	li	a1,1
+ 8000d14:	453d                	li	a0,15
+ 8000d16:	00001097          	auipc	ra,0x1
+ 8000d1a:	d52080e7          	jalr	-686(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 129, 0, GREEN);
+ 8000d1e:	7e000713          	li	a4,2016
+ 8000d22:	4681                	li	a3,0
+ 8000d24:	08100613          	li	a2,129
+ 8000d28:	b791                	j	8000c6c <main+0xf4>
+                else if (lookUpTbl[key] == 4)
+ 8000d2a:	4791                	li	a5,4
                     LCD_Clear(BLACK);
- 8000d24:	00001097          	auipc	ra,0x1
- 8000d28:	c14080e7          	jalr	-1004(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "Low Battery, charging          25%", WHITE, TRANSPARENT);
- 8000d2c:	4705                	li	a4,1
- 8000d2e:	fff40693          	addi	a3,s0,-1
- 8000d32:	980c0613          	addi	a2,s8,-1664 # 8000980 <asc2_1608+0x6cc>
- 8000d36:	4585                	li	a1,1
- 8000d38:	453d                	li	a0,15
- 8000d3a:	00001097          	auipc	ra,0x1
- 8000d3e:	d46080e7          	jalr	-698(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 129, 0, RED);
- 8000d42:	8752                	mv	a4,s4
- 8000d44:	4681                	li	a3,0
- 8000d46:	08100613          	li	a2,129
- 8000d4a:	b789                	j	8000c8c <main+0xfc>
-                else if (lookUpTbl[key] == 0)
- 8000d4c:	e48d                	bnez	s1,8000d76 <main+0x1e6>
+ 8000d2c:	4501                	li	a0,0
+                else if (lookUpTbl[key] == 4)
+ 8000d2e:	02f41863          	bne	s0,a5,8000d5e <main+0x1e6>
                     LCD_Clear(BLACK);
- 8000d4e:	00001097          	auipc	ra,0x1
- 8000d52:	bea080e7          	jalr	-1046(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(32, 1, "Low Battery charge now plz            0%", RED, TRANSPARENT);
- 8000d56:	4705                	li	a4,1
- 8000d58:	86d2                	mv	a3,s4
- 8000d5a:	9a4b8613          	addi	a2,s7,-1628 # 80009a4 <asc2_1608+0x6f0>
- 8000d5e:	4585                	li	a1,1
- 8000d60:	02000513          	li	a0,32
- 8000d64:	00001097          	auipc	ra,0x1
- 8000d68:	d1c080e7          	jalr	-740(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 130, 0, RED);
- 8000d6c:	8752                	mv	a4,s4
- 8000d6e:	4681                	li	a3,0
- 8000d70:	08200613          	li	a2,130
- 8000d74:	bf21                	j	8000c8c <main+0xfc>
+ 8000d32:	00001097          	auipc	ra,0x1
+ 8000d36:	bee080e7          	jalr	-1042(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
+ 8000d3a:	4705                	li	a4,1
+ 8000d3c:	7e000693          	li	a3,2016
+ 8000d40:	998b8613          	addi	a2,s7,-1640 # 8000998 <asc2_1608+0x6e4>
+ 8000d44:	4585                	li	a1,1
+ 8000d46:	02000513          	li	a0,32
+ 8000d4a:	00001097          	auipc	ra,0x1
+ 8000d4e:	d1e080e7          	jalr	-738(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 130, 0, GREEN);
+ 8000d52:	7e000713          	li	a4,2016
+ 8000d56:	4681                	li	a3,0
+ 8000d58:	08200613          	li	a2,130
+ 8000d5c:	bf01                	j	8000c6c <main+0xf4>
                     LCD_Clear(BLACK);
- 8000d76:	00001097          	auipc	ra,0x1
- 8000d7a:	bc2080e7          	jalr	-1086(ra) # 8001938 <LCD_Clear>
+ 8000d5e:	00001097          	auipc	ra,0x1
+ 8000d62:	bc2080e7          	jalr	-1086(ra) # 8001920 <LCD_Clear>
                     LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
- 8000d7e:	4705                	li	a4,1
- 8000d80:	86d2                	mv	a3,s4
- 8000d82:	9d0b0613          	addi	a2,s6,-1584 # 80009d0 <asc2_1608+0x71c>
- 8000d86:	4585                	li	a1,1
- 8000d88:	4505                	li	a0,1
- 8000d8a:	00001097          	auipc	ra,0x1
- 8000d8e:	cf6080e7          	jalr	-778(ra) # 8001a80 <LCD_ShowStr>
- 8000d92:	b729                	j	8000c9c <main+0x10c>
+ 8000d66:	4705                	li	a4,1
+ 8000d68:	86a6                	mv	a3,s1
+ 8000d6a:	9b8b0613          	addi	a2,s6,-1608 # 80009b8 <asc2_1608+0x704>
+ 8000d6e:	4585                	li	a1,1
+ 8000d70:	4505                	li	a0,1
+ 8000d72:	00001097          	auipc	ra,0x1
+ 8000d76:	cf6080e7          	jalr	-778(ra) # 8001a68 <LCD_ShowStr>
+ 8000d7a:	b709                	j	8000c7c <main+0x104>
 
-08000d94 <gpio_init>:
+08000d7c <gpio_init>:
 
     /* GPIO mode configuration */
     temp_mode = (uint32_t) (mode & ((uint32_t) 0x0FU));
 
     /* GPIO speed configuration */
     if (((uint32_t) 0x00U) != ((uint32_t) mode & ((uint32_t) 0x10U))) {
- 8000d94:	0105f793          	andi	a5,a1,16
+ 8000d7c:	0105f793          	andi	a5,a1,16
     temp_mode = (uint32_t) (mode & ((uint32_t) 0x0FU));
- 8000d98:	00f5f893          	andi	a7,a1,15
+ 8000d80:	00f5f893          	andi	a7,a1,15
     if (((uint32_t) 0x00U) != ((uint32_t) mode & ((uint32_t) 0x10U))) {
- 8000d9c:	c399                	beqz	a5,8000da2 <gpio_init+0xe>
+ 8000d84:	c399                	beqz	a5,8000d8a <gpio_init+0xe>
         /* output mode max speed:10MHz,2MHz,50MHz */
         temp_mode |= (uint32_t) speed;
- 8000d9e:	00c8e8b3          	or	a7,a7,a2
+ 8000d86:	00c8e8b3          	or	a7,a7,a2
 {
- 8000da2:	4781                	li	a5,0
+ 8000d8a:	4781                	li	a5,0
     }
 
     /* configure the eight low port pins with GPIO_CTL0 */
     for (i = 0U; i < 8U; i++) {
         if ((1U << i) & pin) {
- 8000da4:	4e05                	li	t3,1
+ 8000d8c:	4e05                	li	t3,1
             reg = GPIO_CTL0(gpio_periph);
 
             /* clear the specified pin mode bits */
             reg &= ~GPIO_MODE_MASK(i);
- 8000da6:	4ebd                	li	t4,15
+ 8000d8e:	4ebd                	li	t4,15
             /* set the specified pin mode bits */
             reg |= GPIO_MODE_SET(i, temp_mode);
 
             /* set IPD or IPU */
             if (GPIO_MODE_IPD == mode) {
- 8000da8:	02800f13          	li	t5,40
+ 8000d90:	02800f13          	li	t5,40
                 /* reset the corresponding OCTL bit */
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
             } else {
                 /* set the corresponding OCTL bit */
                 if (GPIO_MODE_IPU == mode) {
- 8000dac:	04800f93          	li	t6,72
+ 8000d94:	04800f93          	li	t6,72
     for (i = 0U; i < 8U; i++) {
- 8000db0:	4321                	li	t1,8
+ 8000d98:	4321                	li	t1,8
         if ((1U << i) & pin) {
- 8000db2:	00fe1633          	sll	a2,t3,a5
- 8000db6:	8e75                	and	a2,a2,a3
- 8000db8:	c21d                	beqz	a2,8000dde <gpio_init+0x4a>
+ 8000d9a:	00fe1633          	sll	a2,t3,a5
+ 8000d9e:	8e75                	and	a2,a2,a3
+ 8000da0:	c21d                	beqz	a2,8000dc6 <gpio_init+0x4a>
             reg = GPIO_CTL0(gpio_periph);
- 8000dba:	00279713          	slli	a4,a5,0x2
- 8000dbe:	00052283          	lw	t0,0(a0)
+ 8000da2:	00279713          	slli	a4,a5,0x2
+ 8000da6:	00052283          	lw	t0,0(a0)
             reg &= ~GPIO_MODE_MASK(i);
- 8000dc2:	00ee9833          	sll	a6,t4,a4
- 8000dc6:	fff84813          	not	a6,a6
- 8000dca:	00587833          	and	a6,a6,t0
+ 8000daa:	00ee9833          	sll	a6,t4,a4
+ 8000dae:	fff84813          	not	a6,a6
+ 8000db2:	00587833          	and	a6,a6,t0
             reg |= GPIO_MODE_SET(i, temp_mode);
- 8000dce:	00e89733          	sll	a4,a7,a4
- 8000dd2:	01076733          	or	a4,a4,a6
+ 8000db6:	00e89733          	sll	a4,a7,a4
+ 8000dba:	01076733          	or	a4,a4,a6
             if (GPIO_MODE_IPD == mode) {
- 8000dd6:	05e59963          	bne	a1,t5,8000e28 <gpio_init+0x94>
+ 8000dbe:	05e59963          	bne	a1,t5,8000e10 <gpio_init+0x94>
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000dda:	c950                	sw	a2,20(a0)
+ 8000dc2:	c950                	sw	a2,20(a0)
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
                 }
             }
             /* set GPIO_CTL0 register */
             GPIO_CTL0(gpio_periph) = reg;
- 8000ddc:	c118                	sw	a4,0(a0)
- 8000dde:	0785                	addi	a5,a5,1
+ 8000dc4:	c118                	sw	a4,0(a0)
+ 8000dc6:	0785                	addi	a5,a5,1
     for (i = 0U; i < 8U; i++) {
- 8000de0:	fc6799e3          	bne	a5,t1,8000db2 <gpio_init+0x1e>
+ 8000dc8:	fc6799e3          	bne	a5,t1,8000d9a <gpio_init+0x1e>
         }
     }
     /* configure the eight high port pins with GPIO_CTL1 */
     for (i = 8U; i < 16U; i++) {
         if ((1U << i) & pin) {
- 8000de4:	4e05                	li	t3,1
+ 8000dcc:	4e05                	li	t3,1
             reg = GPIO_CTL1(gpio_periph);
 
             /* clear the specified pin mode bits */
             reg &= ~GPIO_MODE_MASK(i - 8U);
- 8000de6:	4ebd                	li	t4,15
+ 8000dce:	4ebd                	li	t4,15
             /* set the specified pin mode bits */
             reg |= GPIO_MODE_SET(i - 8U, temp_mode);
 
             /* set IPD or IPU */
             if (GPIO_MODE_IPD == mode) {
- 8000de8:	02800f13          	li	t5,40
+ 8000dd0:	02800f13          	li	t5,40
                 /* reset the corresponding OCTL bit */
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
             } else {
                 /* set the corresponding OCTL bit */
                 if (GPIO_MODE_IPU == mode) {
- 8000dec:	04800f93          	li	t6,72
+ 8000dd4:	04800f93          	li	t6,72
     for (i = 8U; i < 16U; i++) {
- 8000df0:	4341                	li	t1,16
+ 8000dd8:	4341                	li	t1,16
         if ((1U << i) & pin) {
- 8000df2:	00fe1633          	sll	a2,t3,a5
- 8000df6:	8e75                	and	a2,a2,a3
- 8000df8:	c605                	beqz	a2,8000e20 <gpio_init+0x8c>
+ 8000dda:	00fe1633          	sll	a2,t3,a5
+ 8000dde:	8e75                	and	a2,a2,a3
+ 8000de0:	c605                	beqz	a2,8000e08 <gpio_init+0x8c>
             reg &= ~GPIO_MODE_MASK(i - 8U);
- 8000dfa:	00279713          	slli	a4,a5,0x2
- 8000dfe:	1701                	addi	a4,a4,-32
+ 8000de2:	00279713          	slli	a4,a5,0x2
+ 8000de6:	1701                	addi	a4,a4,-32
             reg = GPIO_CTL1(gpio_periph);
- 8000e00:	00452283          	lw	t0,4(a0)
+ 8000de8:	00452283          	lw	t0,4(a0)
             reg &= ~GPIO_MODE_MASK(i - 8U);
- 8000e04:	00ee9833          	sll	a6,t4,a4
- 8000e08:	fff84813          	not	a6,a6
- 8000e0c:	00587833          	and	a6,a6,t0
+ 8000dec:	00ee9833          	sll	a6,t4,a4
+ 8000df0:	fff84813          	not	a6,a6
+ 8000df4:	00587833          	and	a6,a6,t0
             reg |= GPIO_MODE_SET(i - 8U, temp_mode);
- 8000e10:	00e89733          	sll	a4,a7,a4
- 8000e14:	01076733          	or	a4,a4,a6
+ 8000df8:	00e89733          	sll	a4,a7,a4
+ 8000dfc:	01076733          	or	a4,a4,a6
             if (GPIO_MODE_IPD == mode) {
- 8000e18:	01e59c63          	bne	a1,t5,8000e30 <gpio_init+0x9c>
+ 8000e00:	01e59c63          	bne	a1,t5,8000e18 <gpio_init+0x9c>
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000e1c:	c950                	sw	a2,20(a0)
+ 8000e04:	c950                	sw	a2,20(a0)
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
                 }
             }
             /* set GPIO_CTL1 register */
             GPIO_CTL1(gpio_periph) = reg;
- 8000e1e:	c158                	sw	a4,4(a0)
- 8000e20:	0785                	addi	a5,a5,1
+ 8000e06:	c158                	sw	a4,4(a0)
+ 8000e08:	0785                	addi	a5,a5,1
     for (i = 8U; i < 16U; i++) {
- 8000e22:	fc6798e3          	bne	a5,t1,8000df2 <gpio_init+0x5e>
+ 8000e0a:	fc6798e3          	bne	a5,t1,8000dda <gpio_init+0x5e>
         }
     }
 }
- 8000e26:	8082                	ret
+ 8000e0e:	8082                	ret
                 if (GPIO_MODE_IPU == mode) {
- 8000e28:	fbf59ae3          	bne	a1,t6,8000ddc <gpio_init+0x48>
+ 8000e10:	fbf59ae3          	bne	a1,t6,8000dc4 <gpio_init+0x48>
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000e2c:	c910                	sw	a2,16(a0)
- 8000e2e:	b77d                	j	8000ddc <gpio_init+0x48>
+ 8000e14:	c910                	sw	a2,16(a0)
+ 8000e16:	b77d                	j	8000dc4 <gpio_init+0x48>
                 if (GPIO_MODE_IPU == mode) {
- 8000e30:	fff597e3          	bne	a1,t6,8000e1e <gpio_init+0x8a>
+ 8000e18:	fff597e3          	bne	a1,t6,8000e06 <gpio_init+0x8a>
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000e34:	c910                	sw	a2,16(a0)
- 8000e36:	b7e5                	j	8000e1e <gpio_init+0x8a>
+ 8000e1c:	c910                	sw	a2,16(a0)
+ 8000e1e:	b7e5                	j	8000e06 <gpio_init+0x8a>
 
-08000e38 <gpio_bit_set>:
+08000e20 <gpio_bit_set>:
     \param[out] none
     \retval     none
 */
 void gpio_bit_set(uint32_t gpio_periph, uint32_t pin)
 {
     GPIO_BOP(gpio_periph) = (uint32_t) pin;
- 8000e38:	c90c                	sw	a1,16(a0)
+ 8000e20:	c90c                	sw	a1,16(a0)
 }
- 8000e3a:	8082                	ret
+ 8000e22:	8082                	ret
 
-08000e3c <gpio_bit_reset>:
+08000e24 <gpio_bit_reset>:
     \param[out] none
     \retval     none
 */
 void gpio_bit_reset(uint32_t gpio_periph, uint32_t pin)
 {
     GPIO_BC(gpio_periph) = (uint32_t) pin;
- 8000e3c:	c94c                	sw	a1,20(a0)
+ 8000e24:	c94c                	sw	a1,20(a0)
 }
- 8000e3e:	8082                	ret
+ 8000e26:	8082                	ret
 
-08000e40 <rcu_periph_clock_enable>:
+08000e28 <rcu_periph_clock_enable>:
     \param[out] none
     \retval     none
 */
 void rcu_periph_clock_enable(rcu_periph_enum periph)
 {
     RCU_REG_VAL(periph) |= BIT(RCU_BIT_POS(periph));
- 8000e40:	400217b7          	lui	a5,0x40021
- 8000e44:	00655713          	srli	a4,a0,0x6
- 8000e48:	973e                	add	a4,a4,a5
- 8000e4a:	4314                	lw	a3,0(a4)
- 8000e4c:	4785                	li	a5,1
- 8000e4e:	00a797b3          	sll	a5,a5,a0
- 8000e52:	8fd5                	or	a5,a5,a3
- 8000e54:	c31c                	sw	a5,0(a4)
+ 8000e28:	400217b7          	lui	a5,0x40021
+ 8000e2c:	00655713          	srli	a4,a0,0x6
+ 8000e30:	973e                	add	a4,a4,a5
+ 8000e32:	4314                	lw	a3,0(a4)
+ 8000e34:	4785                	li	a5,1
+ 8000e36:	00a797b3          	sll	a5,a5,a0
+ 8000e3a:	8fd5                	or	a5,a5,a3
+ 8000e3c:	c31c                	sw	a5,0(a4)
 }
- 8000e56:	8082                	ret
+ 8000e3e:	8082                	ret
 
-08000e58 <spi_struct_para_init>:
+08000e40 <spi_struct_para_init>:
     \retval     none
 */
 void spi_struct_para_init(spi_parameter_struct* spi_struct)
 {
     /* set the SPI struct with the default values */
     spi_struct->device_mode = SPI_SLAVE;
- 8000e58:	00052023          	sw	zero,0(a0)
+ 8000e40:	00052023          	sw	zero,0(a0)
     spi_struct->trans_mode = SPI_TRANSMODE_FULLDUPLEX;
- 8000e5c:	00052223          	sw	zero,4(a0)
+ 8000e44:	00052223          	sw	zero,4(a0)
     spi_struct->frame_size = SPI_FRAMESIZE_8BIT;
- 8000e60:	00052423          	sw	zero,8(a0)
+ 8000e48:	00052423          	sw	zero,8(a0)
     spi_struct->nss = SPI_NSS_HARD;
- 8000e64:	00052623          	sw	zero,12(a0)
+ 8000e4c:	00052623          	sw	zero,12(a0)
     spi_struct->clock_polarity_phase = SPI_CK_PL_LOW_PH_1EDGE;
- 8000e68:	00052a23          	sw	zero,20(a0)
+ 8000e50:	00052a23          	sw	zero,20(a0)
     spi_struct->prescale = SPI_PSC_2;
- 8000e6c:	00052c23          	sw	zero,24(a0)
+ 8000e54:	00052c23          	sw	zero,24(a0)
 }
- 8000e70:	8082                	ret
+ 8000e58:	8082                	ret
 
-08000e72 <spi_init>:
+08000e5a <spi_init>:
     \retval     none
 */
 void spi_init(uint32_t spi_periph, spi_parameter_struct* spi_struct)
 {   
     uint32_t reg = 0U;
     reg = SPI_CTL0(spi_periph);
- 8000e72:	411c                	lw	a5,0(a0)
+ 8000e5a:	411c                	lw	a5,0(a0)
     reg &= SPI_INIT_MASK;
- 8000e74:	670d                	lui	a4,0x3
- 8000e76:	04070713          	addi	a4,a4,64 # 3040 <__stack_size+0x2040>
+ 8000e5c:	670d                	lui	a4,0x3
+ 8000e5e:	04070713          	addi	a4,a4,64 # 3040 <__stack_size+0x2040>
     /* select SPI LSB or MSB */
     reg |= spi_struct->endian;
     /* select SPI polarity and phase */
     reg |= spi_struct->clock_polarity_phase;
     /* select SPI prescale to adjust transmit speed */
     reg |= spi_struct->prescale;
- 8000e7a:	41d4                	lw	a3,4(a1)
+ 8000e62:	41d4                	lw	a3,4(a1)
     reg &= SPI_INIT_MASK;
- 8000e7c:	8f7d                	and	a4,a4,a5
+ 8000e64:	8f7d                	and	a4,a4,a5
     reg |= spi_struct->prescale;
- 8000e7e:	419c                	lw	a5,0(a1)
- 8000e80:	8fd5                	or	a5,a5,a3
- 8000e82:	4594                	lw	a3,8(a1)
- 8000e84:	8fd5                	or	a5,a5,a3
- 8000e86:	45d4                	lw	a3,12(a1)
- 8000e88:	8fd5                	or	a5,a5,a3
- 8000e8a:	4994                	lw	a3,16(a1)
- 8000e8c:	8fd5                	or	a5,a5,a3
- 8000e8e:	49d4                	lw	a3,20(a1)
- 8000e90:	8fd5                	or	a5,a5,a3
- 8000e92:	4d94                	lw	a3,24(a1)
- 8000e94:	8fd5                	or	a5,a5,a3
- 8000e96:	8fd9                	or	a5,a5,a4
+ 8000e66:	419c                	lw	a5,0(a1)
+ 8000e68:	8fd5                	or	a5,a5,a3
+ 8000e6a:	4594                	lw	a3,8(a1)
+ 8000e6c:	8fd5                	or	a5,a5,a3
+ 8000e6e:	45d4                	lw	a3,12(a1)
+ 8000e70:	8fd5                	or	a5,a5,a3
+ 8000e72:	4994                	lw	a3,16(a1)
+ 8000e74:	8fd5                	or	a5,a5,a3
+ 8000e76:	49d4                	lw	a3,20(a1)
+ 8000e78:	8fd5                	or	a5,a5,a3
+ 8000e7a:	4d94                	lw	a3,24(a1)
+ 8000e7c:	8fd5                	or	a5,a5,a3
+ 8000e7e:	8fd9                	or	a5,a5,a4
 
     /* write to SPI_CTL0 register */
     SPI_CTL0(spi_periph) = (uint32_t)reg;
- 8000e98:	c11c                	sw	a5,0(a0)
+ 8000e80:	c11c                	sw	a5,0(a0)
 
     SPI_I2SCTL(spi_periph) &= (uint32_t)(~SPI_I2SCTL_I2SSEL);
- 8000e9a:	4d5c                	lw	a5,28(a0)
- 8000e9c:	777d                	lui	a4,0xfffff
- 8000e9e:	7ff70713          	addi	a4,a4,2047 # fffff7ff <RCU+0xbffde7ff>
- 8000ea2:	8ff9                	and	a5,a5,a4
- 8000ea4:	cd5c                	sw	a5,28(a0)
+ 8000e82:	4d5c                	lw	a5,28(a0)
+ 8000e84:	777d                	lui	a4,0xfffff
+ 8000e86:	7ff70713          	addi	a4,a4,2047 # fffff7ff <RCU+0xbffde7ff>
+ 8000e8a:	8ff9                	and	a5,a5,a4
+ 8000e8c:	cd5c                	sw	a5,28(a0)
 }
- 8000ea6:	8082                	ret
+ 8000e8e:	8082                	ret
 
-08000ea8 <spi_enable>:
+08000e90 <spi_enable>:
     \param[out] none
     \retval     none
 */
 void spi_enable(uint32_t spi_periph)
 {
     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_SPIEN;
- 8000ea8:	411c                	lw	a5,0(a0)
- 8000eaa:	0407e793          	ori	a5,a5,64
- 8000eae:	c11c                	sw	a5,0(a0)
+ 8000e90:	411c                	lw	a5,0(a0)
+ 8000e92:	0407e793          	ori	a5,a5,64
+ 8000e96:	c11c                	sw	a5,0(a0)
 }
- 8000eb0:	8082                	ret
+ 8000e98:	8082                	ret
 
-08000eb2 <spi_i2s_data_transmit>:
+08000e9a <spi_i2s_data_transmit>:
     \param[out] none
     \retval     none
 */
 void spi_i2s_data_transmit(uint32_t spi_periph, uint16_t data)
 {
     SPI_DATA(spi_periph) = (uint32_t)data;
- 8000eb2:	c54c                	sw	a1,12(a0)
+ 8000e9a:	c54c                	sw	a1,12(a0)
 }
- 8000eb4:	8082                	ret
+ 8000e9c:	8082                	ret
 
-08000eb6 <spi_crc_polynomial_set>:
+08000e9e <spi_crc_polynomial_set>:
     \retval     none
 */
 void spi_crc_polynomial_set(uint32_t spi_periph,uint16_t crc_poly)
 {
     /* enable SPI CRC */
     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_CRCEN;
- 8000eb6:	411c                	lw	a5,0(a0)
- 8000eb8:	6709                	lui	a4,0x2
- 8000eba:	8fd9                	or	a5,a5,a4
- 8000ebc:	c11c                	sw	a5,0(a0)
+ 8000e9e:	411c                	lw	a5,0(a0)
+ 8000ea0:	6709                	lui	a4,0x2
+ 8000ea2:	8fd9                	or	a5,a5,a4
+ 8000ea4:	c11c                	sw	a5,0(a0)
 
     /* set SPI CRC polynomial */
     SPI_CRCPOLY(spi_periph) = (uint32_t)crc_poly;
- 8000ebe:	c90c                	sw	a1,16(a0)
+ 8000ea6:	c90c                	sw	a1,16(a0)
 }
- 8000ec0:	8082                	ret
+ 8000ea8:	8082                	ret
 
-08000ec2 <spi_i2s_flag_get>:
+08000eaa <spi_i2s_flag_get>:
     \param[out] none
     \retval     FlagStatus: SET or RESET
 */
 FlagStatus spi_i2s_flag_get(uint32_t spi_periph, uint32_t flag)
 {
     if(RESET != (SPI_STAT(spi_periph) & flag)){
- 8000ec2:	4508                	lw	a0,8(a0)
- 8000ec4:	8d6d                	and	a0,a0,a1
+ 8000eaa:	4508                	lw	a0,8(a0)
+ 8000eac:	8d6d                	and	a0,a0,a1
         return SET;
     }else{
         return RESET;
     }
 }
- 8000ec6:	00a03533          	snez	a0,a0
- 8000eca:	8082                	ret
+ 8000eae:	00a03533          	snez	a0,a0
+ 8000eb2:	8082                	ret
 
-08000ecc <SystemInit>:
+08000eb4 <SystemInit>:
 */
 void SystemInit(void)
 {
     /* reset the RCC clock configuration to the default reset state */
     /* enable IRC8M */
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 8000ecc:	400217b7          	lui	a5,0x40021
- 8000ed0:	4398                	lw	a4,0(a5)
+ 8000eb4:	400217b7          	lui	a5,0x40021
+ 8000eb8:	4398                	lw	a4,0(a5)
     
     /* reset SCS, AHBPSC, APB1PSC, APB2PSC, ADCPSC, CKOUT0SEL bits */
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 8000ed2:	e0ff06b7          	lui	a3,0xe0ff0
- 8000ed6:	06b1                	addi	a3,a3,12
+ 8000eba:	e0ff06b7          	lui	a3,0xe0ff0
+ 8000ebe:	06b1                	addi	a3,a3,12
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 8000ed8:	00176713          	ori	a4,a4,1
- 8000edc:	c398                	sw	a4,0(a5)
+ 8000ec0:	00176713          	ori	a4,a4,1
+ 8000ec4:	c398                	sw	a4,0(a5)
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 8000ede:	43d8                	lw	a4,4(a5)
- 8000ee0:	8f75                	and	a4,a4,a3
- 8000ee2:	c3d8                	sw	a4,4(a5)
+ 8000ec6:	43d8                	lw	a4,4(a5)
+ 8000ec8:	8f75                	and	a4,a4,a3
+ 8000eca:	c3d8                	sw	a4,4(a5)
                   RCU_CFG0_ADCPSC | RCU_CFG0_ADCPSC_2 | RCU_CFG0_CKOUT0SEL);
 
     /* reset HXTALEN, CKMEN, PLLEN bits */
     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
- 8000ee4:	4398                	lw	a4,0(a5)
- 8000ee6:	fef706b7          	lui	a3,0xfef70
- 8000eea:	16fd                	addi	a3,a3,-1
- 8000eec:	8f75                	and	a4,a4,a3
- 8000eee:	c398                	sw	a4,0(a5)
+ 8000ecc:	4398                	lw	a4,0(a5)
+ 8000ece:	fef706b7          	lui	a3,0xfef70
+ 8000ed2:	16fd                	addi	a3,a3,-1
+ 8000ed4:	8f75                	and	a4,a4,a3
+ 8000ed6:	c398                	sw	a4,0(a5)
 
     /* Reset HXTALBPS bit */
     RCU_CTL &= ~(RCU_CTL_HXTALBPS);
- 8000ef0:	4398                	lw	a4,0(a5)
- 8000ef2:	fffc06b7          	lui	a3,0xfffc0
- 8000ef6:	16fd                	addi	a3,a3,-1
- 8000ef8:	8f75                	and	a4,a4,a3
- 8000efa:	c398                	sw	a4,0(a5)
+ 8000ed8:	4398                	lw	a4,0(a5)
+ 8000eda:	fffc06b7          	lui	a3,0xfffc0
+ 8000ede:	16fd                	addi	a3,a3,-1
+ 8000ee0:	8f75                	and	a4,a4,a3
+ 8000ee2:	c398                	sw	a4,0(a5)
 
     /* reset PLLSEL, PREDV0_LSB, PLLMF, USBFSPSC bits */
     
     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
- 8000efc:	43d8                	lw	a4,4(a5)
- 8000efe:	df0106b7          	lui	a3,0xdf010
- 8000f02:	16fd                	addi	a3,a3,-1
- 8000f04:	8f75                	and	a4,a4,a3
- 8000f06:	c3d8                	sw	a4,4(a5)
+ 8000ee4:	43d8                	lw	a4,4(a5)
+ 8000ee6:	df0106b7          	lui	a3,0xdf010
+ 8000eea:	16fd                	addi	a3,a3,-1
+ 8000eec:	8f75                	and	a4,a4,a3
+ 8000eee:	c3d8                	sw	a4,4(a5)
                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
     RCU_CFG1 = 0x00000000U;
- 8000f08:	0207a623          	sw	zero,44(a5) # 4002102c <RCU+0x2c>
+ 8000ef0:	0207a623          	sw	zero,44(a5) # 4002102c <RCU+0x2c>
 
     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 8000f0c:	4398                	lw	a4,0(a5)
- 8000f0e:	eaf706b7          	lui	a3,0xeaf70
- 8000f12:	16fd                	addi	a3,a3,-1
- 8000f14:	8f75                	and	a4,a4,a3
- 8000f16:	c398                	sw	a4,0(a5)
+ 8000ef4:	4398                	lw	a4,0(a5)
+ 8000ef6:	eaf706b7          	lui	a3,0xeaf70
+ 8000efa:	16fd                	addi	a3,a3,-1
+ 8000efc:	8f75                	and	a4,a4,a3
+ 8000efe:	c398                	sw	a4,0(a5)
     /* disable all interrupts */
     RCU_INT = 0x00FF0000U;
- 8000f18:	00ff0737          	lui	a4,0xff0
- 8000f1c:	c798                	sw	a4,8(a5)
+ 8000f00:	00ff0737          	lui	a4,0xff0
+ 8000f04:	c798                	sw	a4,8(a5)
 {
     uint32_t timeout   = 0U;
     uint32_t stab_flag = 0U;
 
     /* enable HXTAL */
     RCU_CTL |= RCU_CTL_HXTALEN;
- 8000f1e:	4394                	lw	a3,0(a5)
- 8000f20:	6741                	lui	a4,0x10
- 8000f22:	8ed9                	or	a3,a3,a4
- 8000f24:	c394                	sw	a3,0(a5)
- 8000f26:	fff70793          	addi	a5,a4,-1 # ffff <__stack_size+0xefff>
+ 8000f06:	4394                	lw	a3,0(a5)
+ 8000f08:	6741                	lui	a4,0x10
+ 8000f0a:	8ed9                	or	a3,a3,a4
+ 8000f0c:	c394                	sw	a3,0(a5)
+ 8000f0e:	fff70793          	addi	a5,a4,-1 # ffff <__stack_size+0xefff>
 
     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
     do{
         timeout++;
         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 8000f2a:	40021737          	lui	a4,0x40021
- 8000f2e:	4314                	lw	a3,0(a4)
+ 8000f12:	40021737          	lui	a4,0x40021
+ 8000f16:	4314                	lw	a3,0(a4)
     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 8000f30:	00e69613          	slli	a2,a3,0xe
- 8000f34:	00064463          	bltz	a2,8000f3c <SystemInit+0x70>
- 8000f38:	17fd                	addi	a5,a5,-1
- 8000f3a:	fbf5                	bnez	a5,8000f2e <SystemInit+0x62>
+ 8000f18:	00e69613          	slli	a2,a3,0xe
+ 8000f1c:	00064463          	bltz	a2,8000f24 <SystemInit+0x70>
+ 8000f20:	17fd                	addi	a5,a5,-1
+ 8000f22:	fbf5                	bnez	a5,8000f16 <SystemInit+0x62>
 
     /* if fail */
     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 8000f3c:	400217b7          	lui	a5,0x40021
- 8000f40:	4398                	lw	a4,0(a5)
- 8000f42:	00e71693          	slli	a3,a4,0xe
- 8000f46:	0006c363          	bltz	a3,8000f4c <SystemInit+0x80>
+ 8000f24:	400217b7          	lui	a5,0x40021
+ 8000f28:	4398                	lw	a4,0(a5)
+ 8000f2a:	00e71693          	slli	a3,a4,0xe
+ 8000f2e:	0006c363          	bltz	a3,8000f34 <SystemInit+0x80>
         while(1){
         }
- 8000f4a:	a001                	j	8000f4a <SystemInit+0x7e>
+ 8000f32:	a001                	j	8000f32 <SystemInit+0x7e>
     }
 
     /* HXTAL is stable */
     /* AHB = SYSCLK */
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000f4c:	43d8                	lw	a4,4(a5)
+ 8000f34:	43d8                	lw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
     /* APB1 = AHB/2 */
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
 
     /* CK_PLL = (CK_PREDIV0) * 27 = 108 MHz */ 
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 8000f4e:	dfc406b7          	lui	a3,0xdfc40
- 8000f52:	16fd                	addi	a3,a3,-1
+ 8000f36:	dfc406b7          	lui	a3,0xdfc40
+ 8000f3a:	16fd                	addi	a3,a3,-1
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000f54:	c3d8                	sw	a4,4(a5)
+ 8000f3c:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
- 8000f56:	43d8                	lw	a4,4(a5)
- 8000f58:	c3d8                	sw	a4,4(a5)
+ 8000f3e:	43d8                	lw	a4,4(a5)
+ 8000f40:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
- 8000f5a:	43d8                	lw	a4,4(a5)
- 8000f5c:	40076713          	ori	a4,a4,1024
- 8000f60:	c3d8                	sw	a4,4(a5)
+ 8000f42:	43d8                	lw	a4,4(a5)
+ 8000f44:	40076713          	ori	a4,a4,1024
+ 8000f48:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 8000f62:	43d8                	lw	a4,4(a5)
- 8000f64:	8f75                	and	a4,a4,a3
- 8000f66:	c3d8                	sw	a4,4(a5)
+ 8000f4a:	43d8                	lw	a4,4(a5)
+ 8000f4c:	8f75                	and	a4,a4,a3
+ 8000f4e:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
- 8000f68:	43d8                	lw	a4,4(a5)
- 8000f6a:	202906b7          	lui	a3,0x20290
- 8000f6e:	8f55                	or	a4,a4,a3
- 8000f70:	c3d8                	sw	a4,4(a5)
+ 8000f50:	43d8                	lw	a4,4(a5)
+ 8000f52:	202906b7          	lui	a3,0x20290
+ 8000f56:	8f55                	or	a4,a4,a3
+ 8000f58:	c3d8                	sw	a4,4(a5)
 		RCU_CTL |= RCU_CTL_PLL2EN;
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
 		}
     }else if(HXTAL_VALUE==8000000){
 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
- 8000f72:	57d8                	lw	a4,44(a5)
- 8000f74:	76bd                	lui	a3,0xfffef
- 8000f76:	8f75                	and	a4,a4,a3
- 8000f78:	d7d8                	sw	a4,44(a5)
+ 8000f5a:	57d8                	lw	a4,44(a5)
+ 8000f5c:	76bd                	lui	a3,0xfffef
+ 8000f5e:	8f75                	and	a4,a4,a3
+ 8000f60:	d7d8                	sw	a4,44(a5)
 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_MUL20);
- 8000f7a:	57d8                	lw	a4,44(a5)
- 8000f7c:	66c1                	lui	a3,0x10
- 8000f7e:	f1168693          	addi	a3,a3,-239 # ff11 <__stack_size+0xef11>
- 8000f82:	8f55                	or	a4,a4,a3
- 8000f84:	d7d8                	sw	a4,44(a5)
+ 8000f62:	57d8                	lw	a4,44(a5)
+ 8000f64:	66c1                	lui	a3,0x10
+ 8000f66:	f1168693          	addi	a3,a3,-239 # ff11 <__stack_size+0xef11>
+ 8000f6a:	8f55                	or	a4,a4,a3
+ 8000f6c:	d7d8                	sw	a4,44(a5)
 
 		/* enable PLL1 */
 		RCU_CTL |= RCU_CTL_PLL1EN;
- 8000f86:	4398                	lw	a4,0(a5)
- 8000f88:	040006b7          	lui	a3,0x4000
- 8000f8c:	8f55                	or	a4,a4,a3
- 8000f8e:	c398                	sw	a4,0(a5)
+ 8000f6e:	4398                	lw	a4,0(a5)
+ 8000f70:	040006b7          	lui	a3,0x4000
+ 8000f74:	8f55                	or	a4,a4,a3
+ 8000f76:	c398                	sw	a4,0(a5)
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
- 8000f90:	400217b7          	lui	a5,0x40021
- 8000f94:	4398                	lw	a4,0(a5)
- 8000f96:	00471693          	slli	a3,a4,0x4
- 8000f9a:	fe06dde3          	bgez	a3,8000f94 <SystemInit+0xc8>
+ 8000f78:	400217b7          	lui	a5,0x40021
+ 8000f7c:	4398                	lw	a4,0(a5)
+ 8000f7e:	00471693          	slli	a3,a4,0x4
+ 8000f82:	fe06dde3          	bgez	a3,8000f7c <SystemInit+0xc8>
 		}
 
 		/* enable PLL2 */
 		RCU_CTL |= RCU_CTL_PLL2EN;
- 8000f9e:	4398                	lw	a4,0(a5)
- 8000fa0:	100006b7          	lui	a3,0x10000
- 8000fa4:	8f55                	or	a4,a4,a3
- 8000fa6:	c398                	sw	a4,0(a5)
+ 8000f86:	4398                	lw	a4,0(a5)
+ 8000f88:	100006b7          	lui	a3,0x10000
+ 8000f8c:	8f55                	or	a4,a4,a3
+ 8000f8e:	c398                	sw	a4,0(a5)
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
- 8000fa8:	400217b7          	lui	a5,0x40021
- 8000fac:	4398                	lw	a4,0(a5)
- 8000fae:	00271693          	slli	a3,a4,0x2
- 8000fb2:	fe06dde3          	bgez	a3,8000fac <SystemInit+0xe0>
+ 8000f90:	400217b7          	lui	a5,0x40021
+ 8000f94:	4398                	lw	a4,0(a5)
+ 8000f96:	00271693          	slli	a3,a4,0x2
+ 8000f9a:	fe06dde3          	bgez	a3,8000f94 <SystemInit+0xe0>
 		}
 
     }
     /* enable PLL */
     RCU_CTL |= RCU_CTL_PLLEN;
- 8000fb6:	4398                	lw	a4,0(a5)
- 8000fb8:	010006b7          	lui	a3,0x1000
- 8000fbc:	8f55                	or	a4,a4,a3
- 8000fbe:	c398                	sw	a4,0(a5)
+ 8000f9e:	4398                	lw	a4,0(a5)
+ 8000fa0:	010006b7          	lui	a3,0x1000
+ 8000fa4:	8f55                	or	a4,a4,a3
+ 8000fa6:	c398                	sw	a4,0(a5)
 
     /* wait until PLL is stable */
     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 8000fc0:	400217b7          	lui	a5,0x40021
- 8000fc4:	4398                	lw	a4,0(a5)
- 8000fc6:	00671693          	slli	a3,a4,0x6
- 8000fca:	fe06dde3          	bgez	a3,8000fc4 <SystemInit+0xf8>
+ 8000fa8:	400217b7          	lui	a5,0x40021
+ 8000fac:	4398                	lw	a4,0(a5)
+ 8000fae:	00671693          	slli	a3,a4,0x6
+ 8000fb2:	fe06dde3          	bgez	a3,8000fac <SystemInit+0xf8>
     }
 
     /* select PLL as system clock */
     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 8000fce:	43d8                	lw	a4,4(a5)
- 8000fd0:	9b71                	andi	a4,a4,-4
- 8000fd2:	c3d8                	sw	a4,4(a5)
+ 8000fb6:	43d8                	lw	a4,4(a5)
+ 8000fb8:	9b71                	andi	a4,a4,-4
+ 8000fba:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
- 8000fd4:	43d8                	lw	a4,4(a5)
- 8000fd6:	00276713          	ori	a4,a4,2
- 8000fda:	c3d8                	sw	a4,4(a5)
+ 8000fbc:	43d8                	lw	a4,4(a5)
+ 8000fbe:	00276713          	ori	a4,a4,2
+ 8000fc2:	c3d8                	sw	a4,4(a5)
 
     /* wait until PLL is selected as system clock */
     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
- 8000fdc:	40021737          	lui	a4,0x40021
- 8000fe0:	435c                	lw	a5,4(a4)
- 8000fe2:	8ba1                	andi	a5,a5,8
- 8000fe4:	dff5                	beqz	a5,8000fe0 <SystemInit+0x114>
+ 8000fc4:	40021737          	lui	a4,0x40021
+ 8000fc8:	435c                	lw	a5,4(a4)
+ 8000fca:	8ba1                	andi	a5,a5,8
+ 8000fcc:	dff5                	beqz	a5,8000fc8 <SystemInit+0x114>
 }
- 8000fe6:	8082                	ret
+ 8000fce:	8082                	ret
 
-08000fe8 <_exit>:
+08000fd0 <_exit>:
 
 #include "stub.h"
 
 
 void _exit(int code)
 {
- 8000fe8:	7179                	addi	sp,sp,-48
+ 8000fd0:	7179                	addi	sp,sp,-48
   const char message[] = "\nProgram has exited with code:";
- 8000fea:	080005b7          	lui	a1,0x8000
+ 8000fd2:	080005b7          	lui	a1,0x8000
 {
- 8000fee:	d422                	sw	s0,40(sp)
+ 8000fd6:	d422                	sw	s0,40(sp)
   const char message[] = "\nProgram has exited with code:";
- 8000ff0:	467d                	li	a2,31
+ 8000fd8:	467d                	li	a2,31
 {
- 8000ff2:	842a                	mv	s0,a0
+ 8000fda:	842a                	mv	s0,a0
   const char message[] = "\nProgram has exited with code:";
- 8000ff4:	28058593          	addi	a1,a1,640 # 8000280 <enable_mcycle_minstret+0x34>
- 8000ff8:	850a                	mv	a0,sp
+ 8000fdc:	28058593          	addi	a1,a1,640 # 8000280 <enable_mcycle_minstret+0x34>
+ 8000fe0:	850a                	mv	a0,sp
 {
- 8000ffa:	d606                	sw	ra,44(sp)
+ 8000fe2:	d606                	sw	ra,44(sp)
   const char message[] = "\nProgram has exited with code:";
- 8000ffc:	00002097          	auipc	ra,0x2
- 8001000:	c48080e7          	jalr	-952(ra) # 8002c44 <memcpy>
+ 8000fe4:	00002097          	auipc	ra,0x2
+ 8000fe8:	c60080e7          	jalr	-928(ra) # 8002c44 <memcpy>
 
   write(STDERR_FILENO, message, sizeof(message) - 1);
- 8001004:	4679                	li	a2,30
- 8001006:	858a                	mv	a1,sp
- 8001008:	4509                	li	a0,2
- 800100a:	00002097          	auipc	ra,0x2
- 800100e:	c50080e7          	jalr	-944(ra) # 8002c5a <write>
+ 8000fec:	4679                	li	a2,30
+ 8000fee:	858a                	mv	a1,sp
+ 8000ff0:	4509                	li	a0,2
+ 8000ff2:	00002097          	auipc	ra,0x2
+ 8000ff6:	c68080e7          	jalr	-920(ra) # 8002c5a <write>
   write_hex(STDERR_FILENO, code);
- 8001012:	85a2                	mv	a1,s0
- 8001014:	4509                	li	a0,2
- 8001016:	00000097          	auipc	ra,0x0
- 800101a:	01e080e7          	jalr	30(ra) # 8001034 <write_hex>
+ 8000ffa:	85a2                	mv	a1,s0
+ 8000ffc:	4509                	li	a0,2
+ 8000ffe:	00000097          	auipc	ra,0x0
+ 8001002:	01e080e7          	jalr	30(ra) # 800101c <write_hex>
   write(STDERR_FILENO, "\n", 1);
- 800101e:	080005b7          	lui	a1,0x8000
- 8001022:	4605                	li	a2,1
- 8001024:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
- 8001028:	4509                	li	a0,2
- 800102a:	00002097          	auipc	ra,0x2
- 800102e:	c30080e7          	jalr	-976(ra) # 8002c5a <write>
+ 8001006:	080005b7          	lui	a1,0x8000
+ 800100a:	4605                	li	a2,1
+ 800100c:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
+ 8001010:	4509                	li	a0,2
+ 8001012:	00002097          	auipc	ra,0x2
+ 8001016:	c48080e7          	jalr	-952(ra) # 8002c5a <write>
 
   for (;;);
- 8001032:	a001                	j	8001032 <_exit+0x4a>
+ 800101a:	a001                	j	800101a <_exit+0x4a>
 
-08001034 <write_hex>:
+0800101c <write_hex>:
 
 #include <stdint.h>
 #include <unistd.h>
 
 void write_hex(int fd, unsigned long int hex)
 {
- 8001034:	7179                	addi	sp,sp,-48
- 8001036:	ce4e                	sw	s3,28(sp)
- 8001038:	89ae                	mv	s3,a1
+ 800101c:	7179                	addi	sp,sp,-48
+ 800101e:	ce4e                	sw	s3,28(sp)
+ 8001020:	89ae                	mv	s3,a1
   uint8_t ii;
   uint8_t jj;
   char towrite;
   write(fd , "0x", 2);
- 800103a:	080005b7          	lui	a1,0x8000
- 800103e:	4609                	li	a2,2
- 8001040:	2a058593          	addi	a1,a1,672 # 80002a0 <enable_mcycle_minstret+0x54>
+ 8001022:	080005b7          	lui	a1,0x8000
+ 8001026:	4609                	li	a2,2
+ 8001028:	2a058593          	addi	a1,a1,672 # 80002a0 <enable_mcycle_minstret+0x54>
 {
- 8001044:	d422                	sw	s0,40(sp)
- 8001046:	d226                	sw	s1,36(sp)
- 8001048:	d04a                	sw	s2,32(sp)
- 800104a:	cc52                	sw	s4,24(sp)
- 800104c:	ca56                	sw	s5,20(sp)
- 800104e:	d606                	sw	ra,44(sp)
- 8001050:	892a                	mv	s2,a0
+ 800102c:	d422                	sw	s0,40(sp)
+ 800102e:	d226                	sw	s1,36(sp)
+ 8001030:	d04a                	sw	s2,32(sp)
+ 8001032:	cc52                	sw	s4,24(sp)
+ 8001034:	ca56                	sw	s5,20(sp)
+ 8001036:	d606                	sw	ra,44(sp)
+ 8001038:	892a                	mv	s2,a0
   write(fd , "0x", 2);
- 8001052:	4471                	li	s0,28
- 8001054:	00002097          	auipc	ra,0x2
- 8001058:	c06080e7          	jalr	-1018(ra) # 8002c5a <write>
+ 800103a:	4471                	li	s0,28
+ 800103c:	00002097          	auipc	ra,0x2
+ 8001040:	c1e080e7          	jalr	-994(ra) # 8002c5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
     jj = ii - 1;
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
- 800105c:	4a3d                	li	s4,15
+ 8001044:	4a3d                	li	s4,15
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 800105e:	4aa5                	li	s5,9
+ 8001046:	4aa5                	li	s5,9
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
- 8001060:	54f1                	li	s1,-4
+ 8001048:	54f1                	li	s1,-4
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
- 8001062:	008a17b3          	sll	a5,s4,s0
- 8001066:	0137f7b3          	and	a5,a5,s3
- 800106a:	0087d7b3          	srl	a5,a5,s0
- 800106e:	0ff7f793          	andi	a5,a5,255
+ 800104a:	008a17b3          	sll	a5,s4,s0
+ 800104e:	0137f7b3          	and	a5,a5,s3
+ 8001052:	0087d7b3          	srl	a5,a5,s0
+ 8001056:	0ff7f793          	andi	a5,a5,255
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 8001072:	02faec63          	bltu	s5,a5,80010aa <write_hex+0x76>
- 8001076:	03078793          	addi	a5,a5,48 # 40021030 <RCU+0x30>
- 800107a:	0ff7f793          	andi	a5,a5,255
+ 800105a:	02faec63          	bltu	s5,a5,8001092 <write_hex+0x76>
+ 800105e:	03078793          	addi	a5,a5,48 # 40021030 <RCU+0x30>
+ 8001062:	0ff7f793          	andi	a5,a5,255
     write(fd, &towrite, 1);
- 800107e:	4605                	li	a2,1
- 8001080:	00f10593          	addi	a1,sp,15
- 8001084:	854a                	mv	a0,s2
- 8001086:	1471                	addi	s0,s0,-4
+ 8001066:	4605                	li	a2,1
+ 8001068:	00f10593          	addi	a1,sp,15
+ 800106c:	854a                	mv	a0,s2
+ 800106e:	1471                	addi	s0,s0,-4
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 8001088:	00f107a3          	sb	a5,15(sp)
+ 8001070:	00f107a3          	sb	a5,15(sp)
     write(fd, &towrite, 1);
- 800108c:	00002097          	auipc	ra,0x2
- 8001090:	bce080e7          	jalr	-1074(ra) # 8002c5a <write>
+ 8001074:	00002097          	auipc	ra,0x2
+ 8001078:	be6080e7          	jalr	-1050(ra) # 8002c5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
- 8001094:	fc9417e3          	bne	s0,s1,8001062 <write_hex+0x2e>
+ 800107c:	fc9417e3          	bne	s0,s1,800104a <write_hex+0x2e>
   }
 }
- 8001098:	50b2                	lw	ra,44(sp)
- 800109a:	5422                	lw	s0,40(sp)
- 800109c:	5492                	lw	s1,36(sp)
- 800109e:	5902                	lw	s2,32(sp)
- 80010a0:	49f2                	lw	s3,28(sp)
- 80010a2:	4a62                	lw	s4,24(sp)
- 80010a4:	4ad2                	lw	s5,20(sp)
- 80010a6:	6145                	addi	sp,sp,48
- 80010a8:	8082                	ret
+ 8001080:	50b2                	lw	ra,44(sp)
+ 8001082:	5422                	lw	s0,40(sp)
+ 8001084:	5492                	lw	s1,36(sp)
+ 8001086:	5902                	lw	s2,32(sp)
+ 8001088:	49f2                	lw	s3,28(sp)
+ 800108a:	4a62                	lw	s4,24(sp)
+ 800108c:	4ad2                	lw	s5,20(sp)
+ 800108e:	6145                	addi	sp,sp,48
+ 8001090:	8082                	ret
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 80010aa:	03778793          	addi	a5,a5,55
- 80010ae:	b7f1                	j	800107a <write_hex+0x46>
+ 8001092:	03778793          	addi	a5,a5,55
+ 8001096:	b7f1                	j	8001062 <write_hex+0x46>
 
-080010b0 <get_timer_value>:
+08001098 <get_timer_value>:
 }
 
 
 uint32_t mtime_hi(void)
 {
   return *(volatile uint32_t *)(TIMER_CTRL_ADDR + TIMER_MTIME + 4);
- 80010b0:	d10007b7          	lui	a5,0xd1000
- 80010b4:	43d8                	lw	a4,4(a5)
+ 8001098:	d10007b7          	lui	a5,0xd1000
+ 800109c:	43d8                	lw	a4,4(a5)
   return *(volatile uint32_t *)(TIMER_CTRL_ADDR + TIMER_MTIME);
- 80010b6:	4388                	lw	a0,0(a5)
+ 800109e:	4388                	lw	a0,0(a5)
   return *(volatile uint32_t *)(TIMER_CTRL_ADDR + TIMER_MTIME + 4);
- 80010b8:	43cc                	lw	a1,4(a5)
+ 80010a0:	43cc                	lw	a1,4(a5)
 uint64_t get_timer_value(void)
 {
   while (1) {
     uint32_t hi = mtime_hi();
     uint32_t lo = mtime_lo();
     if (hi == mtime_hi())
- 80010ba:	fee59de3          	bne	a1,a4,80010b4 <get_timer_value+0x4>
+ 80010a2:	fee59de3          	bne	a1,a4,800109c <get_timer_value+0x4>
       return ((uint64_t)hi << 32) | lo;
   }
 }
- 80010be:	8082                	ret
+ 80010a6:	8082                	ret
 
-080010c0 <eclic_init>:
+080010a8 <eclic_init>:
 {
 
   typedef volatile uint32_t vuint32_t;
 
   /* clear cfg register */
   *(volatile uint8_t*)(ECLIC_ADDR_BASE+ECLIC_CFG_OFFSET)=0;
- 80010c0:	d20007b7          	lui	a5,0xd2000
- 80010c4:	00078023          	sb	zero,0(a5) # d2000000 <RCU+0x91fdf000>
+ 80010a8:	d20007b7          	lui	a5,0xd2000
+ 80010ac:	00078023          	sb	zero,0(a5) # d2000000 <RCU+0x91fdf000>
 
   /* clear minthresh register */
   *(volatile uint8_t*)(ECLIC_ADDR_BASE+ECLIC_MTH_OFFSET)=0;
- 80010c8:	000785a3          	sb	zero,11(a5)
+ 80010b0:	000785a3          	sb	zero,11(a5)
 
   /* clear all IP/IE/ATTR/CTRL bits for all interrupt sources */
   vuint32_t * ptr;
 
   vuint32_t * base = (vuint32_t*)(ECLIC_ADDR_BASE + ECLIC_INT_IP_OFFSET);
   vuint32_t * upper = (vuint32_t*)(base + num_irq*4);
- 80010cc:	0512                	slli	a0,a0,0x4
- 80010ce:	d20017b7          	lui	a5,0xd2001
- 80010d2:	953e                	add	a0,a0,a5
+ 80010b4:	0512                	slli	a0,a0,0x4
+ 80010b6:	d20017b7          	lui	a5,0xd2001
+ 80010ba:	953e                	add	a0,a0,a5
 
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80010d4:	00a7e363          	bltu	a5,a0,80010da <eclic_init+0x1a>
+ 80010bc:	00a7e363          	bltu	a5,a0,80010c2 <eclic_init+0x1a>
     *ptr = 0;
   }
 }
- 80010d8:	8082                	ret
+ 80010c0:	8082                	ret
     *ptr = 0;
- 80010da:	0007a023          	sw	zero,0(a5) # d2001000 <RCU+0x91fe0000>
+ 80010c2:	0007a023          	sw	zero,0(a5) # d2001000 <RCU+0x91fe0000>
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80010de:	07c1                	addi	a5,a5,16
- 80010e0:	bfd5                	j	80010d4 <eclic_init+0x14>
+ 80010c6:	07c1                	addi	a5,a5,16
+ 80010c8:	bfd5                	j	80010bc <eclic_init+0x14>
 
-080010e2 <eclic_mode_enable>:
+080010ca <eclic_mode_enable>:
   uint32_t mtvec_value = read_csr(CSR_MTVEC);
   mtvec_value = mtvec_value & 0xFFFFFFC0;
   mtvec_value = mtvec_value | 0x00000003;
   write_csr(CSR_MTVEC,mtvec_value);
 #elif defined ( __GNUC__ )
   uint32_t mtvec_value = read_csr(mtvec);
- 80010e2:	305027f3          	csrr	a5,mtvec
+ 80010ca:	305027f3          	csrr	a5,mtvec
   mtvec_value = mtvec_value & 0xFFFFFFC0;
- 80010e6:	fc07f793          	andi	a5,a5,-64
+ 80010ce:	fc07f793          	andi	a5,a5,-64
   mtvec_value = mtvec_value | 0x00000003;
- 80010ea:	0037e793          	ori	a5,a5,3
+ 80010d2:	0037e793          	ori	a5,a5,3
   write_csr(mtvec,mtvec_value);
- 80010ee:	30579073          	csrw	mtvec,a5
+ 80010d6:	30579073          	csrw	mtvec,a5
 #endif
 
 }
- 80010f2:	8082                	ret
+ 80010da:	8082                	ret
 
-080010f4 <handle_nmi>:
+080010dc <handle_nmi>:
 #include "riscv_encoding.h"
 #include "n200_func.h"
 
 __attribute__((weak)) uintptr_t handle_nmi()
 {
   write(1, "nmi\n", 5);
- 80010f4:	080005b7          	lui	a1,0x8000
+ 80010dc:	080005b7          	lui	a1,0x8000
 {
- 80010f8:	1141                	addi	sp,sp,-16
+ 80010e0:	1141                	addi	sp,sp,-16
   write(1, "nmi\n", 5);
- 80010fa:	4615                	li	a2,5
- 80010fc:	2a458593          	addi	a1,a1,676 # 80002a4 <enable_mcycle_minstret+0x58>
- 8001100:	4505                	li	a0,1
+ 80010e2:	4615                	li	a2,5
+ 80010e4:	2a458593          	addi	a1,a1,676 # 80002a4 <enable_mcycle_minstret+0x58>
+ 80010e8:	4505                	li	a0,1
 {
- 8001102:	c606                	sw	ra,12(sp)
+ 80010ea:	c606                	sw	ra,12(sp)
   write(1, "nmi\n", 5);
- 8001104:	00002097          	auipc	ra,0x2
- 8001108:	b56080e7          	jalr	-1194(ra) # 8002c5a <write>
+ 80010ec:	00002097          	auipc	ra,0x2
+ 80010f0:	b6e080e7          	jalr	-1170(ra) # 8002c5a <write>
   _exit(1);
- 800110c:	4505                	li	a0,1
- 800110e:	00000097          	auipc	ra,0x0
- 8001112:	eda080e7          	jalr	-294(ra) # 8000fe8 <_exit>
+ 80010f4:	4505                	li	a0,1
+ 80010f6:	00000097          	auipc	ra,0x0
+ 80010fa:	eda080e7          	jalr	-294(ra) # 8000fd0 <_exit>
 
-08001116 <handle_trap>:
+080010fe <handle_trap>:
   return 0;
 }
 
 
 __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
 {
- 8001116:	1141                	addi	sp,sp,-16
+ 80010fe:	1141                	addi	sp,sp,-16
   if((mcause & 0xFFF) == 0xFFF) {
- 8001118:	fff54793          	not	a5,a0
+ 8001100:	fff54793          	not	a5,a0
 {
- 800111c:	c422                	sw	s0,8(sp)
- 800111e:	c606                	sw	ra,12(sp)
+ 8001104:	c422                	sw	s0,8(sp)
+ 8001106:	c606                	sw	ra,12(sp)
   if((mcause & 0xFFF) == 0xFFF) {
- 8001120:	01479713          	slli	a4,a5,0x14
+ 8001108:	01479713          	slli	a4,a5,0x14
 {
- 8001124:	842a                	mv	s0,a0
+ 800110c:	842a                	mv	s0,a0
   if((mcause & 0xFFF) == 0xFFF) {
- 8001126:	e709                	bnez	a4,8001130 <handle_trap+0x1a>
+ 800110e:	e709                	bnez	a4,8001118 <handle_trap+0x1a>
       handle_nmi();
- 8001128:	00000097          	auipc	ra,0x0
- 800112c:	fcc080e7          	jalr	-52(ra) # 80010f4 <handle_nmi>
+ 8001110:	00000097          	auipc	ra,0x0
+ 8001114:	fcc080e7          	jalr	-52(ra) # 80010dc <handle_nmi>
   }
   write(1, "trap\n", 5);
- 8001130:	080005b7          	lui	a1,0x8000
- 8001134:	4615                	li	a2,5
- 8001136:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
- 800113a:	4505                	li	a0,1
- 800113c:	00002097          	auipc	ra,0x2
- 8001140:	b1e080e7          	jalr	-1250(ra) # 8002c5a <write>
+ 8001118:	080005b7          	lui	a1,0x8000
+ 800111c:	4615                	li	a2,5
+ 800111e:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
+ 8001122:	4505                	li	a0,1
+ 8001124:	00002097          	auipc	ra,0x2
+ 8001128:	b36080e7          	jalr	-1226(ra) # 8002c5a <write>
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
   _exit(mcause);
- 8001144:	8522                	mv	a0,s0
- 8001146:	00000097          	auipc	ra,0x0
- 800114a:	ea2080e7          	jalr	-350(ra) # 8000fe8 <_exit>
+ 800112c:	8522                	mv	a0,s0
+ 800112e:	00000097          	auipc	ra,0x0
+ 8001132:	ea2080e7          	jalr	-350(ra) # 8000fd0 <_exit>
 
-0800114e <_init>:
+08001136 <_init>:
 #include "debugger.h"
 #endif
 
 extern uint32_t disable_mcycle_minstret();
 void _init()
 {
- 800114e:	1141                	addi	sp,sp,-16
- 8001150:	c606                	sw	ra,12(sp)
+ 8001136:	1141                	addi	sp,sp,-16
+ 8001138:	c606                	sw	ra,12(sp)
 	SystemInit();
- 8001152:	00000097          	auipc	ra,0x0
- 8001156:	d7a080e7          	jalr	-646(ra) # 8000ecc <SystemInit>
+ 800113a:	00000097          	auipc	ra,0x0
+ 800113e:	d7a080e7          	jalr	-646(ra) # 8000eb4 <SystemInit>
 
 	//ECLIC init
 	eclic_init(ECLIC_NUM_INTERRUPTS);
- 800115a:	05700513          	li	a0,87
- 800115e:	00000097          	auipc	ra,0x0
- 8001162:	f62080e7          	jalr	-158(ra) # 80010c0 <eclic_init>
+ 8001142:	05700513          	li	a0,87
+ 8001146:	00000097          	auipc	ra,0x0
+ 800114a:	f62080e7          	jalr	-158(ra) # 80010a8 <eclic_init>
 	eclic_mode_enable();
- 8001166:	00000097          	auipc	ra,0x0
- 800116a:	f7c080e7          	jalr	-132(ra) # 80010e2 <eclic_mode_enable>
+ 800114e:	00000097          	auipc	ra,0x0
+ 8001152:	f7c080e7          	jalr	-132(ra) # 80010ca <eclic_mode_enable>
 #ifdef USE_SOFTWARE_DEBUGGER
 	dbg_init();
 #endif
 	
 
 }
- 800116e:	40b2                	lw	ra,12(sp)
- 8001170:	0141                	addi	sp,sp,16
+ 8001156:	40b2                	lw	ra,12(sp)
+ 8001158:	0141                	addi	sp,sp,16
 	disable_mcycle_minstret();
- 8001172:	fffff317          	auipc	t1,0xfffff
- 8001176:	0d430067          	jr	212(t1) # 8000246 <disable_mcycle_minstret>
+ 800115a:	fffff317          	auipc	t1,0xfffff
+ 800115e:	0ec30067          	jr	236(t1) # 8000246 <disable_mcycle_minstret>
 
-0800117a <_fini>:
+08001162 <_fini>:
 
 void _fini()
 {
 }
- 800117a:	8082                	ret
+ 8001162:	8082                	ret
 
-0800117c <lcd_delay_1ms>:
+08001164 <lcd_delay_1ms>:
 
 lcd_config_t lcd_conf = {0};
 
 
 void lcd_delay_1ms(uint32_t count)
 {
- 800117c:	7179                	addi	sp,sp,-48
- 800117e:	d04a                	sw	s2,32(sp)
- 8001180:	ce4e                	sw	s3,28(sp)
- 8001182:	c85a                	sw	s6,16(sp)
- 8001184:	d606                	sw	ra,44(sp)
- 8001186:	d422                	sw	s0,40(sp)
- 8001188:	d226                	sw	s1,36(sp)
- 800118a:	cc52                	sw	s4,24(sp)
- 800118c:	ca56                	sw	s5,20(sp)
- 800118e:	c65e                	sw	s7,12(sp)
- 8001190:	c462                	sw	s8,8(sp)
- 8001192:	c266                	sw	s9,4(sp)
- 8001194:	8b2a                	mv	s6,a0
+ 8001164:	7179                	addi	sp,sp,-48
+ 8001166:	d04a                	sw	s2,32(sp)
+ 8001168:	ce4e                	sw	s3,28(sp)
+ 800116a:	c85a                	sw	s6,16(sp)
+ 800116c:	d606                	sw	ra,44(sp)
+ 800116e:	d422                	sw	s0,40(sp)
+ 8001170:	d226                	sw	s1,36(sp)
+ 8001172:	cc52                	sw	s4,24(sp)
+ 8001174:	ca56                	sw	s5,20(sp)
+ 8001176:	c65e                	sw	s7,12(sp)
+ 8001178:	c462                	sw	s8,8(sp)
+ 800117a:	c266                	sw	s9,4(sp)
+ 800117c:	8b2a                	mv	s6,a0
 	uint64_t start_mtime, delta_mtime;
 
 	// Don't start measuring until we see an mtime tick
 	uint64_t tmp = get_timer_value();
- 8001196:	00000097          	auipc	ra,0x0
- 800119a:	f1a080e7          	jalr	-230(ra) # 80010b0 <get_timer_value>
- 800119e:	89aa                	mv	s3,a0
- 80011a0:	892e                	mv	s2,a1
+ 800117e:	00000097          	auipc	ra,0x0
+ 8001182:	f1a080e7          	jalr	-230(ra) # 8001098 <get_timer_value>
+ 8001186:	89aa                	mv	s3,a0
+ 8001188:	892e                	mv	s2,a1
 	do {
 	start_mtime = get_timer_value();
- 80011a2:	00000097          	auipc	ra,0x0
- 80011a6:	f0e080e7          	jalr	-242(ra) # 80010b0 <get_timer_value>
- 80011aa:	84aa                	mv	s1,a0
- 80011ac:	842e                	mv	s0,a1
+ 800118a:	00000097          	auipc	ra,0x0
+ 800118e:	f0e080e7          	jalr	-242(ra) # 8001098 <get_timer_value>
+ 8001192:	84aa                	mv	s1,a0
+ 8001194:	842e                	mv	s0,a1
 	} while (start_mtime == tmp);
- 80011ae:	00a99463          	bne	s3,a0,80011b6 <lcd_delay_1ms+0x3a>
- 80011b2:	feb908e3          	beq	s2,a1,80011a2 <lcd_delay_1ms+0x26>
+ 8001196:	00a99463          	bne	s3,a0,800119e <lcd_delay_1ms+0x3a>
+ 800119a:	feb908e3          	beq	s2,a1,800118a <lcd_delay_1ms+0x26>
 
 	do {
 	delta_mtime = get_timer_value() - start_mtime;
 	}while(delta_mtime <(SystemCoreClock/4000.0 *count ));
- 80011b6:	080017b7          	lui	a5,0x8001
- 80011ba:	8e87a903          	lw	s2,-1816(a5) # 80008e8 <asc2_1608+0x634>
- 80011be:	8ec7a983          	lw	s3,-1812(a5)
- 80011c2:	20000bb7          	lui	s7,0x20000
+ 800119e:	080017b7          	lui	a5,0x8001
+ 80011a2:	8e87a903          	lw	s2,-1816(a5) # 80008e8 <asc2_1608+0x634>
+ 80011a6:	8ec7a983          	lw	s3,-1812(a5)
+ 80011aa:	20000bb7          	lui	s7,0x20000
 	delta_mtime = get_timer_value() - start_mtime;
- 80011c6:	00000097          	auipc	ra,0x0
- 80011ca:	eea080e7          	jalr	-278(ra) # 80010b0 <get_timer_value>
- 80011ce:	87aa                	mv	a5,a0
- 80011d0:	8d05                	sub	a0,a0,s1
- 80011d2:	00a7b7b3          	sltu	a5,a5,a0
- 80011d6:	8d81                	sub	a1,a1,s0
+ 80011ae:	00000097          	auipc	ra,0x0
+ 80011b2:	eea080e7          	jalr	-278(ra) # 8001098 <get_timer_value>
+ 80011b6:	87aa                	mv	a5,a0
+ 80011b8:	8d05                	sub	a0,a0,s1
+ 80011ba:	00a7b7b3          	sltu	a5,a5,a0
+ 80011be:	8d81                	sub	a1,a1,s0
 	}while(delta_mtime <(SystemCoreClock/4000.0 *count ));
- 80011d8:	8d9d                	sub	a1,a1,a5
- 80011da:	00001097          	auipc	ra,0x1
- 80011de:	78c080e7          	jalr	1932(ra) # 8002966 <__floatundidf>
- 80011e2:	8a2a                	mv	s4,a0
- 80011e4:	080ba503          	lw	a0,128(s7) # 20000080 <SystemCoreClock>
- 80011e8:	8aae                	mv	s5,a1
- 80011ea:	00001097          	auipc	ra,0x1
- 80011ee:	726080e7          	jalr	1830(ra) # 8002910 <__floatunsidf>
- 80011f2:	864a                	mv	a2,s2
- 80011f4:	86ce                	mv	a3,s3
- 80011f6:	00001097          	auipc	ra,0x1
- 80011fa:	ce4080e7          	jalr	-796(ra) # 8001eda <__divdf3>
- 80011fe:	8c2a                	mv	s8,a0
- 8001200:	855a                	mv	a0,s6
- 8001202:	8cae                	mv	s9,a1
- 8001204:	00001097          	auipc	ra,0x1
- 8001208:	70c080e7          	jalr	1804(ra) # 8002910 <__floatunsidf>
- 800120c:	862a                	mv	a2,a0
- 800120e:	86ae                	mv	a3,a1
- 8001210:	8562                	mv	a0,s8
- 8001212:	85e6                	mv	a1,s9
- 8001214:	00001097          	auipc	ra,0x1
- 8001218:	2b0080e7          	jalr	688(ra) # 80024c4 <__muldf3>
- 800121c:	862a                	mv	a2,a0
- 800121e:	86ae                	mv	a3,a1
- 8001220:	8552                	mv	a0,s4
- 8001222:	85d6                	mv	a1,s5
- 8001224:	00001097          	auipc	ra,0x1
- 8001228:	1fc080e7          	jalr	508(ra) # 8002420 <__ledf2>
- 800122c:	f8054de3          	bltz	a0,80011c6 <lcd_delay_1ms+0x4a>
+ 80011c0:	8d9d                	sub	a1,a1,a5
+ 80011c2:	00001097          	auipc	ra,0x1
+ 80011c6:	7a4080e7          	jalr	1956(ra) # 8002966 <__floatundidf>
+ 80011ca:	8a2a                	mv	s4,a0
+ 80011cc:	080ba503          	lw	a0,128(s7) # 20000080 <SystemCoreClock>
+ 80011d0:	8aae                	mv	s5,a1
+ 80011d2:	00001097          	auipc	ra,0x1
+ 80011d6:	73e080e7          	jalr	1854(ra) # 8002910 <__floatunsidf>
+ 80011da:	864a                	mv	a2,s2
+ 80011dc:	86ce                	mv	a3,s3
+ 80011de:	00001097          	auipc	ra,0x1
+ 80011e2:	cfc080e7          	jalr	-772(ra) # 8001eda <__divdf3>
+ 80011e6:	8c2a                	mv	s8,a0
+ 80011e8:	855a                	mv	a0,s6
+ 80011ea:	8cae                	mv	s9,a1
+ 80011ec:	00001097          	auipc	ra,0x1
+ 80011f0:	724080e7          	jalr	1828(ra) # 8002910 <__floatunsidf>
+ 80011f4:	862a                	mv	a2,a0
+ 80011f6:	86ae                	mv	a3,a1
+ 80011f8:	8562                	mv	a0,s8
+ 80011fa:	85e6                	mv	a1,s9
+ 80011fc:	00001097          	auipc	ra,0x1
+ 8001200:	2c8080e7          	jalr	712(ra) # 80024c4 <__muldf3>
+ 8001204:	862a                	mv	a2,a0
+ 8001206:	86ae                	mv	a3,a1
+ 8001208:	8552                	mv	a0,s4
+ 800120a:	85d6                	mv	a1,s5
+ 800120c:	00001097          	auipc	ra,0x1
+ 8001210:	214080e7          	jalr	532(ra) # 8002420 <__ledf2>
+ 8001214:	f8054de3          	bltz	a0,80011ae <lcd_delay_1ms+0x4a>
 }
- 8001230:	50b2                	lw	ra,44(sp)
- 8001232:	5422                	lw	s0,40(sp)
- 8001234:	5492                	lw	s1,36(sp)
- 8001236:	5902                	lw	s2,32(sp)
- 8001238:	49f2                	lw	s3,28(sp)
- 800123a:	4a62                	lw	s4,24(sp)
- 800123c:	4ad2                	lw	s5,20(sp)
- 800123e:	4b42                	lw	s6,16(sp)
- 8001240:	4bb2                	lw	s7,12(sp)
- 8001242:	4c22                	lw	s8,8(sp)
- 8001244:	4c92                	lw	s9,4(sp)
- 8001246:	6145                	addi	sp,sp,48
- 8001248:	8082                	ret
+ 8001218:	50b2                	lw	ra,44(sp)
+ 800121a:	5422                	lw	s0,40(sp)
+ 800121c:	5492                	lw	s1,36(sp)
+ 800121e:	5902                	lw	s2,32(sp)
+ 8001220:	49f2                	lw	s3,28(sp)
+ 8001222:	4a62                	lw	s4,24(sp)
+ 8001224:	4ad2                	lw	s5,20(sp)
+ 8001226:	4b42                	lw	s6,16(sp)
+ 8001228:	4bb2                	lw	s7,12(sp)
+ 800122a:	4c22                	lw	s8,8(sp)
+ 800122c:	4c92                	lw	s9,4(sp)
+ 800122e:	6145                	addi	sp,sp,48
+ 8001230:	8082                	ret
 
-0800124a <LCD_WR_Queue>:
+08001232 <LCD_WR_Queue>:
 
 void LCD_Wait_On_Queue(){
 	while(r != w) LCD_WR_Queue();					//Blocks while emptying the queue
 }
 
 void LCD_WR_Queue(){
- 800124a:	1141                	addi	sp,sp,-16
- 800124c:	c422                	sw	s0,8(sp)
+ 8001232:	1141                	addi	sp,sp,-16
+ 8001234:	c422                	sw	s0,8(sp)
     if (r!=w) {                                     // Buffer empty?
- 800124e:	200007b7          	lui	a5,0x20000
- 8001252:	20000437          	lui	s0,0x20000
- 8001256:	08c42703          	lw	a4,140(s0) # 2000008c <r>
- 800125a:	0907a783          	lw	a5,144(a5) # 20000090 <w>
+ 8001236:	200007b7          	lui	a5,0x20000
+ 800123a:	20000437          	lui	s0,0x20000
+ 800123e:	08c42703          	lw	a4,140(s0) # 2000008c <r>
+ 8001242:	0907a783          	lw	a5,144(a5) # 20000090 <w>
 void LCD_WR_Queue(){
- 800125e:	c606                	sw	ra,12(sp)
- 8001260:	c226                	sw	s1,4(sp)
+ 8001246:	c606                	sw	ra,12(sp)
+ 8001248:	c226                	sw	s1,4(sp)
     if (r!=w) {                                     // Buffer empty?
- 8001262:	08f70a63          	beq	a4,a5,80012f6 <LCD_WR_Queue+0xac>
+ 800124a:	08f70a63          	beq	a4,a5,80012de <LCD_WR_Queue+0xac>
        if (spi_i2s_flag_get(SPI1,SPI_FLAG_TBE)) {   // ...no! Device redy?
- 8001266:	40004537          	lui	a0,0x40004
- 800126a:	4589                	li	a1,2
- 800126c:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
- 8001270:	00000097          	auipc	ra,0x0
- 8001274:	c52080e7          	jalr	-942(ra) # 8000ec2 <spi_i2s_flag_get>
- 8001278:	c52d                	beqz	a0,80012e2 <LCD_WR_Queue+0x98>
+ 800124e:	40004537          	lui	a0,0x40004
+ 8001252:	4589                	li	a1,2
+ 8001254:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
+ 8001258:	00000097          	auipc	ra,0x0
+ 800125c:	c52080e7          	jalr	-942(ra) # 8000eaa <spi_i2s_flag_get>
+ 8001260:	c52d                	beqz	a0,80012ca <LCD_WR_Queue+0x98>
           OLED_CS_Clr();                            // ......Yes! CS (again)
- 800127a:	6589                	lui	a1,0x2
- 800127c:	40011537          	lui	a0,0x40011
- 8001280:	00000097          	auipc	ra,0x0
- 8001284:	bbc080e7          	jalr	-1092(ra) # 8000e3c <gpio_bit_reset>
- 8001288:	08c40413          	addi	s0,s0,140
+ 8001262:	6589                	lui	a1,0x2
+ 8001264:	40011537          	lui	a0,0x40011
+ 8001268:	00000097          	auipc	ra,0x0
+ 800126c:	bbc080e7          	jalr	-1092(ra) # 8000e24 <gpio_bit_reset>
+ 8001270:	08c40413          	addi	s0,s0,140
           (queue[r]>=1<<8) ? OLED_DC_Set() : OLED_DC_Clr(); //    DC
- 800128c:	4014                	lw	a3,0(s0)
- 800128e:	200007b7          	lui	a5,0x20000
- 8001292:	09878713          	addi	a4,a5,152 # 20000098 <queue>
- 8001296:	068a                	slli	a3,a3,0x2
- 8001298:	9736                	add	a4,a4,a3
- 800129a:	4314                	lw	a3,0(a4)
- 800129c:	0ff00713          	li	a4,255
- 80012a0:	09878493          	addi	s1,a5,152
- 80012a4:	65a1                	lui	a1,0x8
- 80012a6:	40011537          	lui	a0,0x40011
- 80012aa:	04d75163          	bge	a4,a3,80012ec <LCD_WR_Queue+0xa2>
- 80012ae:	00000097          	auipc	ra,0x0
- 80012b2:	b8a080e7          	jalr	-1142(ra) # 8000e38 <gpio_bit_set>
+ 8001274:	4014                	lw	a3,0(s0)
+ 8001276:	200007b7          	lui	a5,0x20000
+ 800127a:	09878713          	addi	a4,a5,152 # 20000098 <queue>
+ 800127e:	068a                	slli	a3,a3,0x2
+ 8001280:	9736                	add	a4,a4,a3
+ 8001282:	4314                	lw	a3,0(a4)
+ 8001284:	0ff00713          	li	a4,255
+ 8001288:	09878493          	addi	s1,a5,152
+ 800128c:	65a1                	lui	a1,0x8
+ 800128e:	40011537          	lui	a0,0x40011
+ 8001292:	04d75163          	bge	a4,a3,80012d4 <LCD_WR_Queue+0xa2>
+ 8001296:	00000097          	auipc	ra,0x0
+ 800129a:	b8a080e7          	jalr	-1142(ra) # 8000e20 <gpio_bit_set>
           spi_i2s_data_transmit(SPI1, queue[r++]&0xFF); //        Write!
- 80012b6:	401c                	lw	a5,0(s0)
- 80012b8:	40004537          	lui	a0,0x40004
- 80012bc:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
- 80012c0:	00178713          	addi	a4,a5,1
- 80012c4:	078a                	slli	a5,a5,0x2
- 80012c6:	97a6                	add	a5,a5,s1
- 80012c8:	0007c583          	lbu	a1,0(a5)
- 80012cc:	c018                	sw	a4,0(s0)
- 80012ce:	00000097          	auipc	ra,0x0
- 80012d2:	be4080e7          	jalr	-1052(ra) # 8000eb2 <spi_i2s_data_transmit>
+ 800129e:	401c                	lw	a5,0(s0)
+ 80012a0:	40004537          	lui	a0,0x40004
+ 80012a4:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
+ 80012a8:	00178713          	addi	a4,a5,1
+ 80012ac:	078a                	slli	a5,a5,0x2
+ 80012ae:	97a6                	add	a5,a5,s1
+ 80012b0:	0007c583          	lbu	a1,0(a5)
+ 80012b4:	c018                	sw	a4,0(s0)
+ 80012b6:	00000097          	auipc	ra,0x0
+ 80012ba:	be4080e7          	jalr	-1052(ra) # 8000e9a <spi_i2s_data_transmit>
           r%=256;                                   //            Advance.
- 80012d6:	401c                	lw	a5,0(s0)
- 80012d8:	10000713          	li	a4,256
- 80012dc:	02e7e7b3          	rem	a5,a5,a4
- 80012e0:	c01c                	sw	a5,0(s0)
+ 80012be:	401c                	lw	a5,0(s0)
+ 80012c0:	10000713          	li	a4,256
+ 80012c4:	02e7e7b3          	rem	a5,a5,a4
+ 80012c8:	c01c                	sw	a5,0(s0)
         }                                           //       (No! Return!)
     } else {
         OLED_CS_Set();                              // ...yes! CS high, done!
     }
 }
- 80012e2:	40b2                	lw	ra,12(sp)
- 80012e4:	4422                	lw	s0,8(sp)
- 80012e6:	4492                	lw	s1,4(sp)
- 80012e8:	0141                	addi	sp,sp,16
- 80012ea:	8082                	ret
+ 80012ca:	40b2                	lw	ra,12(sp)
+ 80012cc:	4422                	lw	s0,8(sp)
+ 80012ce:	4492                	lw	s1,4(sp)
+ 80012d0:	0141                	addi	sp,sp,16
+ 80012d2:	8082                	ret
           (queue[r]>=1<<8) ? OLED_DC_Set() : OLED_DC_Clr(); //    DC
- 80012ec:	00000097          	auipc	ra,0x0
- 80012f0:	b50080e7          	jalr	-1200(ra) # 8000e3c <gpio_bit_reset>
- 80012f4:	b7c9                	j	80012b6 <LCD_WR_Queue+0x6c>
+ 80012d4:	00000097          	auipc	ra,0x0
+ 80012d8:	b50080e7          	jalr	-1200(ra) # 8000e24 <gpio_bit_reset>
+ 80012dc:	b7c9                	j	800129e <LCD_WR_Queue+0x6c>
 }
- 80012f6:	4422                	lw	s0,8(sp)
- 80012f8:	40b2                	lw	ra,12(sp)
- 80012fa:	4492                	lw	s1,4(sp)
+ 80012de:	4422                	lw	s0,8(sp)
+ 80012e0:	40b2                	lw	ra,12(sp)
+ 80012e2:	4492                	lw	s1,4(sp)
         OLED_CS_Set();                              // ...yes! CS high, done!
- 80012fc:	6589                	lui	a1,0x2
- 80012fe:	40011537          	lui	a0,0x40011
+ 80012e4:	6589                	lui	a1,0x2
+ 80012e6:	40011537          	lui	a0,0x40011
 }
- 8001302:	0141                	addi	sp,sp,16
+ 80012ea:	0141                	addi	sp,sp,16
         OLED_CS_Set();                              // ...yes! CS high, done!
- 8001304:	00000317          	auipc	t1,0x0
- 8001308:	b3430067          	jr	-1228(t1) # 8000e38 <gpio_bit_set>
+ 80012ec:	00000317          	auipc	t1,0x0
+ 80012f0:	b3430067          	jr	-1228(t1) # 8000e20 <gpio_bit_set>
 
-0800130c <LCD_Wait_On_Queue>:
+080012f4 <LCD_Wait_On_Queue>:
 void LCD_Wait_On_Queue(){
- 800130c:	1141                	addi	sp,sp,-16
- 800130e:	c422                	sw	s0,8(sp)
- 8001310:	c226                	sw	s1,4(sp)
- 8001312:	c606                	sw	ra,12(sp)
+ 80012f4:	1141                	addi	sp,sp,-16
+ 80012f6:	c422                	sw	s0,8(sp)
+ 80012f8:	c226                	sw	s1,4(sp)
+ 80012fa:	c606                	sw	ra,12(sp)
 	while(r != w) LCD_WR_Queue();					//Blocks while emptying the queue
- 8001314:	200004b7          	lui	s1,0x20000
- 8001318:	20000437          	lui	s0,0x20000
- 800131c:	08c4a703          	lw	a4,140(s1) # 2000008c <r>
- 8001320:	09042783          	lw	a5,144(s0) # 20000090 <w>
- 8001324:	00f71763          	bne	a4,a5,8001332 <LCD_Wait_On_Queue+0x26>
+ 80012fc:	200004b7          	lui	s1,0x20000
+ 8001300:	20000437          	lui	s0,0x20000
+ 8001304:	08c4a703          	lw	a4,140(s1) # 2000008c <r>
+ 8001308:	09042783          	lw	a5,144(s0) # 20000090 <w>
+ 800130c:	00f71763          	bne	a4,a5,800131a <LCD_Wait_On_Queue+0x26>
 }
- 8001328:	40b2                	lw	ra,12(sp)
- 800132a:	4422                	lw	s0,8(sp)
- 800132c:	4492                	lw	s1,4(sp)
- 800132e:	0141                	addi	sp,sp,16
- 8001330:	8082                	ret
+ 8001310:	40b2                	lw	ra,12(sp)
+ 8001312:	4422                	lw	s0,8(sp)
+ 8001314:	4492                	lw	s1,4(sp)
+ 8001316:	0141                	addi	sp,sp,16
+ 8001318:	8082                	ret
 	while(r != w) LCD_WR_Queue();					//Blocks while emptying the queue
- 8001332:	00000097          	auipc	ra,0x0
- 8001336:	f18080e7          	jalr	-232(ra) # 800124a <LCD_WR_Queue>
- 800133a:	b7cd                	j	800131c <LCD_Wait_On_Queue+0x10>
+ 800131a:	00000097          	auipc	ra,0x0
+ 800131e:	f18080e7          	jalr	-232(ra) # 8001232 <LCD_WR_Queue>
+ 8001322:	b7cd                	j	8001304 <LCD_Wait_On_Queue+0x10>
 
-0800133c <LCD_Write_Bus>:
+08001324 <LCD_Write_Bus>:
 
 void LCD_Write_Bus(int dat) {
- 800133c:	1101                	addi	sp,sp,-32
- 800133e:	cc22                	sw	s0,24(sp)
- 8001340:	ca26                	sw	s1,20(sp)
- 8001342:	c84a                	sw	s2,16(sp)
- 8001344:	ce06                	sw	ra,28(sp)
+ 8001324:	1101                	addi	sp,sp,-32
+ 8001326:	cc22                	sw	s0,24(sp)
+ 8001328:	ca26                	sw	s1,20(sp)
+ 800132a:	c84a                	sw	s2,16(sp)
+ 800132c:	ce06                	sw	ra,28(sp)
    while (((w+1)%256)==r) LCD_WR_Queue(); //If buffer full then spin...
- 8001346:	20000937          	lui	s2,0x20000
- 800134a:	10000493          	li	s1,256
- 800134e:	20000437          	lui	s0,0x20000
- 8001352:	09090613          	addi	a2,s2,144 # 20000090 <w>
- 8001356:	421c                	lw	a5,0(a2)
- 8001358:	08c42683          	lw	a3,140(s0) # 2000008c <r>
- 800135c:	00178713          	addi	a4,a5,1
- 8001360:	02976733          	rem	a4,a4,s1
- 8001364:	02d70163          	beq	a4,a3,8001386 <LCD_Write_Bus+0x4a>
+ 800132e:	20000937          	lui	s2,0x20000
+ 8001332:	10000493          	li	s1,256
+ 8001336:	20000437          	lui	s0,0x20000
+ 800133a:	09090613          	addi	a2,s2,144 # 20000090 <w>
+ 800133e:	421c                	lw	a5,0(a2)
+ 8001340:	08c42683          	lw	a3,140(s0) # 2000008c <r>
+ 8001344:	00178713          	addi	a4,a5,1
+ 8001348:	02976733          	rem	a4,a4,s1
+ 800134c:	02d70163          	beq	a4,a3,800136e <LCD_Write_Bus+0x4a>
    queue[w++]=dat;                        //...If/when not then store data...
- 8001368:	00279693          	slli	a3,a5,0x2
- 800136c:	200007b7          	lui	a5,0x20000
+ 8001350:	00279693          	slli	a3,a5,0x2
+ 8001354:	200007b7          	lui	a5,0x20000
    w%=256;                                //...and advance write index!
 }
- 8001370:	40f2                	lw	ra,28(sp)
- 8001372:	4462                	lw	s0,24(sp)
+ 8001358:	40f2                	lw	ra,28(sp)
+ 800135a:	4462                	lw	s0,24(sp)
    queue[w++]=dat;                        //...If/when not then store data...
- 8001374:	09878793          	addi	a5,a5,152 # 20000098 <queue>
- 8001378:	97b6                	add	a5,a5,a3
- 800137a:	c388                	sw	a0,0(a5)
+ 800135c:	09878793          	addi	a5,a5,152 # 20000098 <queue>
+ 8001360:	97b6                	add	a5,a5,a3
+ 8001362:	c388                	sw	a0,0(a5)
    w%=256;                                //...and advance write index!
- 800137c:	c218                	sw	a4,0(a2)
+ 8001364:	c218                	sw	a4,0(a2)
 }
- 800137e:	44d2                	lw	s1,20(sp)
- 8001380:	4942                	lw	s2,16(sp)
- 8001382:	6105                	addi	sp,sp,32
- 8001384:	8082                	ret
- 8001386:	c62a                	sw	a0,12(sp)
+ 8001366:	44d2                	lw	s1,20(sp)
+ 8001368:	4942                	lw	s2,16(sp)
+ 800136a:	6105                	addi	sp,sp,32
+ 800136c:	8082                	ret
+ 800136e:	c62a                	sw	a0,12(sp)
    while (((w+1)%256)==r) LCD_WR_Queue(); //If buffer full then spin...
- 8001388:	00000097          	auipc	ra,0x0
- 800138c:	ec2080e7          	jalr	-318(ra) # 800124a <LCD_WR_Queue>
- 8001390:	4532                	lw	a0,12(sp)
- 8001392:	b7c1                	j	8001352 <LCD_Write_Bus+0x16>
+ 8001370:	00000097          	auipc	ra,0x0
+ 8001374:	ec2080e7          	jalr	-318(ra) # 8001232 <LCD_WR_Queue>
+ 8001378:	4532                	lw	a0,12(sp)
+ 800137a:	b7c1                	j	800133a <LCD_Write_Bus+0x16>
 
-08001394 <LCD_WR_DATA>:
+0800137c <LCD_WR_DATA>:
   Function description: LCD write 16-bit data
   Entry data: dat: 16-bit data to be written
   Return value: None
 */
 void LCD_WR_DATA(u16 dat)
 {
- 8001394:	1141                	addi	sp,sp,-16
- 8001396:	c422                	sw	s0,8(sp)
- 8001398:	842a                	mv	s0,a0
+ 800137c:	1141                	addi	sp,sp,-16
+ 800137e:	c422                	sw	s0,8(sp)
+ 8001380:	842a                	mv	s0,a0
 	//OLED_DC_Set();  // Write data
 	//LCD_Writ_Bus(dat>>8);
 	//LCD_Writ_Bus(dat);
     LCD_Write_Bus(((int)dat>>8)+(1<<8));
- 800139a:	8521                	srai	a0,a0,0x8
- 800139c:	10050513          	addi	a0,a0,256 # 40011100 <GPIOB+0x500>
+ 8001382:	8521                	srai	a0,a0,0x8
+ 8001384:	10050513          	addi	a0,a0,256 # 40011100 <GPIOB+0x500>
 {
- 80013a0:	c606                	sw	ra,12(sp)
+ 8001388:	c606                	sw	ra,12(sp)
     LCD_Write_Bus(((int)dat>>8)+(1<<8));
- 80013a2:	00000097          	auipc	ra,0x0
- 80013a6:	f9a080e7          	jalr	-102(ra) # 800133c <LCD_Write_Bus>
+ 800138a:	00000097          	auipc	ra,0x0
+ 800138e:	f9a080e7          	jalr	-102(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat&0xFF)+(1<<8));
- 80013aa:	0ff47513          	andi	a0,s0,255
+ 8001392:	0ff47513          	andi	a0,s0,255
 }
- 80013ae:	4422                	lw	s0,8(sp)
- 80013b0:	40b2                	lw	ra,12(sp)
+ 8001396:	4422                	lw	s0,8(sp)
+ 8001398:	40b2                	lw	ra,12(sp)
     LCD_Write_Bus(((int)dat&0xFF)+(1<<8));
- 80013b2:	10050513          	addi	a0,a0,256
+ 800139a:	10050513          	addi	a0,a0,256
 }
- 80013b6:	0141                	addi	sp,sp,16
+ 800139e:	0141                	addi	sp,sp,16
     LCD_Write_Bus(((int)dat&0xFF)+(1<<8));
- 80013b8:	00000317          	auipc	t1,0x0
- 80013bc:	f8430067          	jr	-124(t1) # 800133c <LCD_Write_Bus>
+ 80013a0:	00000317          	auipc	t1,0x0
+ 80013a4:	f8430067          	jr	-124(t1) # 8001324 <LCD_Write_Bus>
 
-080013c0 <LCD_Address_Set>:
+080013a8 <LCD_Address_Set>:
   Entry data: x1, x2 set the start and end column address
               y1, y2 set the start and end row address
   Return value: None
 */
 void LCD_Address_Set(u16 x1,u16 y1,u16 x2,u16 y2)
 {
- 80013c0:	1101                	addi	sp,sp,-32
- 80013c2:	cc22                	sw	s0,24(sp)
- 80013c4:	ca26                	sw	s1,20(sp)
+ 80013a8:	1101                	addi	sp,sp,-32
+ 80013aa:	cc22                	sw	s0,24(sp)
+ 80013ac:	ca26                	sw	s1,20(sp)
 	LCD_WR_REG(0x2a);  // Column address setting
 	LCD_WR_DATA(x1+lcd_conf.offset_x);
- 80013c6:	20000437          	lui	s0,0x20000
+ 80013ae:	20000437          	lui	s0,0x20000
 {
- 80013ca:	84aa                	mv	s1,a0
+ 80013b2:	84aa                	mv	s1,a0
     LCD_Write_Bus((int)dat);
- 80013cc:	02a00513          	li	a0,42
+ 80013b4:	02a00513          	li	a0,42
 {
- 80013d0:	ce06                	sw	ra,28(sp)
- 80013d2:	c236                	sw	a3,4(sp)
- 80013d4:	c62e                	sw	a1,12(sp)
+ 80013b8:	ce06                	sw	ra,28(sp)
+ 80013ba:	c236                	sw	a3,4(sp)
+ 80013bc:	c62e                	sw	a1,12(sp)
 	LCD_WR_DATA(x1+lcd_conf.offset_x);
- 80013d6:	08840413          	addi	s0,s0,136 # 20000088 <lcd_conf>
+ 80013be:	08840413          	addi	s0,s0,136 # 20000088 <lcd_conf>
 {
- 80013da:	c432                	sw	a2,8(sp)
+ 80013c2:	c432                	sw	a2,8(sp)
     LCD_Write_Bus((int)dat);
- 80013dc:	00000097          	auipc	ra,0x0
- 80013e0:	f60080e7          	jalr	-160(ra) # 800133c <LCD_Write_Bus>
+ 80013c4:	00000097          	auipc	ra,0x0
+ 80013c8:	f60080e7          	jalr	-160(ra) # 8001324 <LCD_Write_Bus>
 	LCD_WR_DATA(x1+lcd_conf.offset_x);
- 80013e4:	00244503          	lbu	a0,2(s0)
- 80013e8:	9526                	add	a0,a0,s1
- 80013ea:	00000097          	auipc	ra,0x0
- 80013ee:	faa080e7          	jalr	-86(ra) # 8001394 <LCD_WR_DATA>
+ 80013cc:	00244503          	lbu	a0,2(s0)
+ 80013d0:	9526                	add	a0,a0,s1
+ 80013d2:	00000097          	auipc	ra,0x0
+ 80013d6:	faa080e7          	jalr	-86(ra) # 800137c <LCD_WR_DATA>
 	LCD_WR_DATA(x2+lcd_conf.offset_x);
- 80013f2:	4622                	lw	a2,8(sp)
- 80013f4:	00244503          	lbu	a0,2(s0)
- 80013f8:	9532                	add	a0,a0,a2
- 80013fa:	00000097          	auipc	ra,0x0
- 80013fe:	f9a080e7          	jalr	-102(ra) # 8001394 <LCD_WR_DATA>
+ 80013da:	4622                	lw	a2,8(sp)
+ 80013dc:	00244503          	lbu	a0,2(s0)
+ 80013e0:	9532                	add	a0,a0,a2
+ 80013e2:	00000097          	auipc	ra,0x0
+ 80013e6:	f9a080e7          	jalr	-102(ra) # 800137c <LCD_WR_DATA>
     LCD_Write_Bus((int)dat);
- 8001402:	02b00513          	li	a0,43
- 8001406:	00000097          	auipc	ra,0x0
- 800140a:	f36080e7          	jalr	-202(ra) # 800133c <LCD_Write_Bus>
+ 80013ea:	02b00513          	li	a0,43
+ 80013ee:	00000097          	auipc	ra,0x0
+ 80013f2:	f36080e7          	jalr	-202(ra) # 8001324 <LCD_Write_Bus>
 	LCD_WR_REG(0x2b);  // row address setting
 	LCD_WR_DATA(y1+lcd_conf.offset_y);
- 800140e:	45b2                	lw	a1,12(sp)
- 8001410:	00344503          	lbu	a0,3(s0)
- 8001414:	952e                	add	a0,a0,a1
- 8001416:	00000097          	auipc	ra,0x0
- 800141a:	f7e080e7          	jalr	-130(ra) # 8001394 <LCD_WR_DATA>
+ 80013f6:	45b2                	lw	a1,12(sp)
+ 80013f8:	00344503          	lbu	a0,3(s0)
+ 80013fc:	952e                	add	a0,a0,a1
+ 80013fe:	00000097          	auipc	ra,0x0
+ 8001402:	f7e080e7          	jalr	-130(ra) # 800137c <LCD_WR_DATA>
 	LCD_WR_DATA(y2+lcd_conf.offset_y);
- 800141e:	00344503          	lbu	a0,3(s0)
- 8001422:	4692                	lw	a3,4(sp)
- 8001424:	9536                	add	a0,a0,a3
- 8001426:	00000097          	auipc	ra,0x0
- 800142a:	f6e080e7          	jalr	-146(ra) # 8001394 <LCD_WR_DATA>
+ 8001406:	00344503          	lbu	a0,3(s0)
+ 800140a:	4692                	lw	a3,4(sp)
+ 800140c:	9536                	add	a0,a0,a3
+ 800140e:	00000097          	auipc	ra,0x0
+ 8001412:	f6e080e7          	jalr	-146(ra) # 800137c <LCD_WR_DATA>
 	LCD_WR_REG(0x2c);  // Memory write
 }
- 800142e:	4462                	lw	s0,24(sp)
- 8001430:	40f2                	lw	ra,28(sp)
- 8001432:	44d2                	lw	s1,20(sp)
+ 8001416:	4462                	lw	s0,24(sp)
+ 8001418:	40f2                	lw	ra,28(sp)
+ 800141a:	44d2                	lw	s1,20(sp)
     LCD_Write_Bus((int)dat);
- 8001434:	02c00513          	li	a0,44
+ 800141c:	02c00513          	li	a0,44
 }
- 8001438:	6105                	addi	sp,sp,32
+ 8001420:	6105                	addi	sp,sp,32
     LCD_Write_Bus((int)dat);
- 800143a:	00000317          	auipc	t1,0x0
- 800143e:	f0230067          	jr	-254(t1) # 800133c <LCD_Write_Bus>
+ 8001422:	00000317          	auipc	t1,0x0
+ 8001426:	f0230067          	jr	-254(t1) # 8001324 <LCD_Write_Bus>
 
-08001442 <spi_config>:
+0800142a <spi_config>:
     \param[in]  none
     \param[out] none
     \retval     none
 */
 void spi_config(void)
 {
- 8001442:	7179                	addi	sp,sp,-48
+ 800142a:	7179                	addi	sp,sp,-48
     spi_parameter_struct spi_init_struct;
     /* deinitilize SPI and the parameters */
     OLED_CS_Set();
- 8001444:	6589                	lui	a1,0x2
- 8001446:	40011537          	lui	a0,0x40011
+ 800142c:	6589                	lui	a1,0x2
+ 800142e:	40011537          	lui	a0,0x40011
 {
- 800144a:	d606                	sw	ra,44(sp)
- 800144c:	d422                	sw	s0,40(sp)
+ 8001432:	d606                	sw	ra,44(sp)
+ 8001434:	d422                	sw	s0,40(sp)
     OLED_CS_Set();
- 800144e:	00000097          	auipc	ra,0x0
- 8001452:	9ea080e7          	jalr	-1558(ra) # 8000e38 <gpio_bit_set>
+ 8001436:	00000097          	auipc	ra,0x0
+ 800143a:	9ea080e7          	jalr	-1558(ra) # 8000e20 <gpio_bit_set>
     spi_struct_para_init(&spi_init_struct);
- 8001456:	0048                	addi	a0,sp,4
- 8001458:	00000097          	auipc	ra,0x0
- 800145c:	a00080e7          	jalr	-1536(ra) # 8000e58 <spi_struct_para_init>
+ 800143e:	0048                	addi	a0,sp,4
+ 8001440:	00000097          	auipc	ra,0x0
+ 8001444:	a00080e7          	jalr	-1536(ra) # 8000e40 <spi_struct_para_init>
 
     /* SPI1 parameter config */
     spi_init_struct.trans_mode           = SPI_TRANSMODE_FULLDUPLEX;
     spi_init_struct.device_mode          = SPI_MASTER;
- 8001460:	10400793          	li	a5,260
- 8001464:	c23e                	sw	a5,4(sp)
+ 8001448:	10400793          	li	a5,260
+ 800144c:	c23e                	sw	a5,4(sp)
     spi_init_struct.frame_size           = SPI_FRAMESIZE_8BIT;
     spi_init_struct.clock_polarity_phase = SPI_CK_PL_HIGH_PH_2EDGE;
- 8001466:	478d                	li	a5,3
+ 800144e:	478d                	li	a5,3
     spi_init_struct.nss                  = SPI_NSS_SOFT;
     spi_init_struct.prescale             = SPI_PSC_4;
     spi_init_struct.endian               = SPI_ENDIAN_MSB;
     spi_init(SPI1, &spi_init_struct);
- 8001468:	40004437          	lui	s0,0x40004
+ 8001450:	40004437          	lui	s0,0x40004
     spi_init_struct.clock_polarity_phase = SPI_CK_PL_HIGH_PH_2EDGE;
- 800146c:	cc3e                	sw	a5,24(sp)
+ 8001454:	cc3e                	sw	a5,24(sp)
     spi_init_struct.nss                  = SPI_NSS_SOFT;
- 800146e:	20000793          	li	a5,512
- 8001472:	c83e                	sw	a5,16(sp)
+ 8001456:	20000793          	li	a5,512
+ 800145a:	c83e                	sw	a5,16(sp)
     spi_init(SPI1, &spi_init_struct);
- 8001474:	004c                	addi	a1,sp,4
+ 800145c:	004c                	addi	a1,sp,4
     spi_init_struct.prescale             = SPI_PSC_4;
- 8001476:	47a1                	li	a5,8
+ 800145e:	47a1                	li	a5,8
     spi_init(SPI1, &spi_init_struct);
- 8001478:	80040513          	addi	a0,s0,-2048 # 40003800 <TIMER5+0x2800>
+ 8001460:	80040513          	addi	a0,s0,-2048 # 40003800 <TIMER5+0x2800>
     spi_init_struct.prescale             = SPI_PSC_4;
- 800147c:	ce3e                	sw	a5,28(sp)
+ 8001464:	ce3e                	sw	a5,28(sp)
     spi_init_struct.trans_mode           = SPI_TRANSMODE_FULLDUPLEX;
- 800147e:	c402                	sw	zero,8(sp)
+ 8001466:	c402                	sw	zero,8(sp)
     spi_init_struct.frame_size           = SPI_FRAMESIZE_8BIT;
- 8001480:	c602                	sw	zero,12(sp)
+ 8001468:	c602                	sw	zero,12(sp)
     spi_init_struct.endian               = SPI_ENDIAN_MSB;
- 8001482:	ca02                	sw	zero,20(sp)
+ 800146a:	ca02                	sw	zero,20(sp)
     spi_init(SPI1, &spi_init_struct);
- 8001484:	00000097          	auipc	ra,0x0
- 8001488:	9ee080e7          	jalr	-1554(ra) # 8000e72 <spi_init>
+ 800146c:	00000097          	auipc	ra,0x0
+ 8001470:	9ee080e7          	jalr	-1554(ra) # 8000e5a <spi_init>
 
 	spi_crc_polynomial_set(SPI1,7);
- 800148c:	80040513          	addi	a0,s0,-2048
- 8001490:	459d                	li	a1,7
- 8001492:	00000097          	auipc	ra,0x0
- 8001496:	a24080e7          	jalr	-1500(ra) # 8000eb6 <spi_crc_polynomial_set>
+ 8001474:	80040513          	addi	a0,s0,-2048
+ 8001478:	459d                	li	a1,7
+ 800147a:	00000097          	auipc	ra,0x0
+ 800147e:	a24080e7          	jalr	-1500(ra) # 8000e9e <spi_crc_polynomial_set>
 	spi_enable(SPI1);
- 800149a:	80040513          	addi	a0,s0,-2048
- 800149e:	00000097          	auipc	ra,0x0
- 80014a2:	a0a080e7          	jalr	-1526(ra) # 8000ea8 <spi_enable>
+ 8001482:	80040513          	addi	a0,s0,-2048
+ 8001486:	00000097          	auipc	ra,0x0
+ 800148a:	a0a080e7          	jalr	-1526(ra) # 8000e90 <spi_enable>
 }
- 80014a6:	50b2                	lw	ra,44(sp)
- 80014a8:	5422                	lw	s0,40(sp)
- 80014aa:	6145                	addi	sp,sp,48
- 80014ac:	8082                	ret
+ 800148e:	50b2                	lw	ra,44(sp)
+ 8001490:	5422                	lw	s0,40(sp)
+ 8001492:	6145                	addi	sp,sp,48
+ 8001494:	8082                	ret
 
-080014ae <Lcd_SetType>:
+08001496 <Lcd_SetType>:
 
 void Lcd_SetType(int type){
 	if(type == LCD_NORMAL){
- 80014ae:	e909                	bnez	a0,80014c0 <Lcd_SetType+0x12>
+ 8001496:	e909                	bnez	a0,80014a8 <Lcd_SetType+0x12>
 		lcd_conf.configured = 1;
- 80014b0:	1a0107b7          	lui	a5,0x1a010
- 80014b4:	20000737          	lui	a4,0x20000
- 80014b8:	0785                	addi	a5,a5,1
+ 8001498:	1a0107b7          	lui	a5,0x1a010
+ 800149c:	20000737          	lui	a4,0x20000
+ 80014a0:	0785                	addi	a5,a5,1
 		lcd_conf.offset_x = 1;
 		lcd_conf.offset_y = 26;
 		lcd_conf.inverted = 0;
 	}
 	if(type == LCD_INVERTED){
 		lcd_conf.configured = 1;
- 80014ba:	08f72423          	sw	a5,136(a4) # 20000088 <lcd_conf>
+ 80014a2:	08f72423          	sw	a5,136(a4) # 20000088 <lcd_conf>
 		lcd_conf.offset_x = 0;
 		lcd_conf.offset_y = 24;
 		lcd_conf.inverted = 1;
 	}
 }
- 80014be:	8082                	ret
+ 80014a6:	8082                	ret
 	if(type == LCD_INVERTED){
- 80014c0:	4785                	li	a5,1
- 80014c2:	fef51ee3          	bne	a0,a5,80014be <Lcd_SetType+0x10>
+ 80014a8:	4785                	li	a5,1
+ 80014aa:	fef51ee3          	bne	a0,a5,80014a6 <Lcd_SetType+0x10>
 		lcd_conf.configured = 1;
- 80014c6:	180007b7          	lui	a5,0x18000
- 80014ca:	20000737          	lui	a4,0x20000
- 80014ce:	10178793          	addi	a5,a5,257 # 18000101 <__fini_array_end+0xfffd2bd>
- 80014d2:	b7e5                	j	80014ba <Lcd_SetType+0xc>
+ 80014ae:	180007b7          	lui	a5,0x18000
+ 80014b2:	20000737          	lui	a4,0x20000
+ 80014b6:	10178793          	addi	a5,a5,257 # 18000101 <__fini_array_end+0xfffd2bd>
+ 80014ba:	b7e5                	j	80014a2 <Lcd_SetType+0xc>
 
-080014d4 <Lcd_Init>:
+080014bc <Lcd_Init>:
   Entry data: None
   Return value: None
 */
 void Lcd_Init(void)
 {
 	if(!lcd_conf.configured) Lcd_SetType(LCD_NORMAL);
- 80014d4:	200007b7          	lui	a5,0x20000
- 80014d8:	0887c703          	lbu	a4,136(a5) # 20000088 <lcd_conf>
+ 80014bc:	200007b7          	lui	a5,0x20000
+ 80014c0:	0887c703          	lbu	a4,136(a5) # 20000088 <lcd_conf>
 {
- 80014dc:	1141                	addi	sp,sp,-16
- 80014de:	c422                	sw	s0,8(sp)
- 80014e0:	c606                	sw	ra,12(sp)
- 80014e2:	08878413          	addi	s0,a5,136
+ 80014c4:	1141                	addi	sp,sp,-16
+ 80014c6:	c422                	sw	s0,8(sp)
+ 80014c8:	c606                	sw	ra,12(sp)
+ 80014ca:	08878413          	addi	s0,a5,136
 	if(!lcd_conf.configured) Lcd_SetType(LCD_NORMAL);
- 80014e6:	e711                	bnez	a4,80014f2 <Lcd_Init+0x1e>
- 80014e8:	4501                	li	a0,0
- 80014ea:	00000097          	auipc	ra,0x0
- 80014ee:	fc4080e7          	jalr	-60(ra) # 80014ae <Lcd_SetType>
+ 80014ce:	e711                	bnez	a4,80014da <Lcd_Init+0x1e>
+ 80014d0:	4501                	li	a0,0
+ 80014d2:	00000097          	auipc	ra,0x0
+ 80014d6:	fc4080e7          	jalr	-60(ra) # 8001496 <Lcd_SetType>
 	rcu_periph_clock_enable(RCU_GPIOB);
- 80014f2:	60300513          	li	a0,1539
- 80014f6:	00000097          	auipc	ra,0x0
- 80014fa:	94a080e7          	jalr	-1718(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014da:	60300513          	li	a0,1539
+ 80014de:	00000097          	auipc	ra,0x0
+ 80014e2:	94a080e7          	jalr	-1718(ra) # 8000e28 <rcu_periph_clock_enable>
 	rcu_periph_clock_enable(RCU_GPIOC);
- 80014fe:	60400513          	li	a0,1540
- 8001502:	00000097          	auipc	ra,0x0
- 8001506:	93e080e7          	jalr	-1730(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014e6:	60400513          	li	a0,1540
+ 80014ea:	00000097          	auipc	ra,0x0
+ 80014ee:	93e080e7          	jalr	-1730(ra) # 8000e28 <rcu_periph_clock_enable>
 
  	rcu_periph_clock_enable(RCU_AF);
- 800150a:	60000513          	li	a0,1536
- 800150e:	00000097          	auipc	ra,0x0
- 8001512:	932080e7          	jalr	-1742(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014f2:	60000513          	li	a0,1536
+ 80014f6:	00000097          	auipc	ra,0x0
+ 80014fa:	932080e7          	jalr	-1742(ra) # 8000e28 <rcu_periph_clock_enable>
 	rcu_periph_clock_enable(RCU_SPI1);
- 8001516:	70e00513          	li	a0,1806
- 800151a:	00000097          	auipc	ra,0x0
- 800151e:	926080e7          	jalr	-1754(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014fe:	70e00513          	li	a0,1806
+ 8001502:	00000097          	auipc	ra,0x0
+ 8001506:	926080e7          	jalr	-1754(ra) # 8000e28 <rcu_periph_clock_enable>
 	
     gpio_init(GPIOB, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_13 |GPIO_PIN_14| GPIO_PIN_15);
- 8001522:	40011537          	lui	a0,0x40011
- 8001526:	66b9                	lui	a3,0xe
- 8001528:	460d                	li	a2,3
- 800152a:	45e1                	li	a1,24
- 800152c:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
- 8001530:	00000097          	auipc	ra,0x0
- 8001534:	864080e7          	jalr	-1948(ra) # 8000d94 <gpio_init>
+ 800150a:	40011537          	lui	a0,0x40011
+ 800150e:	66b9                	lui	a3,0xe
+ 8001510:	460d                	li	a2,3
+ 8001512:	45e1                	li	a1,24
+ 8001514:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8001518:	00000097          	auipc	ra,0x0
+ 800151c:	864080e7          	jalr	-1948(ra) # 8000d7c <gpio_init>
 	gpio_init(GPIOC, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_13 | GPIO_PIN_15); //CS
- 8001538:	66a9                	lui	a3,0xa
- 800153a:	460d                	li	a2,3
- 800153c:	45c1                	li	a1,16
- 800153e:	40011537          	lui	a0,0x40011
- 8001542:	00000097          	auipc	ra,0x0
- 8001546:	852080e7          	jalr	-1966(ra) # 8000d94 <gpio_init>
+ 8001520:	66a9                	lui	a3,0xa
+ 8001522:	460d                	li	a2,3
+ 8001524:	45c1                	li	a1,16
+ 8001526:	40011537          	lui	a0,0x40011
+ 800152a:	00000097          	auipc	ra,0x0
+ 800152e:	852080e7          	jalr	-1966(ra) # 8000d7c <gpio_init>
 
 	spi_config();
- 800154a:	00000097          	auipc	ra,0x0
- 800154e:	ef8080e7          	jalr	-264(ra) # 8001442 <spi_config>
+ 8001532:	00000097          	auipc	ra,0x0
+ 8001536:	ef8080e7          	jalr	-264(ra) # 800142a <spi_config>
 
 	gpio_bit_reset(GPIOC, GPIO_PIN_13 | GPIO_PIN_15);
- 8001552:	65a9                	lui	a1,0xa
- 8001554:	40011537          	lui	a0,0x40011
- 8001558:	00000097          	auipc	ra,0x0
- 800155c:	8e4080e7          	jalr	-1820(ra) # 8000e3c <gpio_bit_reset>
+ 800153a:	65a9                	lui	a1,0xa
+ 800153c:	40011537          	lui	a0,0x40011
+ 8001540:	00000097          	auipc	ra,0x0
+ 8001544:	8e4080e7          	jalr	-1820(ra) # 8000e24 <gpio_bit_reset>
 	LCD_Wait_On_Queue();
- 8001560:	00000097          	auipc	ra,0x0
- 8001564:	dac080e7          	jalr	-596(ra) # 800130c <LCD_Wait_On_Queue>
+ 8001548:	00000097          	auipc	ra,0x0
+ 800154c:	dac080e7          	jalr	-596(ra) # 80012f4 <LCD_Wait_On_Queue>
 	lcd_delay_1ms(100);
- 8001568:	06400513          	li	a0,100
- 800156c:	00000097          	auipc	ra,0x0
- 8001570:	c10080e7          	jalr	-1008(ra) # 800117c <lcd_delay_1ms>
+ 8001550:	06400513          	li	a0,100
+ 8001554:	00000097          	auipc	ra,0x0
+ 8001558:	c10080e7          	jalr	-1008(ra) # 8001164 <lcd_delay_1ms>
     LCD_Write_Bus((int)dat);
- 8001574:	4505                	li	a0,1
- 8001576:	00000097          	auipc	ra,0x0
- 800157a:	dc6080e7          	jalr	-570(ra) # 800133c <LCD_Write_Bus>
+ 800155c:	4505                	li	a0,1
+ 800155e:	00000097          	auipc	ra,0x0
+ 8001562:	dc6080e7          	jalr	-570(ra) # 8001324 <LCD_Write_Bus>
 	
 
 	LCD_WR_REG(0x01); 	//SW reset
 	LCD_Wait_On_Queue();
- 800157e:	00000097          	auipc	ra,0x0
- 8001582:	d8e080e7          	jalr	-626(ra) # 800130c <LCD_Wait_On_Queue>
+ 8001566:	00000097          	auipc	ra,0x0
+ 800156a:	d8e080e7          	jalr	-626(ra) # 80012f4 <LCD_Wait_On_Queue>
 	lcd_delay_1ms(120);
- 8001586:	07800513          	li	a0,120
- 800158a:	00000097          	auipc	ra,0x0
- 800158e:	bf2080e7          	jalr	-1038(ra) # 800117c <lcd_delay_1ms>
+ 800156e:	07800513          	li	a0,120
+ 8001572:	00000097          	auipc	ra,0x0
+ 8001576:	bf2080e7          	jalr	-1038(ra) # 8001164 <lcd_delay_1ms>
     LCD_Write_Bus((int)dat);
- 8001592:	4545                	li	a0,17
- 8001594:	00000097          	auipc	ra,0x0
- 8001598:	da8080e7          	jalr	-600(ra) # 800133c <LCD_Write_Bus>
+ 800157a:	4545                	li	a0,17
+ 800157c:	00000097          	auipc	ra,0x0
+ 8001580:	da8080e7          	jalr	-600(ra) # 8001324 <LCD_Write_Bus>
 	
 
 	LCD_WR_REG(0x11); 	//SLPOUT
 	LCD_Wait_On_Queue();
- 800159c:	00000097          	auipc	ra,0x0
- 80015a0:	d70080e7          	jalr	-656(ra) # 800130c <LCD_Wait_On_Queue>
+ 8001584:	00000097          	auipc	ra,0x0
+ 8001588:	d70080e7          	jalr	-656(ra) # 80012f4 <LCD_Wait_On_Queue>
 	lcd_delay_1ms(100);
- 80015a4:	06400513          	li	a0,100
- 80015a8:	00000097          	auipc	ra,0x0
- 80015ac:	bd4080e7          	jalr	-1068(ra) # 800117c <lcd_delay_1ms>
+ 800158c:	06400513          	li	a0,100
+ 8001590:	00000097          	auipc	ra,0x0
+ 8001594:	bd4080e7          	jalr	-1068(ra) # 8001164 <lcd_delay_1ms>
 
 	if(lcd_conf.inverted) LCD_WR_REG(0x22); 
- 80015b0:	00144783          	lbu	a5,1(s0)
+ 8001598:	00144783          	lbu	a5,1(s0)
     LCD_Write_Bus((int)dat);
- 80015b4:	02200513          	li	a0,34
+ 800159c:	02200513          	li	a0,34
 	if(lcd_conf.inverted) LCD_WR_REG(0x22); 
- 80015b8:	e399                	bnez	a5,80015be <Lcd_Init+0xea>
+ 80015a0:	e399                	bnez	a5,80015a6 <Lcd_Init+0xea>
     LCD_Write_Bus((int)dat);
- 80015ba:	02100513          	li	a0,33
+ 80015a2:	02100513          	li	a0,33
+ 80015a6:	00000097          	auipc	ra,0x0
+ 80015aa:	d7e080e7          	jalr	-642(ra) # 8001324 <LCD_Write_Bus>
+ 80015ae:	0b100513          	li	a0,177
+ 80015b2:	00000097          	auipc	ra,0x0
+ 80015b6:	d72080e7          	jalr	-654(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80015ba:	10500513          	li	a0,261
  80015be:	00000097          	auipc	ra,0x0
- 80015c2:	d7e080e7          	jalr	-642(ra) # 800133c <LCD_Write_Bus>
- 80015c6:	0b100513          	li	a0,177
+ 80015c2:	d66080e7          	jalr	-666(ra) # 8001324 <LCD_Write_Bus>
+ 80015c6:	13a00513          	li	a0,314
  80015ca:	00000097          	auipc	ra,0x0
- 80015ce:	d72080e7          	jalr	-654(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 80015d2:	10500513          	li	a0,261
+ 80015ce:	d5a080e7          	jalr	-678(ra) # 8001324 <LCD_Write_Bus>
+ 80015d2:	13a00513          	li	a0,314
  80015d6:	00000097          	auipc	ra,0x0
- 80015da:	d66080e7          	jalr	-666(ra) # 800133c <LCD_Write_Bus>
- 80015de:	13a00513          	li	a0,314
+ 80015da:	d4e080e7          	jalr	-690(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80015de:	0b200513          	li	a0,178
  80015e2:	00000097          	auipc	ra,0x0
- 80015e6:	d5a080e7          	jalr	-678(ra) # 800133c <LCD_Write_Bus>
- 80015ea:	13a00513          	li	a0,314
+ 80015e6:	d42080e7          	jalr	-702(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80015ea:	10500513          	li	a0,261
  80015ee:	00000097          	auipc	ra,0x0
- 80015f2:	d4e080e7          	jalr	-690(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 80015f6:	0b200513          	li	a0,178
+ 80015f2:	d36080e7          	jalr	-714(ra) # 8001324 <LCD_Write_Bus>
+ 80015f6:	13a00513          	li	a0,314
  80015fa:	00000097          	auipc	ra,0x0
- 80015fe:	d42080e7          	jalr	-702(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 8001602:	10500513          	li	a0,261
+ 80015fe:	d2a080e7          	jalr	-726(ra) # 8001324 <LCD_Write_Bus>
+ 8001602:	13a00513          	li	a0,314
  8001606:	00000097          	auipc	ra,0x0
- 800160a:	d36080e7          	jalr	-714(ra) # 800133c <LCD_Write_Bus>
- 800160e:	13a00513          	li	a0,314
- 8001612:	00000097          	auipc	ra,0x0
- 8001616:	d2a080e7          	jalr	-726(ra) # 800133c <LCD_Write_Bus>
- 800161a:	13a00513          	li	a0,314
- 800161e:	00000097          	auipc	ra,0x0
- 8001622:	d1e080e7          	jalr	-738(ra) # 800133c <LCD_Write_Bus>
+ 800160a:	d1e080e7          	jalr	-738(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 8001626:	0b300513          	li	a0,179
- 800162a:	00000097          	auipc	ra,0x0
- 800162e:	d12080e7          	jalr	-750(ra) # 800133c <LCD_Write_Bus>
+ 800160e:	0b300513          	li	a0,179
+ 8001612:	00000097          	auipc	ra,0x0
+ 8001616:	d12080e7          	jalr	-750(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001632:	10500513          	li	a0,261
+ 800161a:	10500513          	li	a0,261
+ 800161e:	00000097          	auipc	ra,0x0
+ 8001622:	d06080e7          	jalr	-762(ra) # 8001324 <LCD_Write_Bus>
+ 8001626:	13a00513          	li	a0,314
+ 800162a:	00000097          	auipc	ra,0x0
+ 800162e:	cfa080e7          	jalr	-774(ra) # 8001324 <LCD_Write_Bus>
+ 8001632:	13a00513          	li	a0,314
  8001636:	00000097          	auipc	ra,0x0
- 800163a:	d06080e7          	jalr	-762(ra) # 800133c <LCD_Write_Bus>
- 800163e:	13a00513          	li	a0,314
+ 800163a:	cee080e7          	jalr	-786(ra) # 8001324 <LCD_Write_Bus>
+ 800163e:	10500513          	li	a0,261
  8001642:	00000097          	auipc	ra,0x0
- 8001646:	cfa080e7          	jalr	-774(ra) # 800133c <LCD_Write_Bus>
+ 8001646:	ce2080e7          	jalr	-798(ra) # 8001324 <LCD_Write_Bus>
  800164a:	13a00513          	li	a0,314
  800164e:	00000097          	auipc	ra,0x0
- 8001652:	cee080e7          	jalr	-786(ra) # 800133c <LCD_Write_Bus>
- 8001656:	10500513          	li	a0,261
+ 8001652:	cd6080e7          	jalr	-810(ra) # 8001324 <LCD_Write_Bus>
+ 8001656:	13a00513          	li	a0,314
  800165a:	00000097          	auipc	ra,0x0
- 800165e:	ce2080e7          	jalr	-798(ra) # 800133c <LCD_Write_Bus>
- 8001662:	13a00513          	li	a0,314
+ 800165e:	cca080e7          	jalr	-822(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 8001662:	0b400513          	li	a0,180
  8001666:	00000097          	auipc	ra,0x0
- 800166a:	cd6080e7          	jalr	-810(ra) # 800133c <LCD_Write_Bus>
- 800166e:	13a00513          	li	a0,314
+ 800166a:	cbe080e7          	jalr	-834(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 800166e:	10300513          	li	a0,259
  8001672:	00000097          	auipc	ra,0x0
- 8001676:	cca080e7          	jalr	-822(ra) # 800133c <LCD_Write_Bus>
+ 8001676:	cb2080e7          	jalr	-846(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 800167a:	0b400513          	li	a0,180
+ 800167a:	0c000513          	li	a0,192
  800167e:	00000097          	auipc	ra,0x0
- 8001682:	cbe080e7          	jalr	-834(ra) # 800133c <LCD_Write_Bus>
+ 8001682:	ca6080e7          	jalr	-858(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001686:	10300513          	li	a0,259
+ 8001686:	16200513          	li	a0,354
  800168a:	00000097          	auipc	ra,0x0
- 800168e:	cb2080e7          	jalr	-846(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 8001692:	0c000513          	li	a0,192
+ 800168e:	c9a080e7          	jalr	-870(ra) # 8001324 <LCD_Write_Bus>
+ 8001692:	10200513          	li	a0,258
  8001696:	00000097          	auipc	ra,0x0
- 800169a:	ca6080e7          	jalr	-858(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800169e:	16200513          	li	a0,354
+ 800169a:	c8e080e7          	jalr	-882(ra) # 8001324 <LCD_Write_Bus>
+ 800169e:	10400513          	li	a0,260
  80016a2:	00000097          	auipc	ra,0x0
- 80016a6:	c9a080e7          	jalr	-870(ra) # 800133c <LCD_Write_Bus>
- 80016aa:	10200513          	li	a0,258
+ 80016a6:	c82080e7          	jalr	-894(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80016aa:	0c100513          	li	a0,193
  80016ae:	00000097          	auipc	ra,0x0
- 80016b2:	c8e080e7          	jalr	-882(ra) # 800133c <LCD_Write_Bus>
- 80016b6:	10400513          	li	a0,260
+ 80016b2:	c76080e7          	jalr	-906(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80016b6:	1c000513          	li	a0,448
  80016ba:	00000097          	auipc	ra,0x0
- 80016be:	c82080e7          	jalr	-894(ra) # 800133c <LCD_Write_Bus>
+ 80016be:	c6a080e7          	jalr	-918(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 80016c2:	0c100513          	li	a0,193
+ 80016c2:	0c200513          	li	a0,194
  80016c6:	00000097          	auipc	ra,0x0
- 80016ca:	c76080e7          	jalr	-906(ra) # 800133c <LCD_Write_Bus>
+ 80016ca:	c5e080e7          	jalr	-930(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 80016ce:	1c000513          	li	a0,448
+ 80016ce:	10d00513          	li	a0,269
  80016d2:	00000097          	auipc	ra,0x0
- 80016d6:	c6a080e7          	jalr	-918(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 80016da:	0c200513          	li	a0,194
+ 80016d6:	c52080e7          	jalr	-942(ra) # 8001324 <LCD_Write_Bus>
+ 80016da:	10000513          	li	a0,256
  80016de:	00000097          	auipc	ra,0x0
- 80016e2:	c5e080e7          	jalr	-930(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 80016e6:	10d00513          	li	a0,269
+ 80016e2:	c46080e7          	jalr	-954(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80016e6:	0c300513          	li	a0,195
  80016ea:	00000097          	auipc	ra,0x0
- 80016ee:	c52080e7          	jalr	-942(ra) # 800133c <LCD_Write_Bus>
- 80016f2:	10000513          	li	a0,256
+ 80016ee:	c3a080e7          	jalr	-966(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80016f2:	18d00513          	li	a0,397
  80016f6:	00000097          	auipc	ra,0x0
- 80016fa:	c46080e7          	jalr	-954(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 80016fe:	0c300513          	li	a0,195
+ 80016fa:	c2e080e7          	jalr	-978(ra) # 8001324 <LCD_Write_Bus>
+ 80016fe:	16a00513          	li	a0,362
  8001702:	00000097          	auipc	ra,0x0
- 8001706:	c3a080e7          	jalr	-966(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800170a:	18d00513          	li	a0,397
+ 8001706:	c22080e7          	jalr	-990(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 800170a:	0c400513          	li	a0,196
  800170e:	00000097          	auipc	ra,0x0
- 8001712:	c2e080e7          	jalr	-978(ra) # 800133c <LCD_Write_Bus>
- 8001716:	16a00513          	li	a0,362
+ 8001712:	c16080e7          	jalr	-1002(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 8001716:	18d00513          	li	a0,397
  800171a:	00000097          	auipc	ra,0x0
- 800171e:	c22080e7          	jalr	-990(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 8001722:	0c400513          	li	a0,196
+ 800171e:	c0a080e7          	jalr	-1014(ra) # 8001324 <LCD_Write_Bus>
+ 8001722:	1ee00513          	li	a0,494
  8001726:	00000097          	auipc	ra,0x0
- 800172a:	c16080e7          	jalr	-1002(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800172e:	18d00513          	li	a0,397
+ 800172a:	bfe080e7          	jalr	-1026(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 800172e:	0c500513          	li	a0,197
  8001732:	00000097          	auipc	ra,0x0
- 8001736:	c0a080e7          	jalr	-1014(ra) # 800133c <LCD_Write_Bus>
- 800173a:	1ee00513          	li	a0,494
+ 8001736:	bf2080e7          	jalr	-1038(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 800173a:	10e00513          	li	a0,270
  800173e:	00000097          	auipc	ra,0x0
- 8001742:	bfe080e7          	jalr	-1026(ra) # 800133c <LCD_Write_Bus>
+ 8001742:	be6080e7          	jalr	-1050(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 8001746:	0c500513          	li	a0,197
+ 8001746:	0e000513          	li	a0,224
  800174a:	00000097          	auipc	ra,0x0
- 800174e:	bf2080e7          	jalr	-1038(ra) # 800133c <LCD_Write_Bus>
+ 800174e:	bda080e7          	jalr	-1062(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001752:	10e00513          	li	a0,270
+ 8001752:	11000513          	li	a0,272
  8001756:	00000097          	auipc	ra,0x0
- 800175a:	be6080e7          	jalr	-1050(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 800175e:	0e000513          	li	a0,224
+ 800175a:	bce080e7          	jalr	-1074(ra) # 8001324 <LCD_Write_Bus>
+ 800175e:	10e00513          	li	a0,270
  8001762:	00000097          	auipc	ra,0x0
- 8001766:	bda080e7          	jalr	-1062(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800176a:	11000513          	li	a0,272
+ 8001766:	bc2080e7          	jalr	-1086(ra) # 8001324 <LCD_Write_Bus>
+ 800176a:	10200513          	li	a0,258
  800176e:	00000097          	auipc	ra,0x0
- 8001772:	bce080e7          	jalr	-1074(ra) # 800133c <LCD_Write_Bus>
- 8001776:	10e00513          	li	a0,270
+ 8001772:	bb6080e7          	jalr	-1098(ra) # 8001324 <LCD_Write_Bus>
+ 8001776:	10300513          	li	a0,259
  800177a:	00000097          	auipc	ra,0x0
- 800177e:	bc2080e7          	jalr	-1086(ra) # 800133c <LCD_Write_Bus>
- 8001782:	10200513          	li	a0,258
+ 800177e:	baa080e7          	jalr	-1110(ra) # 8001324 <LCD_Write_Bus>
+ 8001782:	10e00513          	li	a0,270
  8001786:	00000097          	auipc	ra,0x0
- 800178a:	bb6080e7          	jalr	-1098(ra) # 800133c <LCD_Write_Bus>
- 800178e:	10300513          	li	a0,259
+ 800178a:	b9e080e7          	jalr	-1122(ra) # 8001324 <LCD_Write_Bus>
+ 800178e:	10700513          	li	a0,263
  8001792:	00000097          	auipc	ra,0x0
- 8001796:	baa080e7          	jalr	-1110(ra) # 800133c <LCD_Write_Bus>
- 800179a:	10e00513          	li	a0,270
+ 8001796:	b92080e7          	jalr	-1134(ra) # 8001324 <LCD_Write_Bus>
+ 800179a:	10200513          	li	a0,258
  800179e:	00000097          	auipc	ra,0x0
- 80017a2:	b9e080e7          	jalr	-1122(ra) # 800133c <LCD_Write_Bus>
+ 80017a2:	b86080e7          	jalr	-1146(ra) # 8001324 <LCD_Write_Bus>
  80017a6:	10700513          	li	a0,263
  80017aa:	00000097          	auipc	ra,0x0
- 80017ae:	b92080e7          	jalr	-1134(ra) # 800133c <LCD_Write_Bus>
- 80017b2:	10200513          	li	a0,258
+ 80017ae:	b7a080e7          	jalr	-1158(ra) # 8001324 <LCD_Write_Bus>
+ 80017b2:	10a00513          	li	a0,266
  80017b6:	00000097          	auipc	ra,0x0
- 80017ba:	b86080e7          	jalr	-1146(ra) # 800133c <LCD_Write_Bus>
- 80017be:	10700513          	li	a0,263
+ 80017ba:	b6e080e7          	jalr	-1170(ra) # 8001324 <LCD_Write_Bus>
+ 80017be:	11200513          	li	a0,274
  80017c2:	00000097          	auipc	ra,0x0
- 80017c6:	b7a080e7          	jalr	-1158(ra) # 800133c <LCD_Write_Bus>
- 80017ca:	10a00513          	li	a0,266
+ 80017c6:	b62080e7          	jalr	-1182(ra) # 8001324 <LCD_Write_Bus>
+ 80017ca:	12700513          	li	a0,295
  80017ce:	00000097          	auipc	ra,0x0
- 80017d2:	b6e080e7          	jalr	-1170(ra) # 800133c <LCD_Write_Bus>
- 80017d6:	11200513          	li	a0,274
+ 80017d2:	b56080e7          	jalr	-1194(ra) # 8001324 <LCD_Write_Bus>
+ 80017d6:	13700513          	li	a0,311
  80017da:	00000097          	auipc	ra,0x0
- 80017de:	b62080e7          	jalr	-1182(ra) # 800133c <LCD_Write_Bus>
- 80017e2:	12700513          	li	a0,295
+ 80017de:	b4a080e7          	jalr	-1206(ra) # 8001324 <LCD_Write_Bus>
+ 80017e2:	10000513          	li	a0,256
  80017e6:	00000097          	auipc	ra,0x0
- 80017ea:	b56080e7          	jalr	-1194(ra) # 800133c <LCD_Write_Bus>
- 80017ee:	13700513          	li	a0,311
+ 80017ea:	b3e080e7          	jalr	-1218(ra) # 8001324 <LCD_Write_Bus>
+ 80017ee:	10d00513          	li	a0,269
  80017f2:	00000097          	auipc	ra,0x0
- 80017f6:	b4a080e7          	jalr	-1206(ra) # 800133c <LCD_Write_Bus>
- 80017fa:	10000513          	li	a0,256
+ 80017f6:	b32080e7          	jalr	-1230(ra) # 8001324 <LCD_Write_Bus>
+ 80017fa:	10e00513          	li	a0,270
  80017fe:	00000097          	auipc	ra,0x0
- 8001802:	b3e080e7          	jalr	-1218(ra) # 800133c <LCD_Write_Bus>
- 8001806:	10d00513          	li	a0,269
+ 8001802:	b26080e7          	jalr	-1242(ra) # 8001324 <LCD_Write_Bus>
+ 8001806:	11000513          	li	a0,272
  800180a:	00000097          	auipc	ra,0x0
- 800180e:	b32080e7          	jalr	-1230(ra) # 800133c <LCD_Write_Bus>
- 8001812:	10e00513          	li	a0,270
+ 800180e:	b1a080e7          	jalr	-1254(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 8001812:	0e100513          	li	a0,225
  8001816:	00000097          	auipc	ra,0x0
- 800181a:	b26080e7          	jalr	-1242(ra) # 800133c <LCD_Write_Bus>
+ 800181a:	b0e080e7          	jalr	-1266(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
  800181e:	11000513          	li	a0,272
  8001822:	00000097          	auipc	ra,0x0
- 8001826:	b1a080e7          	jalr	-1254(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 800182a:	0e100513          	li	a0,225
+ 8001826:	b02080e7          	jalr	-1278(ra) # 8001324 <LCD_Write_Bus>
+ 800182a:	10e00513          	li	a0,270
  800182e:	00000097          	auipc	ra,0x0
- 8001832:	b0e080e7          	jalr	-1266(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 8001836:	11000513          	li	a0,272
+ 8001832:	af6080e7          	jalr	-1290(ra) # 8001324 <LCD_Write_Bus>
+ 8001836:	10300513          	li	a0,259
  800183a:	00000097          	auipc	ra,0x0
- 800183e:	b02080e7          	jalr	-1278(ra) # 800133c <LCD_Write_Bus>
- 8001842:	10e00513          	li	a0,270
+ 800183e:	aea080e7          	jalr	-1302(ra) # 8001324 <LCD_Write_Bus>
+ 8001842:	10300513          	li	a0,259
  8001846:	00000097          	auipc	ra,0x0
- 800184a:	af6080e7          	jalr	-1290(ra) # 800133c <LCD_Write_Bus>
- 800184e:	10300513          	li	a0,259
+ 800184a:	ade080e7          	jalr	-1314(ra) # 8001324 <LCD_Write_Bus>
+ 800184e:	10f00513          	li	a0,271
  8001852:	00000097          	auipc	ra,0x0
- 8001856:	aea080e7          	jalr	-1302(ra) # 800133c <LCD_Write_Bus>
- 800185a:	10300513          	li	a0,259
+ 8001856:	ad2080e7          	jalr	-1326(ra) # 8001324 <LCD_Write_Bus>
+ 800185a:	10600513          	li	a0,262
  800185e:	00000097          	auipc	ra,0x0
- 8001862:	ade080e7          	jalr	-1314(ra) # 800133c <LCD_Write_Bus>
- 8001866:	10f00513          	li	a0,271
+ 8001862:	ac6080e7          	jalr	-1338(ra) # 8001324 <LCD_Write_Bus>
+ 8001866:	10200513          	li	a0,258
  800186a:	00000097          	auipc	ra,0x0
- 800186e:	ad2080e7          	jalr	-1326(ra) # 800133c <LCD_Write_Bus>
- 8001872:	10600513          	li	a0,262
+ 800186e:	aba080e7          	jalr	-1350(ra) # 8001324 <LCD_Write_Bus>
+ 8001872:	10800513          	li	a0,264
  8001876:	00000097          	auipc	ra,0x0
- 800187a:	ac6080e7          	jalr	-1338(ra) # 800133c <LCD_Write_Bus>
- 800187e:	10200513          	li	a0,258
+ 800187a:	aae080e7          	jalr	-1362(ra) # 8001324 <LCD_Write_Bus>
+ 800187e:	10a00513          	li	a0,266
  8001882:	00000097          	auipc	ra,0x0
- 8001886:	aba080e7          	jalr	-1350(ra) # 800133c <LCD_Write_Bus>
- 800188a:	10800513          	li	a0,264
+ 8001886:	aa2080e7          	jalr	-1374(ra) # 8001324 <LCD_Write_Bus>
+ 800188a:	11300513          	li	a0,275
  800188e:	00000097          	auipc	ra,0x0
- 8001892:	aae080e7          	jalr	-1362(ra) # 800133c <LCD_Write_Bus>
- 8001896:	10a00513          	li	a0,266
+ 8001892:	a96080e7          	jalr	-1386(ra) # 8001324 <LCD_Write_Bus>
+ 8001896:	12600513          	li	a0,294
  800189a:	00000097          	auipc	ra,0x0
- 800189e:	aa2080e7          	jalr	-1374(ra) # 800133c <LCD_Write_Bus>
- 80018a2:	11300513          	li	a0,275
+ 800189e:	a8a080e7          	jalr	-1398(ra) # 8001324 <LCD_Write_Bus>
+ 80018a2:	13600513          	li	a0,310
  80018a6:	00000097          	auipc	ra,0x0
- 80018aa:	a96080e7          	jalr	-1386(ra) # 800133c <LCD_Write_Bus>
- 80018ae:	12600513          	li	a0,294
+ 80018aa:	a7e080e7          	jalr	-1410(ra) # 8001324 <LCD_Write_Bus>
+ 80018ae:	10000513          	li	a0,256
  80018b2:	00000097          	auipc	ra,0x0
- 80018b6:	a8a080e7          	jalr	-1398(ra) # 800133c <LCD_Write_Bus>
- 80018ba:	13600513          	li	a0,310
+ 80018b6:	a72080e7          	jalr	-1422(ra) # 8001324 <LCD_Write_Bus>
+ 80018ba:	10d00513          	li	a0,269
  80018be:	00000097          	auipc	ra,0x0
- 80018c2:	a7e080e7          	jalr	-1410(ra) # 800133c <LCD_Write_Bus>
- 80018c6:	10000513          	li	a0,256
+ 80018c2:	a66080e7          	jalr	-1434(ra) # 8001324 <LCD_Write_Bus>
+ 80018c6:	10e00513          	li	a0,270
  80018ca:	00000097          	auipc	ra,0x0
- 80018ce:	a72080e7          	jalr	-1422(ra) # 800133c <LCD_Write_Bus>
- 80018d2:	10d00513          	li	a0,269
+ 80018ce:	a5a080e7          	jalr	-1446(ra) # 8001324 <LCD_Write_Bus>
+ 80018d2:	11000513          	li	a0,272
  80018d6:	00000097          	auipc	ra,0x0
- 80018da:	a66080e7          	jalr	-1434(ra) # 800133c <LCD_Write_Bus>
- 80018de:	10e00513          	li	a0,270
+ 80018da:	a4e080e7          	jalr	-1458(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80018de:	03a00513          	li	a0,58
  80018e2:	00000097          	auipc	ra,0x0
- 80018e6:	a5a080e7          	jalr	-1446(ra) # 800133c <LCD_Write_Bus>
- 80018ea:	11000513          	li	a0,272
+ 80018e6:	a42080e7          	jalr	-1470(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80018ea:	10500513          	li	a0,261
  80018ee:	00000097          	auipc	ra,0x0
- 80018f2:	a4e080e7          	jalr	-1458(ra) # 800133c <LCD_Write_Bus>
+ 80018f2:	a36080e7          	jalr	-1482(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 80018f6:	03a00513          	li	a0,58
+ 80018f6:	03600513          	li	a0,54
  80018fa:	00000097          	auipc	ra,0x0
- 80018fe:	a42080e7          	jalr	-1470(ra) # 800133c <LCD_Write_Bus>
+ 80018fe:	a2a080e7          	jalr	-1494(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001902:	10500513          	li	a0,261
+ 8001902:	17800513          	li	a0,376
  8001906:	00000097          	auipc	ra,0x0
- 800190a:	a36080e7          	jalr	-1482(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 800190e:	03600513          	li	a0,54
- 8001912:	00000097          	auipc	ra,0x0
- 8001916:	a2a080e7          	jalr	-1494(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800191a:	17800513          	li	a0,376
- 800191e:	00000097          	auipc	ra,0x0
- 8001922:	a1e080e7          	jalr	-1506(ra) # 800133c <LCD_Write_Bus>
+ 800190a:	a1e080e7          	jalr	-1506(ra) # 8001324 <LCD_Write_Bus>
 	LCD_WR_DATA8(0x05);//16 bit color
 
 	LCD_WR_REG(0x36); //Data access mode
 	LCD_WR_DATA8(0x78);
 	LCD_WR_REG(0x29); 
 } 
- 8001926:	4422                	lw	s0,8(sp)
- 8001928:	40b2                	lw	ra,12(sp)
+ 800190e:	4422                	lw	s0,8(sp)
+ 8001910:	40b2                	lw	ra,12(sp)
     LCD_Write_Bus((int)dat);
- 800192a:	02900513          	li	a0,41
+ 8001912:	02900513          	li	a0,41
 } 
- 800192e:	0141                	addi	sp,sp,16
+ 8001916:	0141                	addi	sp,sp,16
     LCD_Write_Bus((int)dat);
- 8001930:	00000317          	auipc	t1,0x0
- 8001934:	a0c30067          	jr	-1524(t1) # 800133c <LCD_Write_Bus>
+ 8001918:	00000317          	auipc	t1,0x0
+ 800191c:	a0c30067          	jr	-1524(t1) # 8001324 <LCD_Write_Bus>
 
-08001938 <LCD_Clear>:
+08001920 <LCD_Clear>:
   Function description: LCD clear screen function
   Entry data: Color: color to set as background
   Return value: None
 */
 void LCD_Clear(u16 Color)
 {
- 8001938:	1141                	addi	sp,sp,-16
- 800193a:	c04a                	sw	s2,0(sp)
+ 8001920:	1141                	addi	sp,sp,-16
+ 8001922:	c04a                	sw	s2,0(sp)
 	u16 i,j;  	
 	LCD_Address_Set(0,0,LCD_W-1,LCD_H-1);
- 800193c:	04f00693          	li	a3,79
+ 8001924:	04f00693          	li	a3,79
 {
- 8001940:	892a                	mv	s2,a0
+ 8001928:	892a                	mv	s2,a0
 	LCD_Address_Set(0,0,LCD_W-1,LCD_H-1);
- 8001942:	09f00613          	li	a2,159
- 8001946:	4581                	li	a1,0
- 8001948:	4501                	li	a0,0
+ 800192a:	09f00613          	li	a2,159
+ 800192e:	4581                	li	a1,0
+ 8001930:	4501                	li	a0,0
 {
- 800194a:	c226                	sw	s1,4(sp)
- 800194c:	c606                	sw	ra,12(sp)
- 800194e:	c422                	sw	s0,8(sp)
+ 8001932:	c226                	sw	s1,4(sp)
+ 8001934:	c606                	sw	ra,12(sp)
+ 8001936:	c422                	sw	s0,8(sp)
 	LCD_Address_Set(0,0,LCD_W-1,LCD_H-1);
- 8001950:	0a000493          	li	s1,160
- 8001954:	00000097          	auipc	ra,0x0
- 8001958:	a6c080e7          	jalr	-1428(ra) # 80013c0 <LCD_Address_Set>
+ 8001938:	0a000493          	li	s1,160
+ 800193c:	00000097          	auipc	ra,0x0
+ 8001940:	a6c080e7          	jalr	-1428(ra) # 80013a8 <LCD_Address_Set>
 {
- 800195c:	05000413          	li	s0,80
+ 8001944:	05000413          	li	s0,80
     for(i=0;i<LCD_W;i++)
 	  {
 			for (j=0;j<LCD_H;j++)
 				{
 					LCD_WR_DATA(Color);
- 8001960:	854a                	mv	a0,s2
- 8001962:	147d                	addi	s0,s0,-1
- 8001964:	00000097          	auipc	ra,0x0
- 8001968:	a30080e7          	jalr	-1488(ra) # 8001394 <LCD_WR_DATA>
+ 8001948:	854a                	mv	a0,s2
+ 800194a:	147d                	addi	s0,s0,-1
+ 800194c:	00000097          	auipc	ra,0x0
+ 8001950:	a30080e7          	jalr	-1488(ra) # 800137c <LCD_WR_DATA>
 			for (j=0;j<LCD_H;j++)
- 800196c:	f875                	bnez	s0,8001960 <LCD_Clear+0x28>
- 800196e:	14fd                	addi	s1,s1,-1
+ 8001954:	f875                	bnez	s0,8001948 <LCD_Clear+0x28>
+ 8001956:	14fd                	addi	s1,s1,-1
     for(i=0;i<LCD_W;i++)
- 8001970:	f4f5                	bnez	s1,800195c <LCD_Clear+0x24>
+ 8001958:	f4f5                	bnez	s1,8001944 <LCD_Clear+0x24>
 				}
 	  }
 }
- 8001972:	40b2                	lw	ra,12(sp)
- 8001974:	4422                	lw	s0,8(sp)
- 8001976:	4492                	lw	s1,4(sp)
- 8001978:	4902                	lw	s2,0(sp)
- 800197a:	0141                	addi	sp,sp,16
- 800197c:	8082                	ret
+ 800195a:	40b2                	lw	ra,12(sp)
+ 800195c:	4422                	lw	s0,8(sp)
+ 800195e:	4492                	lw	s1,4(sp)
+ 8001960:	4902                	lw	s2,0(sp)
+ 8001962:	0141                	addi	sp,sp,16
+ 8001964:	8082                	ret
 
-0800197e <LCD_DrawPoint>:
+08001966 <LCD_DrawPoint>:
   Function description: LCD display Chinese characters
   Entry data: x, y: start coordinates
   Return value: None
 */
 void LCD_DrawPoint(u16 x,u16 y,u16 color)
 {
- 800197e:	1141                	addi	sp,sp,-16
- 8001980:	c422                	sw	s0,8(sp)
+ 8001966:	1141                	addi	sp,sp,-16
+ 8001968:	c422                	sw	s0,8(sp)
 	LCD_Address_Set(x,y,x,y); // Set cursor position
- 8001982:	86ae                	mv	a3,a1
+ 800196a:	86ae                	mv	a3,a1
 {
- 8001984:	8432                	mv	s0,a2
+ 800196c:	8432                	mv	s0,a2
 	LCD_Address_Set(x,y,x,y); // Set cursor position
- 8001986:	862a                	mv	a2,a0
+ 800196e:	862a                	mv	a2,a0
 {
- 8001988:	c606                	sw	ra,12(sp)
+ 8001970:	c606                	sw	ra,12(sp)
 	LCD_Address_Set(x,y,x,y); // Set cursor position
- 800198a:	00000097          	auipc	ra,0x0
- 800198e:	a36080e7          	jalr	-1482(ra) # 80013c0 <LCD_Address_Set>
+ 8001972:	00000097          	auipc	ra,0x0
+ 8001976:	a36080e7          	jalr	-1482(ra) # 80013a8 <LCD_Address_Set>
 	LCD_WR_DATA(color);
- 8001992:	8522                	mv	a0,s0
+ 800197a:	8522                	mv	a0,s0
 } 
- 8001994:	4422                	lw	s0,8(sp)
- 8001996:	40b2                	lw	ra,12(sp)
- 8001998:	0141                	addi	sp,sp,16
+ 800197c:	4422                	lw	s0,8(sp)
+ 800197e:	40b2                	lw	ra,12(sp)
+ 8001980:	0141                	addi	sp,sp,16
 	LCD_WR_DATA(color);
- 800199a:	00000317          	auipc	t1,0x0
- 800199e:	9fa30067          	jr	-1542(t1) # 8001394 <LCD_WR_DATA>
+ 8001982:	00000317          	auipc	t1,0x0
+ 8001986:	9fa30067          	jr	-1542(t1) # 800137c <LCD_WR_DATA>
 
-080019a2 <LCD_ShowChar>:
+0800198a <LCD_ShowChar>:
 void LCD_ShowChar(u16 x,u16 y,u8 num,u8 mode,u16 color)
 {
     u8 temp;
     u8 pos,t;
 	  u16 x0=x;    
     if(x>LCD_W-8 || y>LCD_H-16)return;	// Outside of display area
- 80019a2:	09800793          	li	a5,152
- 80019a6:	0ca7ec63          	bltu	a5,a0,8001a7e <LCD_ShowChar+0xdc>
+ 800198a:	09800793          	li	a5,152
+ 800198e:	0ca7ec63          	bltu	a5,a0,8001a66 <LCD_ShowChar+0xdc>
 {
- 80019aa:	7179                	addi	sp,sp,-48
- 80019ac:	d422                	sw	s0,40(sp)
- 80019ae:	d606                	sw	ra,44(sp)
- 80019b0:	d226                	sw	s1,36(sp)
- 80019b2:	d04a                	sw	s2,32(sp)
- 80019b4:	ce4e                	sw	s3,28(sp)
- 80019b6:	cc52                	sw	s4,24(sp)
- 80019b8:	ca56                	sw	s5,20(sp)
- 80019ba:	c85a                	sw	s6,16(sp)
- 80019bc:	c65e                	sw	s7,12(sp)
+ 8001992:	7179                	addi	sp,sp,-48
+ 8001994:	d422                	sw	s0,40(sp)
+ 8001996:	d606                	sw	ra,44(sp)
+ 8001998:	d226                	sw	s1,36(sp)
+ 800199a:	d04a                	sw	s2,32(sp)
+ 800199c:	ce4e                	sw	s3,28(sp)
+ 800199e:	cc52                	sw	s4,24(sp)
+ 80019a0:	ca56                	sw	s5,20(sp)
+ 80019a2:	c85a                	sw	s6,16(sp)
+ 80019a4:	c65e                	sw	s7,12(sp)
     if(x>LCD_W-8 || y>LCD_H-16)return;	// Outside of display area
- 80019be:	04000793          	li	a5,64
- 80019c2:	842e                	mv	s0,a1
- 80019c4:	06b7e663          	bltu	a5,a1,8001a30 <LCD_ShowChar+0x8e>
- 80019c8:	84b2                	mv	s1,a2
+ 80019a6:	04000793          	li	a5,64
+ 80019aa:	842e                	mv	s0,a1
+ 80019ac:	06b7e663          	bltu	a5,a1,8001a18 <LCD_ShowChar+0x8e>
+ 80019b0:	84b2                	mv	s1,a2
 	num=num-' ';                        // Get offset value
- 80019ca:	1481                	addi	s1,s1,-32
- 80019cc:	0ff4f493          	andi	s1,s1,255
- 80019d0:	8ab6                	mv	s5,a3
+ 80019b2:	1481                	addi	s1,s1,-32
+ 80019b4:	0ff4f493          	andi	s1,s1,255
+ 80019b8:	8ab6                	mv	s5,a3
 	LCD_Address_Set(x,y,x+8-1,y+16-1);  // Set cursor position
- 80019d2:	00750613          	addi	a2,a0,7 # 40011007 <GPIOB+0x407>
- 80019d6:	00f58693          	addi	a3,a1,15 # a00f <__stack_size+0x900f>
- 80019da:	00449913          	slli	s2,s1,0x4
- 80019de:	080004b7          	lui	s1,0x8000
- 80019e2:	89aa                	mv	s3,a0
- 80019e4:	8a3a                	mv	s4,a4
- 80019e6:	2b448493          	addi	s1,s1,692 # 80002b4 <asc2_1608>
- 80019ea:	00000097          	auipc	ra,0x0
- 80019ee:	9d6080e7          	jalr	-1578(ra) # 80013c0 <LCD_Address_Set>
+ 80019ba:	00750613          	addi	a2,a0,7 # 40011007 <GPIOB+0x407>
+ 80019be:	00f58693          	addi	a3,a1,15 # a00f <__stack_size+0x900f>
+ 80019c2:	00449913          	slli	s2,s1,0x4
+ 80019c6:	080004b7          	lui	s1,0x8000
+ 80019ca:	89aa                	mv	s3,a0
+ 80019cc:	8a3a                	mv	s4,a4
+ 80019ce:	2b448493          	addi	s1,s1,692 # 80002b4 <asc2_1608>
+ 80019d2:	00000097          	auipc	ra,0x0
+ 80019d6:	9d6080e7          	jalr	-1578(ra) # 80013a8 <LCD_Address_Set>
 	if(!mode)
- 80019f2:	040a9a63          	bnez	s5,8001a46 <LCD_ShowChar+0xa4>
- 80019f6:	4981                	li	s3,0
+ 80019da:	040a9a63          	bnez	s5,8001a2e <LCD_ShowChar+0xa4>
+ 80019de:	4981                	li	s3,0
 		{ 
 			temp=asc2_1608[(u16)num*16+pos];  // load 1608 font character
 			for(t=0;t<8;t++)
 		    {                 
 		        if(temp&0x01)LCD_WR_DATA(color);
 				else LCD_WR_DATA(BACK_COLOR);
- 80019f8:	20000bb7          	lui	s7,0x20000
+ 80019e0:	20000bb7          	lui	s7,0x20000
 		for(pos=0;pos<16;pos++)
- 80019fc:	4b41                	li	s6,16
+ 80019e4:	4b41                	li	s6,16
 			temp=asc2_1608[(u16)num*16+pos];  // load 1608 font character
- 80019fe:	013907b3          	add	a5,s2,s3
- 8001a02:	97a6                	add	a5,a5,s1
- 8001a04:	0007ca83          	lbu	s5,0(a5)
- 8001a08:	4421                	li	s0,8
+ 80019e6:	013907b3          	add	a5,s2,s3
+ 80019ea:	97a6                	add	a5,a5,s1
+ 80019ec:	0007ca83          	lbu	s5,0(a5)
+ 80019f0:	4421                	li	s0,8
 		        if(temp&0x01)LCD_WR_DATA(color);
- 8001a0a:	001af793          	andi	a5,s5,1
- 8001a0e:	8552                	mv	a0,s4
- 8001a10:	e399                	bnez	a5,8001a16 <LCD_ShowChar+0x74>
+ 80019f2:	001af793          	andi	a5,s5,1
+ 80019f6:	8552                	mv	a0,s4
+ 80019f8:	e399                	bnez	a5,80019fe <LCD_ShowChar+0x74>
 				else LCD_WR_DATA(BACK_COLOR);
- 8001a12:	524ba503          	lw	a0,1316(s7) # 20000524 <BACK_COLOR>
- 8001a16:	147d                	addi	s0,s0,-1
- 8001a18:	0ff47413          	andi	s0,s0,255
- 8001a1c:	00000097          	auipc	ra,0x0
- 8001a20:	978080e7          	jalr	-1672(ra) # 8001394 <LCD_WR_DATA>
+ 80019fa:	524ba503          	lw	a0,1316(s7) # 20000524 <BACK_COLOR>
+ 80019fe:	147d                	addi	s0,s0,-1
+ 8001a00:	0ff47413          	andi	s0,s0,255
+ 8001a04:	00000097          	auipc	ra,0x0
+ 8001a08:	978080e7          	jalr	-1672(ra) # 800137c <LCD_WR_DATA>
 				temp>>=1;
- 8001a24:	001ada93          	srli	s5,s5,0x1
+ 8001a0c:	001ada93          	srli	s5,s5,0x1
 			for(t=0;t<8;t++)
- 8001a28:	f06d                	bnez	s0,8001a0a <LCD_ShowChar+0x68>
+ 8001a10:	f06d                	bnez	s0,80019f2 <LCD_ShowChar+0x68>
 				x++;
 		    }
 			x=x0;
 			y++;
- 8001a2a:	0985                	addi	s3,s3,1
+ 8001a12:	0985                	addi	s3,s3,1
 		for(pos=0;pos<16;pos++)
- 8001a2c:	fd6999e3          	bne	s3,s6,80019fe <LCD_ShowChar+0x5c>
+ 8001a14:	fd6999e3          	bne	s3,s6,80019e6 <LCD_ShowChar+0x5c>
 		        if(temp&0x01)LCD_DrawPoint(x+t,y+pos,color); //Draw a dot
 		        temp>>=1; 
 		    }
 		}
 	}   	   	 	  
 }
- 8001a30:	50b2                	lw	ra,44(sp)
- 8001a32:	5422                	lw	s0,40(sp)
- 8001a34:	5492                	lw	s1,36(sp)
- 8001a36:	5902                	lw	s2,32(sp)
- 8001a38:	49f2                	lw	s3,28(sp)
- 8001a3a:	4a62                	lw	s4,24(sp)
- 8001a3c:	4ad2                	lw	s5,20(sp)
- 8001a3e:	4b42                	lw	s6,16(sp)
- 8001a40:	4bb2                	lw	s7,12(sp)
- 8001a42:	6145                	addi	sp,sp,48
- 8001a44:	8082                	ret
- 8001a46:	94ca                	add	s1,s1,s2
- 8001a48:	01040b13          	addi	s6,s0,16
+ 8001a18:	50b2                	lw	ra,44(sp)
+ 8001a1a:	5422                	lw	s0,40(sp)
+ 8001a1c:	5492                	lw	s1,36(sp)
+ 8001a1e:	5902                	lw	s2,32(sp)
+ 8001a20:	49f2                	lw	s3,28(sp)
+ 8001a22:	4a62                	lw	s4,24(sp)
+ 8001a24:	4ad2                	lw	s5,20(sp)
+ 8001a26:	4b42                	lw	s6,16(sp)
+ 8001a28:	4bb2                	lw	s7,12(sp)
+ 8001a2a:	6145                	addi	sp,sp,48
+ 8001a2c:	8082                	ret
+ 8001a2e:	94ca                	add	s1,s1,s2
+ 8001a30:	01040b13          	addi	s6,s0,16
 			for(t=0;t<8;t++)
- 8001a4c:	4ba1                	li	s7,8
+ 8001a34:	4ba1                	li	s7,8
 		    temp=asc2_1608[(u16)num*16+pos]; // load 1608 font character
- 8001a4e:	0004ca83          	lbu	s5,0(s1)
- 8001a52:	4901                	li	s2,0
+ 8001a36:	0004ca83          	lbu	s5,0(s1)
+ 8001a3a:	4901                	li	s2,0
 		        if(temp&0x01)LCD_DrawPoint(x+t,y+pos,color); //Draw a dot
- 8001a54:	001af793          	andi	a5,s5,1
- 8001a58:	cb89                	beqz	a5,8001a6a <LCD_ShowChar+0xc8>
- 8001a5a:	8652                	mv	a2,s4
- 8001a5c:	85a2                	mv	a1,s0
- 8001a5e:	01298533          	add	a0,s3,s2
- 8001a62:	00000097          	auipc	ra,0x0
- 8001a66:	f1c080e7          	jalr	-228(ra) # 800197e <LCD_DrawPoint>
+ 8001a3c:	001af793          	andi	a5,s5,1
+ 8001a40:	cb89                	beqz	a5,8001a52 <LCD_ShowChar+0xc8>
+ 8001a42:	8652                	mv	a2,s4
+ 8001a44:	85a2                	mv	a1,s0
+ 8001a46:	01298533          	add	a0,s3,s2
+ 8001a4a:	00000097          	auipc	ra,0x0
+ 8001a4e:	f1c080e7          	jalr	-228(ra) # 8001966 <LCD_DrawPoint>
 		        temp>>=1; 
- 8001a6a:	0905                	addi	s2,s2,1
- 8001a6c:	001ada93          	srli	s5,s5,0x1
+ 8001a52:	0905                	addi	s2,s2,1
+ 8001a54:	001ada93          	srli	s5,s5,0x1
 			for(t=0;t<8;t++)
- 8001a70:	ff7912e3          	bne	s2,s7,8001a54 <LCD_ShowChar+0xb2>
- 8001a74:	0405                	addi	s0,s0,1
- 8001a76:	0485                	addi	s1,s1,1
+ 8001a58:	ff7912e3          	bne	s2,s7,8001a3c <LCD_ShowChar+0xb2>
+ 8001a5c:	0405                	addi	s0,s0,1
+ 8001a5e:	0485                	addi	s1,s1,1
 		for(pos=0;pos<16;pos++)
- 8001a78:	fd641be3          	bne	s0,s6,8001a4e <LCD_ShowChar+0xac>
- 8001a7c:	bf55                	j	8001a30 <LCD_ShowChar+0x8e>
- 8001a7e:	8082                	ret
+ 8001a60:	fd641be3          	bne	s0,s6,8001a36 <LCD_ShowChar+0xac>
+ 8001a64:	bf55                	j	8001a18 <LCD_ShowChar+0x8e>
+ 8001a66:	8082                	ret
 
-08001a80 <LCD_ShowStr>:
+08001a68 <LCD_ShowStr>:
   Return value: None
   Note: If character position is outside the display area
         the character is not displayed
 */
 void LCD_ShowStr(u16 x,u16 y,const u8 *p,u16 color, u8 mode)
 {         
- 8001a80:	1101                	addi	sp,sp,-32
- 8001a82:	cc22                	sw	s0,24(sp)
- 8001a84:	ca26                	sw	s1,20(sp)
- 8001a86:	c84a                	sw	s2,16(sp)
- 8001a88:	c64e                	sw	s3,12(sp)
- 8001a8a:	c452                	sw	s4,8(sp)
- 8001a8c:	c256                	sw	s5,4(sp)
- 8001a8e:	c05a                	sw	s6,0(sp)
- 8001a90:	ce06                	sw	ra,28(sp)
- 8001a92:	842a                	mv	s0,a0
- 8001a94:	84ae                	mv	s1,a1
- 8001a96:	8932                	mv	s2,a2
- 8001a98:	89b6                	mv	s3,a3
- 8001a9a:	8a3a                	mv	s4,a4
+ 8001a68:	1101                	addi	sp,sp,-32
+ 8001a6a:	cc22                	sw	s0,24(sp)
+ 8001a6c:	ca26                	sw	s1,20(sp)
+ 8001a6e:	c84a                	sw	s2,16(sp)
+ 8001a70:	c64e                	sw	s3,12(sp)
+ 8001a72:	c452                	sw	s4,8(sp)
+ 8001a74:	c256                	sw	s5,4(sp)
+ 8001a76:	c05a                	sw	s6,0(sp)
+ 8001a78:	ce06                	sw	ra,28(sp)
+ 8001a7a:	842a                	mv	s0,a0
+ 8001a7c:	84ae                	mv	s1,a1
+ 8001a7e:	8932                	mv	s2,a2
+ 8001a80:	89b6                	mv	s3,a3
+ 8001a82:	8a3a                	mv	s4,a4
     while(*p!='\0')
     {       
         if(x>LCD_W-8){x=0;y+=16;}
- 8001a9c:	09800a93          	li	s5,152
+ 8001a84:	09800a93          	li	s5,152
         if(y>LCD_H-16) break;
- 8001aa0:	04000b13          	li	s6,64
+ 8001a88:	04000b13          	li	s6,64
     while(*p!='\0')
- 8001aa4:	00094603          	lbu	a2,0(s2)
- 8001aa8:	ea19                	bnez	a2,8001abe <LCD_ShowStr+0x3e>
+ 8001a8c:	00094603          	lbu	a2,0(s2)
+ 8001a90:	ea19                	bnez	a2,8001aa6 <LCD_ShowStr+0x3e>
         LCD_ShowChar(x,y,*p,mode,color);
         x+=8;
         p++;
     }  
 }
- 8001aaa:	40f2                	lw	ra,28(sp)
- 8001aac:	4462                	lw	s0,24(sp)
- 8001aae:	44d2                	lw	s1,20(sp)
- 8001ab0:	4942                	lw	s2,16(sp)
- 8001ab2:	49b2                	lw	s3,12(sp)
- 8001ab4:	4a22                	lw	s4,8(sp)
- 8001ab6:	4a92                	lw	s5,4(sp)
- 8001ab8:	4b02                	lw	s6,0(sp)
- 8001aba:	6105                	addi	sp,sp,32
- 8001abc:	8082                	ret
+ 8001a92:	40f2                	lw	ra,28(sp)
+ 8001a94:	4462                	lw	s0,24(sp)
+ 8001a96:	44d2                	lw	s1,20(sp)
+ 8001a98:	4942                	lw	s2,16(sp)
+ 8001a9a:	49b2                	lw	s3,12(sp)
+ 8001a9c:	4a22                	lw	s4,8(sp)
+ 8001a9e:	4a92                	lw	s5,4(sp)
+ 8001aa0:	4b02                	lw	s6,0(sp)
+ 8001aa2:	6105                	addi	sp,sp,32
+ 8001aa4:	8082                	ret
         if(x>LCD_W-8){x=0;y+=16;}
- 8001abe:	008af463          	bgeu	s5,s0,8001ac6 <LCD_ShowStr+0x46>
- 8001ac2:	04c1                	addi	s1,s1,16
- 8001ac4:	4401                	li	s0,0
+ 8001aa6:	008af463          	bgeu	s5,s0,8001aae <LCD_ShowStr+0x46>
+ 8001aaa:	04c1                	addi	s1,s1,16
+ 8001aac:	4401                	li	s0,0
         if(y>LCD_H-16) break;
- 8001ac6:	fe9b62e3          	bltu	s6,s1,8001aaa <LCD_ShowStr+0x2a>
+ 8001aae:	fe9b62e3          	bltu	s6,s1,8001a92 <LCD_ShowStr+0x2a>
         LCD_ShowChar(x,y,*p,mode,color);
- 8001aca:	8522                	mv	a0,s0
- 8001acc:	874e                	mv	a4,s3
- 8001ace:	86d2                	mv	a3,s4
- 8001ad0:	85a6                	mv	a1,s1
- 8001ad2:	00000097          	auipc	ra,0x0
- 8001ad6:	ed0080e7          	jalr	-304(ra) # 80019a2 <LCD_ShowChar>
+ 8001ab2:	8522                	mv	a0,s0
+ 8001ab4:	874e                	mv	a4,s3
+ 8001ab6:	86d2                	mv	a3,s4
+ 8001ab8:	85a6                	mv	a1,s1
+ 8001aba:	00000097          	auipc	ra,0x0
+ 8001abe:	ed0080e7          	jalr	-304(ra) # 800198a <LCD_ShowChar>
         x+=8;
- 8001ada:	0421                	addi	s0,s0,8
+ 8001ac2:	0421                	addi	s0,s0,8
         p++;
- 8001adc:	0905                	addi	s2,s2,1
- 8001ade:	b7d9                	j	8001aa4 <LCD_ShowStr+0x24>
+ 8001ac4:	0905                	addi	s2,s2,1
+ 8001ac6:	b7d9                	j	8001a8c <LCD_ShowStr+0x24>
 	...
 
 08001b00 <trap_entry>:
@@ -2807,7 +2806,7 @@ trap_entry:
      // Call the function
   call handle_trap
  8001b3c:	fffff097          	auipc	ra,0xfffff
- 8001b40:	5da080e7          	jalr	1498(ra) # 8001116 <handle_trap>
+ 8001b40:	5c2080e7          	jalr	1474(ra) # 80010fe <handle_trap>
 
   // Restore the MEPC/Mstatus/Msubm reg
   RESTORE_EPC_STATUS
@@ -3599,7 +3598,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8001f74:	40a90833          	sub	a6,s2,a0
  8001f78:	10e6eb63          	bltu	a3,a4,800208e <__divdf3+0x1b4>
  8001f7c:	fffff697          	auipc	a3,0xfffff
- 8001f80:	a9c68693          	addi	a3,a3,-1380 # 8000a18 <asc2_1608+0x764>
+ 8001f80:	a8468693          	addi	a3,a3,-1404 # 8000a00 <asc2_1608+0x74c>
  8001f84:	070a                	slli	a4,a4,0x2
  8001f86:	9736                	add	a4,a4,a3
  8001f88:	4318                	lw	a4,0(a4)
@@ -4100,7 +4099,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8002558:	00150813          	addi	a6,a0,1
  800255c:	10d5e663          	bltu	a1,a3,8002668 <__muldf3+0x1a4>
  8002560:	ffffe597          	auipc	a1,0xffffe
- 8002564:	4f458593          	addi	a1,a1,1268 # 8000a54 <asc2_1608+0x7a0>
+ 8002564:	4dc58593          	addi	a1,a1,1244 # 8000a3c <asc2_1608+0x788>
  8002568:	068a                	slli	a3,a3,0x2
  800256a:	96ae                	add	a3,a3,a1
  800256c:	4294                	lw	a3,0(a3)
@@ -4616,7 +4615,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8002b34:	8f1d                	sub	a4,a4,a5
  8002b36:	00f557b3          	srl	a5,a0,a5
  8002b3a:	ffffe517          	auipc	a0,0xffffe
- 8002b3e:	f5650513          	addi	a0,a0,-170 # 8000a90 <__clz_tab>
+ 8002b3e:	f3e50513          	addi	a0,a0,-194 # 8000a78 <__clz_tab>
  8002b42:	97aa                	add	a5,a5,a0
  8002b44:	0007c503          	lbu	a0,0(a5) # 10000 <__stack_size+0xf000>
  8002b48:	40a70533          	sub	a0,a4,a0
@@ -4654,7 +4653,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8002b96:	9782                	jalr	a5
  8002b98:	8522                	mv	a0,s0
  8002b9a:	ffffe097          	auipc	ra,0xffffe
- 8002b9e:	44e080e7          	jalr	1102(ra) # 8000fe8 <_exit>
+ 8002b9e:	436080e7          	jalr	1078(ra) # 8000fd0 <_exit>
 
 08002ba2 <__libc_fini_array>:
  8002ba2:	1141                	addi	sp,sp,-16
@@ -4959,25 +4958,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   8 .stack        00001000  20007000  2000052c  00005000  2**0
                   ALLOC
-  9 .debug_info   0000dc10  00000000  00000000  00004088  2**0
+  9 .debug_info   0000dc1b  00000000  00000000  00004088  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00002b8d  00000000  00000000  00011c98  2**0
+ 10 .debug_abbrev 00002b8d  00000000  00000000  00011ca3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00006b49  00000000  00000000  00014825  2**0
+ 11 .debug_loc    00006b5f  00000000  00000000  00014830  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 000007b0  00000000  00000000  0001b370  2**3
+ 12 .debug_aranges 000007b0  00000000  00000000  0001b390  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000c50  00000000  00000000  0001bb20  2**3
+ 13 .debug_ranges 00000c50  00000000  00000000  0001bb40  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0000b0c0  00000000  00000000  0001c770  2**0
+ 14 .debug_line   0000b0c0  00000000  00000000  0001c790  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00002c7f  00000000  00000000  00027830  2**0
+ 15 .debug_str    00002c7f  00000000  00000000  00027850  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0002a4af  2**0
+ 16 .comment      00000028  00000000  00000000  0002a4cf  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  0002a4d7  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  0002a4f7  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  000011e0  00000000  00000000  0002a504  2**2
+ 18 .debug_frame  000011e0  00000000  00000000  0002a524  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -5089,25 +5088,25 @@ SYMBOL TABLE:
 08002e44 l       .sdata2._global_impure_ptr	00000000 __preinit_array_end
 08002e44 l       .sdata2._global_impure_ptr	00000000 __init_array_start
 08002e44 l       .sdata2._global_impure_ptr	00000000 __preinit_array_start
-080019a2 g     F .text	000000de LCD_ShowChar
-0800197e g     F .text	00000024 LCD_DrawPoint
+0800198a g     F .text	000000de LCD_ShowChar
+08001966 g     F .text	00000024 LCD_DrawPoint
 08002af6 g     F .text	0000002a .hidden __ashldi3
-08000e58 g     F .text	0000001a spi_struct_para_init
+08000e40 g     F .text	0000001a spi_struct_para_init
 20000524 g     O .bss	00000004 BACK_COLOR
 20000880 g       .data	00000000 __global_pointer$
 08002e34 g     F .text	0000000c __errno
-08001938 g     F .text	00000046 LCD_Clear
+08001920 g     F .text	00000046 LCD_Clear
 20000528 g     O .bss	00000004 errno
 00001000 g       *ABS*	00000000 __stack_size
-0800130c g     F .text	00000030 LCD_Wait_On_Queue
+080012f4 g     F .text	00000030 LCD_Wait_On_Queue
 08002c44 g     F .text	00000016 memcpy
 08002420 g     F .text	000000a4 .hidden __ltdf2
-08000e38 g     F .text	00000004 gpio_bit_set
+08000e20 g     F .text	00000004 gpio_bit_set
 08001d8a g       .text	00000000 l88mem
 20000080 g     O .data	00000004 SystemCoreClock
 20000098 g     O .bss	00000400 queue
-08000e72 g     F .text	00000036 spi_init
-08001116  w    F .text	00000038 handle_trap
+08000e5a g     F .text	00000036 spi_init
+080010fe  w    F .text	00000038 handle_trap
 08001b84  w      .text	00000000 irq_entry
 20000090 g     O .bss	00000004 w
 08001c68 g       .text	00000000 t5omsi
@@ -5115,70 +5114,70 @@ SYMBOL TABLE:
 08002e40 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
 08002bda g     F .text	0000006a __libc_init_array
 08002910 g     F .text	00000056 .hidden __floatunsidf
-0800114e g     F .text	0000002c _init
+08001136 g     F .text	0000002c _init
 08002ba2 g     F .text	00000038 __libc_fini_array
-080010f4  w    F .text	00000022 handle_nmi
-08000eb2 g     F .text	00000004 spi_i2s_data_transmit
+080010dc  w    F .text	00000022 handle_nmi
+08000e9a g     F .text	00000004 spi_i2s_data_transmit
 2000008c g     O .bss	00000004 r
-08001394 g     F .text	0000002c LCD_WR_DATA
+0800137c g     F .text	0000002c LCD_WR_DATA
 08002c5a g     F .text	00000018 write
 08002acc g     F .text	0000002a .hidden __lshrdi3
 08002420 g     F .text	000000a4 .hidden __ledf2
-08001034 g     F .text	0000007c write_hex
+0800101c g     F .text	0000007c write_hex
 08002b20 g     F .text	0000003c .hidden __clzsi2
-08000e3c g     F .text	00000004 gpio_bit_reset
+08000e24 g     F .text	00000004 gpio_bit_reset
 20000094 g     O .bss	00000004 _global_atexit
 08002d38 g     F .text	000000c8 __call_exitprocs
 20008000 g       .stack	00000000 _sp
 20000088 g     O .bss	00000004 lcd_conf
 0800015c g     F .init	00000000 _start
-08000e40 g     F .text	00000018 rcu_periph_clock_enable
+08000e28 g     F .text	00000018 rcu_periph_clock_enable
 08002966 g     F .text	00000166 .hidden __floatundidf
 08001c9a g       .text	00000000 t5expq
 08001cea g       .text	00000000 colset
 0800024c g       .init	00000000 enable_mcycle_minstret
 08002cac g     F .text	0000008c __register_exitproc
-0800133c g     F .text	00000058 LCD_Write_Bus
+08001324 g     F .text	00000058 LCD_Write_Bus
 08001caa g       .text	00000000 colinit
-080010b0 g     F .text	00000010 get_timer_value
+08001098 g     F .text	00000010 get_timer_value
 08001d9e g       .text	00000000 keyinit
 08001d22 g       .text	00000000 l88init
-08001442 g     F .text	0000006c spi_config
+0800142a g     F .text	0000006c spi_config
 08001dd0 g       .text	00000000 keyscan
-08000ea8 g     F .text	0000000a spi_enable
-08000eb6 g     F .text	0000000c spi_crc_polynomial_set
+08000e90 g     F .text	0000000a spi_enable
+08000e9e g     F .text	0000000c spi_crc_polynomial_set
 08001eda g     F .text	00000546 .hidden __divdf3
 080024c4 g     F .text	0000044c .hidden __muldf3
 20000088 g       .bss	00000000 __bss_start
-08000b90 g     F .text	00000204 main
+08000b78 g     F .text	00000204 main
 080002b4 g     O .text	00000630 asc2_1608
 08001b00  w      .text	00000000 trap_entry
 08000246 g       .init	00000000 disable_mcycle_minstret
-080010e2 g     F .text	00000012 eclic_mode_enable
-08000ecc g     F .text	0000011c SystemInit
-0800117a g     F .text	00000002 _fini
+080010ca g     F .text	00000012 eclic_mode_enable
+08000eb4 g     F .text	0000011c SystemInit
+08001162 g     F .text	00000002 _fini
 00000000 g       *ABS*	00000000 __dbg_stack_size
-08000a90 g     O .text	00000100 .hidden __clz_tab
+08000a78 g     O .text	00000100 .hidden __clz_tab
 08002b5c g     F .text	00000010 atexit
 08002c72 g     F .text	0000003a _write_r
-080013c0 g     F .text	00000082 LCD_Address_Set
+080013a8 g     F .text	00000082 LCD_Address_Set
 20000084 g     O .data	00000004 _impure_ptr
 20000000 g       .dalign	00000000 _data
-080014d4 g     F .text	00000464 Lcd_Init
+080014bc g     F .text	00000464 Lcd_Init
 08002e00 g     F .text	00000034 _write
 20000088 g       .bss	00000000 _edata
 20000530 g       .bss	00000000 _end
 08001d54 g       .text	00000000 l88row
 08002e44 g       .lalign	00000000 _data_lma
-080014ae g     F .text	00000026 Lcd_SetType
-0800117c g     F .text	000000ce lcd_delay_1ms
+08001496 g     F .text	00000026 Lcd_SetType
+08001164 g     F .text	000000ce lcd_delay_1ms
 08002b6c g     F .text	00000036 exit
-08000ec2 g     F .text	0000000a spi_i2s_flag_get
-080010c0 g     F .text	00000022 eclic_init
-0800124a g     F .text	000000c2 LCD_WR_Queue
-08000fe8 g     F .text	0000004c _exit
-08000d94 g     F .text	000000a4 gpio_init
-08001a80 g     F .text	00000060 LCD_ShowStr
+08000eaa g     F .text	0000000a spi_i2s_flag_get
+080010a8 g     F .text	00000022 eclic_init
+08001232 g     F .text	000000c2 LCD_WR_Queue
+08000fd0 g     F .text	0000004c _exit
+08000d7c g     F .text	000000a4 gpio_init
+08001a68 g     F .text	00000060 LCD_ShowStr
 
 
 
@@ -5329,14 +5328,14 @@ _start0800:
 	/* argc = argv = 0 */
 	call _init
  8000228:	00001097          	auipc	ra,0x1
- 800022c:	f26080e7          	jalr	-218(ra) # 800114e <_init>
+ 800022c:	f0e080e7          	jalr	-242(ra) # 8001136 <_init>
 	li a0, 0
  8000230:	4501                	li	a0,0
 	li a1, 0
  8000232:	4581                	li	a1,0
 	call main
  8000234:	00001097          	auipc	ra,0x1
- 8000238:	95c080e7          	jalr	-1700(ra) # 8000b90 <main>
+ 8000238:	944080e7          	jalr	-1724(ra) # 8000b78 <main>
 	tail exit
  800023c:	00003317          	auipc	t1,0x3
  8000240:	93030067          	jr	-1744(t1) # 8002b6c <exit>
@@ -5486,2207 +5485,2206 @@ Disassembly of section .text:
  8000858:	0000 7e00 1022 0808 7e44 0000 c000 2020     ...~"...D~....  
  8000868:	2020 1020 2020 2020 2020 00c0 1010 1010        .      ......
  8000878:	1010 1010 1010 1010 1010 1010 0600 0808     ................
- 8000888:	0808 1008 0808 0808 0808 0006 1800 423c     ..............<B
- 8000898:	5a5a 5a5a 5a5a 5a5a 7e42 0000 1800 423c     ZZZZZZZZB~....<B
- 80008a8:	4242 5a5a 5a5a 5a5a 7e42 0000 1800 423c     BBZZZZZZB~....<B
- 80008b8:	4242 4242 5a5a 5a5a 7e42 0000 1800 423c     BBBBZZZZB~....<B
- 80008c8:	4242 4242 4242 5a5a 7e42 0000 1800 423c     BBBBBBZZB~....<B
- 80008d8:	4242 4242 4242 4242 7e42 0000 0000 0000     BBBBBBBBB~......
+ 8000888:	0808 1008 0808 0808 0808 0006 1818 7e3c     ..............<~
+ 8000898:	c3c3 c3c3 c3c3 c3c3 c3c3 ffc3 1818 7e3c     ..............<~
+ 80008a8:	c3c3 c3c3 c3c3 c3c3 bdbd ffbd 1818 7e3c     ..............<~
+ 80008b8:	c3c3 c3c3 bdc3 c3bd bdbd ffbd 1818 ff3c     ..............<.
+ 80008c8:	c3c3 bdbd bdc3 c3bd bdbd ffbd 1818 ff3c     ..............<.
+ 80008d8:	c3bd bdbd bdc3 c3bd bdbd ffbd 0000 0000     ................
  80008e8:	0000 0000 4000 40af 000d 0000 000e 0000     .....@.@........
  80008f8:	0000 0000 000f 0000 000c 0000 0009 0000     ................
  8000908:	0008 0000 0007 0000 000b 0000 0006 0000     ................
  8000918:	0005 0000 0004 0000 000a 0000 0003 0000     ................
- 8000928:	0002 0000 0001 0000 6142 7474 7265 2079     ........Battery 
- 8000938:	7566 6c6c 0000 0000 6142 7474 7265 2079     full....Battery 
- 8000948:	6863 7261 6967 676e 2020 2020 2020 2020     charging        
- 8000958:	2020 3537 0025 0000 6142 7474 7265 2079       75%...Battery 
- 8000968:	6863 7261 6967 676e 2020 2020 2020 2020     charging        
- 8000978:	2020 3035 0025 0000 6f4c 2077 6142 7474       50%...Low Batt
- 8000988:	7265 2c79 6320 6168 6772 6e69 2067 2020     ery, charging   
- 8000998:	2020 2020 2020 3220 2535 0000 6f4c 2077            25%..Low 
- 80009a8:	6142 7474 7265 2079 6863 7261 6567 6e20     Battery charge n
- 80009b8:	776f 7020 7a6c 2020 2020 2020 2020 2020     ow plz          
- 80009c8:	2020 2530 0000 0000 7257 6e6f 2067 7562       0%....Wrong bu
- 80009d8:	7474 6e6f 2020 2020 2020 7020 6572 7373     tton       press
- 80009e8:	6465 2020 2020 2020 2020 2020 2020 5020     ed             P
- 80009f8:	6572 7373 6120 796e 6b20 7965 2020 2020     ress any key    
- 8000a08:	2020 6220 7465 6577 6e65 3020 342d 0000        between 0-4..
- 8000a18:	19f0 0000 1940 0000 1946 0000 1940 0000     ....@...F...@...
- 8000a28:	19e2 0000 1940 0000 1946 0000 19f0 0000     ....@...F.......
- 8000a38:	19f0 0000 19e2 0000 1946 0000 1926 0000     ........F...&...
- 8000a48:	1926 0000 1926 0000 194a 0000 1df6 0000     &...&...J.......
- 8000a58:	1df6 0000 1e0e 0000 1df0 0000 1df0 0000     ................
- 8000a68:	1e9c 0000 1e0e 0000 1df0 0000 1e9c 0000     ................
- 8000a78:	1df0 0000 1e0e 0000 1dee 0000 1dee 0000     ................
- 8000a88:	1dee 0000 1e9c 0000                         ........
+ 8000928:	0002 0000 0001 0000 4843 5241 4547 4120     ........CHARGE A
+ 8000938:	4153 0050 6142 7474 7265 2079 6f6c 2077     SAP.Battery low 
+ 8000948:	2020 2020 2020 2020 3220 2535 0000 0000              25%....
+ 8000958:	6142 7474 7265 2079 6863 7261 6967 676e     Battery charging
+ 8000968:	2020 2020 2020 2020 2020 3035 0025 0000               50%...
+ 8000978:	6142 7474 7265 2079 6863 7261 6967 676e     Battery charging
+ 8000988:	2020 2020 2020 2020 2020 3537 0025 0000               75%...
+ 8000998:	6142 7474 7265 2079 7566 6c6c 2020 2020     Battery full    
+ 80009a8:	2020 2020 2020 2020 3031 2530 0000 0000             100%....
+ 80009b8:	7257 6e6f 2067 7562 7474 6e6f 2020 2020     Wrong button    
+ 80009c8:	2020 7020 6572 7373 6465 2020 2020 2020        pressed      
+ 80009d8:	2020 2020 2020 5020 6572 7373 6120 796e            Press any
+ 80009e8:	6b20 7965 2020 2020 2020 6220 7465 6577      key       betwe
+ 80009f8:	6e65 3020 342d 0000 1a08 0000 1958 0000     en 0-4......X...
+ 8000a08:	195e 0000 1958 0000 19fa 0000 1958 0000     ^...X.......X...
+ 8000a18:	195e 0000 1a08 0000 1a08 0000 19fa 0000     ^...............
+ 8000a28:	195e 0000 193e 0000 193e 0000 193e 0000     ^...>...>...>...
+ 8000a38:	1962 0000 1e0e 0000 1e0e 0000 1e26 0000     b...........&...
+ 8000a48:	1e08 0000 1e08 0000 1eb4 0000 1e26 0000     ............&...
+ 8000a58:	1e08 0000 1eb4 0000 1e08 0000 1e26 0000     ............&...
+ 8000a68:	1e06 0000 1e06 0000 1e06 0000 1eb4 0000     ................
 
-08000a90 <__clz_tab>:
- 8000a90:	0100 0202 0303 0303 0404 0404 0404 0404     ................
- 8000aa0:	0505 0505 0505 0505 0505 0505 0505 0505     ................
- 8000ab0:	0606 0606 0606 0606 0606 0606 0606 0606     ................
- 8000ac0:	0606 0606 0606 0606 0606 0606 0606 0606     ................
- 8000ad0:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000ae0:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000af0:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000b00:	0707 0707 0707 0707 0707 0707 0707 0707     ................
- 8000b10:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b20:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b30:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b40:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b50:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b60:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b70:	0808 0808 0808 0808 0808 0808 0808 0808     ................
- 8000b80:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+08000a78 <__clz_tab>:
+ 8000a78:	0100 0202 0303 0303 0404 0404 0404 0404     ................
+ 8000a88:	0505 0505 0505 0505 0505 0505 0505 0505     ................
+ 8000a98:	0606 0606 0606 0606 0606 0606 0606 0606     ................
+ 8000aa8:	0606 0606 0606 0606 0606 0606 0606 0606     ................
+ 8000ab8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000ac8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000ad8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000ae8:	0707 0707 0707 0707 0707 0707 0707 0707     ................
+ 8000af8:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b08:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b18:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b28:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b38:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b48:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b58:	0808 0808 0808 0808 0808 0808 0808 0808     ................
+ 8000b68:	0808 0808 0808 0808 0808 0808 0808 0808     ................
 
-08000b90 <main>:
+08000b78 <main>:
 #include "gd32vf103.h"
 #include "drivers.h"
 #include "lcd.h"
 
 int main(void)
 {
- 8000b90:	7119                	addi	sp,sp,-128
+ 8000b78:	7119                	addi	sp,sp,-128
     int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
     int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1}; // A = 10, B = 11, C = 12, D = 13, # = 14, * = 15
- 8000b92:	080015b7          	lui	a1,0x8001
- 8000b96:	04000613          	li	a2,64
- 8000b9a:	8f058593          	addi	a1,a1,-1808 # 80008f0 <asc2_1608+0x63c>
- 8000b9e:	850a                	mv	a0,sp
+ 8000b7a:	080015b7          	lui	a1,0x8001
+ 8000b7e:	04000613          	li	a2,64
+ 8000b82:	8f058593          	addi	a1,a1,-1808 # 80008f0 <asc2_1608+0x63c>
+ 8000b86:	850a                	mv	a0,sp
 {
- 8000ba0:	de86                	sw	ra,124(sp)
- 8000ba2:	dca2                	sw	s0,120(sp)
- 8000ba4:	d6ce                	sw	s3,108(sp)
- 8000ba6:	d4d2                	sw	s4,104(sp)
- 8000ba8:	d2d6                	sw	s5,100(sp)
- 8000baa:	d0da                	sw	s6,96(sp)
- 8000bac:	cede                	sw	s7,92(sp)
- 8000bae:	cce2                	sw	s8,88(sp)
- 8000bb0:	cae6                	sw	s9,84(sp)
- 8000bb2:	c8ea                	sw	s10,80(sp)
- 8000bb4:	c6ee                	sw	s11,76(sp)
- 8000bb6:	daa6                	sw	s1,116(sp)
- 8000bb8:	d8ca                	sw	s2,112(sp)
+ 8000b88:	de86                	sw	ra,124(sp)
+ 8000b8a:	daa6                	sw	s1,116(sp)
+ 8000b8c:	d6ce                	sw	s3,108(sp)
+ 8000b8e:	d4d2                	sw	s4,104(sp)
+ 8000b90:	d2d6                	sw	s5,100(sp)
+ 8000b92:	d0da                	sw	s6,96(sp)
+ 8000b94:	cede                	sw	s7,92(sp)
+ 8000b96:	cce2                	sw	s8,88(sp)
+ 8000b98:	cae6                	sw	s9,84(sp)
+ 8000b9a:	c8ea                	sw	s10,80(sp)
+ 8000b9c:	c6ee                	sw	s11,76(sp)
+ 8000b9e:	dca2                	sw	s0,120(sp)
+ 8000ba0:	d8ca                	sw	s2,112(sp)
     int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1}; // A = 10, B = 11, C = 12, D = 13, # = 14, * = 15
- 8000bba:	00002097          	auipc	ra,0x2
- 8000bbe:	08a080e7          	jalr	138(ra) # 8002c44 <memcpy>
+ 8000ba2:	00002097          	auipc	ra,0x2
+ 8000ba6:	0a2080e7          	jalr	162(ra) # 8002c44 <memcpy>
     int dac = 0, speed = -100;
     int adcr, tmpr;
 
     t5omsi();                  // Initialize timer5 1kHz
- 8000bc2:	00001097          	auipc	ra,0x1
- 8000bc6:	0a6080e7          	jalr	166(ra) # 8001c68 <t5omsi>
+ 8000baa:	00001097          	auipc	ra,0x1
+ 8000bae:	0be080e7          	jalr	190(ra) # 8001c68 <t5omsi>
     colinit();                 // Initialize column toolbox
- 8000bca:	00001097          	auipc	ra,0x1
- 8000bce:	0e0080e7          	jalr	224(ra) # 8001caa <colinit>
+ 8000bb2:	00001097          	auipc	ra,0x1
+ 8000bb6:	0f8080e7          	jalr	248(ra) # 8001caa <colinit>
     l88init();                 // Initialize 8*8 led toolbox
- 8000bd2:	00001097          	auipc	ra,0x1
- 8000bd6:	150080e7          	jalr	336(ra) # 8001d22 <l88init>
+ 8000bba:	00001097          	auipc	ra,0x1
+ 8000bbe:	168080e7          	jalr	360(ra) # 8001d22 <l88init>
     keyinit();                 // Initialize keyboard toolbox
- 8000bda:	00001097          	auipc	ra,0x1
- 8000bde:	1c4080e7          	jalr	452(ra) # 8001d9e <keyinit>
+ 8000bc2:	00001097          	auipc	ra,0x1
+ 8000bc6:	1dc080e7          	jalr	476(ra) # 8001d9e <keyinit>
     Lcd_SetType(LCD_INVERTED); // or use LCD_INVERTED!
- 8000be2:	4505                	li	a0,1
- 8000be4:	00001097          	auipc	ra,0x1
- 8000be8:	8ca080e7          	jalr	-1846(ra) # 80014ae <Lcd_SetType>
+ 8000bca:	4505                	li	a0,1
+ 8000bcc:	00001097          	auipc	ra,0x1
+ 8000bd0:	8ca080e7          	jalr	-1846(ra) # 8001496 <Lcd_SetType>
     Lcd_Init();
- 8000bec:	00001097          	auipc	ra,0x1
- 8000bf0:	8e8080e7          	jalr	-1816(ra) # 80014d4 <Lcd_Init>
+ 8000bd4:	00001097          	auipc	ra,0x1
+ 8000bd8:	8e8080e7          	jalr	-1816(ra) # 80014bc <Lcd_Init>
     LCD_Clear(BLACK);
- 8000bf4:	4501                	li	a0,0
-                    LCD_ShowChar(75, 50, 130, 0, RED);
+ 8000bdc:	4501                	li	a0,0
+                    LCD_ShowChar(75, 50, 130, 0, GREEN);
                 }
                 else if (lookUpTbl[key] != 0 || 1 || 2 || 3 || 4)
                 {
                     LCD_Clear(BLACK);
                     LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
- 8000bf6:	6441                	lui	s0,0x10
+ 8000bde:	6a41                	lui	s4,0x10
     LCD_Clear(BLACK);
- 8000bf8:	00001097          	auipc	ra,0x1
- 8000bfc:	d40080e7          	jalr	-704(ra) # 8001938 <LCD_Clear>
+ 8000be0:	00001097          	auipc	ra,0x1
+ 8000be4:	d40080e7          	jalr	-704(ra) # 8001920 <LCD_Clear>
     int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
- 8000c00:	4981                	li	s3,0
- 8000c02:	5afd                	li	s5,-1
+ 8000be8:	4981                	li	s3,0
+ 8000bea:	5afd                	li	s5,-1
                     LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
- 8000c04:	80040a13          	addi	s4,s0,-2048 # f800 <__stack_size+0xe800>
- 8000c08:	08001b37          	lui	s6,0x8001
-                    LCD_ShowStr(32, 1, "Low Battery charge now plz            0%", RED, TRANSPARENT);
- 8000c0c:	08001bb7          	lui	s7,0x8001
-                    LCD_ShowStr(15, 1, "Low Battery, charging          25%", WHITE, TRANSPARENT);
- 8000c10:	08001c37          	lui	s8,0x8001
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
- 8000c14:	08001cb7          	lui	s9,0x8001
+ 8000bec:	800a0493          	addi	s1,s4,-2048 # f800 <__stack_size+0xe800>
+ 8000bf0:	08001b37          	lui	s6,0x8001
+                    LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
+ 8000bf4:	08001bb7          	lui	s7,0x8001
                     LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
- 8000c18:	08001d37          	lui	s10,0x8001
-                    LCD_ShowStr(1, 1, "Battery full", WHITE, TRANSPARENT); // Skriver texten rött
- 8000c1c:	08001db7          	lui	s11,0x8001
+ 8000bf8:	08001c37          	lui	s8,0x8001
+                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+ 8000bfc:	08001cb7          	lui	s9,0x8001
+                    LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
+ 8000c00:	08001d37          	lui	s10,0x8001
+                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+ 8000c04:	08001db7          	lui	s11,0x8001
         LCD_WR_Queue(); // Manage LCD com queue!
- 8000c20:	00000097          	auipc	ra,0x0
- 8000c24:	62a080e7          	jalr	1578(ra) # 800124a <LCD_WR_Queue>
+ 8000c08:	00000097          	auipc	ra,0x0
+ 8000c0c:	62a080e7          	jalr	1578(ra) # 8001232 <LCD_WR_Queue>
         if (t5expq())
- 8000c28:	00001097          	auipc	ra,0x1
- 8000c2c:	072080e7          	jalr	114(ra) # 8001c9a <t5expq>
- 8000c30:	d965                	beqz	a0,8000c20 <main+0x90>
+ 8000c10:	00001097          	auipc	ra,0x1
+ 8000c14:	08a080e7          	jalr	138(ra) # 8001c9a <t5expq>
+ 8000c18:	d965                	beqz	a0,8000c08 <main+0x90>
             l88row(colset()); // ...8*8LED and Keyboard
- 8000c32:	00001097          	auipc	ra,0x1
- 8000c36:	0b8080e7          	jalr	184(ra) # 8001cea <colset>
- 8000c3a:	00001097          	auipc	ra,0x1
- 8000c3e:	11a080e7          	jalr	282(ra) # 8001d54 <l88row>
+ 8000c1a:	00001097          	auipc	ra,0x1
+ 8000c1e:	0d0080e7          	jalr	208(ra) # 8001cea <colset>
+ 8000c22:	00001097          	auipc	ra,0x1
+ 8000c26:	132080e7          	jalr	306(ra) # 8001d54 <l88row>
             if ((key = keyscan()) >= 0)
- 8000c42:	00001097          	auipc	ra,0x1
- 8000c46:	18e080e7          	jalr	398(ra) # 8001dd0 <keyscan>
- 8000c4a:	892a                	mv	s2,a0
- 8000c4c:	fc054ae3          	bltz	a0,8000c20 <main+0x90>
-                if (lookUpTbl[key] == 4) // Om tangent 0 är tryckt
- 8000c50:	00251793          	slli	a5,a0,0x2
- 8000c54:	0098                	addi	a4,sp,64
- 8000c56:	97ba                	add	a5,a5,a4
- 8000c58:	fc07a483          	lw	s1,-64(a5)
- 8000c5c:	4791                	li	a5,4
- 8000c5e:	04f49d63          	bne	s1,a5,8000cb8 <main+0x128>
-                    LCD_Clear(BLACK);                                      // Rensar displayen
- 8000c62:	4501                	li	a0,0
- 8000c64:	00001097          	auipc	ra,0x1
- 8000c68:	cd4080e7          	jalr	-812(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(1, 1, "Battery full", WHITE, TRANSPARENT); // Skriver texten rött
- 8000c6c:	4705                	li	a4,1
- 8000c6e:	fff40693          	addi	a3,s0,-1
- 8000c72:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
- 8000c76:	4585                	li	a1,1
- 8000c78:	4505                	li	a0,1
- 8000c7a:	00001097          	auipc	ra,0x1
- 8000c7e:	e06080e7          	jalr	-506(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 126, 0, GREEN);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
- 8000c82:	7e000713          	li	a4,2016
- 8000c86:	4681                	li	a3,0
- 8000c88:	07e00613          	li	a2,126
-                    LCD_ShowChar(75, 50, 127, 0, WHITE);
- 8000c8c:	03200593          	li	a1,50
- 8000c90:	04b00513          	li	a0,75
- 8000c94:	00001097          	auipc	ra,0x1
- 8000c98:	d0e080e7          	jalr	-754(ra) # 80019a2 <LCD_ShowChar>
+ 8000c2a:	00001097          	auipc	ra,0x1
+ 8000c2e:	1a6080e7          	jalr	422(ra) # 8001dd0 <keyscan>
+ 8000c32:	892a                	mv	s2,a0
+ 8000c34:	fc054ae3          	bltz	a0,8000c08 <main+0x90>
+                if (lookUpTbl[key] == 0) // Om tangent 0 är tryckt
+ 8000c38:	00251793          	slli	a5,a0,0x2
+ 8000c3c:	0098                	addi	a4,sp,64
+ 8000c3e:	97ba                	add	a5,a5,a4
+ 8000c40:	fc07a403          	lw	s0,-64(a5)
+ 8000c44:	e831                	bnez	s0,8000c98 <main+0x120>
+                    LCD_Clear(BLACK);                                   // Rensar displayen
+ 8000c46:	4501                	li	a0,0
+ 8000c48:	00001097          	auipc	ra,0x1
+ 8000c4c:	cd8080e7          	jalr	-808(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+ 8000c50:	4705                	li	a4,1
+ 8000c52:	86a6                	mv	a3,s1
+ 8000c54:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
+ 8000c58:	4585                	li	a1,1
+ 8000c5a:	4505                	li	a0,1
+ 8000c5c:	00001097          	auipc	ra,0x1
+ 8000c60:	e0c080e7          	jalr	-500(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 126, 0, RED);                  // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+ 8000c64:	8726                	mv	a4,s1
+ 8000c66:	4681                	li	a3,0
+ 8000c68:	07e00613          	li	a2,126
+                    LCD_ShowChar(75, 50, 127, 0, RED);
+ 8000c6c:	03200593          	li	a1,50
+ 8000c70:	04b00513          	li	a0,75
+ 8000c74:	00001097          	auipc	ra,0x1
+ 8000c78:	d16080e7          	jalr	-746(ra) # 800198a <LCD_ShowChar>
                 }
 
                 if (pKey == key)
                     c++;
- 8000c9c:	0985                	addi	s3,s3,1
+ 8000c7c:	0985                	addi	s3,s3,1
                 if (pKey == key)
- 8000c9e:	01590363          	beq	s2,s5,8000ca4 <main+0x114>
+ 8000c7e:	01590363          	beq	s2,s5,8000c84 <main+0x10c>
                 else
                 {
                     c = 0;
- 8000ca2:	4981                	li	s3,0
+ 8000c82:	4981                	li	s3,0
                     pKey = key;
                 }
                 l88mem(1, lookUpTbl[key] + (c << 4));
- 8000ca4:	00499593          	slli	a1,s3,0x4
- 8000ca8:	95a6                	add	a1,a1,s1
- 8000caa:	4505                	li	a0,1
- 8000cac:	00001097          	auipc	ra,0x1
- 8000cb0:	0de080e7          	jalr	222(ra) # 8001d8a <l88mem>
- 8000cb4:	8aca                	mv	s5,s2
- 8000cb6:	b7ad                	j	8000c20 <main+0x90>
-                else if (lookUpTbl[key] == 3)
- 8000cb8:	478d                	li	a5,3
- 8000cba:	02f49863          	bne	s1,a5,8000cea <main+0x15a>
+ 8000c84:	00499593          	slli	a1,s3,0x4
+ 8000c88:	95a2                	add	a1,a1,s0
+ 8000c8a:	4505                	li	a0,1
+ 8000c8c:	00001097          	auipc	ra,0x1
+ 8000c90:	0fe080e7          	jalr	254(ra) # 8001d8a <l88mem>
+ 8000c94:	8aca                	mv	s5,s2
+ 8000c96:	bf8d                	j	8000c08 <main+0x90>
+                else if (lookUpTbl[key] == 1)
+ 8000c98:	4785                	li	a5,1
+ 8000c9a:	02f41663          	bne	s0,a5,8000cc6 <main+0x14e>
                     LCD_Clear(BLACK);
- 8000cbe:	4501                	li	a0,0
- 8000cc0:	00001097          	auipc	ra,0x1
- 8000cc4:	c78080e7          	jalr	-904(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
- 8000cc8:	4705                	li	a4,1
- 8000cca:	fff40693          	addi	a3,s0,-1
- 8000cce:	940d0613          	addi	a2,s10,-1728 # 8000940 <asc2_1608+0x68c>
- 8000cd2:	4585                	li	a1,1
- 8000cd4:	453d                	li	a0,15
- 8000cd6:	00001097          	auipc	ra,0x1
- 8000cda:	daa080e7          	jalr	-598(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 127, 0, WHITE);
- 8000cde:	fff40713          	addi	a4,s0,-1
- 8000ce2:	4681                	li	a3,0
- 8000ce4:	07f00613          	li	a2,127
- 8000ce8:	b755                	j	8000c8c <main+0xfc>
+ 8000c9e:	4501                	li	a0,0
+ 8000ca0:	00001097          	auipc	ra,0x1
+ 8000ca4:	c80080e7          	jalr	-896(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
+ 8000ca8:	4705                	li	a4,1
+ 8000caa:	86a6                	mv	a3,s1
+ 8000cac:	93cd0613          	addi	a2,s10,-1732 # 800093c <asc2_1608+0x688>
+ 8000cb0:	4585                	li	a1,1
+ 8000cb2:	453d                	li	a0,15
+ 8000cb4:	00001097          	auipc	ra,0x1
+ 8000cb8:	db4080e7          	jalr	-588(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 127, 0, RED);
+ 8000cbc:	8726                	mv	a4,s1
+ 8000cbe:	4681                	li	a3,0
+ 8000cc0:	07f00613          	li	a2,127
+ 8000cc4:	b765                	j	8000c6c <main+0xf4>
                 else if (lookUpTbl[key] == 2)
- 8000cea:	4789                	li	a5,2
- 8000cec:	02f49863          	bne	s1,a5,8000d1c <main+0x18c>
+ 8000cc6:	4789                	li	a5,2
+ 8000cc8:	02f41863          	bne	s0,a5,8000cf8 <main+0x180>
                     LCD_Clear(BLACK);
- 8000cf0:	4501                	li	a0,0
- 8000cf2:	00001097          	auipc	ra,0x1
- 8000cf6:	c46080e7          	jalr	-954(ra) # 8001938 <LCD_Clear>
+ 8000ccc:	4501                	li	a0,0
+ 8000cce:	00001097          	auipc	ra,0x1
+ 8000cd2:	c52080e7          	jalr	-942(ra) # 8001920 <LCD_Clear>
                     LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
- 8000cfa:	4705                	li	a4,1
- 8000cfc:	fff40693          	addi	a3,s0,-1
- 8000d00:	960c8613          	addi	a2,s9,-1696 # 8000960 <asc2_1608+0x6ac>
- 8000d04:	4585                	li	a1,1
- 8000d06:	453d                	li	a0,15
- 8000d08:	00001097          	auipc	ra,0x1
- 8000d0c:	d78080e7          	jalr	-648(ra) # 8001a80 <LCD_ShowStr>
+ 8000cd6:	4705                	li	a4,1
+ 8000cd8:	fffa0693          	addi	a3,s4,-1
+ 8000cdc:	958c8613          	addi	a2,s9,-1704 # 8000958 <asc2_1608+0x6a4>
+ 8000ce0:	4585                	li	a1,1
+ 8000ce2:	453d                	li	a0,15
+ 8000ce4:	00001097          	auipc	ra,0x1
+ 8000ce8:	d84080e7          	jalr	-636(ra) # 8001a68 <LCD_ShowStr>
                     LCD_ShowChar(75, 50, 128, 0, YELLOW);
- 8000d10:	fe040713          	addi	a4,s0,-32
- 8000d14:	4681                	li	a3,0
- 8000d16:	08000613          	li	a2,128
- 8000d1a:	bf8d                	j	8000c8c <main+0xfc>
-                else if (lookUpTbl[key] == 1)
- 8000d1c:	4785                	li	a5,1
+ 8000cec:	fe0a0713          	addi	a4,s4,-32
+ 8000cf0:	4681                	li	a3,0
+ 8000cf2:	08000613          	li	a2,128
+ 8000cf6:	bf9d                	j	8000c6c <main+0xf4>
+                else if (lookUpTbl[key] == 3)
+ 8000cf8:	478d                	li	a5,3
+ 8000cfa:	02f41863          	bne	s0,a5,8000d2a <main+0x1b2>
                     LCD_Clear(BLACK);
- 8000d1e:	4501                	li	a0,0
-                else if (lookUpTbl[key] == 1)
- 8000d20:	02f49663          	bne	s1,a5,8000d4c <main+0x1bc>
+ 8000cfe:	4501                	li	a0,0
+ 8000d00:	00001097          	auipc	ra,0x1
+ 8000d04:	c20080e7          	jalr	-992(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
+ 8000d08:	4705                	li	a4,1
+ 8000d0a:	fffa0693          	addi	a3,s4,-1
+ 8000d0e:	978c0613          	addi	a2,s8,-1672 # 8000978 <asc2_1608+0x6c4>
+ 8000d12:	4585                	li	a1,1
+ 8000d14:	453d                	li	a0,15
+ 8000d16:	00001097          	auipc	ra,0x1
+ 8000d1a:	d52080e7          	jalr	-686(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 129, 0, GREEN);
+ 8000d1e:	7e000713          	li	a4,2016
+ 8000d22:	4681                	li	a3,0
+ 8000d24:	08100613          	li	a2,129
+ 8000d28:	b791                	j	8000c6c <main+0xf4>
+                else if (lookUpTbl[key] == 4)
+ 8000d2a:	4791                	li	a5,4
                     LCD_Clear(BLACK);
- 8000d24:	00001097          	auipc	ra,0x1
- 8000d28:	c14080e7          	jalr	-1004(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "Low Battery, charging          25%", WHITE, TRANSPARENT);
- 8000d2c:	4705                	li	a4,1
- 8000d2e:	fff40693          	addi	a3,s0,-1
- 8000d32:	980c0613          	addi	a2,s8,-1664 # 8000980 <asc2_1608+0x6cc>
- 8000d36:	4585                	li	a1,1
- 8000d38:	453d                	li	a0,15
- 8000d3a:	00001097          	auipc	ra,0x1
- 8000d3e:	d46080e7          	jalr	-698(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 129, 0, RED);
- 8000d42:	8752                	mv	a4,s4
- 8000d44:	4681                	li	a3,0
- 8000d46:	08100613          	li	a2,129
- 8000d4a:	b789                	j	8000c8c <main+0xfc>
-                else if (lookUpTbl[key] == 0)
- 8000d4c:	e48d                	bnez	s1,8000d76 <main+0x1e6>
+ 8000d2c:	4501                	li	a0,0
+                else if (lookUpTbl[key] == 4)
+ 8000d2e:	02f41863          	bne	s0,a5,8000d5e <main+0x1e6>
                     LCD_Clear(BLACK);
- 8000d4e:	00001097          	auipc	ra,0x1
- 8000d52:	bea080e7          	jalr	-1046(ra) # 8001938 <LCD_Clear>
-                    LCD_ShowStr(32, 1, "Low Battery charge now plz            0%", RED, TRANSPARENT);
- 8000d56:	4705                	li	a4,1
- 8000d58:	86d2                	mv	a3,s4
- 8000d5a:	9a4b8613          	addi	a2,s7,-1628 # 80009a4 <asc2_1608+0x6f0>
- 8000d5e:	4585                	li	a1,1
- 8000d60:	02000513          	li	a0,32
- 8000d64:	00001097          	auipc	ra,0x1
- 8000d68:	d1c080e7          	jalr	-740(ra) # 8001a80 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 130, 0, RED);
- 8000d6c:	8752                	mv	a4,s4
- 8000d6e:	4681                	li	a3,0
- 8000d70:	08200613          	li	a2,130
- 8000d74:	bf21                	j	8000c8c <main+0xfc>
+ 8000d32:	00001097          	auipc	ra,0x1
+ 8000d36:	bee080e7          	jalr	-1042(ra) # 8001920 <LCD_Clear>
+                    LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
+ 8000d3a:	4705                	li	a4,1
+ 8000d3c:	7e000693          	li	a3,2016
+ 8000d40:	998b8613          	addi	a2,s7,-1640 # 8000998 <asc2_1608+0x6e4>
+ 8000d44:	4585                	li	a1,1
+ 8000d46:	02000513          	li	a0,32
+ 8000d4a:	00001097          	auipc	ra,0x1
+ 8000d4e:	d1e080e7          	jalr	-738(ra) # 8001a68 <LCD_ShowStr>
+                    LCD_ShowChar(75, 50, 130, 0, GREEN);
+ 8000d52:	7e000713          	li	a4,2016
+ 8000d56:	4681                	li	a3,0
+ 8000d58:	08200613          	li	a2,130
+ 8000d5c:	bf01                	j	8000c6c <main+0xf4>
                     LCD_Clear(BLACK);
- 8000d76:	00001097          	auipc	ra,0x1
- 8000d7a:	bc2080e7          	jalr	-1086(ra) # 8001938 <LCD_Clear>
+ 8000d5e:	00001097          	auipc	ra,0x1
+ 8000d62:	bc2080e7          	jalr	-1086(ra) # 8001920 <LCD_Clear>
                     LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
- 8000d7e:	4705                	li	a4,1
- 8000d80:	86d2                	mv	a3,s4
- 8000d82:	9d0b0613          	addi	a2,s6,-1584 # 80009d0 <asc2_1608+0x71c>
- 8000d86:	4585                	li	a1,1
- 8000d88:	4505                	li	a0,1
- 8000d8a:	00001097          	auipc	ra,0x1
- 8000d8e:	cf6080e7          	jalr	-778(ra) # 8001a80 <LCD_ShowStr>
- 8000d92:	b729                	j	8000c9c <main+0x10c>
+ 8000d66:	4705                	li	a4,1
+ 8000d68:	86a6                	mv	a3,s1
+ 8000d6a:	9b8b0613          	addi	a2,s6,-1608 # 80009b8 <asc2_1608+0x704>
+ 8000d6e:	4585                	li	a1,1
+ 8000d70:	4505                	li	a0,1
+ 8000d72:	00001097          	auipc	ra,0x1
+ 8000d76:	cf6080e7          	jalr	-778(ra) # 8001a68 <LCD_ShowStr>
+ 8000d7a:	b709                	j	8000c7c <main+0x104>
 
-08000d94 <gpio_init>:
+08000d7c <gpio_init>:
 
     /* GPIO mode configuration */
     temp_mode = (uint32_t) (mode & ((uint32_t) 0x0FU));
 
     /* GPIO speed configuration */
     if (((uint32_t) 0x00U) != ((uint32_t) mode & ((uint32_t) 0x10U))) {
- 8000d94:	0105f793          	andi	a5,a1,16
+ 8000d7c:	0105f793          	andi	a5,a1,16
     temp_mode = (uint32_t) (mode & ((uint32_t) 0x0FU));
- 8000d98:	00f5f893          	andi	a7,a1,15
+ 8000d80:	00f5f893          	andi	a7,a1,15
     if (((uint32_t) 0x00U) != ((uint32_t) mode & ((uint32_t) 0x10U))) {
- 8000d9c:	c399                	beqz	a5,8000da2 <gpio_init+0xe>
+ 8000d84:	c399                	beqz	a5,8000d8a <gpio_init+0xe>
         /* output mode max speed:10MHz,2MHz,50MHz */
         temp_mode |= (uint32_t) speed;
- 8000d9e:	00c8e8b3          	or	a7,a7,a2
+ 8000d86:	00c8e8b3          	or	a7,a7,a2
 {
- 8000da2:	4781                	li	a5,0
+ 8000d8a:	4781                	li	a5,0
     }
 
     /* configure the eight low port pins with GPIO_CTL0 */
     for (i = 0U; i < 8U; i++) {
         if ((1U << i) & pin) {
- 8000da4:	4e05                	li	t3,1
+ 8000d8c:	4e05                	li	t3,1
             reg = GPIO_CTL0(gpio_periph);
 
             /* clear the specified pin mode bits */
             reg &= ~GPIO_MODE_MASK(i);
- 8000da6:	4ebd                	li	t4,15
+ 8000d8e:	4ebd                	li	t4,15
             /* set the specified pin mode bits */
             reg |= GPIO_MODE_SET(i, temp_mode);
 
             /* set IPD or IPU */
             if (GPIO_MODE_IPD == mode) {
- 8000da8:	02800f13          	li	t5,40
+ 8000d90:	02800f13          	li	t5,40
                 /* reset the corresponding OCTL bit */
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
             } else {
                 /* set the corresponding OCTL bit */
                 if (GPIO_MODE_IPU == mode) {
- 8000dac:	04800f93          	li	t6,72
+ 8000d94:	04800f93          	li	t6,72
     for (i = 0U; i < 8U; i++) {
- 8000db0:	4321                	li	t1,8
+ 8000d98:	4321                	li	t1,8
         if ((1U << i) & pin) {
- 8000db2:	00fe1633          	sll	a2,t3,a5
- 8000db6:	8e75                	and	a2,a2,a3
- 8000db8:	c21d                	beqz	a2,8000dde <gpio_init+0x4a>
+ 8000d9a:	00fe1633          	sll	a2,t3,a5
+ 8000d9e:	8e75                	and	a2,a2,a3
+ 8000da0:	c21d                	beqz	a2,8000dc6 <gpio_init+0x4a>
             reg = GPIO_CTL0(gpio_periph);
- 8000dba:	00279713          	slli	a4,a5,0x2
- 8000dbe:	00052283          	lw	t0,0(a0)
+ 8000da2:	00279713          	slli	a4,a5,0x2
+ 8000da6:	00052283          	lw	t0,0(a0)
             reg &= ~GPIO_MODE_MASK(i);
- 8000dc2:	00ee9833          	sll	a6,t4,a4
- 8000dc6:	fff84813          	not	a6,a6
- 8000dca:	00587833          	and	a6,a6,t0
+ 8000daa:	00ee9833          	sll	a6,t4,a4
+ 8000dae:	fff84813          	not	a6,a6
+ 8000db2:	00587833          	and	a6,a6,t0
             reg |= GPIO_MODE_SET(i, temp_mode);
- 8000dce:	00e89733          	sll	a4,a7,a4
- 8000dd2:	01076733          	or	a4,a4,a6
+ 8000db6:	00e89733          	sll	a4,a7,a4
+ 8000dba:	01076733          	or	a4,a4,a6
             if (GPIO_MODE_IPD == mode) {
- 8000dd6:	05e59963          	bne	a1,t5,8000e28 <gpio_init+0x94>
+ 8000dbe:	05e59963          	bne	a1,t5,8000e10 <gpio_init+0x94>
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000dda:	c950                	sw	a2,20(a0)
+ 8000dc2:	c950                	sw	a2,20(a0)
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
                 }
             }
             /* set GPIO_CTL0 register */
             GPIO_CTL0(gpio_periph) = reg;
- 8000ddc:	c118                	sw	a4,0(a0)
- 8000dde:	0785                	addi	a5,a5,1
+ 8000dc4:	c118                	sw	a4,0(a0)
+ 8000dc6:	0785                	addi	a5,a5,1
     for (i = 0U; i < 8U; i++) {
- 8000de0:	fc6799e3          	bne	a5,t1,8000db2 <gpio_init+0x1e>
+ 8000dc8:	fc6799e3          	bne	a5,t1,8000d9a <gpio_init+0x1e>
         }
     }
     /* configure the eight high port pins with GPIO_CTL1 */
     for (i = 8U; i < 16U; i++) {
         if ((1U << i) & pin) {
- 8000de4:	4e05                	li	t3,1
+ 8000dcc:	4e05                	li	t3,1
             reg = GPIO_CTL1(gpio_periph);
 
             /* clear the specified pin mode bits */
             reg &= ~GPIO_MODE_MASK(i - 8U);
- 8000de6:	4ebd                	li	t4,15
+ 8000dce:	4ebd                	li	t4,15
             /* set the specified pin mode bits */
             reg |= GPIO_MODE_SET(i - 8U, temp_mode);
 
             /* set IPD or IPU */
             if (GPIO_MODE_IPD == mode) {
- 8000de8:	02800f13          	li	t5,40
+ 8000dd0:	02800f13          	li	t5,40
                 /* reset the corresponding OCTL bit */
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
             } else {
                 /* set the corresponding OCTL bit */
                 if (GPIO_MODE_IPU == mode) {
- 8000dec:	04800f93          	li	t6,72
+ 8000dd4:	04800f93          	li	t6,72
     for (i = 8U; i < 16U; i++) {
- 8000df0:	4341                	li	t1,16
+ 8000dd8:	4341                	li	t1,16
         if ((1U << i) & pin) {
- 8000df2:	00fe1633          	sll	a2,t3,a5
- 8000df6:	8e75                	and	a2,a2,a3
- 8000df8:	c605                	beqz	a2,8000e20 <gpio_init+0x8c>
+ 8000dda:	00fe1633          	sll	a2,t3,a5
+ 8000dde:	8e75                	and	a2,a2,a3
+ 8000de0:	c605                	beqz	a2,8000e08 <gpio_init+0x8c>
             reg &= ~GPIO_MODE_MASK(i - 8U);
- 8000dfa:	00279713          	slli	a4,a5,0x2
- 8000dfe:	1701                	addi	a4,a4,-32
+ 8000de2:	00279713          	slli	a4,a5,0x2
+ 8000de6:	1701                	addi	a4,a4,-32
             reg = GPIO_CTL1(gpio_periph);
- 8000e00:	00452283          	lw	t0,4(a0)
+ 8000de8:	00452283          	lw	t0,4(a0)
             reg &= ~GPIO_MODE_MASK(i - 8U);
- 8000e04:	00ee9833          	sll	a6,t4,a4
- 8000e08:	fff84813          	not	a6,a6
- 8000e0c:	00587833          	and	a6,a6,t0
+ 8000dec:	00ee9833          	sll	a6,t4,a4
+ 8000df0:	fff84813          	not	a6,a6
+ 8000df4:	00587833          	and	a6,a6,t0
             reg |= GPIO_MODE_SET(i - 8U, temp_mode);
- 8000e10:	00e89733          	sll	a4,a7,a4
- 8000e14:	01076733          	or	a4,a4,a6
+ 8000df8:	00e89733          	sll	a4,a7,a4
+ 8000dfc:	01076733          	or	a4,a4,a6
             if (GPIO_MODE_IPD == mode) {
- 8000e18:	01e59c63          	bne	a1,t5,8000e30 <gpio_init+0x9c>
+ 8000e00:	01e59c63          	bne	a1,t5,8000e18 <gpio_init+0x9c>
                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000e1c:	c950                	sw	a2,20(a0)
+ 8000e04:	c950                	sw	a2,20(a0)
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
                 }
             }
             /* set GPIO_CTL1 register */
             GPIO_CTL1(gpio_periph) = reg;
- 8000e1e:	c158                	sw	a4,4(a0)
- 8000e20:	0785                	addi	a5,a5,1
+ 8000e06:	c158                	sw	a4,4(a0)
+ 8000e08:	0785                	addi	a5,a5,1
     for (i = 8U; i < 16U; i++) {
- 8000e22:	fc6798e3          	bne	a5,t1,8000df2 <gpio_init+0x5e>
+ 8000e0a:	fc6798e3          	bne	a5,t1,8000dda <gpio_init+0x5e>
         }
     }
 }
- 8000e26:	8082                	ret
+ 8000e0e:	8082                	ret
                 if (GPIO_MODE_IPU == mode) {
- 8000e28:	fbf59ae3          	bne	a1,t6,8000ddc <gpio_init+0x48>
+ 8000e10:	fbf59ae3          	bne	a1,t6,8000dc4 <gpio_init+0x48>
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000e2c:	c910                	sw	a2,16(a0)
- 8000e2e:	b77d                	j	8000ddc <gpio_init+0x48>
+ 8000e14:	c910                	sw	a2,16(a0)
+ 8000e16:	b77d                	j	8000dc4 <gpio_init+0x48>
                 if (GPIO_MODE_IPU == mode) {
- 8000e30:	fff597e3          	bne	a1,t6,8000e1e <gpio_init+0x8a>
+ 8000e18:	fff597e3          	bne	a1,t6,8000e06 <gpio_init+0x8a>
                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
- 8000e34:	c910                	sw	a2,16(a0)
- 8000e36:	b7e5                	j	8000e1e <gpio_init+0x8a>
+ 8000e1c:	c910                	sw	a2,16(a0)
+ 8000e1e:	b7e5                	j	8000e06 <gpio_init+0x8a>
 
-08000e38 <gpio_bit_set>:
+08000e20 <gpio_bit_set>:
     \param[out] none
     \retval     none
 */
 void gpio_bit_set(uint32_t gpio_periph, uint32_t pin)
 {
     GPIO_BOP(gpio_periph) = (uint32_t) pin;
- 8000e38:	c90c                	sw	a1,16(a0)
+ 8000e20:	c90c                	sw	a1,16(a0)
 }
- 8000e3a:	8082                	ret
+ 8000e22:	8082                	ret
 
-08000e3c <gpio_bit_reset>:
+08000e24 <gpio_bit_reset>:
     \param[out] none
     \retval     none
 */
 void gpio_bit_reset(uint32_t gpio_periph, uint32_t pin)
 {
     GPIO_BC(gpio_periph) = (uint32_t) pin;
- 8000e3c:	c94c                	sw	a1,20(a0)
+ 8000e24:	c94c                	sw	a1,20(a0)
 }
- 8000e3e:	8082                	ret
+ 8000e26:	8082                	ret
 
-08000e40 <rcu_periph_clock_enable>:
+08000e28 <rcu_periph_clock_enable>:
     \param[out] none
     \retval     none
 */
 void rcu_periph_clock_enable(rcu_periph_enum periph)
 {
     RCU_REG_VAL(periph) |= BIT(RCU_BIT_POS(periph));
- 8000e40:	400217b7          	lui	a5,0x40021
- 8000e44:	00655713          	srli	a4,a0,0x6
- 8000e48:	973e                	add	a4,a4,a5
- 8000e4a:	4314                	lw	a3,0(a4)
- 8000e4c:	4785                	li	a5,1
- 8000e4e:	00a797b3          	sll	a5,a5,a0
- 8000e52:	8fd5                	or	a5,a5,a3
- 8000e54:	c31c                	sw	a5,0(a4)
+ 8000e28:	400217b7          	lui	a5,0x40021
+ 8000e2c:	00655713          	srli	a4,a0,0x6
+ 8000e30:	973e                	add	a4,a4,a5
+ 8000e32:	4314                	lw	a3,0(a4)
+ 8000e34:	4785                	li	a5,1
+ 8000e36:	00a797b3          	sll	a5,a5,a0
+ 8000e3a:	8fd5                	or	a5,a5,a3
+ 8000e3c:	c31c                	sw	a5,0(a4)
 }
- 8000e56:	8082                	ret
+ 8000e3e:	8082                	ret
 
-08000e58 <spi_struct_para_init>:
+08000e40 <spi_struct_para_init>:
     \retval     none
 */
 void spi_struct_para_init(spi_parameter_struct* spi_struct)
 {
     /* set the SPI struct with the default values */
     spi_struct->device_mode = SPI_SLAVE;
- 8000e58:	00052023          	sw	zero,0(a0)
+ 8000e40:	00052023          	sw	zero,0(a0)
     spi_struct->trans_mode = SPI_TRANSMODE_FULLDUPLEX;
- 8000e5c:	00052223          	sw	zero,4(a0)
+ 8000e44:	00052223          	sw	zero,4(a0)
     spi_struct->frame_size = SPI_FRAMESIZE_8BIT;
- 8000e60:	00052423          	sw	zero,8(a0)
+ 8000e48:	00052423          	sw	zero,8(a0)
     spi_struct->nss = SPI_NSS_HARD;
- 8000e64:	00052623          	sw	zero,12(a0)
+ 8000e4c:	00052623          	sw	zero,12(a0)
     spi_struct->clock_polarity_phase = SPI_CK_PL_LOW_PH_1EDGE;
- 8000e68:	00052a23          	sw	zero,20(a0)
+ 8000e50:	00052a23          	sw	zero,20(a0)
     spi_struct->prescale = SPI_PSC_2;
- 8000e6c:	00052c23          	sw	zero,24(a0)
+ 8000e54:	00052c23          	sw	zero,24(a0)
 }
- 8000e70:	8082                	ret
+ 8000e58:	8082                	ret
 
-08000e72 <spi_init>:
+08000e5a <spi_init>:
     \retval     none
 */
 void spi_init(uint32_t spi_periph, spi_parameter_struct* spi_struct)
 {   
     uint32_t reg = 0U;
     reg = SPI_CTL0(spi_periph);
- 8000e72:	411c                	lw	a5,0(a0)
+ 8000e5a:	411c                	lw	a5,0(a0)
     reg &= SPI_INIT_MASK;
- 8000e74:	670d                	lui	a4,0x3
- 8000e76:	04070713          	addi	a4,a4,64 # 3040 <__stack_size+0x2040>
+ 8000e5c:	670d                	lui	a4,0x3
+ 8000e5e:	04070713          	addi	a4,a4,64 # 3040 <__stack_size+0x2040>
     /* select SPI LSB or MSB */
     reg |= spi_struct->endian;
     /* select SPI polarity and phase */
     reg |= spi_struct->clock_polarity_phase;
     /* select SPI prescale to adjust transmit speed */
     reg |= spi_struct->prescale;
- 8000e7a:	41d4                	lw	a3,4(a1)
+ 8000e62:	41d4                	lw	a3,4(a1)
     reg &= SPI_INIT_MASK;
- 8000e7c:	8f7d                	and	a4,a4,a5
+ 8000e64:	8f7d                	and	a4,a4,a5
     reg |= spi_struct->prescale;
- 8000e7e:	419c                	lw	a5,0(a1)
- 8000e80:	8fd5                	or	a5,a5,a3
- 8000e82:	4594                	lw	a3,8(a1)
- 8000e84:	8fd5                	or	a5,a5,a3
- 8000e86:	45d4                	lw	a3,12(a1)
- 8000e88:	8fd5                	or	a5,a5,a3
- 8000e8a:	4994                	lw	a3,16(a1)
- 8000e8c:	8fd5                	or	a5,a5,a3
- 8000e8e:	49d4                	lw	a3,20(a1)
- 8000e90:	8fd5                	or	a5,a5,a3
- 8000e92:	4d94                	lw	a3,24(a1)
- 8000e94:	8fd5                	or	a5,a5,a3
- 8000e96:	8fd9                	or	a5,a5,a4
+ 8000e66:	419c                	lw	a5,0(a1)
+ 8000e68:	8fd5                	or	a5,a5,a3
+ 8000e6a:	4594                	lw	a3,8(a1)
+ 8000e6c:	8fd5                	or	a5,a5,a3
+ 8000e6e:	45d4                	lw	a3,12(a1)
+ 8000e70:	8fd5                	or	a5,a5,a3
+ 8000e72:	4994                	lw	a3,16(a1)
+ 8000e74:	8fd5                	or	a5,a5,a3
+ 8000e76:	49d4                	lw	a3,20(a1)
+ 8000e78:	8fd5                	or	a5,a5,a3
+ 8000e7a:	4d94                	lw	a3,24(a1)
+ 8000e7c:	8fd5                	or	a5,a5,a3
+ 8000e7e:	8fd9                	or	a5,a5,a4
 
     /* write to SPI_CTL0 register */
     SPI_CTL0(spi_periph) = (uint32_t)reg;
- 8000e98:	c11c                	sw	a5,0(a0)
+ 8000e80:	c11c                	sw	a5,0(a0)
 
     SPI_I2SCTL(spi_periph) &= (uint32_t)(~SPI_I2SCTL_I2SSEL);
- 8000e9a:	4d5c                	lw	a5,28(a0)
- 8000e9c:	777d                	lui	a4,0xfffff
- 8000e9e:	7ff70713          	addi	a4,a4,2047 # fffff7ff <RCU+0xbffde7ff>
- 8000ea2:	8ff9                	and	a5,a5,a4
- 8000ea4:	cd5c                	sw	a5,28(a0)
+ 8000e82:	4d5c                	lw	a5,28(a0)
+ 8000e84:	777d                	lui	a4,0xfffff
+ 8000e86:	7ff70713          	addi	a4,a4,2047 # fffff7ff <RCU+0xbffde7ff>
+ 8000e8a:	8ff9                	and	a5,a5,a4
+ 8000e8c:	cd5c                	sw	a5,28(a0)
 }
- 8000ea6:	8082                	ret
+ 8000e8e:	8082                	ret
 
-08000ea8 <spi_enable>:
+08000e90 <spi_enable>:
     \param[out] none
     \retval     none
 */
 void spi_enable(uint32_t spi_periph)
 {
     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_SPIEN;
- 8000ea8:	411c                	lw	a5,0(a0)
- 8000eaa:	0407e793          	ori	a5,a5,64
- 8000eae:	c11c                	sw	a5,0(a0)
+ 8000e90:	411c                	lw	a5,0(a0)
+ 8000e92:	0407e793          	ori	a5,a5,64
+ 8000e96:	c11c                	sw	a5,0(a0)
 }
- 8000eb0:	8082                	ret
+ 8000e98:	8082                	ret
 
-08000eb2 <spi_i2s_data_transmit>:
+08000e9a <spi_i2s_data_transmit>:
     \param[out] none
     \retval     none
 */
 void spi_i2s_data_transmit(uint32_t spi_periph, uint16_t data)
 {
     SPI_DATA(spi_periph) = (uint32_t)data;
- 8000eb2:	c54c                	sw	a1,12(a0)
+ 8000e9a:	c54c                	sw	a1,12(a0)
 }
- 8000eb4:	8082                	ret
+ 8000e9c:	8082                	ret
 
-08000eb6 <spi_crc_polynomial_set>:
+08000e9e <spi_crc_polynomial_set>:
     \retval     none
 */
 void spi_crc_polynomial_set(uint32_t spi_periph,uint16_t crc_poly)
 {
     /* enable SPI CRC */
     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_CRCEN;
- 8000eb6:	411c                	lw	a5,0(a0)
- 8000eb8:	6709                	lui	a4,0x2
- 8000eba:	8fd9                	or	a5,a5,a4
- 8000ebc:	c11c                	sw	a5,0(a0)
+ 8000e9e:	411c                	lw	a5,0(a0)
+ 8000ea0:	6709                	lui	a4,0x2
+ 8000ea2:	8fd9                	or	a5,a5,a4
+ 8000ea4:	c11c                	sw	a5,0(a0)
 
     /* set SPI CRC polynomial */
     SPI_CRCPOLY(spi_periph) = (uint32_t)crc_poly;
- 8000ebe:	c90c                	sw	a1,16(a0)
+ 8000ea6:	c90c                	sw	a1,16(a0)
 }
- 8000ec0:	8082                	ret
+ 8000ea8:	8082                	ret
 
-08000ec2 <spi_i2s_flag_get>:
+08000eaa <spi_i2s_flag_get>:
     \param[out] none
     \retval     FlagStatus: SET or RESET
 */
 FlagStatus spi_i2s_flag_get(uint32_t spi_periph, uint32_t flag)
 {
     if(RESET != (SPI_STAT(spi_periph) & flag)){
- 8000ec2:	4508                	lw	a0,8(a0)
- 8000ec4:	8d6d                	and	a0,a0,a1
+ 8000eaa:	4508                	lw	a0,8(a0)
+ 8000eac:	8d6d                	and	a0,a0,a1
         return SET;
     }else{
         return RESET;
     }
 }
- 8000ec6:	00a03533          	snez	a0,a0
- 8000eca:	8082                	ret
+ 8000eae:	00a03533          	snez	a0,a0
+ 8000eb2:	8082                	ret
 
-08000ecc <SystemInit>:
+08000eb4 <SystemInit>:
 */
 void SystemInit(void)
 {
     /* reset the RCC clock configuration to the default reset state */
     /* enable IRC8M */
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 8000ecc:	400217b7          	lui	a5,0x40021
- 8000ed0:	4398                	lw	a4,0(a5)
+ 8000eb4:	400217b7          	lui	a5,0x40021
+ 8000eb8:	4398                	lw	a4,0(a5)
     
     /* reset SCS, AHBPSC, APB1PSC, APB2PSC, ADCPSC, CKOUT0SEL bits */
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 8000ed2:	e0ff06b7          	lui	a3,0xe0ff0
- 8000ed6:	06b1                	addi	a3,a3,12
+ 8000eba:	e0ff06b7          	lui	a3,0xe0ff0
+ 8000ebe:	06b1                	addi	a3,a3,12
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 8000ed8:	00176713          	ori	a4,a4,1
- 8000edc:	c398                	sw	a4,0(a5)
+ 8000ec0:	00176713          	ori	a4,a4,1
+ 8000ec4:	c398                	sw	a4,0(a5)
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 8000ede:	43d8                	lw	a4,4(a5)
- 8000ee0:	8f75                	and	a4,a4,a3
- 8000ee2:	c3d8                	sw	a4,4(a5)
+ 8000ec6:	43d8                	lw	a4,4(a5)
+ 8000ec8:	8f75                	and	a4,a4,a3
+ 8000eca:	c3d8                	sw	a4,4(a5)
                   RCU_CFG0_ADCPSC | RCU_CFG0_ADCPSC_2 | RCU_CFG0_CKOUT0SEL);
 
     /* reset HXTALEN, CKMEN, PLLEN bits */
     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
- 8000ee4:	4398                	lw	a4,0(a5)
- 8000ee6:	fef706b7          	lui	a3,0xfef70
- 8000eea:	16fd                	addi	a3,a3,-1
- 8000eec:	8f75                	and	a4,a4,a3
- 8000eee:	c398                	sw	a4,0(a5)
+ 8000ecc:	4398                	lw	a4,0(a5)
+ 8000ece:	fef706b7          	lui	a3,0xfef70
+ 8000ed2:	16fd                	addi	a3,a3,-1
+ 8000ed4:	8f75                	and	a4,a4,a3
+ 8000ed6:	c398                	sw	a4,0(a5)
 
     /* Reset HXTALBPS bit */
     RCU_CTL &= ~(RCU_CTL_HXTALBPS);
- 8000ef0:	4398                	lw	a4,0(a5)
- 8000ef2:	fffc06b7          	lui	a3,0xfffc0
- 8000ef6:	16fd                	addi	a3,a3,-1
- 8000ef8:	8f75                	and	a4,a4,a3
- 8000efa:	c398                	sw	a4,0(a5)
+ 8000ed8:	4398                	lw	a4,0(a5)
+ 8000eda:	fffc06b7          	lui	a3,0xfffc0
+ 8000ede:	16fd                	addi	a3,a3,-1
+ 8000ee0:	8f75                	and	a4,a4,a3
+ 8000ee2:	c398                	sw	a4,0(a5)
 
     /* reset PLLSEL, PREDV0_LSB, PLLMF, USBFSPSC bits */
     
     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
- 8000efc:	43d8                	lw	a4,4(a5)
- 8000efe:	df0106b7          	lui	a3,0xdf010
- 8000f02:	16fd                	addi	a3,a3,-1
- 8000f04:	8f75                	and	a4,a4,a3
- 8000f06:	c3d8                	sw	a4,4(a5)
+ 8000ee4:	43d8                	lw	a4,4(a5)
+ 8000ee6:	df0106b7          	lui	a3,0xdf010
+ 8000eea:	16fd                	addi	a3,a3,-1
+ 8000eec:	8f75                	and	a4,a4,a3
+ 8000eee:	c3d8                	sw	a4,4(a5)
                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
     RCU_CFG1 = 0x00000000U;
- 8000f08:	0207a623          	sw	zero,44(a5) # 4002102c <RCU+0x2c>
+ 8000ef0:	0207a623          	sw	zero,44(a5) # 4002102c <RCU+0x2c>
 
     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 8000f0c:	4398                	lw	a4,0(a5)
- 8000f0e:	eaf706b7          	lui	a3,0xeaf70
- 8000f12:	16fd                	addi	a3,a3,-1
- 8000f14:	8f75                	and	a4,a4,a3
- 8000f16:	c398                	sw	a4,0(a5)
+ 8000ef4:	4398                	lw	a4,0(a5)
+ 8000ef6:	eaf706b7          	lui	a3,0xeaf70
+ 8000efa:	16fd                	addi	a3,a3,-1
+ 8000efc:	8f75                	and	a4,a4,a3
+ 8000efe:	c398                	sw	a4,0(a5)
     /* disable all interrupts */
     RCU_INT = 0x00FF0000U;
- 8000f18:	00ff0737          	lui	a4,0xff0
- 8000f1c:	c798                	sw	a4,8(a5)
+ 8000f00:	00ff0737          	lui	a4,0xff0
+ 8000f04:	c798                	sw	a4,8(a5)
 {
     uint32_t timeout   = 0U;
     uint32_t stab_flag = 0U;
 
     /* enable HXTAL */
     RCU_CTL |= RCU_CTL_HXTALEN;
- 8000f1e:	4394                	lw	a3,0(a5)
- 8000f20:	6741                	lui	a4,0x10
- 8000f22:	8ed9                	or	a3,a3,a4
- 8000f24:	c394                	sw	a3,0(a5)
- 8000f26:	fff70793          	addi	a5,a4,-1 # ffff <__stack_size+0xefff>
+ 8000f06:	4394                	lw	a3,0(a5)
+ 8000f08:	6741                	lui	a4,0x10
+ 8000f0a:	8ed9                	or	a3,a3,a4
+ 8000f0c:	c394                	sw	a3,0(a5)
+ 8000f0e:	fff70793          	addi	a5,a4,-1 # ffff <__stack_size+0xefff>
 
     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
     do{
         timeout++;
         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 8000f2a:	40021737          	lui	a4,0x40021
- 8000f2e:	4314                	lw	a3,0(a4)
+ 8000f12:	40021737          	lui	a4,0x40021
+ 8000f16:	4314                	lw	a3,0(a4)
     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 8000f30:	00e69613          	slli	a2,a3,0xe
- 8000f34:	00064463          	bltz	a2,8000f3c <SystemInit+0x70>
- 8000f38:	17fd                	addi	a5,a5,-1
- 8000f3a:	fbf5                	bnez	a5,8000f2e <SystemInit+0x62>
+ 8000f18:	00e69613          	slli	a2,a3,0xe
+ 8000f1c:	00064463          	bltz	a2,8000f24 <SystemInit+0x70>
+ 8000f20:	17fd                	addi	a5,a5,-1
+ 8000f22:	fbf5                	bnez	a5,8000f16 <SystemInit+0x62>
 
     /* if fail */
     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 8000f3c:	400217b7          	lui	a5,0x40021
- 8000f40:	4398                	lw	a4,0(a5)
- 8000f42:	00e71693          	slli	a3,a4,0xe
- 8000f46:	0006c363          	bltz	a3,8000f4c <SystemInit+0x80>
+ 8000f24:	400217b7          	lui	a5,0x40021
+ 8000f28:	4398                	lw	a4,0(a5)
+ 8000f2a:	00e71693          	slli	a3,a4,0xe
+ 8000f2e:	0006c363          	bltz	a3,8000f34 <SystemInit+0x80>
         while(1){
         }
- 8000f4a:	a001                	j	8000f4a <SystemInit+0x7e>
+ 8000f32:	a001                	j	8000f32 <SystemInit+0x7e>
     }
 
     /* HXTAL is stable */
     /* AHB = SYSCLK */
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000f4c:	43d8                	lw	a4,4(a5)
+ 8000f34:	43d8                	lw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
     /* APB1 = AHB/2 */
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
 
     /* CK_PLL = (CK_PREDIV0) * 27 = 108 MHz */ 
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 8000f4e:	dfc406b7          	lui	a3,0xdfc40
- 8000f52:	16fd                	addi	a3,a3,-1
+ 8000f36:	dfc406b7          	lui	a3,0xdfc40
+ 8000f3a:	16fd                	addi	a3,a3,-1
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000f54:	c3d8                	sw	a4,4(a5)
+ 8000f3c:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
- 8000f56:	43d8                	lw	a4,4(a5)
- 8000f58:	c3d8                	sw	a4,4(a5)
+ 8000f3e:	43d8                	lw	a4,4(a5)
+ 8000f40:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
- 8000f5a:	43d8                	lw	a4,4(a5)
- 8000f5c:	40076713          	ori	a4,a4,1024
- 8000f60:	c3d8                	sw	a4,4(a5)
+ 8000f42:	43d8                	lw	a4,4(a5)
+ 8000f44:	40076713          	ori	a4,a4,1024
+ 8000f48:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 8000f62:	43d8                	lw	a4,4(a5)
- 8000f64:	8f75                	and	a4,a4,a3
- 8000f66:	c3d8                	sw	a4,4(a5)
+ 8000f4a:	43d8                	lw	a4,4(a5)
+ 8000f4c:	8f75                	and	a4,a4,a3
+ 8000f4e:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
- 8000f68:	43d8                	lw	a4,4(a5)
- 8000f6a:	202906b7          	lui	a3,0x20290
- 8000f6e:	8f55                	or	a4,a4,a3
- 8000f70:	c3d8                	sw	a4,4(a5)
+ 8000f50:	43d8                	lw	a4,4(a5)
+ 8000f52:	202906b7          	lui	a3,0x20290
+ 8000f56:	8f55                	or	a4,a4,a3
+ 8000f58:	c3d8                	sw	a4,4(a5)
 		RCU_CTL |= RCU_CTL_PLL2EN;
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
 		}
     }else if(HXTAL_VALUE==8000000){
 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
- 8000f72:	57d8                	lw	a4,44(a5)
- 8000f74:	76bd                	lui	a3,0xfffef
- 8000f76:	8f75                	and	a4,a4,a3
- 8000f78:	d7d8                	sw	a4,44(a5)
+ 8000f5a:	57d8                	lw	a4,44(a5)
+ 8000f5c:	76bd                	lui	a3,0xfffef
+ 8000f5e:	8f75                	and	a4,a4,a3
+ 8000f60:	d7d8                	sw	a4,44(a5)
 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_MUL20);
- 8000f7a:	57d8                	lw	a4,44(a5)
- 8000f7c:	66c1                	lui	a3,0x10
- 8000f7e:	f1168693          	addi	a3,a3,-239 # ff11 <__stack_size+0xef11>
- 8000f82:	8f55                	or	a4,a4,a3
- 8000f84:	d7d8                	sw	a4,44(a5)
+ 8000f62:	57d8                	lw	a4,44(a5)
+ 8000f64:	66c1                	lui	a3,0x10
+ 8000f66:	f1168693          	addi	a3,a3,-239 # ff11 <__stack_size+0xef11>
+ 8000f6a:	8f55                	or	a4,a4,a3
+ 8000f6c:	d7d8                	sw	a4,44(a5)
 
 		/* enable PLL1 */
 		RCU_CTL |= RCU_CTL_PLL1EN;
- 8000f86:	4398                	lw	a4,0(a5)
- 8000f88:	040006b7          	lui	a3,0x4000
- 8000f8c:	8f55                	or	a4,a4,a3
- 8000f8e:	c398                	sw	a4,0(a5)
+ 8000f6e:	4398                	lw	a4,0(a5)
+ 8000f70:	040006b7          	lui	a3,0x4000
+ 8000f74:	8f55                	or	a4,a4,a3
+ 8000f76:	c398                	sw	a4,0(a5)
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
- 8000f90:	400217b7          	lui	a5,0x40021
- 8000f94:	4398                	lw	a4,0(a5)
- 8000f96:	00471693          	slli	a3,a4,0x4
- 8000f9a:	fe06dde3          	bgez	a3,8000f94 <SystemInit+0xc8>
+ 8000f78:	400217b7          	lui	a5,0x40021
+ 8000f7c:	4398                	lw	a4,0(a5)
+ 8000f7e:	00471693          	slli	a3,a4,0x4
+ 8000f82:	fe06dde3          	bgez	a3,8000f7c <SystemInit+0xc8>
 		}
 
 		/* enable PLL2 */
 		RCU_CTL |= RCU_CTL_PLL2EN;
- 8000f9e:	4398                	lw	a4,0(a5)
- 8000fa0:	100006b7          	lui	a3,0x10000
- 8000fa4:	8f55                	or	a4,a4,a3
- 8000fa6:	c398                	sw	a4,0(a5)
+ 8000f86:	4398                	lw	a4,0(a5)
+ 8000f88:	100006b7          	lui	a3,0x10000
+ 8000f8c:	8f55                	or	a4,a4,a3
+ 8000f8e:	c398                	sw	a4,0(a5)
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
- 8000fa8:	400217b7          	lui	a5,0x40021
- 8000fac:	4398                	lw	a4,0(a5)
- 8000fae:	00271693          	slli	a3,a4,0x2
- 8000fb2:	fe06dde3          	bgez	a3,8000fac <SystemInit+0xe0>
+ 8000f90:	400217b7          	lui	a5,0x40021
+ 8000f94:	4398                	lw	a4,0(a5)
+ 8000f96:	00271693          	slli	a3,a4,0x2
+ 8000f9a:	fe06dde3          	bgez	a3,8000f94 <SystemInit+0xe0>
 		}
 
     }
     /* enable PLL */
     RCU_CTL |= RCU_CTL_PLLEN;
- 8000fb6:	4398                	lw	a4,0(a5)
- 8000fb8:	010006b7          	lui	a3,0x1000
- 8000fbc:	8f55                	or	a4,a4,a3
- 8000fbe:	c398                	sw	a4,0(a5)
+ 8000f9e:	4398                	lw	a4,0(a5)
+ 8000fa0:	010006b7          	lui	a3,0x1000
+ 8000fa4:	8f55                	or	a4,a4,a3
+ 8000fa6:	c398                	sw	a4,0(a5)
 
     /* wait until PLL is stable */
     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 8000fc0:	400217b7          	lui	a5,0x40021
- 8000fc4:	4398                	lw	a4,0(a5)
- 8000fc6:	00671693          	slli	a3,a4,0x6
- 8000fca:	fe06dde3          	bgez	a3,8000fc4 <SystemInit+0xf8>
+ 8000fa8:	400217b7          	lui	a5,0x40021
+ 8000fac:	4398                	lw	a4,0(a5)
+ 8000fae:	00671693          	slli	a3,a4,0x6
+ 8000fb2:	fe06dde3          	bgez	a3,8000fac <SystemInit+0xf8>
     }
 
     /* select PLL as system clock */
     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 8000fce:	43d8                	lw	a4,4(a5)
- 8000fd0:	9b71                	andi	a4,a4,-4
- 8000fd2:	c3d8                	sw	a4,4(a5)
+ 8000fb6:	43d8                	lw	a4,4(a5)
+ 8000fb8:	9b71                	andi	a4,a4,-4
+ 8000fba:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
- 8000fd4:	43d8                	lw	a4,4(a5)
- 8000fd6:	00276713          	ori	a4,a4,2
- 8000fda:	c3d8                	sw	a4,4(a5)
+ 8000fbc:	43d8                	lw	a4,4(a5)
+ 8000fbe:	00276713          	ori	a4,a4,2
+ 8000fc2:	c3d8                	sw	a4,4(a5)
 
     /* wait until PLL is selected as system clock */
     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
- 8000fdc:	40021737          	lui	a4,0x40021
- 8000fe0:	435c                	lw	a5,4(a4)
- 8000fe2:	8ba1                	andi	a5,a5,8
- 8000fe4:	dff5                	beqz	a5,8000fe0 <SystemInit+0x114>
+ 8000fc4:	40021737          	lui	a4,0x40021
+ 8000fc8:	435c                	lw	a5,4(a4)
+ 8000fca:	8ba1                	andi	a5,a5,8
+ 8000fcc:	dff5                	beqz	a5,8000fc8 <SystemInit+0x114>
 }
- 8000fe6:	8082                	ret
+ 8000fce:	8082                	ret
 
-08000fe8 <_exit>:
+08000fd0 <_exit>:
 
 #include "stub.h"
 
 
 void _exit(int code)
 {
- 8000fe8:	7179                	addi	sp,sp,-48
+ 8000fd0:	7179                	addi	sp,sp,-48
   const char message[] = "\nProgram has exited with code:";
- 8000fea:	080005b7          	lui	a1,0x8000
+ 8000fd2:	080005b7          	lui	a1,0x8000
 {
- 8000fee:	d422                	sw	s0,40(sp)
+ 8000fd6:	d422                	sw	s0,40(sp)
   const char message[] = "\nProgram has exited with code:";
- 8000ff0:	467d                	li	a2,31
+ 8000fd8:	467d                	li	a2,31
 {
- 8000ff2:	842a                	mv	s0,a0
+ 8000fda:	842a                	mv	s0,a0
   const char message[] = "\nProgram has exited with code:";
- 8000ff4:	28058593          	addi	a1,a1,640 # 8000280 <enable_mcycle_minstret+0x34>
- 8000ff8:	850a                	mv	a0,sp
+ 8000fdc:	28058593          	addi	a1,a1,640 # 8000280 <enable_mcycle_minstret+0x34>
+ 8000fe0:	850a                	mv	a0,sp
 {
- 8000ffa:	d606                	sw	ra,44(sp)
+ 8000fe2:	d606                	sw	ra,44(sp)
   const char message[] = "\nProgram has exited with code:";
- 8000ffc:	00002097          	auipc	ra,0x2
- 8001000:	c48080e7          	jalr	-952(ra) # 8002c44 <memcpy>
+ 8000fe4:	00002097          	auipc	ra,0x2
+ 8000fe8:	c60080e7          	jalr	-928(ra) # 8002c44 <memcpy>
 
   write(STDERR_FILENO, message, sizeof(message) - 1);
- 8001004:	4679                	li	a2,30
- 8001006:	858a                	mv	a1,sp
- 8001008:	4509                	li	a0,2
- 800100a:	00002097          	auipc	ra,0x2
- 800100e:	c50080e7          	jalr	-944(ra) # 8002c5a <write>
+ 8000fec:	4679                	li	a2,30
+ 8000fee:	858a                	mv	a1,sp
+ 8000ff0:	4509                	li	a0,2
+ 8000ff2:	00002097          	auipc	ra,0x2
+ 8000ff6:	c68080e7          	jalr	-920(ra) # 8002c5a <write>
   write_hex(STDERR_FILENO, code);
- 8001012:	85a2                	mv	a1,s0
- 8001014:	4509                	li	a0,2
- 8001016:	00000097          	auipc	ra,0x0
- 800101a:	01e080e7          	jalr	30(ra) # 8001034 <write_hex>
+ 8000ffa:	85a2                	mv	a1,s0
+ 8000ffc:	4509                	li	a0,2
+ 8000ffe:	00000097          	auipc	ra,0x0
+ 8001002:	01e080e7          	jalr	30(ra) # 800101c <write_hex>
   write(STDERR_FILENO, "\n", 1);
- 800101e:	080005b7          	lui	a1,0x8000
- 8001022:	4605                	li	a2,1
- 8001024:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
- 8001028:	4509                	li	a0,2
- 800102a:	00002097          	auipc	ra,0x2
- 800102e:	c30080e7          	jalr	-976(ra) # 8002c5a <write>
+ 8001006:	080005b7          	lui	a1,0x8000
+ 800100a:	4605                	li	a2,1
+ 800100c:	2b058593          	addi	a1,a1,688 # 80002b0 <enable_mcycle_minstret+0x64>
+ 8001010:	4509                	li	a0,2
+ 8001012:	00002097          	auipc	ra,0x2
+ 8001016:	c48080e7          	jalr	-952(ra) # 8002c5a <write>
 
   for (;;);
- 8001032:	a001                	j	8001032 <_exit+0x4a>
+ 800101a:	a001                	j	800101a <_exit+0x4a>
 
-08001034 <write_hex>:
+0800101c <write_hex>:
 
 #include <stdint.h>
 #include <unistd.h>
 
 void write_hex(int fd, unsigned long int hex)
 {
- 8001034:	7179                	addi	sp,sp,-48
- 8001036:	ce4e                	sw	s3,28(sp)
- 8001038:	89ae                	mv	s3,a1
+ 800101c:	7179                	addi	sp,sp,-48
+ 800101e:	ce4e                	sw	s3,28(sp)
+ 8001020:	89ae                	mv	s3,a1
   uint8_t ii;
   uint8_t jj;
   char towrite;
   write(fd , "0x", 2);
- 800103a:	080005b7          	lui	a1,0x8000
- 800103e:	4609                	li	a2,2
- 8001040:	2a058593          	addi	a1,a1,672 # 80002a0 <enable_mcycle_minstret+0x54>
+ 8001022:	080005b7          	lui	a1,0x8000
+ 8001026:	4609                	li	a2,2
+ 8001028:	2a058593          	addi	a1,a1,672 # 80002a0 <enable_mcycle_minstret+0x54>
 {
- 8001044:	d422                	sw	s0,40(sp)
- 8001046:	d226                	sw	s1,36(sp)
- 8001048:	d04a                	sw	s2,32(sp)
- 800104a:	cc52                	sw	s4,24(sp)
- 800104c:	ca56                	sw	s5,20(sp)
- 800104e:	d606                	sw	ra,44(sp)
- 8001050:	892a                	mv	s2,a0
+ 800102c:	d422                	sw	s0,40(sp)
+ 800102e:	d226                	sw	s1,36(sp)
+ 8001030:	d04a                	sw	s2,32(sp)
+ 8001032:	cc52                	sw	s4,24(sp)
+ 8001034:	ca56                	sw	s5,20(sp)
+ 8001036:	d606                	sw	ra,44(sp)
+ 8001038:	892a                	mv	s2,a0
   write(fd , "0x", 2);
- 8001052:	4471                	li	s0,28
- 8001054:	00002097          	auipc	ra,0x2
- 8001058:	c06080e7          	jalr	-1018(ra) # 8002c5a <write>
+ 800103a:	4471                	li	s0,28
+ 800103c:	00002097          	auipc	ra,0x2
+ 8001040:	c1e080e7          	jalr	-994(ra) # 8002c5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
     jj = ii - 1;
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
- 800105c:	4a3d                	li	s4,15
+ 8001044:	4a3d                	li	s4,15
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 800105e:	4aa5                	li	s5,9
+ 8001046:	4aa5                	li	s5,9
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
- 8001060:	54f1                	li	s1,-4
+ 8001048:	54f1                	li	s1,-4
     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
- 8001062:	008a17b3          	sll	a5,s4,s0
- 8001066:	0137f7b3          	and	a5,a5,s3
- 800106a:	0087d7b3          	srl	a5,a5,s0
- 800106e:	0ff7f793          	andi	a5,a5,255
+ 800104a:	008a17b3          	sll	a5,s4,s0
+ 800104e:	0137f7b3          	and	a5,a5,s3
+ 8001052:	0087d7b3          	srl	a5,a5,s0
+ 8001056:	0ff7f793          	andi	a5,a5,255
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 8001072:	02faec63          	bltu	s5,a5,80010aa <write_hex+0x76>
- 8001076:	03078793          	addi	a5,a5,48 # 40021030 <RCU+0x30>
- 800107a:	0ff7f793          	andi	a5,a5,255
+ 800105a:	02faec63          	bltu	s5,a5,8001092 <write_hex+0x76>
+ 800105e:	03078793          	addi	a5,a5,48 # 40021030 <RCU+0x30>
+ 8001062:	0ff7f793          	andi	a5,a5,255
     write(fd, &towrite, 1);
- 800107e:	4605                	li	a2,1
- 8001080:	00f10593          	addi	a1,sp,15
- 8001084:	854a                	mv	a0,s2
- 8001086:	1471                	addi	s0,s0,-4
+ 8001066:	4605                	li	a2,1
+ 8001068:	00f10593          	addi	a1,sp,15
+ 800106c:	854a                	mv	a0,s2
+ 800106e:	1471                	addi	s0,s0,-4
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 8001088:	00f107a3          	sb	a5,15(sp)
+ 8001070:	00f107a3          	sb	a5,15(sp)
     write(fd, &towrite, 1);
- 800108c:	00002097          	auipc	ra,0x2
- 8001090:	bce080e7          	jalr	-1074(ra) # 8002c5a <write>
+ 8001074:	00002097          	auipc	ra,0x2
+ 8001078:	be6080e7          	jalr	-1050(ra) # 8002c5a <write>
   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
- 8001094:	fc9417e3          	bne	s0,s1,8001062 <write_hex+0x2e>
+ 800107c:	fc9417e3          	bne	s0,s1,800104a <write_hex+0x2e>
   }
 }
- 8001098:	50b2                	lw	ra,44(sp)
- 800109a:	5422                	lw	s0,40(sp)
- 800109c:	5492                	lw	s1,36(sp)
- 800109e:	5902                	lw	s2,32(sp)
- 80010a0:	49f2                	lw	s3,28(sp)
- 80010a2:	4a62                	lw	s4,24(sp)
- 80010a4:	4ad2                	lw	s5,20(sp)
- 80010a6:	6145                	addi	sp,sp,48
- 80010a8:	8082                	ret
+ 8001080:	50b2                	lw	ra,44(sp)
+ 8001082:	5422                	lw	s0,40(sp)
+ 8001084:	5492                	lw	s1,36(sp)
+ 8001086:	5902                	lw	s2,32(sp)
+ 8001088:	49f2                	lw	s3,28(sp)
+ 800108a:	4a62                	lw	s4,24(sp)
+ 800108c:	4ad2                	lw	s5,20(sp)
+ 800108e:	6145                	addi	sp,sp,48
+ 8001090:	8082                	ret
     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
- 80010aa:	03778793          	addi	a5,a5,55
- 80010ae:	b7f1                	j	800107a <write_hex+0x46>
+ 8001092:	03778793          	addi	a5,a5,55
+ 8001096:	b7f1                	j	8001062 <write_hex+0x46>
 
-080010b0 <get_timer_value>:
+08001098 <get_timer_value>:
 }
 
 
 uint32_t mtime_hi(void)
 {
   return *(volatile uint32_t *)(TIMER_CTRL_ADDR + TIMER_MTIME + 4);
- 80010b0:	d10007b7          	lui	a5,0xd1000
- 80010b4:	43d8                	lw	a4,4(a5)
+ 8001098:	d10007b7          	lui	a5,0xd1000
+ 800109c:	43d8                	lw	a4,4(a5)
   return *(volatile uint32_t *)(TIMER_CTRL_ADDR + TIMER_MTIME);
- 80010b6:	4388                	lw	a0,0(a5)
+ 800109e:	4388                	lw	a0,0(a5)
   return *(volatile uint32_t *)(TIMER_CTRL_ADDR + TIMER_MTIME + 4);
- 80010b8:	43cc                	lw	a1,4(a5)
+ 80010a0:	43cc                	lw	a1,4(a5)
 uint64_t get_timer_value(void)
 {
   while (1) {
     uint32_t hi = mtime_hi();
     uint32_t lo = mtime_lo();
     if (hi == mtime_hi())
- 80010ba:	fee59de3          	bne	a1,a4,80010b4 <get_timer_value+0x4>
+ 80010a2:	fee59de3          	bne	a1,a4,800109c <get_timer_value+0x4>
       return ((uint64_t)hi << 32) | lo;
   }
 }
- 80010be:	8082                	ret
+ 80010a6:	8082                	ret
 
-080010c0 <eclic_init>:
+080010a8 <eclic_init>:
 {
 
   typedef volatile uint32_t vuint32_t;
 
   /* clear cfg register */
   *(volatile uint8_t*)(ECLIC_ADDR_BASE+ECLIC_CFG_OFFSET)=0;
- 80010c0:	d20007b7          	lui	a5,0xd2000
- 80010c4:	00078023          	sb	zero,0(a5) # d2000000 <RCU+0x91fdf000>
+ 80010a8:	d20007b7          	lui	a5,0xd2000
+ 80010ac:	00078023          	sb	zero,0(a5) # d2000000 <RCU+0x91fdf000>
 
   /* clear minthresh register */
   *(volatile uint8_t*)(ECLIC_ADDR_BASE+ECLIC_MTH_OFFSET)=0;
- 80010c8:	000785a3          	sb	zero,11(a5)
+ 80010b0:	000785a3          	sb	zero,11(a5)
 
   /* clear all IP/IE/ATTR/CTRL bits for all interrupt sources */
   vuint32_t * ptr;
 
   vuint32_t * base = (vuint32_t*)(ECLIC_ADDR_BASE + ECLIC_INT_IP_OFFSET);
   vuint32_t * upper = (vuint32_t*)(base + num_irq*4);
- 80010cc:	0512                	slli	a0,a0,0x4
- 80010ce:	d20017b7          	lui	a5,0xd2001
- 80010d2:	953e                	add	a0,a0,a5
+ 80010b4:	0512                	slli	a0,a0,0x4
+ 80010b6:	d20017b7          	lui	a5,0xd2001
+ 80010ba:	953e                	add	a0,a0,a5
 
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80010d4:	00a7e363          	bltu	a5,a0,80010da <eclic_init+0x1a>
+ 80010bc:	00a7e363          	bltu	a5,a0,80010c2 <eclic_init+0x1a>
     *ptr = 0;
   }
 }
- 80010d8:	8082                	ret
+ 80010c0:	8082                	ret
     *ptr = 0;
- 80010da:	0007a023          	sw	zero,0(a5) # d2001000 <RCU+0x91fe0000>
+ 80010c2:	0007a023          	sw	zero,0(a5) # d2001000 <RCU+0x91fe0000>
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80010de:	07c1                	addi	a5,a5,16
- 80010e0:	bfd5                	j	80010d4 <eclic_init+0x14>
+ 80010c6:	07c1                	addi	a5,a5,16
+ 80010c8:	bfd5                	j	80010bc <eclic_init+0x14>
 
-080010e2 <eclic_mode_enable>:
+080010ca <eclic_mode_enable>:
   uint32_t mtvec_value = read_csr(CSR_MTVEC);
   mtvec_value = mtvec_value & 0xFFFFFFC0;
   mtvec_value = mtvec_value | 0x00000003;
   write_csr(CSR_MTVEC,mtvec_value);
 #elif defined ( __GNUC__ )
   uint32_t mtvec_value = read_csr(mtvec);
- 80010e2:	305027f3          	csrr	a5,mtvec
+ 80010ca:	305027f3          	csrr	a5,mtvec
   mtvec_value = mtvec_value & 0xFFFFFFC0;
- 80010e6:	fc07f793          	andi	a5,a5,-64
+ 80010ce:	fc07f793          	andi	a5,a5,-64
   mtvec_value = mtvec_value | 0x00000003;
- 80010ea:	0037e793          	ori	a5,a5,3
+ 80010d2:	0037e793          	ori	a5,a5,3
   write_csr(mtvec,mtvec_value);
- 80010ee:	30579073          	csrw	mtvec,a5
+ 80010d6:	30579073          	csrw	mtvec,a5
 #endif
 
 }
- 80010f2:	8082                	ret
+ 80010da:	8082                	ret
 
-080010f4 <handle_nmi>:
+080010dc <handle_nmi>:
 #include "riscv_encoding.h"
 #include "n200_func.h"
 
 __attribute__((weak)) uintptr_t handle_nmi()
 {
   write(1, "nmi\n", 5);
- 80010f4:	080005b7          	lui	a1,0x8000
+ 80010dc:	080005b7          	lui	a1,0x8000
 {
- 80010f8:	1141                	addi	sp,sp,-16
+ 80010e0:	1141                	addi	sp,sp,-16
   write(1, "nmi\n", 5);
- 80010fa:	4615                	li	a2,5
- 80010fc:	2a458593          	addi	a1,a1,676 # 80002a4 <enable_mcycle_minstret+0x58>
- 8001100:	4505                	li	a0,1
+ 80010e2:	4615                	li	a2,5
+ 80010e4:	2a458593          	addi	a1,a1,676 # 80002a4 <enable_mcycle_minstret+0x58>
+ 80010e8:	4505                	li	a0,1
 {
- 8001102:	c606                	sw	ra,12(sp)
+ 80010ea:	c606                	sw	ra,12(sp)
   write(1, "nmi\n", 5);
- 8001104:	00002097          	auipc	ra,0x2
- 8001108:	b56080e7          	jalr	-1194(ra) # 8002c5a <write>
+ 80010ec:	00002097          	auipc	ra,0x2
+ 80010f0:	b6e080e7          	jalr	-1170(ra) # 8002c5a <write>
   _exit(1);
- 800110c:	4505                	li	a0,1
- 800110e:	00000097          	auipc	ra,0x0
- 8001112:	eda080e7          	jalr	-294(ra) # 8000fe8 <_exit>
+ 80010f4:	4505                	li	a0,1
+ 80010f6:	00000097          	auipc	ra,0x0
+ 80010fa:	eda080e7          	jalr	-294(ra) # 8000fd0 <_exit>
 
-08001116 <handle_trap>:
+080010fe <handle_trap>:
   return 0;
 }
 
 
 __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
 {
- 8001116:	1141                	addi	sp,sp,-16
+ 80010fe:	1141                	addi	sp,sp,-16
   if((mcause & 0xFFF) == 0xFFF) {
- 8001118:	fff54793          	not	a5,a0
+ 8001100:	fff54793          	not	a5,a0
 {
- 800111c:	c422                	sw	s0,8(sp)
- 800111e:	c606                	sw	ra,12(sp)
+ 8001104:	c422                	sw	s0,8(sp)
+ 8001106:	c606                	sw	ra,12(sp)
   if((mcause & 0xFFF) == 0xFFF) {
- 8001120:	01479713          	slli	a4,a5,0x14
+ 8001108:	01479713          	slli	a4,a5,0x14
 {
- 8001124:	842a                	mv	s0,a0
+ 800110c:	842a                	mv	s0,a0
   if((mcause & 0xFFF) == 0xFFF) {
- 8001126:	e709                	bnez	a4,8001130 <handle_trap+0x1a>
+ 800110e:	e709                	bnez	a4,8001118 <handle_trap+0x1a>
       handle_nmi();
- 8001128:	00000097          	auipc	ra,0x0
- 800112c:	fcc080e7          	jalr	-52(ra) # 80010f4 <handle_nmi>
+ 8001110:	00000097          	auipc	ra,0x0
+ 8001114:	fcc080e7          	jalr	-52(ra) # 80010dc <handle_nmi>
   }
   write(1, "trap\n", 5);
- 8001130:	080005b7          	lui	a1,0x8000
- 8001134:	4615                	li	a2,5
- 8001136:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
- 800113a:	4505                	li	a0,1
- 800113c:	00002097          	auipc	ra,0x2
- 8001140:	b1e080e7          	jalr	-1250(ra) # 8002c5a <write>
+ 8001118:	080005b7          	lui	a1,0x8000
+ 800111c:	4615                	li	a2,5
+ 800111e:	2ac58593          	addi	a1,a1,684 # 80002ac <enable_mcycle_minstret+0x60>
+ 8001122:	4505                	li	a0,1
+ 8001124:	00002097          	auipc	ra,0x2
+ 8001128:	b36080e7          	jalr	-1226(ra) # 8002c5a <write>
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
   _exit(mcause);
- 8001144:	8522                	mv	a0,s0
- 8001146:	00000097          	auipc	ra,0x0
- 800114a:	ea2080e7          	jalr	-350(ra) # 8000fe8 <_exit>
+ 800112c:	8522                	mv	a0,s0
+ 800112e:	00000097          	auipc	ra,0x0
+ 8001132:	ea2080e7          	jalr	-350(ra) # 8000fd0 <_exit>
 
-0800114e <_init>:
+08001136 <_init>:
 #include "debugger.h"
 #endif
 
 extern uint32_t disable_mcycle_minstret();
 void _init()
 {
- 800114e:	1141                	addi	sp,sp,-16
- 8001150:	c606                	sw	ra,12(sp)
+ 8001136:	1141                	addi	sp,sp,-16
+ 8001138:	c606                	sw	ra,12(sp)
 	SystemInit();
- 8001152:	00000097          	auipc	ra,0x0
- 8001156:	d7a080e7          	jalr	-646(ra) # 8000ecc <SystemInit>
+ 800113a:	00000097          	auipc	ra,0x0
+ 800113e:	d7a080e7          	jalr	-646(ra) # 8000eb4 <SystemInit>
 
 	//ECLIC init
 	eclic_init(ECLIC_NUM_INTERRUPTS);
- 800115a:	05700513          	li	a0,87
- 800115e:	00000097          	auipc	ra,0x0
- 8001162:	f62080e7          	jalr	-158(ra) # 80010c0 <eclic_init>
+ 8001142:	05700513          	li	a0,87
+ 8001146:	00000097          	auipc	ra,0x0
+ 800114a:	f62080e7          	jalr	-158(ra) # 80010a8 <eclic_init>
 	eclic_mode_enable();
- 8001166:	00000097          	auipc	ra,0x0
- 800116a:	f7c080e7          	jalr	-132(ra) # 80010e2 <eclic_mode_enable>
+ 800114e:	00000097          	auipc	ra,0x0
+ 8001152:	f7c080e7          	jalr	-132(ra) # 80010ca <eclic_mode_enable>
 #ifdef USE_SOFTWARE_DEBUGGER
 	dbg_init();
 #endif
 	
 
 }
- 800116e:	40b2                	lw	ra,12(sp)
- 8001170:	0141                	addi	sp,sp,16
+ 8001156:	40b2                	lw	ra,12(sp)
+ 8001158:	0141                	addi	sp,sp,16
 	disable_mcycle_minstret();
- 8001172:	fffff317          	auipc	t1,0xfffff
- 8001176:	0d430067          	jr	212(t1) # 8000246 <disable_mcycle_minstret>
+ 800115a:	fffff317          	auipc	t1,0xfffff
+ 800115e:	0ec30067          	jr	236(t1) # 8000246 <disable_mcycle_minstret>
 
-0800117a <_fini>:
+08001162 <_fini>:
 
 void _fini()
 {
 }
- 800117a:	8082                	ret
+ 8001162:	8082                	ret
 
-0800117c <lcd_delay_1ms>:
+08001164 <lcd_delay_1ms>:
 
 lcd_config_t lcd_conf = {0};
 
 
 void lcd_delay_1ms(uint32_t count)
 {
- 800117c:	7179                	addi	sp,sp,-48
- 800117e:	d04a                	sw	s2,32(sp)
- 8001180:	ce4e                	sw	s3,28(sp)
- 8001182:	c85a                	sw	s6,16(sp)
- 8001184:	d606                	sw	ra,44(sp)
- 8001186:	d422                	sw	s0,40(sp)
- 8001188:	d226                	sw	s1,36(sp)
- 800118a:	cc52                	sw	s4,24(sp)
- 800118c:	ca56                	sw	s5,20(sp)
- 800118e:	c65e                	sw	s7,12(sp)
- 8001190:	c462                	sw	s8,8(sp)
- 8001192:	c266                	sw	s9,4(sp)
- 8001194:	8b2a                	mv	s6,a0
+ 8001164:	7179                	addi	sp,sp,-48
+ 8001166:	d04a                	sw	s2,32(sp)
+ 8001168:	ce4e                	sw	s3,28(sp)
+ 800116a:	c85a                	sw	s6,16(sp)
+ 800116c:	d606                	sw	ra,44(sp)
+ 800116e:	d422                	sw	s0,40(sp)
+ 8001170:	d226                	sw	s1,36(sp)
+ 8001172:	cc52                	sw	s4,24(sp)
+ 8001174:	ca56                	sw	s5,20(sp)
+ 8001176:	c65e                	sw	s7,12(sp)
+ 8001178:	c462                	sw	s8,8(sp)
+ 800117a:	c266                	sw	s9,4(sp)
+ 800117c:	8b2a                	mv	s6,a0
 	uint64_t start_mtime, delta_mtime;
 
 	// Don't start measuring until we see an mtime tick
 	uint64_t tmp = get_timer_value();
- 8001196:	00000097          	auipc	ra,0x0
- 800119a:	f1a080e7          	jalr	-230(ra) # 80010b0 <get_timer_value>
- 800119e:	89aa                	mv	s3,a0
- 80011a0:	892e                	mv	s2,a1
+ 800117e:	00000097          	auipc	ra,0x0
+ 8001182:	f1a080e7          	jalr	-230(ra) # 8001098 <get_timer_value>
+ 8001186:	89aa                	mv	s3,a0
+ 8001188:	892e                	mv	s2,a1
 	do {
 	start_mtime = get_timer_value();
- 80011a2:	00000097          	auipc	ra,0x0
- 80011a6:	f0e080e7          	jalr	-242(ra) # 80010b0 <get_timer_value>
- 80011aa:	84aa                	mv	s1,a0
- 80011ac:	842e                	mv	s0,a1
+ 800118a:	00000097          	auipc	ra,0x0
+ 800118e:	f0e080e7          	jalr	-242(ra) # 8001098 <get_timer_value>
+ 8001192:	84aa                	mv	s1,a0
+ 8001194:	842e                	mv	s0,a1
 	} while (start_mtime == tmp);
- 80011ae:	00a99463          	bne	s3,a0,80011b6 <lcd_delay_1ms+0x3a>
- 80011b2:	feb908e3          	beq	s2,a1,80011a2 <lcd_delay_1ms+0x26>
+ 8001196:	00a99463          	bne	s3,a0,800119e <lcd_delay_1ms+0x3a>
+ 800119a:	feb908e3          	beq	s2,a1,800118a <lcd_delay_1ms+0x26>
 
 	do {
 	delta_mtime = get_timer_value() - start_mtime;
 	}while(delta_mtime <(SystemCoreClock/4000.0 *count ));
- 80011b6:	080017b7          	lui	a5,0x8001
- 80011ba:	8e87a903          	lw	s2,-1816(a5) # 80008e8 <asc2_1608+0x634>
- 80011be:	8ec7a983          	lw	s3,-1812(a5)
- 80011c2:	20000bb7          	lui	s7,0x20000
+ 800119e:	080017b7          	lui	a5,0x8001
+ 80011a2:	8e87a903          	lw	s2,-1816(a5) # 80008e8 <asc2_1608+0x634>
+ 80011a6:	8ec7a983          	lw	s3,-1812(a5)
+ 80011aa:	20000bb7          	lui	s7,0x20000
 	delta_mtime = get_timer_value() - start_mtime;
- 80011c6:	00000097          	auipc	ra,0x0
- 80011ca:	eea080e7          	jalr	-278(ra) # 80010b0 <get_timer_value>
- 80011ce:	87aa                	mv	a5,a0
- 80011d0:	8d05                	sub	a0,a0,s1
- 80011d2:	00a7b7b3          	sltu	a5,a5,a0
- 80011d6:	8d81                	sub	a1,a1,s0
+ 80011ae:	00000097          	auipc	ra,0x0
+ 80011b2:	eea080e7          	jalr	-278(ra) # 8001098 <get_timer_value>
+ 80011b6:	87aa                	mv	a5,a0
+ 80011b8:	8d05                	sub	a0,a0,s1
+ 80011ba:	00a7b7b3          	sltu	a5,a5,a0
+ 80011be:	8d81                	sub	a1,a1,s0
 	}while(delta_mtime <(SystemCoreClock/4000.0 *count ));
- 80011d8:	8d9d                	sub	a1,a1,a5
- 80011da:	00001097          	auipc	ra,0x1
- 80011de:	78c080e7          	jalr	1932(ra) # 8002966 <__floatundidf>
- 80011e2:	8a2a                	mv	s4,a0
- 80011e4:	080ba503          	lw	a0,128(s7) # 20000080 <SystemCoreClock>
- 80011e8:	8aae                	mv	s5,a1
- 80011ea:	00001097          	auipc	ra,0x1
- 80011ee:	726080e7          	jalr	1830(ra) # 8002910 <__floatunsidf>
- 80011f2:	864a                	mv	a2,s2
- 80011f4:	86ce                	mv	a3,s3
- 80011f6:	00001097          	auipc	ra,0x1
- 80011fa:	ce4080e7          	jalr	-796(ra) # 8001eda <__divdf3>
- 80011fe:	8c2a                	mv	s8,a0
- 8001200:	855a                	mv	a0,s6
- 8001202:	8cae                	mv	s9,a1
- 8001204:	00001097          	auipc	ra,0x1
- 8001208:	70c080e7          	jalr	1804(ra) # 8002910 <__floatunsidf>
- 800120c:	862a                	mv	a2,a0
- 800120e:	86ae                	mv	a3,a1
- 8001210:	8562                	mv	a0,s8
- 8001212:	85e6                	mv	a1,s9
- 8001214:	00001097          	auipc	ra,0x1
- 8001218:	2b0080e7          	jalr	688(ra) # 80024c4 <__muldf3>
- 800121c:	862a                	mv	a2,a0
- 800121e:	86ae                	mv	a3,a1
- 8001220:	8552                	mv	a0,s4
- 8001222:	85d6                	mv	a1,s5
- 8001224:	00001097          	auipc	ra,0x1
- 8001228:	1fc080e7          	jalr	508(ra) # 8002420 <__ledf2>
- 800122c:	f8054de3          	bltz	a0,80011c6 <lcd_delay_1ms+0x4a>
+ 80011c0:	8d9d                	sub	a1,a1,a5
+ 80011c2:	00001097          	auipc	ra,0x1
+ 80011c6:	7a4080e7          	jalr	1956(ra) # 8002966 <__floatundidf>
+ 80011ca:	8a2a                	mv	s4,a0
+ 80011cc:	080ba503          	lw	a0,128(s7) # 20000080 <SystemCoreClock>
+ 80011d0:	8aae                	mv	s5,a1
+ 80011d2:	00001097          	auipc	ra,0x1
+ 80011d6:	73e080e7          	jalr	1854(ra) # 8002910 <__floatunsidf>
+ 80011da:	864a                	mv	a2,s2
+ 80011dc:	86ce                	mv	a3,s3
+ 80011de:	00001097          	auipc	ra,0x1
+ 80011e2:	cfc080e7          	jalr	-772(ra) # 8001eda <__divdf3>
+ 80011e6:	8c2a                	mv	s8,a0
+ 80011e8:	855a                	mv	a0,s6
+ 80011ea:	8cae                	mv	s9,a1
+ 80011ec:	00001097          	auipc	ra,0x1
+ 80011f0:	724080e7          	jalr	1828(ra) # 8002910 <__floatunsidf>
+ 80011f4:	862a                	mv	a2,a0
+ 80011f6:	86ae                	mv	a3,a1
+ 80011f8:	8562                	mv	a0,s8
+ 80011fa:	85e6                	mv	a1,s9
+ 80011fc:	00001097          	auipc	ra,0x1
+ 8001200:	2c8080e7          	jalr	712(ra) # 80024c4 <__muldf3>
+ 8001204:	862a                	mv	a2,a0
+ 8001206:	86ae                	mv	a3,a1
+ 8001208:	8552                	mv	a0,s4
+ 800120a:	85d6                	mv	a1,s5
+ 800120c:	00001097          	auipc	ra,0x1
+ 8001210:	214080e7          	jalr	532(ra) # 8002420 <__ledf2>
+ 8001214:	f8054de3          	bltz	a0,80011ae <lcd_delay_1ms+0x4a>
 }
- 8001230:	50b2                	lw	ra,44(sp)
- 8001232:	5422                	lw	s0,40(sp)
- 8001234:	5492                	lw	s1,36(sp)
- 8001236:	5902                	lw	s2,32(sp)
- 8001238:	49f2                	lw	s3,28(sp)
- 800123a:	4a62                	lw	s4,24(sp)
- 800123c:	4ad2                	lw	s5,20(sp)
- 800123e:	4b42                	lw	s6,16(sp)
- 8001240:	4bb2                	lw	s7,12(sp)
- 8001242:	4c22                	lw	s8,8(sp)
- 8001244:	4c92                	lw	s9,4(sp)
- 8001246:	6145                	addi	sp,sp,48
- 8001248:	8082                	ret
+ 8001218:	50b2                	lw	ra,44(sp)
+ 800121a:	5422                	lw	s0,40(sp)
+ 800121c:	5492                	lw	s1,36(sp)
+ 800121e:	5902                	lw	s2,32(sp)
+ 8001220:	49f2                	lw	s3,28(sp)
+ 8001222:	4a62                	lw	s4,24(sp)
+ 8001224:	4ad2                	lw	s5,20(sp)
+ 8001226:	4b42                	lw	s6,16(sp)
+ 8001228:	4bb2                	lw	s7,12(sp)
+ 800122a:	4c22                	lw	s8,8(sp)
+ 800122c:	4c92                	lw	s9,4(sp)
+ 800122e:	6145                	addi	sp,sp,48
+ 8001230:	8082                	ret
 
-0800124a <LCD_WR_Queue>:
+08001232 <LCD_WR_Queue>:
 
 void LCD_Wait_On_Queue(){
 	while(r != w) LCD_WR_Queue();					//Blocks while emptying the queue
 }
 
 void LCD_WR_Queue(){
- 800124a:	1141                	addi	sp,sp,-16
- 800124c:	c422                	sw	s0,8(sp)
+ 8001232:	1141                	addi	sp,sp,-16
+ 8001234:	c422                	sw	s0,8(sp)
     if (r!=w) {                                     // Buffer empty?
- 800124e:	200007b7          	lui	a5,0x20000
- 8001252:	20000437          	lui	s0,0x20000
- 8001256:	08c42703          	lw	a4,140(s0) # 2000008c <r>
- 800125a:	0907a783          	lw	a5,144(a5) # 20000090 <w>
+ 8001236:	200007b7          	lui	a5,0x20000
+ 800123a:	20000437          	lui	s0,0x20000
+ 800123e:	08c42703          	lw	a4,140(s0) # 2000008c <r>
+ 8001242:	0907a783          	lw	a5,144(a5) # 20000090 <w>
 void LCD_WR_Queue(){
- 800125e:	c606                	sw	ra,12(sp)
- 8001260:	c226                	sw	s1,4(sp)
+ 8001246:	c606                	sw	ra,12(sp)
+ 8001248:	c226                	sw	s1,4(sp)
     if (r!=w) {                                     // Buffer empty?
- 8001262:	08f70a63          	beq	a4,a5,80012f6 <LCD_WR_Queue+0xac>
+ 800124a:	08f70a63          	beq	a4,a5,80012de <LCD_WR_Queue+0xac>
        if (spi_i2s_flag_get(SPI1,SPI_FLAG_TBE)) {   // ...no! Device redy?
- 8001266:	40004537          	lui	a0,0x40004
- 800126a:	4589                	li	a1,2
- 800126c:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
- 8001270:	00000097          	auipc	ra,0x0
- 8001274:	c52080e7          	jalr	-942(ra) # 8000ec2 <spi_i2s_flag_get>
- 8001278:	c52d                	beqz	a0,80012e2 <LCD_WR_Queue+0x98>
+ 800124e:	40004537          	lui	a0,0x40004
+ 8001252:	4589                	li	a1,2
+ 8001254:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
+ 8001258:	00000097          	auipc	ra,0x0
+ 800125c:	c52080e7          	jalr	-942(ra) # 8000eaa <spi_i2s_flag_get>
+ 8001260:	c52d                	beqz	a0,80012ca <LCD_WR_Queue+0x98>
           OLED_CS_Clr();                            // ......Yes! CS (again)
- 800127a:	6589                	lui	a1,0x2
- 800127c:	40011537          	lui	a0,0x40011
- 8001280:	00000097          	auipc	ra,0x0
- 8001284:	bbc080e7          	jalr	-1092(ra) # 8000e3c <gpio_bit_reset>
- 8001288:	08c40413          	addi	s0,s0,140
+ 8001262:	6589                	lui	a1,0x2
+ 8001264:	40011537          	lui	a0,0x40011
+ 8001268:	00000097          	auipc	ra,0x0
+ 800126c:	bbc080e7          	jalr	-1092(ra) # 8000e24 <gpio_bit_reset>
+ 8001270:	08c40413          	addi	s0,s0,140
           (queue[r]>=1<<8) ? OLED_DC_Set() : OLED_DC_Clr(); //    DC
- 800128c:	4014                	lw	a3,0(s0)
- 800128e:	200007b7          	lui	a5,0x20000
- 8001292:	09878713          	addi	a4,a5,152 # 20000098 <queue>
- 8001296:	068a                	slli	a3,a3,0x2
- 8001298:	9736                	add	a4,a4,a3
- 800129a:	4314                	lw	a3,0(a4)
- 800129c:	0ff00713          	li	a4,255
- 80012a0:	09878493          	addi	s1,a5,152
- 80012a4:	65a1                	lui	a1,0x8
- 80012a6:	40011537          	lui	a0,0x40011
- 80012aa:	04d75163          	bge	a4,a3,80012ec <LCD_WR_Queue+0xa2>
- 80012ae:	00000097          	auipc	ra,0x0
- 80012b2:	b8a080e7          	jalr	-1142(ra) # 8000e38 <gpio_bit_set>
+ 8001274:	4014                	lw	a3,0(s0)
+ 8001276:	200007b7          	lui	a5,0x20000
+ 800127a:	09878713          	addi	a4,a5,152 # 20000098 <queue>
+ 800127e:	068a                	slli	a3,a3,0x2
+ 8001280:	9736                	add	a4,a4,a3
+ 8001282:	4314                	lw	a3,0(a4)
+ 8001284:	0ff00713          	li	a4,255
+ 8001288:	09878493          	addi	s1,a5,152
+ 800128c:	65a1                	lui	a1,0x8
+ 800128e:	40011537          	lui	a0,0x40011
+ 8001292:	04d75163          	bge	a4,a3,80012d4 <LCD_WR_Queue+0xa2>
+ 8001296:	00000097          	auipc	ra,0x0
+ 800129a:	b8a080e7          	jalr	-1142(ra) # 8000e20 <gpio_bit_set>
           spi_i2s_data_transmit(SPI1, queue[r++]&0xFF); //        Write!
- 80012b6:	401c                	lw	a5,0(s0)
- 80012b8:	40004537          	lui	a0,0x40004
- 80012bc:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
- 80012c0:	00178713          	addi	a4,a5,1
- 80012c4:	078a                	slli	a5,a5,0x2
- 80012c6:	97a6                	add	a5,a5,s1
- 80012c8:	0007c583          	lbu	a1,0(a5)
- 80012cc:	c018                	sw	a4,0(s0)
- 80012ce:	00000097          	auipc	ra,0x0
- 80012d2:	be4080e7          	jalr	-1052(ra) # 8000eb2 <spi_i2s_data_transmit>
+ 800129e:	401c                	lw	a5,0(s0)
+ 80012a0:	40004537          	lui	a0,0x40004
+ 80012a4:	80050513          	addi	a0,a0,-2048 # 40003800 <TIMER5+0x2800>
+ 80012a8:	00178713          	addi	a4,a5,1
+ 80012ac:	078a                	slli	a5,a5,0x2
+ 80012ae:	97a6                	add	a5,a5,s1
+ 80012b0:	0007c583          	lbu	a1,0(a5)
+ 80012b4:	c018                	sw	a4,0(s0)
+ 80012b6:	00000097          	auipc	ra,0x0
+ 80012ba:	be4080e7          	jalr	-1052(ra) # 8000e9a <spi_i2s_data_transmit>
           r%=256;                                   //            Advance.
- 80012d6:	401c                	lw	a5,0(s0)
- 80012d8:	10000713          	li	a4,256
- 80012dc:	02e7e7b3          	rem	a5,a5,a4
- 80012e0:	c01c                	sw	a5,0(s0)
+ 80012be:	401c                	lw	a5,0(s0)
+ 80012c0:	10000713          	li	a4,256
+ 80012c4:	02e7e7b3          	rem	a5,a5,a4
+ 80012c8:	c01c                	sw	a5,0(s0)
         }                                           //       (No! Return!)
     } else {
         OLED_CS_Set();                              // ...yes! CS high, done!
     }
 }
- 80012e2:	40b2                	lw	ra,12(sp)
- 80012e4:	4422                	lw	s0,8(sp)
- 80012e6:	4492                	lw	s1,4(sp)
- 80012e8:	0141                	addi	sp,sp,16
- 80012ea:	8082                	ret
+ 80012ca:	40b2                	lw	ra,12(sp)
+ 80012cc:	4422                	lw	s0,8(sp)
+ 80012ce:	4492                	lw	s1,4(sp)
+ 80012d0:	0141                	addi	sp,sp,16
+ 80012d2:	8082                	ret
           (queue[r]>=1<<8) ? OLED_DC_Set() : OLED_DC_Clr(); //    DC
- 80012ec:	00000097          	auipc	ra,0x0
- 80012f0:	b50080e7          	jalr	-1200(ra) # 8000e3c <gpio_bit_reset>
- 80012f4:	b7c9                	j	80012b6 <LCD_WR_Queue+0x6c>
+ 80012d4:	00000097          	auipc	ra,0x0
+ 80012d8:	b50080e7          	jalr	-1200(ra) # 8000e24 <gpio_bit_reset>
+ 80012dc:	b7c9                	j	800129e <LCD_WR_Queue+0x6c>
 }
- 80012f6:	4422                	lw	s0,8(sp)
- 80012f8:	40b2                	lw	ra,12(sp)
- 80012fa:	4492                	lw	s1,4(sp)
+ 80012de:	4422                	lw	s0,8(sp)
+ 80012e0:	40b2                	lw	ra,12(sp)
+ 80012e2:	4492                	lw	s1,4(sp)
         OLED_CS_Set();                              // ...yes! CS high, done!
- 80012fc:	6589                	lui	a1,0x2
- 80012fe:	40011537          	lui	a0,0x40011
+ 80012e4:	6589                	lui	a1,0x2
+ 80012e6:	40011537          	lui	a0,0x40011
 }
- 8001302:	0141                	addi	sp,sp,16
+ 80012ea:	0141                	addi	sp,sp,16
         OLED_CS_Set();                              // ...yes! CS high, done!
- 8001304:	00000317          	auipc	t1,0x0
- 8001308:	b3430067          	jr	-1228(t1) # 8000e38 <gpio_bit_set>
+ 80012ec:	00000317          	auipc	t1,0x0
+ 80012f0:	b3430067          	jr	-1228(t1) # 8000e20 <gpio_bit_set>
 
-0800130c <LCD_Wait_On_Queue>:
+080012f4 <LCD_Wait_On_Queue>:
 void LCD_Wait_On_Queue(){
- 800130c:	1141                	addi	sp,sp,-16
- 800130e:	c422                	sw	s0,8(sp)
- 8001310:	c226                	sw	s1,4(sp)
- 8001312:	c606                	sw	ra,12(sp)
+ 80012f4:	1141                	addi	sp,sp,-16
+ 80012f6:	c422                	sw	s0,8(sp)
+ 80012f8:	c226                	sw	s1,4(sp)
+ 80012fa:	c606                	sw	ra,12(sp)
 	while(r != w) LCD_WR_Queue();					//Blocks while emptying the queue
- 8001314:	200004b7          	lui	s1,0x20000
- 8001318:	20000437          	lui	s0,0x20000
- 800131c:	08c4a703          	lw	a4,140(s1) # 2000008c <r>
- 8001320:	09042783          	lw	a5,144(s0) # 20000090 <w>
- 8001324:	00f71763          	bne	a4,a5,8001332 <LCD_Wait_On_Queue+0x26>
+ 80012fc:	200004b7          	lui	s1,0x20000
+ 8001300:	20000437          	lui	s0,0x20000
+ 8001304:	08c4a703          	lw	a4,140(s1) # 2000008c <r>
+ 8001308:	09042783          	lw	a5,144(s0) # 20000090 <w>
+ 800130c:	00f71763          	bne	a4,a5,800131a <LCD_Wait_On_Queue+0x26>
 }
- 8001328:	40b2                	lw	ra,12(sp)
- 800132a:	4422                	lw	s0,8(sp)
- 800132c:	4492                	lw	s1,4(sp)
- 800132e:	0141                	addi	sp,sp,16
- 8001330:	8082                	ret
+ 8001310:	40b2                	lw	ra,12(sp)
+ 8001312:	4422                	lw	s0,8(sp)
+ 8001314:	4492                	lw	s1,4(sp)
+ 8001316:	0141                	addi	sp,sp,16
+ 8001318:	8082                	ret
 	while(r != w) LCD_WR_Queue();					//Blocks while emptying the queue
- 8001332:	00000097          	auipc	ra,0x0
- 8001336:	f18080e7          	jalr	-232(ra) # 800124a <LCD_WR_Queue>
- 800133a:	b7cd                	j	800131c <LCD_Wait_On_Queue+0x10>
+ 800131a:	00000097          	auipc	ra,0x0
+ 800131e:	f18080e7          	jalr	-232(ra) # 8001232 <LCD_WR_Queue>
+ 8001322:	b7cd                	j	8001304 <LCD_Wait_On_Queue+0x10>
 
-0800133c <LCD_Write_Bus>:
+08001324 <LCD_Write_Bus>:
 
 void LCD_Write_Bus(int dat) {
- 800133c:	1101                	addi	sp,sp,-32
- 800133e:	cc22                	sw	s0,24(sp)
- 8001340:	ca26                	sw	s1,20(sp)
- 8001342:	c84a                	sw	s2,16(sp)
- 8001344:	ce06                	sw	ra,28(sp)
+ 8001324:	1101                	addi	sp,sp,-32
+ 8001326:	cc22                	sw	s0,24(sp)
+ 8001328:	ca26                	sw	s1,20(sp)
+ 800132a:	c84a                	sw	s2,16(sp)
+ 800132c:	ce06                	sw	ra,28(sp)
    while (((w+1)%256)==r) LCD_WR_Queue(); //If buffer full then spin...
- 8001346:	20000937          	lui	s2,0x20000
- 800134a:	10000493          	li	s1,256
- 800134e:	20000437          	lui	s0,0x20000
- 8001352:	09090613          	addi	a2,s2,144 # 20000090 <w>
- 8001356:	421c                	lw	a5,0(a2)
- 8001358:	08c42683          	lw	a3,140(s0) # 2000008c <r>
- 800135c:	00178713          	addi	a4,a5,1
- 8001360:	02976733          	rem	a4,a4,s1
- 8001364:	02d70163          	beq	a4,a3,8001386 <LCD_Write_Bus+0x4a>
+ 800132e:	20000937          	lui	s2,0x20000
+ 8001332:	10000493          	li	s1,256
+ 8001336:	20000437          	lui	s0,0x20000
+ 800133a:	09090613          	addi	a2,s2,144 # 20000090 <w>
+ 800133e:	421c                	lw	a5,0(a2)
+ 8001340:	08c42683          	lw	a3,140(s0) # 2000008c <r>
+ 8001344:	00178713          	addi	a4,a5,1
+ 8001348:	02976733          	rem	a4,a4,s1
+ 800134c:	02d70163          	beq	a4,a3,800136e <LCD_Write_Bus+0x4a>
    queue[w++]=dat;                        //...If/when not then store data...
- 8001368:	00279693          	slli	a3,a5,0x2
- 800136c:	200007b7          	lui	a5,0x20000
+ 8001350:	00279693          	slli	a3,a5,0x2
+ 8001354:	200007b7          	lui	a5,0x20000
    w%=256;                                //...and advance write index!
 }
- 8001370:	40f2                	lw	ra,28(sp)
- 8001372:	4462                	lw	s0,24(sp)
+ 8001358:	40f2                	lw	ra,28(sp)
+ 800135a:	4462                	lw	s0,24(sp)
    queue[w++]=dat;                        //...If/when not then store data...
- 8001374:	09878793          	addi	a5,a5,152 # 20000098 <queue>
- 8001378:	97b6                	add	a5,a5,a3
- 800137a:	c388                	sw	a0,0(a5)
+ 800135c:	09878793          	addi	a5,a5,152 # 20000098 <queue>
+ 8001360:	97b6                	add	a5,a5,a3
+ 8001362:	c388                	sw	a0,0(a5)
    w%=256;                                //...and advance write index!
- 800137c:	c218                	sw	a4,0(a2)
+ 8001364:	c218                	sw	a4,0(a2)
 }
- 800137e:	44d2                	lw	s1,20(sp)
- 8001380:	4942                	lw	s2,16(sp)
- 8001382:	6105                	addi	sp,sp,32
- 8001384:	8082                	ret
- 8001386:	c62a                	sw	a0,12(sp)
+ 8001366:	44d2                	lw	s1,20(sp)
+ 8001368:	4942                	lw	s2,16(sp)
+ 800136a:	6105                	addi	sp,sp,32
+ 800136c:	8082                	ret
+ 800136e:	c62a                	sw	a0,12(sp)
    while (((w+1)%256)==r) LCD_WR_Queue(); //If buffer full then spin...
- 8001388:	00000097          	auipc	ra,0x0
- 800138c:	ec2080e7          	jalr	-318(ra) # 800124a <LCD_WR_Queue>
- 8001390:	4532                	lw	a0,12(sp)
- 8001392:	b7c1                	j	8001352 <LCD_Write_Bus+0x16>
+ 8001370:	00000097          	auipc	ra,0x0
+ 8001374:	ec2080e7          	jalr	-318(ra) # 8001232 <LCD_WR_Queue>
+ 8001378:	4532                	lw	a0,12(sp)
+ 800137a:	b7c1                	j	800133a <LCD_Write_Bus+0x16>
 
-08001394 <LCD_WR_DATA>:
+0800137c <LCD_WR_DATA>:
   Function description: LCD write 16-bit data
   Entry data: dat: 16-bit data to be written
   Return value: None
 */
 void LCD_WR_DATA(u16 dat)
 {
- 8001394:	1141                	addi	sp,sp,-16
- 8001396:	c422                	sw	s0,8(sp)
- 8001398:	842a                	mv	s0,a0
+ 800137c:	1141                	addi	sp,sp,-16
+ 800137e:	c422                	sw	s0,8(sp)
+ 8001380:	842a                	mv	s0,a0
 	//OLED_DC_Set();  // Write data
 	//LCD_Writ_Bus(dat>>8);
 	//LCD_Writ_Bus(dat);
     LCD_Write_Bus(((int)dat>>8)+(1<<8));
- 800139a:	8521                	srai	a0,a0,0x8
- 800139c:	10050513          	addi	a0,a0,256 # 40011100 <GPIOB+0x500>
+ 8001382:	8521                	srai	a0,a0,0x8
+ 8001384:	10050513          	addi	a0,a0,256 # 40011100 <GPIOB+0x500>
 {
- 80013a0:	c606                	sw	ra,12(sp)
+ 8001388:	c606                	sw	ra,12(sp)
     LCD_Write_Bus(((int)dat>>8)+(1<<8));
- 80013a2:	00000097          	auipc	ra,0x0
- 80013a6:	f9a080e7          	jalr	-102(ra) # 800133c <LCD_Write_Bus>
+ 800138a:	00000097          	auipc	ra,0x0
+ 800138e:	f9a080e7          	jalr	-102(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat&0xFF)+(1<<8));
- 80013aa:	0ff47513          	andi	a0,s0,255
+ 8001392:	0ff47513          	andi	a0,s0,255
 }
- 80013ae:	4422                	lw	s0,8(sp)
- 80013b0:	40b2                	lw	ra,12(sp)
+ 8001396:	4422                	lw	s0,8(sp)
+ 8001398:	40b2                	lw	ra,12(sp)
     LCD_Write_Bus(((int)dat&0xFF)+(1<<8));
- 80013b2:	10050513          	addi	a0,a0,256
+ 800139a:	10050513          	addi	a0,a0,256
 }
- 80013b6:	0141                	addi	sp,sp,16
+ 800139e:	0141                	addi	sp,sp,16
     LCD_Write_Bus(((int)dat&0xFF)+(1<<8));
- 80013b8:	00000317          	auipc	t1,0x0
- 80013bc:	f8430067          	jr	-124(t1) # 800133c <LCD_Write_Bus>
+ 80013a0:	00000317          	auipc	t1,0x0
+ 80013a4:	f8430067          	jr	-124(t1) # 8001324 <LCD_Write_Bus>
 
-080013c0 <LCD_Address_Set>:
+080013a8 <LCD_Address_Set>:
   Entry data: x1, x2 set the start and end column address
               y1, y2 set the start and end row address
   Return value: None
 */
 void LCD_Address_Set(u16 x1,u16 y1,u16 x2,u16 y2)
 {
- 80013c0:	1101                	addi	sp,sp,-32
- 80013c2:	cc22                	sw	s0,24(sp)
- 80013c4:	ca26                	sw	s1,20(sp)
+ 80013a8:	1101                	addi	sp,sp,-32
+ 80013aa:	cc22                	sw	s0,24(sp)
+ 80013ac:	ca26                	sw	s1,20(sp)
 	LCD_WR_REG(0x2a);  // Column address setting
 	LCD_WR_DATA(x1+lcd_conf.offset_x);
- 80013c6:	20000437          	lui	s0,0x20000
+ 80013ae:	20000437          	lui	s0,0x20000
 {
- 80013ca:	84aa                	mv	s1,a0
+ 80013b2:	84aa                	mv	s1,a0
     LCD_Write_Bus((int)dat);
- 80013cc:	02a00513          	li	a0,42
+ 80013b4:	02a00513          	li	a0,42
 {
- 80013d0:	ce06                	sw	ra,28(sp)
- 80013d2:	c236                	sw	a3,4(sp)
- 80013d4:	c62e                	sw	a1,12(sp)
+ 80013b8:	ce06                	sw	ra,28(sp)
+ 80013ba:	c236                	sw	a3,4(sp)
+ 80013bc:	c62e                	sw	a1,12(sp)
 	LCD_WR_DATA(x1+lcd_conf.offset_x);
- 80013d6:	08840413          	addi	s0,s0,136 # 20000088 <lcd_conf>
+ 80013be:	08840413          	addi	s0,s0,136 # 20000088 <lcd_conf>
 {
- 80013da:	c432                	sw	a2,8(sp)
+ 80013c2:	c432                	sw	a2,8(sp)
     LCD_Write_Bus((int)dat);
- 80013dc:	00000097          	auipc	ra,0x0
- 80013e0:	f60080e7          	jalr	-160(ra) # 800133c <LCD_Write_Bus>
+ 80013c4:	00000097          	auipc	ra,0x0
+ 80013c8:	f60080e7          	jalr	-160(ra) # 8001324 <LCD_Write_Bus>
 	LCD_WR_DATA(x1+lcd_conf.offset_x);
- 80013e4:	00244503          	lbu	a0,2(s0)
- 80013e8:	9526                	add	a0,a0,s1
- 80013ea:	00000097          	auipc	ra,0x0
- 80013ee:	faa080e7          	jalr	-86(ra) # 8001394 <LCD_WR_DATA>
+ 80013cc:	00244503          	lbu	a0,2(s0)
+ 80013d0:	9526                	add	a0,a0,s1
+ 80013d2:	00000097          	auipc	ra,0x0
+ 80013d6:	faa080e7          	jalr	-86(ra) # 800137c <LCD_WR_DATA>
 	LCD_WR_DATA(x2+lcd_conf.offset_x);
- 80013f2:	4622                	lw	a2,8(sp)
- 80013f4:	00244503          	lbu	a0,2(s0)
- 80013f8:	9532                	add	a0,a0,a2
- 80013fa:	00000097          	auipc	ra,0x0
- 80013fe:	f9a080e7          	jalr	-102(ra) # 8001394 <LCD_WR_DATA>
+ 80013da:	4622                	lw	a2,8(sp)
+ 80013dc:	00244503          	lbu	a0,2(s0)
+ 80013e0:	9532                	add	a0,a0,a2
+ 80013e2:	00000097          	auipc	ra,0x0
+ 80013e6:	f9a080e7          	jalr	-102(ra) # 800137c <LCD_WR_DATA>
     LCD_Write_Bus((int)dat);
- 8001402:	02b00513          	li	a0,43
- 8001406:	00000097          	auipc	ra,0x0
- 800140a:	f36080e7          	jalr	-202(ra) # 800133c <LCD_Write_Bus>
+ 80013ea:	02b00513          	li	a0,43
+ 80013ee:	00000097          	auipc	ra,0x0
+ 80013f2:	f36080e7          	jalr	-202(ra) # 8001324 <LCD_Write_Bus>
 	LCD_WR_REG(0x2b);  // row address setting
 	LCD_WR_DATA(y1+lcd_conf.offset_y);
- 800140e:	45b2                	lw	a1,12(sp)
- 8001410:	00344503          	lbu	a0,3(s0)
- 8001414:	952e                	add	a0,a0,a1
- 8001416:	00000097          	auipc	ra,0x0
- 800141a:	f7e080e7          	jalr	-130(ra) # 8001394 <LCD_WR_DATA>
+ 80013f6:	45b2                	lw	a1,12(sp)
+ 80013f8:	00344503          	lbu	a0,3(s0)
+ 80013fc:	952e                	add	a0,a0,a1
+ 80013fe:	00000097          	auipc	ra,0x0
+ 8001402:	f7e080e7          	jalr	-130(ra) # 800137c <LCD_WR_DATA>
 	LCD_WR_DATA(y2+lcd_conf.offset_y);
- 800141e:	00344503          	lbu	a0,3(s0)
- 8001422:	4692                	lw	a3,4(sp)
- 8001424:	9536                	add	a0,a0,a3
- 8001426:	00000097          	auipc	ra,0x0
- 800142a:	f6e080e7          	jalr	-146(ra) # 8001394 <LCD_WR_DATA>
+ 8001406:	00344503          	lbu	a0,3(s0)
+ 800140a:	4692                	lw	a3,4(sp)
+ 800140c:	9536                	add	a0,a0,a3
+ 800140e:	00000097          	auipc	ra,0x0
+ 8001412:	f6e080e7          	jalr	-146(ra) # 800137c <LCD_WR_DATA>
 	LCD_WR_REG(0x2c);  // Memory write
 }
- 800142e:	4462                	lw	s0,24(sp)
- 8001430:	40f2                	lw	ra,28(sp)
- 8001432:	44d2                	lw	s1,20(sp)
+ 8001416:	4462                	lw	s0,24(sp)
+ 8001418:	40f2                	lw	ra,28(sp)
+ 800141a:	44d2                	lw	s1,20(sp)
     LCD_Write_Bus((int)dat);
- 8001434:	02c00513          	li	a0,44
+ 800141c:	02c00513          	li	a0,44
 }
- 8001438:	6105                	addi	sp,sp,32
+ 8001420:	6105                	addi	sp,sp,32
     LCD_Write_Bus((int)dat);
- 800143a:	00000317          	auipc	t1,0x0
- 800143e:	f0230067          	jr	-254(t1) # 800133c <LCD_Write_Bus>
+ 8001422:	00000317          	auipc	t1,0x0
+ 8001426:	f0230067          	jr	-254(t1) # 8001324 <LCD_Write_Bus>
 
-08001442 <spi_config>:
+0800142a <spi_config>:
     \param[in]  none
     \param[out] none
     \retval     none
 */
 void spi_config(void)
 {
- 8001442:	7179                	addi	sp,sp,-48
+ 800142a:	7179                	addi	sp,sp,-48
     spi_parameter_struct spi_init_struct;
     /* deinitilize SPI and the parameters */
     OLED_CS_Set();
- 8001444:	6589                	lui	a1,0x2
- 8001446:	40011537          	lui	a0,0x40011
+ 800142c:	6589                	lui	a1,0x2
+ 800142e:	40011537          	lui	a0,0x40011
 {
- 800144a:	d606                	sw	ra,44(sp)
- 800144c:	d422                	sw	s0,40(sp)
+ 8001432:	d606                	sw	ra,44(sp)
+ 8001434:	d422                	sw	s0,40(sp)
     OLED_CS_Set();
- 800144e:	00000097          	auipc	ra,0x0
- 8001452:	9ea080e7          	jalr	-1558(ra) # 8000e38 <gpio_bit_set>
+ 8001436:	00000097          	auipc	ra,0x0
+ 800143a:	9ea080e7          	jalr	-1558(ra) # 8000e20 <gpio_bit_set>
     spi_struct_para_init(&spi_init_struct);
- 8001456:	0048                	addi	a0,sp,4
- 8001458:	00000097          	auipc	ra,0x0
- 800145c:	a00080e7          	jalr	-1536(ra) # 8000e58 <spi_struct_para_init>
+ 800143e:	0048                	addi	a0,sp,4
+ 8001440:	00000097          	auipc	ra,0x0
+ 8001444:	a00080e7          	jalr	-1536(ra) # 8000e40 <spi_struct_para_init>
 
     /* SPI1 parameter config */
     spi_init_struct.trans_mode           = SPI_TRANSMODE_FULLDUPLEX;
     spi_init_struct.device_mode          = SPI_MASTER;
- 8001460:	10400793          	li	a5,260
- 8001464:	c23e                	sw	a5,4(sp)
+ 8001448:	10400793          	li	a5,260
+ 800144c:	c23e                	sw	a5,4(sp)
     spi_init_struct.frame_size           = SPI_FRAMESIZE_8BIT;
     spi_init_struct.clock_polarity_phase = SPI_CK_PL_HIGH_PH_2EDGE;
- 8001466:	478d                	li	a5,3
+ 800144e:	478d                	li	a5,3
     spi_init_struct.nss                  = SPI_NSS_SOFT;
     spi_init_struct.prescale             = SPI_PSC_4;
     spi_init_struct.endian               = SPI_ENDIAN_MSB;
     spi_init(SPI1, &spi_init_struct);
- 8001468:	40004437          	lui	s0,0x40004
+ 8001450:	40004437          	lui	s0,0x40004
     spi_init_struct.clock_polarity_phase = SPI_CK_PL_HIGH_PH_2EDGE;
- 800146c:	cc3e                	sw	a5,24(sp)
+ 8001454:	cc3e                	sw	a5,24(sp)
     spi_init_struct.nss                  = SPI_NSS_SOFT;
- 800146e:	20000793          	li	a5,512
- 8001472:	c83e                	sw	a5,16(sp)
+ 8001456:	20000793          	li	a5,512
+ 800145a:	c83e                	sw	a5,16(sp)
     spi_init(SPI1, &spi_init_struct);
- 8001474:	004c                	addi	a1,sp,4
+ 800145c:	004c                	addi	a1,sp,4
     spi_init_struct.prescale             = SPI_PSC_4;
- 8001476:	47a1                	li	a5,8
+ 800145e:	47a1                	li	a5,8
     spi_init(SPI1, &spi_init_struct);
- 8001478:	80040513          	addi	a0,s0,-2048 # 40003800 <TIMER5+0x2800>
+ 8001460:	80040513          	addi	a0,s0,-2048 # 40003800 <TIMER5+0x2800>
     spi_init_struct.prescale             = SPI_PSC_4;
- 800147c:	ce3e                	sw	a5,28(sp)
+ 8001464:	ce3e                	sw	a5,28(sp)
     spi_init_struct.trans_mode           = SPI_TRANSMODE_FULLDUPLEX;
- 800147e:	c402                	sw	zero,8(sp)
+ 8001466:	c402                	sw	zero,8(sp)
     spi_init_struct.frame_size           = SPI_FRAMESIZE_8BIT;
- 8001480:	c602                	sw	zero,12(sp)
+ 8001468:	c602                	sw	zero,12(sp)
     spi_init_struct.endian               = SPI_ENDIAN_MSB;
- 8001482:	ca02                	sw	zero,20(sp)
+ 800146a:	ca02                	sw	zero,20(sp)
     spi_init(SPI1, &spi_init_struct);
- 8001484:	00000097          	auipc	ra,0x0
- 8001488:	9ee080e7          	jalr	-1554(ra) # 8000e72 <spi_init>
+ 800146c:	00000097          	auipc	ra,0x0
+ 8001470:	9ee080e7          	jalr	-1554(ra) # 8000e5a <spi_init>
 
 	spi_crc_polynomial_set(SPI1,7);
- 800148c:	80040513          	addi	a0,s0,-2048
- 8001490:	459d                	li	a1,7
- 8001492:	00000097          	auipc	ra,0x0
- 8001496:	a24080e7          	jalr	-1500(ra) # 8000eb6 <spi_crc_polynomial_set>
+ 8001474:	80040513          	addi	a0,s0,-2048
+ 8001478:	459d                	li	a1,7
+ 800147a:	00000097          	auipc	ra,0x0
+ 800147e:	a24080e7          	jalr	-1500(ra) # 8000e9e <spi_crc_polynomial_set>
 	spi_enable(SPI1);
- 800149a:	80040513          	addi	a0,s0,-2048
- 800149e:	00000097          	auipc	ra,0x0
- 80014a2:	a0a080e7          	jalr	-1526(ra) # 8000ea8 <spi_enable>
+ 8001482:	80040513          	addi	a0,s0,-2048
+ 8001486:	00000097          	auipc	ra,0x0
+ 800148a:	a0a080e7          	jalr	-1526(ra) # 8000e90 <spi_enable>
 }
- 80014a6:	50b2                	lw	ra,44(sp)
- 80014a8:	5422                	lw	s0,40(sp)
- 80014aa:	6145                	addi	sp,sp,48
- 80014ac:	8082                	ret
+ 800148e:	50b2                	lw	ra,44(sp)
+ 8001490:	5422                	lw	s0,40(sp)
+ 8001492:	6145                	addi	sp,sp,48
+ 8001494:	8082                	ret
 
-080014ae <Lcd_SetType>:
+08001496 <Lcd_SetType>:
 
 void Lcd_SetType(int type){
 	if(type == LCD_NORMAL){
- 80014ae:	e909                	bnez	a0,80014c0 <Lcd_SetType+0x12>
+ 8001496:	e909                	bnez	a0,80014a8 <Lcd_SetType+0x12>
 		lcd_conf.configured = 1;
- 80014b0:	1a0107b7          	lui	a5,0x1a010
- 80014b4:	20000737          	lui	a4,0x20000
- 80014b8:	0785                	addi	a5,a5,1
+ 8001498:	1a0107b7          	lui	a5,0x1a010
+ 800149c:	20000737          	lui	a4,0x20000
+ 80014a0:	0785                	addi	a5,a5,1
 		lcd_conf.offset_x = 1;
 		lcd_conf.offset_y = 26;
 		lcd_conf.inverted = 0;
 	}
 	if(type == LCD_INVERTED){
 		lcd_conf.configured = 1;
- 80014ba:	08f72423          	sw	a5,136(a4) # 20000088 <lcd_conf>
+ 80014a2:	08f72423          	sw	a5,136(a4) # 20000088 <lcd_conf>
 		lcd_conf.offset_x = 0;
 		lcd_conf.offset_y = 24;
 		lcd_conf.inverted = 1;
 	}
 }
- 80014be:	8082                	ret
+ 80014a6:	8082                	ret
 	if(type == LCD_INVERTED){
- 80014c0:	4785                	li	a5,1
- 80014c2:	fef51ee3          	bne	a0,a5,80014be <Lcd_SetType+0x10>
+ 80014a8:	4785                	li	a5,1
+ 80014aa:	fef51ee3          	bne	a0,a5,80014a6 <Lcd_SetType+0x10>
 		lcd_conf.configured = 1;
- 80014c6:	180007b7          	lui	a5,0x18000
- 80014ca:	20000737          	lui	a4,0x20000
- 80014ce:	10178793          	addi	a5,a5,257 # 18000101 <__fini_array_end+0xfffd2bd>
- 80014d2:	b7e5                	j	80014ba <Lcd_SetType+0xc>
+ 80014ae:	180007b7          	lui	a5,0x18000
+ 80014b2:	20000737          	lui	a4,0x20000
+ 80014b6:	10178793          	addi	a5,a5,257 # 18000101 <__fini_array_end+0xfffd2bd>
+ 80014ba:	b7e5                	j	80014a2 <Lcd_SetType+0xc>
 
-080014d4 <Lcd_Init>:
+080014bc <Lcd_Init>:
   Entry data: None
   Return value: None
 */
 void Lcd_Init(void)
 {
 	if(!lcd_conf.configured) Lcd_SetType(LCD_NORMAL);
- 80014d4:	200007b7          	lui	a5,0x20000
- 80014d8:	0887c703          	lbu	a4,136(a5) # 20000088 <lcd_conf>
+ 80014bc:	200007b7          	lui	a5,0x20000
+ 80014c0:	0887c703          	lbu	a4,136(a5) # 20000088 <lcd_conf>
 {
- 80014dc:	1141                	addi	sp,sp,-16
- 80014de:	c422                	sw	s0,8(sp)
- 80014e0:	c606                	sw	ra,12(sp)
- 80014e2:	08878413          	addi	s0,a5,136
+ 80014c4:	1141                	addi	sp,sp,-16
+ 80014c6:	c422                	sw	s0,8(sp)
+ 80014c8:	c606                	sw	ra,12(sp)
+ 80014ca:	08878413          	addi	s0,a5,136
 	if(!lcd_conf.configured) Lcd_SetType(LCD_NORMAL);
- 80014e6:	e711                	bnez	a4,80014f2 <Lcd_Init+0x1e>
- 80014e8:	4501                	li	a0,0
- 80014ea:	00000097          	auipc	ra,0x0
- 80014ee:	fc4080e7          	jalr	-60(ra) # 80014ae <Lcd_SetType>
+ 80014ce:	e711                	bnez	a4,80014da <Lcd_Init+0x1e>
+ 80014d0:	4501                	li	a0,0
+ 80014d2:	00000097          	auipc	ra,0x0
+ 80014d6:	fc4080e7          	jalr	-60(ra) # 8001496 <Lcd_SetType>
 	rcu_periph_clock_enable(RCU_GPIOB);
- 80014f2:	60300513          	li	a0,1539
- 80014f6:	00000097          	auipc	ra,0x0
- 80014fa:	94a080e7          	jalr	-1718(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014da:	60300513          	li	a0,1539
+ 80014de:	00000097          	auipc	ra,0x0
+ 80014e2:	94a080e7          	jalr	-1718(ra) # 8000e28 <rcu_periph_clock_enable>
 	rcu_periph_clock_enable(RCU_GPIOC);
- 80014fe:	60400513          	li	a0,1540
- 8001502:	00000097          	auipc	ra,0x0
- 8001506:	93e080e7          	jalr	-1730(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014e6:	60400513          	li	a0,1540
+ 80014ea:	00000097          	auipc	ra,0x0
+ 80014ee:	93e080e7          	jalr	-1730(ra) # 8000e28 <rcu_periph_clock_enable>
 
  	rcu_periph_clock_enable(RCU_AF);
- 800150a:	60000513          	li	a0,1536
- 800150e:	00000097          	auipc	ra,0x0
- 8001512:	932080e7          	jalr	-1742(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014f2:	60000513          	li	a0,1536
+ 80014f6:	00000097          	auipc	ra,0x0
+ 80014fa:	932080e7          	jalr	-1742(ra) # 8000e28 <rcu_periph_clock_enable>
 	rcu_periph_clock_enable(RCU_SPI1);
- 8001516:	70e00513          	li	a0,1806
- 800151a:	00000097          	auipc	ra,0x0
- 800151e:	926080e7          	jalr	-1754(ra) # 8000e40 <rcu_periph_clock_enable>
+ 80014fe:	70e00513          	li	a0,1806
+ 8001502:	00000097          	auipc	ra,0x0
+ 8001506:	926080e7          	jalr	-1754(ra) # 8000e28 <rcu_periph_clock_enable>
 	
     gpio_init(GPIOB, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_13 |GPIO_PIN_14| GPIO_PIN_15);
- 8001522:	40011537          	lui	a0,0x40011
- 8001526:	66b9                	lui	a3,0xe
- 8001528:	460d                	li	a2,3
- 800152a:	45e1                	li	a1,24
- 800152c:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
- 8001530:	00000097          	auipc	ra,0x0
- 8001534:	864080e7          	jalr	-1948(ra) # 8000d94 <gpio_init>
+ 800150a:	40011537          	lui	a0,0x40011
+ 800150e:	66b9                	lui	a3,0xe
+ 8001510:	460d                	li	a2,3
+ 8001512:	45e1                	li	a1,24
+ 8001514:	c0050513          	addi	a0,a0,-1024 # 40010c00 <GPIOB>
+ 8001518:	00000097          	auipc	ra,0x0
+ 800151c:	864080e7          	jalr	-1948(ra) # 8000d7c <gpio_init>
 	gpio_init(GPIOC, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_13 | GPIO_PIN_15); //CS
- 8001538:	66a9                	lui	a3,0xa
- 800153a:	460d                	li	a2,3
- 800153c:	45c1                	li	a1,16
- 800153e:	40011537          	lui	a0,0x40011
- 8001542:	00000097          	auipc	ra,0x0
- 8001546:	852080e7          	jalr	-1966(ra) # 8000d94 <gpio_init>
+ 8001520:	66a9                	lui	a3,0xa
+ 8001522:	460d                	li	a2,3
+ 8001524:	45c1                	li	a1,16
+ 8001526:	40011537          	lui	a0,0x40011
+ 800152a:	00000097          	auipc	ra,0x0
+ 800152e:	852080e7          	jalr	-1966(ra) # 8000d7c <gpio_init>
 
 	spi_config();
- 800154a:	00000097          	auipc	ra,0x0
- 800154e:	ef8080e7          	jalr	-264(ra) # 8001442 <spi_config>
+ 8001532:	00000097          	auipc	ra,0x0
+ 8001536:	ef8080e7          	jalr	-264(ra) # 800142a <spi_config>
 
 	gpio_bit_reset(GPIOC, GPIO_PIN_13 | GPIO_PIN_15);
- 8001552:	65a9                	lui	a1,0xa
- 8001554:	40011537          	lui	a0,0x40011
- 8001558:	00000097          	auipc	ra,0x0
- 800155c:	8e4080e7          	jalr	-1820(ra) # 8000e3c <gpio_bit_reset>
+ 800153a:	65a9                	lui	a1,0xa
+ 800153c:	40011537          	lui	a0,0x40011
+ 8001540:	00000097          	auipc	ra,0x0
+ 8001544:	8e4080e7          	jalr	-1820(ra) # 8000e24 <gpio_bit_reset>
 	LCD_Wait_On_Queue();
- 8001560:	00000097          	auipc	ra,0x0
- 8001564:	dac080e7          	jalr	-596(ra) # 800130c <LCD_Wait_On_Queue>
+ 8001548:	00000097          	auipc	ra,0x0
+ 800154c:	dac080e7          	jalr	-596(ra) # 80012f4 <LCD_Wait_On_Queue>
 	lcd_delay_1ms(100);
- 8001568:	06400513          	li	a0,100
- 800156c:	00000097          	auipc	ra,0x0
- 8001570:	c10080e7          	jalr	-1008(ra) # 800117c <lcd_delay_1ms>
+ 8001550:	06400513          	li	a0,100
+ 8001554:	00000097          	auipc	ra,0x0
+ 8001558:	c10080e7          	jalr	-1008(ra) # 8001164 <lcd_delay_1ms>
     LCD_Write_Bus((int)dat);
- 8001574:	4505                	li	a0,1
- 8001576:	00000097          	auipc	ra,0x0
- 800157a:	dc6080e7          	jalr	-570(ra) # 800133c <LCD_Write_Bus>
+ 800155c:	4505                	li	a0,1
+ 800155e:	00000097          	auipc	ra,0x0
+ 8001562:	dc6080e7          	jalr	-570(ra) # 8001324 <LCD_Write_Bus>
 	
 
 	LCD_WR_REG(0x01); 	//SW reset
 	LCD_Wait_On_Queue();
- 800157e:	00000097          	auipc	ra,0x0
- 8001582:	d8e080e7          	jalr	-626(ra) # 800130c <LCD_Wait_On_Queue>
+ 8001566:	00000097          	auipc	ra,0x0
+ 800156a:	d8e080e7          	jalr	-626(ra) # 80012f4 <LCD_Wait_On_Queue>
 	lcd_delay_1ms(120);
- 8001586:	07800513          	li	a0,120
- 800158a:	00000097          	auipc	ra,0x0
- 800158e:	bf2080e7          	jalr	-1038(ra) # 800117c <lcd_delay_1ms>
+ 800156e:	07800513          	li	a0,120
+ 8001572:	00000097          	auipc	ra,0x0
+ 8001576:	bf2080e7          	jalr	-1038(ra) # 8001164 <lcd_delay_1ms>
     LCD_Write_Bus((int)dat);
- 8001592:	4545                	li	a0,17
- 8001594:	00000097          	auipc	ra,0x0
- 8001598:	da8080e7          	jalr	-600(ra) # 800133c <LCD_Write_Bus>
+ 800157a:	4545                	li	a0,17
+ 800157c:	00000097          	auipc	ra,0x0
+ 8001580:	da8080e7          	jalr	-600(ra) # 8001324 <LCD_Write_Bus>
 	
 
 	LCD_WR_REG(0x11); 	//SLPOUT
 	LCD_Wait_On_Queue();
- 800159c:	00000097          	auipc	ra,0x0
- 80015a0:	d70080e7          	jalr	-656(ra) # 800130c <LCD_Wait_On_Queue>
+ 8001584:	00000097          	auipc	ra,0x0
+ 8001588:	d70080e7          	jalr	-656(ra) # 80012f4 <LCD_Wait_On_Queue>
 	lcd_delay_1ms(100);
- 80015a4:	06400513          	li	a0,100
- 80015a8:	00000097          	auipc	ra,0x0
- 80015ac:	bd4080e7          	jalr	-1068(ra) # 800117c <lcd_delay_1ms>
+ 800158c:	06400513          	li	a0,100
+ 8001590:	00000097          	auipc	ra,0x0
+ 8001594:	bd4080e7          	jalr	-1068(ra) # 8001164 <lcd_delay_1ms>
 
 	if(lcd_conf.inverted) LCD_WR_REG(0x22); 
- 80015b0:	00144783          	lbu	a5,1(s0)
+ 8001598:	00144783          	lbu	a5,1(s0)
     LCD_Write_Bus((int)dat);
- 80015b4:	02200513          	li	a0,34
+ 800159c:	02200513          	li	a0,34
 	if(lcd_conf.inverted) LCD_WR_REG(0x22); 
- 80015b8:	e399                	bnez	a5,80015be <Lcd_Init+0xea>
+ 80015a0:	e399                	bnez	a5,80015a6 <Lcd_Init+0xea>
     LCD_Write_Bus((int)dat);
- 80015ba:	02100513          	li	a0,33
+ 80015a2:	02100513          	li	a0,33
+ 80015a6:	00000097          	auipc	ra,0x0
+ 80015aa:	d7e080e7          	jalr	-642(ra) # 8001324 <LCD_Write_Bus>
+ 80015ae:	0b100513          	li	a0,177
+ 80015b2:	00000097          	auipc	ra,0x0
+ 80015b6:	d72080e7          	jalr	-654(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80015ba:	10500513          	li	a0,261
  80015be:	00000097          	auipc	ra,0x0
- 80015c2:	d7e080e7          	jalr	-642(ra) # 800133c <LCD_Write_Bus>
- 80015c6:	0b100513          	li	a0,177
+ 80015c2:	d66080e7          	jalr	-666(ra) # 8001324 <LCD_Write_Bus>
+ 80015c6:	13a00513          	li	a0,314
  80015ca:	00000097          	auipc	ra,0x0
- 80015ce:	d72080e7          	jalr	-654(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 80015d2:	10500513          	li	a0,261
+ 80015ce:	d5a080e7          	jalr	-678(ra) # 8001324 <LCD_Write_Bus>
+ 80015d2:	13a00513          	li	a0,314
  80015d6:	00000097          	auipc	ra,0x0
- 80015da:	d66080e7          	jalr	-666(ra) # 800133c <LCD_Write_Bus>
- 80015de:	13a00513          	li	a0,314
+ 80015da:	d4e080e7          	jalr	-690(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80015de:	0b200513          	li	a0,178
  80015e2:	00000097          	auipc	ra,0x0
- 80015e6:	d5a080e7          	jalr	-678(ra) # 800133c <LCD_Write_Bus>
- 80015ea:	13a00513          	li	a0,314
+ 80015e6:	d42080e7          	jalr	-702(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80015ea:	10500513          	li	a0,261
  80015ee:	00000097          	auipc	ra,0x0
- 80015f2:	d4e080e7          	jalr	-690(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 80015f6:	0b200513          	li	a0,178
+ 80015f2:	d36080e7          	jalr	-714(ra) # 8001324 <LCD_Write_Bus>
+ 80015f6:	13a00513          	li	a0,314
  80015fa:	00000097          	auipc	ra,0x0
- 80015fe:	d42080e7          	jalr	-702(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 8001602:	10500513          	li	a0,261
+ 80015fe:	d2a080e7          	jalr	-726(ra) # 8001324 <LCD_Write_Bus>
+ 8001602:	13a00513          	li	a0,314
  8001606:	00000097          	auipc	ra,0x0
- 800160a:	d36080e7          	jalr	-714(ra) # 800133c <LCD_Write_Bus>
- 800160e:	13a00513          	li	a0,314
- 8001612:	00000097          	auipc	ra,0x0
- 8001616:	d2a080e7          	jalr	-726(ra) # 800133c <LCD_Write_Bus>
- 800161a:	13a00513          	li	a0,314
- 800161e:	00000097          	auipc	ra,0x0
- 8001622:	d1e080e7          	jalr	-738(ra) # 800133c <LCD_Write_Bus>
+ 800160a:	d1e080e7          	jalr	-738(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 8001626:	0b300513          	li	a0,179
- 800162a:	00000097          	auipc	ra,0x0
- 800162e:	d12080e7          	jalr	-750(ra) # 800133c <LCD_Write_Bus>
+ 800160e:	0b300513          	li	a0,179
+ 8001612:	00000097          	auipc	ra,0x0
+ 8001616:	d12080e7          	jalr	-750(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001632:	10500513          	li	a0,261
+ 800161a:	10500513          	li	a0,261
+ 800161e:	00000097          	auipc	ra,0x0
+ 8001622:	d06080e7          	jalr	-762(ra) # 8001324 <LCD_Write_Bus>
+ 8001626:	13a00513          	li	a0,314
+ 800162a:	00000097          	auipc	ra,0x0
+ 800162e:	cfa080e7          	jalr	-774(ra) # 8001324 <LCD_Write_Bus>
+ 8001632:	13a00513          	li	a0,314
  8001636:	00000097          	auipc	ra,0x0
- 800163a:	d06080e7          	jalr	-762(ra) # 800133c <LCD_Write_Bus>
- 800163e:	13a00513          	li	a0,314
+ 800163a:	cee080e7          	jalr	-786(ra) # 8001324 <LCD_Write_Bus>
+ 800163e:	10500513          	li	a0,261
  8001642:	00000097          	auipc	ra,0x0
- 8001646:	cfa080e7          	jalr	-774(ra) # 800133c <LCD_Write_Bus>
+ 8001646:	ce2080e7          	jalr	-798(ra) # 8001324 <LCD_Write_Bus>
  800164a:	13a00513          	li	a0,314
  800164e:	00000097          	auipc	ra,0x0
- 8001652:	cee080e7          	jalr	-786(ra) # 800133c <LCD_Write_Bus>
- 8001656:	10500513          	li	a0,261
+ 8001652:	cd6080e7          	jalr	-810(ra) # 8001324 <LCD_Write_Bus>
+ 8001656:	13a00513          	li	a0,314
  800165a:	00000097          	auipc	ra,0x0
- 800165e:	ce2080e7          	jalr	-798(ra) # 800133c <LCD_Write_Bus>
- 8001662:	13a00513          	li	a0,314
+ 800165e:	cca080e7          	jalr	-822(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 8001662:	0b400513          	li	a0,180
  8001666:	00000097          	auipc	ra,0x0
- 800166a:	cd6080e7          	jalr	-810(ra) # 800133c <LCD_Write_Bus>
- 800166e:	13a00513          	li	a0,314
+ 800166a:	cbe080e7          	jalr	-834(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 800166e:	10300513          	li	a0,259
  8001672:	00000097          	auipc	ra,0x0
- 8001676:	cca080e7          	jalr	-822(ra) # 800133c <LCD_Write_Bus>
+ 8001676:	cb2080e7          	jalr	-846(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 800167a:	0b400513          	li	a0,180
+ 800167a:	0c000513          	li	a0,192
  800167e:	00000097          	auipc	ra,0x0
- 8001682:	cbe080e7          	jalr	-834(ra) # 800133c <LCD_Write_Bus>
+ 8001682:	ca6080e7          	jalr	-858(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001686:	10300513          	li	a0,259
+ 8001686:	16200513          	li	a0,354
  800168a:	00000097          	auipc	ra,0x0
- 800168e:	cb2080e7          	jalr	-846(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 8001692:	0c000513          	li	a0,192
+ 800168e:	c9a080e7          	jalr	-870(ra) # 8001324 <LCD_Write_Bus>
+ 8001692:	10200513          	li	a0,258
  8001696:	00000097          	auipc	ra,0x0
- 800169a:	ca6080e7          	jalr	-858(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800169e:	16200513          	li	a0,354
+ 800169a:	c8e080e7          	jalr	-882(ra) # 8001324 <LCD_Write_Bus>
+ 800169e:	10400513          	li	a0,260
  80016a2:	00000097          	auipc	ra,0x0
- 80016a6:	c9a080e7          	jalr	-870(ra) # 800133c <LCD_Write_Bus>
- 80016aa:	10200513          	li	a0,258
+ 80016a6:	c82080e7          	jalr	-894(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80016aa:	0c100513          	li	a0,193
  80016ae:	00000097          	auipc	ra,0x0
- 80016b2:	c8e080e7          	jalr	-882(ra) # 800133c <LCD_Write_Bus>
- 80016b6:	10400513          	li	a0,260
+ 80016b2:	c76080e7          	jalr	-906(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80016b6:	1c000513          	li	a0,448
  80016ba:	00000097          	auipc	ra,0x0
- 80016be:	c82080e7          	jalr	-894(ra) # 800133c <LCD_Write_Bus>
+ 80016be:	c6a080e7          	jalr	-918(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 80016c2:	0c100513          	li	a0,193
+ 80016c2:	0c200513          	li	a0,194
  80016c6:	00000097          	auipc	ra,0x0
- 80016ca:	c76080e7          	jalr	-906(ra) # 800133c <LCD_Write_Bus>
+ 80016ca:	c5e080e7          	jalr	-930(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 80016ce:	1c000513          	li	a0,448
+ 80016ce:	10d00513          	li	a0,269
  80016d2:	00000097          	auipc	ra,0x0
- 80016d6:	c6a080e7          	jalr	-918(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 80016da:	0c200513          	li	a0,194
+ 80016d6:	c52080e7          	jalr	-942(ra) # 8001324 <LCD_Write_Bus>
+ 80016da:	10000513          	li	a0,256
  80016de:	00000097          	auipc	ra,0x0
- 80016e2:	c5e080e7          	jalr	-930(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 80016e6:	10d00513          	li	a0,269
+ 80016e2:	c46080e7          	jalr	-954(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80016e6:	0c300513          	li	a0,195
  80016ea:	00000097          	auipc	ra,0x0
- 80016ee:	c52080e7          	jalr	-942(ra) # 800133c <LCD_Write_Bus>
- 80016f2:	10000513          	li	a0,256
+ 80016ee:	c3a080e7          	jalr	-966(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80016f2:	18d00513          	li	a0,397
  80016f6:	00000097          	auipc	ra,0x0
- 80016fa:	c46080e7          	jalr	-954(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 80016fe:	0c300513          	li	a0,195
+ 80016fa:	c2e080e7          	jalr	-978(ra) # 8001324 <LCD_Write_Bus>
+ 80016fe:	16a00513          	li	a0,362
  8001702:	00000097          	auipc	ra,0x0
- 8001706:	c3a080e7          	jalr	-966(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800170a:	18d00513          	li	a0,397
+ 8001706:	c22080e7          	jalr	-990(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 800170a:	0c400513          	li	a0,196
  800170e:	00000097          	auipc	ra,0x0
- 8001712:	c2e080e7          	jalr	-978(ra) # 800133c <LCD_Write_Bus>
- 8001716:	16a00513          	li	a0,362
+ 8001712:	c16080e7          	jalr	-1002(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 8001716:	18d00513          	li	a0,397
  800171a:	00000097          	auipc	ra,0x0
- 800171e:	c22080e7          	jalr	-990(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 8001722:	0c400513          	li	a0,196
+ 800171e:	c0a080e7          	jalr	-1014(ra) # 8001324 <LCD_Write_Bus>
+ 8001722:	1ee00513          	li	a0,494
  8001726:	00000097          	auipc	ra,0x0
- 800172a:	c16080e7          	jalr	-1002(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800172e:	18d00513          	li	a0,397
+ 800172a:	bfe080e7          	jalr	-1026(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 800172e:	0c500513          	li	a0,197
  8001732:	00000097          	auipc	ra,0x0
- 8001736:	c0a080e7          	jalr	-1014(ra) # 800133c <LCD_Write_Bus>
- 800173a:	1ee00513          	li	a0,494
+ 8001736:	bf2080e7          	jalr	-1038(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 800173a:	10e00513          	li	a0,270
  800173e:	00000097          	auipc	ra,0x0
- 8001742:	bfe080e7          	jalr	-1026(ra) # 800133c <LCD_Write_Bus>
+ 8001742:	be6080e7          	jalr	-1050(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 8001746:	0c500513          	li	a0,197
+ 8001746:	0e000513          	li	a0,224
  800174a:	00000097          	auipc	ra,0x0
- 800174e:	bf2080e7          	jalr	-1038(ra) # 800133c <LCD_Write_Bus>
+ 800174e:	bda080e7          	jalr	-1062(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001752:	10e00513          	li	a0,270
+ 8001752:	11000513          	li	a0,272
  8001756:	00000097          	auipc	ra,0x0
- 800175a:	be6080e7          	jalr	-1050(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 800175e:	0e000513          	li	a0,224
+ 800175a:	bce080e7          	jalr	-1074(ra) # 8001324 <LCD_Write_Bus>
+ 800175e:	10e00513          	li	a0,270
  8001762:	00000097          	auipc	ra,0x0
- 8001766:	bda080e7          	jalr	-1062(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800176a:	11000513          	li	a0,272
+ 8001766:	bc2080e7          	jalr	-1086(ra) # 8001324 <LCD_Write_Bus>
+ 800176a:	10200513          	li	a0,258
  800176e:	00000097          	auipc	ra,0x0
- 8001772:	bce080e7          	jalr	-1074(ra) # 800133c <LCD_Write_Bus>
- 8001776:	10e00513          	li	a0,270
+ 8001772:	bb6080e7          	jalr	-1098(ra) # 8001324 <LCD_Write_Bus>
+ 8001776:	10300513          	li	a0,259
  800177a:	00000097          	auipc	ra,0x0
- 800177e:	bc2080e7          	jalr	-1086(ra) # 800133c <LCD_Write_Bus>
- 8001782:	10200513          	li	a0,258
+ 800177e:	baa080e7          	jalr	-1110(ra) # 8001324 <LCD_Write_Bus>
+ 8001782:	10e00513          	li	a0,270
  8001786:	00000097          	auipc	ra,0x0
- 800178a:	bb6080e7          	jalr	-1098(ra) # 800133c <LCD_Write_Bus>
- 800178e:	10300513          	li	a0,259
+ 800178a:	b9e080e7          	jalr	-1122(ra) # 8001324 <LCD_Write_Bus>
+ 800178e:	10700513          	li	a0,263
  8001792:	00000097          	auipc	ra,0x0
- 8001796:	baa080e7          	jalr	-1110(ra) # 800133c <LCD_Write_Bus>
- 800179a:	10e00513          	li	a0,270
+ 8001796:	b92080e7          	jalr	-1134(ra) # 8001324 <LCD_Write_Bus>
+ 800179a:	10200513          	li	a0,258
  800179e:	00000097          	auipc	ra,0x0
- 80017a2:	b9e080e7          	jalr	-1122(ra) # 800133c <LCD_Write_Bus>
+ 80017a2:	b86080e7          	jalr	-1146(ra) # 8001324 <LCD_Write_Bus>
  80017a6:	10700513          	li	a0,263
  80017aa:	00000097          	auipc	ra,0x0
- 80017ae:	b92080e7          	jalr	-1134(ra) # 800133c <LCD_Write_Bus>
- 80017b2:	10200513          	li	a0,258
+ 80017ae:	b7a080e7          	jalr	-1158(ra) # 8001324 <LCD_Write_Bus>
+ 80017b2:	10a00513          	li	a0,266
  80017b6:	00000097          	auipc	ra,0x0
- 80017ba:	b86080e7          	jalr	-1146(ra) # 800133c <LCD_Write_Bus>
- 80017be:	10700513          	li	a0,263
+ 80017ba:	b6e080e7          	jalr	-1170(ra) # 8001324 <LCD_Write_Bus>
+ 80017be:	11200513          	li	a0,274
  80017c2:	00000097          	auipc	ra,0x0
- 80017c6:	b7a080e7          	jalr	-1158(ra) # 800133c <LCD_Write_Bus>
- 80017ca:	10a00513          	li	a0,266
+ 80017c6:	b62080e7          	jalr	-1182(ra) # 8001324 <LCD_Write_Bus>
+ 80017ca:	12700513          	li	a0,295
  80017ce:	00000097          	auipc	ra,0x0
- 80017d2:	b6e080e7          	jalr	-1170(ra) # 800133c <LCD_Write_Bus>
- 80017d6:	11200513          	li	a0,274
+ 80017d2:	b56080e7          	jalr	-1194(ra) # 8001324 <LCD_Write_Bus>
+ 80017d6:	13700513          	li	a0,311
  80017da:	00000097          	auipc	ra,0x0
- 80017de:	b62080e7          	jalr	-1182(ra) # 800133c <LCD_Write_Bus>
- 80017e2:	12700513          	li	a0,295
+ 80017de:	b4a080e7          	jalr	-1206(ra) # 8001324 <LCD_Write_Bus>
+ 80017e2:	10000513          	li	a0,256
  80017e6:	00000097          	auipc	ra,0x0
- 80017ea:	b56080e7          	jalr	-1194(ra) # 800133c <LCD_Write_Bus>
- 80017ee:	13700513          	li	a0,311
+ 80017ea:	b3e080e7          	jalr	-1218(ra) # 8001324 <LCD_Write_Bus>
+ 80017ee:	10d00513          	li	a0,269
  80017f2:	00000097          	auipc	ra,0x0
- 80017f6:	b4a080e7          	jalr	-1206(ra) # 800133c <LCD_Write_Bus>
- 80017fa:	10000513          	li	a0,256
+ 80017f6:	b32080e7          	jalr	-1230(ra) # 8001324 <LCD_Write_Bus>
+ 80017fa:	10e00513          	li	a0,270
  80017fe:	00000097          	auipc	ra,0x0
- 8001802:	b3e080e7          	jalr	-1218(ra) # 800133c <LCD_Write_Bus>
- 8001806:	10d00513          	li	a0,269
+ 8001802:	b26080e7          	jalr	-1242(ra) # 8001324 <LCD_Write_Bus>
+ 8001806:	11000513          	li	a0,272
  800180a:	00000097          	auipc	ra,0x0
- 800180e:	b32080e7          	jalr	-1230(ra) # 800133c <LCD_Write_Bus>
- 8001812:	10e00513          	li	a0,270
+ 800180e:	b1a080e7          	jalr	-1254(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 8001812:	0e100513          	li	a0,225
  8001816:	00000097          	auipc	ra,0x0
- 800181a:	b26080e7          	jalr	-1242(ra) # 800133c <LCD_Write_Bus>
+ 800181a:	b0e080e7          	jalr	-1266(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
  800181e:	11000513          	li	a0,272
  8001822:	00000097          	auipc	ra,0x0
- 8001826:	b1a080e7          	jalr	-1254(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 800182a:	0e100513          	li	a0,225
+ 8001826:	b02080e7          	jalr	-1278(ra) # 8001324 <LCD_Write_Bus>
+ 800182a:	10e00513          	li	a0,270
  800182e:	00000097          	auipc	ra,0x0
- 8001832:	b0e080e7          	jalr	-1266(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 8001836:	11000513          	li	a0,272
+ 8001832:	af6080e7          	jalr	-1290(ra) # 8001324 <LCD_Write_Bus>
+ 8001836:	10300513          	li	a0,259
  800183a:	00000097          	auipc	ra,0x0
- 800183e:	b02080e7          	jalr	-1278(ra) # 800133c <LCD_Write_Bus>
- 8001842:	10e00513          	li	a0,270
+ 800183e:	aea080e7          	jalr	-1302(ra) # 8001324 <LCD_Write_Bus>
+ 8001842:	10300513          	li	a0,259
  8001846:	00000097          	auipc	ra,0x0
- 800184a:	af6080e7          	jalr	-1290(ra) # 800133c <LCD_Write_Bus>
- 800184e:	10300513          	li	a0,259
+ 800184a:	ade080e7          	jalr	-1314(ra) # 8001324 <LCD_Write_Bus>
+ 800184e:	10f00513          	li	a0,271
  8001852:	00000097          	auipc	ra,0x0
- 8001856:	aea080e7          	jalr	-1302(ra) # 800133c <LCD_Write_Bus>
- 800185a:	10300513          	li	a0,259
+ 8001856:	ad2080e7          	jalr	-1326(ra) # 8001324 <LCD_Write_Bus>
+ 800185a:	10600513          	li	a0,262
  800185e:	00000097          	auipc	ra,0x0
- 8001862:	ade080e7          	jalr	-1314(ra) # 800133c <LCD_Write_Bus>
- 8001866:	10f00513          	li	a0,271
+ 8001862:	ac6080e7          	jalr	-1338(ra) # 8001324 <LCD_Write_Bus>
+ 8001866:	10200513          	li	a0,258
  800186a:	00000097          	auipc	ra,0x0
- 800186e:	ad2080e7          	jalr	-1326(ra) # 800133c <LCD_Write_Bus>
- 8001872:	10600513          	li	a0,262
+ 800186e:	aba080e7          	jalr	-1350(ra) # 8001324 <LCD_Write_Bus>
+ 8001872:	10800513          	li	a0,264
  8001876:	00000097          	auipc	ra,0x0
- 800187a:	ac6080e7          	jalr	-1338(ra) # 800133c <LCD_Write_Bus>
- 800187e:	10200513          	li	a0,258
+ 800187a:	aae080e7          	jalr	-1362(ra) # 8001324 <LCD_Write_Bus>
+ 800187e:	10a00513          	li	a0,266
  8001882:	00000097          	auipc	ra,0x0
- 8001886:	aba080e7          	jalr	-1350(ra) # 800133c <LCD_Write_Bus>
- 800188a:	10800513          	li	a0,264
+ 8001886:	aa2080e7          	jalr	-1374(ra) # 8001324 <LCD_Write_Bus>
+ 800188a:	11300513          	li	a0,275
  800188e:	00000097          	auipc	ra,0x0
- 8001892:	aae080e7          	jalr	-1362(ra) # 800133c <LCD_Write_Bus>
- 8001896:	10a00513          	li	a0,266
+ 8001892:	a96080e7          	jalr	-1386(ra) # 8001324 <LCD_Write_Bus>
+ 8001896:	12600513          	li	a0,294
  800189a:	00000097          	auipc	ra,0x0
- 800189e:	aa2080e7          	jalr	-1374(ra) # 800133c <LCD_Write_Bus>
- 80018a2:	11300513          	li	a0,275
+ 800189e:	a8a080e7          	jalr	-1398(ra) # 8001324 <LCD_Write_Bus>
+ 80018a2:	13600513          	li	a0,310
  80018a6:	00000097          	auipc	ra,0x0
- 80018aa:	a96080e7          	jalr	-1386(ra) # 800133c <LCD_Write_Bus>
- 80018ae:	12600513          	li	a0,294
+ 80018aa:	a7e080e7          	jalr	-1410(ra) # 8001324 <LCD_Write_Bus>
+ 80018ae:	10000513          	li	a0,256
  80018b2:	00000097          	auipc	ra,0x0
- 80018b6:	a8a080e7          	jalr	-1398(ra) # 800133c <LCD_Write_Bus>
- 80018ba:	13600513          	li	a0,310
+ 80018b6:	a72080e7          	jalr	-1422(ra) # 8001324 <LCD_Write_Bus>
+ 80018ba:	10d00513          	li	a0,269
  80018be:	00000097          	auipc	ra,0x0
- 80018c2:	a7e080e7          	jalr	-1410(ra) # 800133c <LCD_Write_Bus>
- 80018c6:	10000513          	li	a0,256
+ 80018c2:	a66080e7          	jalr	-1434(ra) # 8001324 <LCD_Write_Bus>
+ 80018c6:	10e00513          	li	a0,270
  80018ca:	00000097          	auipc	ra,0x0
- 80018ce:	a72080e7          	jalr	-1422(ra) # 800133c <LCD_Write_Bus>
- 80018d2:	10d00513          	li	a0,269
+ 80018ce:	a5a080e7          	jalr	-1446(ra) # 8001324 <LCD_Write_Bus>
+ 80018d2:	11000513          	li	a0,272
  80018d6:	00000097          	auipc	ra,0x0
- 80018da:	a66080e7          	jalr	-1434(ra) # 800133c <LCD_Write_Bus>
- 80018de:	10e00513          	li	a0,270
+ 80018da:	a4e080e7          	jalr	-1458(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus((int)dat);
+ 80018de:	03a00513          	li	a0,58
  80018e2:	00000097          	auipc	ra,0x0
- 80018e6:	a5a080e7          	jalr	-1446(ra) # 800133c <LCD_Write_Bus>
- 80018ea:	11000513          	li	a0,272
+ 80018e6:	a42080e7          	jalr	-1470(ra) # 8001324 <LCD_Write_Bus>
+    LCD_Write_Bus(((int)dat)+(1<<8));
+ 80018ea:	10500513          	li	a0,261
  80018ee:	00000097          	auipc	ra,0x0
- 80018f2:	a4e080e7          	jalr	-1458(ra) # 800133c <LCD_Write_Bus>
+ 80018f2:	a36080e7          	jalr	-1482(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus((int)dat);
- 80018f6:	03a00513          	li	a0,58
+ 80018f6:	03600513          	li	a0,54
  80018fa:	00000097          	auipc	ra,0x0
- 80018fe:	a42080e7          	jalr	-1470(ra) # 800133c <LCD_Write_Bus>
+ 80018fe:	a2a080e7          	jalr	-1494(ra) # 8001324 <LCD_Write_Bus>
     LCD_Write_Bus(((int)dat)+(1<<8));
- 8001902:	10500513          	li	a0,261
+ 8001902:	17800513          	li	a0,376
  8001906:	00000097          	auipc	ra,0x0
- 800190a:	a36080e7          	jalr	-1482(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus((int)dat);
- 800190e:	03600513          	li	a0,54
- 8001912:	00000097          	auipc	ra,0x0
- 8001916:	a2a080e7          	jalr	-1494(ra) # 800133c <LCD_Write_Bus>
-    LCD_Write_Bus(((int)dat)+(1<<8));
- 800191a:	17800513          	li	a0,376
- 800191e:	00000097          	auipc	ra,0x0
- 8001922:	a1e080e7          	jalr	-1506(ra) # 800133c <LCD_Write_Bus>
+ 800190a:	a1e080e7          	jalr	-1506(ra) # 8001324 <LCD_Write_Bus>
 	LCD_WR_DATA8(0x05);//16 bit color
 
 	LCD_WR_REG(0x36); //Data access mode
 	LCD_WR_DATA8(0x78);
 	LCD_WR_REG(0x29); 
 } 
- 8001926:	4422                	lw	s0,8(sp)
- 8001928:	40b2                	lw	ra,12(sp)
+ 800190e:	4422                	lw	s0,8(sp)
+ 8001910:	40b2                	lw	ra,12(sp)
     LCD_Write_Bus((int)dat);
- 800192a:	02900513          	li	a0,41
+ 8001912:	02900513          	li	a0,41
 } 
- 800192e:	0141                	addi	sp,sp,16
+ 8001916:	0141                	addi	sp,sp,16
     LCD_Write_Bus((int)dat);
- 8001930:	00000317          	auipc	t1,0x0
- 8001934:	a0c30067          	jr	-1524(t1) # 800133c <LCD_Write_Bus>
+ 8001918:	00000317          	auipc	t1,0x0
+ 800191c:	a0c30067          	jr	-1524(t1) # 8001324 <LCD_Write_Bus>
 
-08001938 <LCD_Clear>:
+08001920 <LCD_Clear>:
   Function description: LCD clear screen function
   Entry data: Color: color to set as background
   Return value: None
 */
 void LCD_Clear(u16 Color)
 {
- 8001938:	1141                	addi	sp,sp,-16
- 800193a:	c04a                	sw	s2,0(sp)
+ 8001920:	1141                	addi	sp,sp,-16
+ 8001922:	c04a                	sw	s2,0(sp)
 	u16 i,j;  	
 	LCD_Address_Set(0,0,LCD_W-1,LCD_H-1);
- 800193c:	04f00693          	li	a3,79
+ 8001924:	04f00693          	li	a3,79
 {
- 8001940:	892a                	mv	s2,a0
+ 8001928:	892a                	mv	s2,a0
 	LCD_Address_Set(0,0,LCD_W-1,LCD_H-1);
- 8001942:	09f00613          	li	a2,159
- 8001946:	4581                	li	a1,0
- 8001948:	4501                	li	a0,0
+ 800192a:	09f00613          	li	a2,159
+ 800192e:	4581                	li	a1,0
+ 8001930:	4501                	li	a0,0
 {
- 800194a:	c226                	sw	s1,4(sp)
- 800194c:	c606                	sw	ra,12(sp)
- 800194e:	c422                	sw	s0,8(sp)
+ 8001932:	c226                	sw	s1,4(sp)
+ 8001934:	c606                	sw	ra,12(sp)
+ 8001936:	c422                	sw	s0,8(sp)
 	LCD_Address_Set(0,0,LCD_W-1,LCD_H-1);
- 8001950:	0a000493          	li	s1,160
- 8001954:	00000097          	auipc	ra,0x0
- 8001958:	a6c080e7          	jalr	-1428(ra) # 80013c0 <LCD_Address_Set>
+ 8001938:	0a000493          	li	s1,160
+ 800193c:	00000097          	auipc	ra,0x0
+ 8001940:	a6c080e7          	jalr	-1428(ra) # 80013a8 <LCD_Address_Set>
 {
- 800195c:	05000413          	li	s0,80
+ 8001944:	05000413          	li	s0,80
     for(i=0;i<LCD_W;i++)
 	  {
 			for (j=0;j<LCD_H;j++)
 				{
 					LCD_WR_DATA(Color);
- 8001960:	854a                	mv	a0,s2
- 8001962:	147d                	addi	s0,s0,-1
- 8001964:	00000097          	auipc	ra,0x0
- 8001968:	a30080e7          	jalr	-1488(ra) # 8001394 <LCD_WR_DATA>
+ 8001948:	854a                	mv	a0,s2
+ 800194a:	147d                	addi	s0,s0,-1
+ 800194c:	00000097          	auipc	ra,0x0
+ 8001950:	a30080e7          	jalr	-1488(ra) # 800137c <LCD_WR_DATA>
 			for (j=0;j<LCD_H;j++)
- 800196c:	f875                	bnez	s0,8001960 <LCD_Clear+0x28>
- 800196e:	14fd                	addi	s1,s1,-1
+ 8001954:	f875                	bnez	s0,8001948 <LCD_Clear+0x28>
+ 8001956:	14fd                	addi	s1,s1,-1
     for(i=0;i<LCD_W;i++)
- 8001970:	f4f5                	bnez	s1,800195c <LCD_Clear+0x24>
+ 8001958:	f4f5                	bnez	s1,8001944 <LCD_Clear+0x24>
 				}
 	  }
 }
- 8001972:	40b2                	lw	ra,12(sp)
- 8001974:	4422                	lw	s0,8(sp)
- 8001976:	4492                	lw	s1,4(sp)
- 8001978:	4902                	lw	s2,0(sp)
- 800197a:	0141                	addi	sp,sp,16
- 800197c:	8082                	ret
+ 800195a:	40b2                	lw	ra,12(sp)
+ 800195c:	4422                	lw	s0,8(sp)
+ 800195e:	4492                	lw	s1,4(sp)
+ 8001960:	4902                	lw	s2,0(sp)
+ 8001962:	0141                	addi	sp,sp,16
+ 8001964:	8082                	ret
 
-0800197e <LCD_DrawPoint>:
+08001966 <LCD_DrawPoint>:
   Function description: LCD display Chinese characters
   Entry data: x, y: start coordinates
   Return value: None
 */
 void LCD_DrawPoint(u16 x,u16 y,u16 color)
 {
- 800197e:	1141                	addi	sp,sp,-16
- 8001980:	c422                	sw	s0,8(sp)
+ 8001966:	1141                	addi	sp,sp,-16
+ 8001968:	c422                	sw	s0,8(sp)
 	LCD_Address_Set(x,y,x,y); // Set cursor position
- 8001982:	86ae                	mv	a3,a1
+ 800196a:	86ae                	mv	a3,a1
 {
- 8001984:	8432                	mv	s0,a2
+ 800196c:	8432                	mv	s0,a2
 	LCD_Address_Set(x,y,x,y); // Set cursor position
- 8001986:	862a                	mv	a2,a0
+ 800196e:	862a                	mv	a2,a0
 {
- 8001988:	c606                	sw	ra,12(sp)
+ 8001970:	c606                	sw	ra,12(sp)
 	LCD_Address_Set(x,y,x,y); // Set cursor position
- 800198a:	00000097          	auipc	ra,0x0
- 800198e:	a36080e7          	jalr	-1482(ra) # 80013c0 <LCD_Address_Set>
+ 8001972:	00000097          	auipc	ra,0x0
+ 8001976:	a36080e7          	jalr	-1482(ra) # 80013a8 <LCD_Address_Set>
 	LCD_WR_DATA(color);
- 8001992:	8522                	mv	a0,s0
+ 800197a:	8522                	mv	a0,s0
 } 
- 8001994:	4422                	lw	s0,8(sp)
- 8001996:	40b2                	lw	ra,12(sp)
- 8001998:	0141                	addi	sp,sp,16
+ 800197c:	4422                	lw	s0,8(sp)
+ 800197e:	40b2                	lw	ra,12(sp)
+ 8001980:	0141                	addi	sp,sp,16
 	LCD_WR_DATA(color);
- 800199a:	00000317          	auipc	t1,0x0
- 800199e:	9fa30067          	jr	-1542(t1) # 8001394 <LCD_WR_DATA>
+ 8001982:	00000317          	auipc	t1,0x0
+ 8001986:	9fa30067          	jr	-1542(t1) # 800137c <LCD_WR_DATA>
 
-080019a2 <LCD_ShowChar>:
+0800198a <LCD_ShowChar>:
 void LCD_ShowChar(u16 x,u16 y,u8 num,u8 mode,u16 color)
 {
     u8 temp;
     u8 pos,t;
 	  u16 x0=x;    
     if(x>LCD_W-8 || y>LCD_H-16)return;	// Outside of display area
- 80019a2:	09800793          	li	a5,152
- 80019a6:	0ca7ec63          	bltu	a5,a0,8001a7e <LCD_ShowChar+0xdc>
+ 800198a:	09800793          	li	a5,152
+ 800198e:	0ca7ec63          	bltu	a5,a0,8001a66 <LCD_ShowChar+0xdc>
 {
- 80019aa:	7179                	addi	sp,sp,-48
- 80019ac:	d422                	sw	s0,40(sp)
- 80019ae:	d606                	sw	ra,44(sp)
- 80019b0:	d226                	sw	s1,36(sp)
- 80019b2:	d04a                	sw	s2,32(sp)
- 80019b4:	ce4e                	sw	s3,28(sp)
- 80019b6:	cc52                	sw	s4,24(sp)
- 80019b8:	ca56                	sw	s5,20(sp)
- 80019ba:	c85a                	sw	s6,16(sp)
- 80019bc:	c65e                	sw	s7,12(sp)
+ 8001992:	7179                	addi	sp,sp,-48
+ 8001994:	d422                	sw	s0,40(sp)
+ 8001996:	d606                	sw	ra,44(sp)
+ 8001998:	d226                	sw	s1,36(sp)
+ 800199a:	d04a                	sw	s2,32(sp)
+ 800199c:	ce4e                	sw	s3,28(sp)
+ 800199e:	cc52                	sw	s4,24(sp)
+ 80019a0:	ca56                	sw	s5,20(sp)
+ 80019a2:	c85a                	sw	s6,16(sp)
+ 80019a4:	c65e                	sw	s7,12(sp)
     if(x>LCD_W-8 || y>LCD_H-16)return;	// Outside of display area
- 80019be:	04000793          	li	a5,64
- 80019c2:	842e                	mv	s0,a1
- 80019c4:	06b7e663          	bltu	a5,a1,8001a30 <LCD_ShowChar+0x8e>
- 80019c8:	84b2                	mv	s1,a2
+ 80019a6:	04000793          	li	a5,64
+ 80019aa:	842e                	mv	s0,a1
+ 80019ac:	06b7e663          	bltu	a5,a1,8001a18 <LCD_ShowChar+0x8e>
+ 80019b0:	84b2                	mv	s1,a2
 	num=num-' ';                        // Get offset value
- 80019ca:	1481                	addi	s1,s1,-32
- 80019cc:	0ff4f493          	andi	s1,s1,255
- 80019d0:	8ab6                	mv	s5,a3
+ 80019b2:	1481                	addi	s1,s1,-32
+ 80019b4:	0ff4f493          	andi	s1,s1,255
+ 80019b8:	8ab6                	mv	s5,a3
 	LCD_Address_Set(x,y,x+8-1,y+16-1);  // Set cursor position
- 80019d2:	00750613          	addi	a2,a0,7 # 40011007 <GPIOB+0x407>
- 80019d6:	00f58693          	addi	a3,a1,15 # a00f <__stack_size+0x900f>
- 80019da:	00449913          	slli	s2,s1,0x4
- 80019de:	080004b7          	lui	s1,0x8000
- 80019e2:	89aa                	mv	s3,a0
- 80019e4:	8a3a                	mv	s4,a4
- 80019e6:	2b448493          	addi	s1,s1,692 # 80002b4 <asc2_1608>
- 80019ea:	00000097          	auipc	ra,0x0
- 80019ee:	9d6080e7          	jalr	-1578(ra) # 80013c0 <LCD_Address_Set>
+ 80019ba:	00750613          	addi	a2,a0,7 # 40011007 <GPIOB+0x407>
+ 80019be:	00f58693          	addi	a3,a1,15 # a00f <__stack_size+0x900f>
+ 80019c2:	00449913          	slli	s2,s1,0x4
+ 80019c6:	080004b7          	lui	s1,0x8000
+ 80019ca:	89aa                	mv	s3,a0
+ 80019cc:	8a3a                	mv	s4,a4
+ 80019ce:	2b448493          	addi	s1,s1,692 # 80002b4 <asc2_1608>
+ 80019d2:	00000097          	auipc	ra,0x0
+ 80019d6:	9d6080e7          	jalr	-1578(ra) # 80013a8 <LCD_Address_Set>
 	if(!mode)
- 80019f2:	040a9a63          	bnez	s5,8001a46 <LCD_ShowChar+0xa4>
- 80019f6:	4981                	li	s3,0
+ 80019da:	040a9a63          	bnez	s5,8001a2e <LCD_ShowChar+0xa4>
+ 80019de:	4981                	li	s3,0
 		{ 
 			temp=asc2_1608[(u16)num*16+pos];  // load 1608 font character
 			for(t=0;t<8;t++)
 		    {                 
 		        if(temp&0x01)LCD_WR_DATA(color);
 				else LCD_WR_DATA(BACK_COLOR);
- 80019f8:	20000bb7          	lui	s7,0x20000
+ 80019e0:	20000bb7          	lui	s7,0x20000
 		for(pos=0;pos<16;pos++)
- 80019fc:	4b41                	li	s6,16
+ 80019e4:	4b41                	li	s6,16
 			temp=asc2_1608[(u16)num*16+pos];  // load 1608 font character
- 80019fe:	013907b3          	add	a5,s2,s3
- 8001a02:	97a6                	add	a5,a5,s1
- 8001a04:	0007ca83          	lbu	s5,0(a5)
- 8001a08:	4421                	li	s0,8
+ 80019e6:	013907b3          	add	a5,s2,s3
+ 80019ea:	97a6                	add	a5,a5,s1
+ 80019ec:	0007ca83          	lbu	s5,0(a5)
+ 80019f0:	4421                	li	s0,8
 		        if(temp&0x01)LCD_WR_DATA(color);
- 8001a0a:	001af793          	andi	a5,s5,1
- 8001a0e:	8552                	mv	a0,s4
- 8001a10:	e399                	bnez	a5,8001a16 <LCD_ShowChar+0x74>
+ 80019f2:	001af793          	andi	a5,s5,1
+ 80019f6:	8552                	mv	a0,s4
+ 80019f8:	e399                	bnez	a5,80019fe <LCD_ShowChar+0x74>
 				else LCD_WR_DATA(BACK_COLOR);
- 8001a12:	524ba503          	lw	a0,1316(s7) # 20000524 <BACK_COLOR>
- 8001a16:	147d                	addi	s0,s0,-1
- 8001a18:	0ff47413          	andi	s0,s0,255
- 8001a1c:	00000097          	auipc	ra,0x0
- 8001a20:	978080e7          	jalr	-1672(ra) # 8001394 <LCD_WR_DATA>
+ 80019fa:	524ba503          	lw	a0,1316(s7) # 20000524 <BACK_COLOR>
+ 80019fe:	147d                	addi	s0,s0,-1
+ 8001a00:	0ff47413          	andi	s0,s0,255
+ 8001a04:	00000097          	auipc	ra,0x0
+ 8001a08:	978080e7          	jalr	-1672(ra) # 800137c <LCD_WR_DATA>
 				temp>>=1;
- 8001a24:	001ada93          	srli	s5,s5,0x1
+ 8001a0c:	001ada93          	srli	s5,s5,0x1
 			for(t=0;t<8;t++)
- 8001a28:	f06d                	bnez	s0,8001a0a <LCD_ShowChar+0x68>
+ 8001a10:	f06d                	bnez	s0,80019f2 <LCD_ShowChar+0x68>
 				x++;
 		    }
 			x=x0;
 			y++;
- 8001a2a:	0985                	addi	s3,s3,1
+ 8001a12:	0985                	addi	s3,s3,1
 		for(pos=0;pos<16;pos++)
- 8001a2c:	fd6999e3          	bne	s3,s6,80019fe <LCD_ShowChar+0x5c>
+ 8001a14:	fd6999e3          	bne	s3,s6,80019e6 <LCD_ShowChar+0x5c>
 		        if(temp&0x01)LCD_DrawPoint(x+t,y+pos,color); //Draw a dot
 		        temp>>=1; 
 		    }
 		}
 	}   	   	 	  
 }
- 8001a30:	50b2                	lw	ra,44(sp)
- 8001a32:	5422                	lw	s0,40(sp)
- 8001a34:	5492                	lw	s1,36(sp)
- 8001a36:	5902                	lw	s2,32(sp)
- 8001a38:	49f2                	lw	s3,28(sp)
- 8001a3a:	4a62                	lw	s4,24(sp)
- 8001a3c:	4ad2                	lw	s5,20(sp)
- 8001a3e:	4b42                	lw	s6,16(sp)
- 8001a40:	4bb2                	lw	s7,12(sp)
- 8001a42:	6145                	addi	sp,sp,48
- 8001a44:	8082                	ret
- 8001a46:	94ca                	add	s1,s1,s2
- 8001a48:	01040b13          	addi	s6,s0,16
+ 8001a18:	50b2                	lw	ra,44(sp)
+ 8001a1a:	5422                	lw	s0,40(sp)
+ 8001a1c:	5492                	lw	s1,36(sp)
+ 8001a1e:	5902                	lw	s2,32(sp)
+ 8001a20:	49f2                	lw	s3,28(sp)
+ 8001a22:	4a62                	lw	s4,24(sp)
+ 8001a24:	4ad2                	lw	s5,20(sp)
+ 8001a26:	4b42                	lw	s6,16(sp)
+ 8001a28:	4bb2                	lw	s7,12(sp)
+ 8001a2a:	6145                	addi	sp,sp,48
+ 8001a2c:	8082                	ret
+ 8001a2e:	94ca                	add	s1,s1,s2
+ 8001a30:	01040b13          	addi	s6,s0,16
 			for(t=0;t<8;t++)
- 8001a4c:	4ba1                	li	s7,8
+ 8001a34:	4ba1                	li	s7,8
 		    temp=asc2_1608[(u16)num*16+pos]; // load 1608 font character
- 8001a4e:	0004ca83          	lbu	s5,0(s1)
- 8001a52:	4901                	li	s2,0
+ 8001a36:	0004ca83          	lbu	s5,0(s1)
+ 8001a3a:	4901                	li	s2,0
 		        if(temp&0x01)LCD_DrawPoint(x+t,y+pos,color); //Draw a dot
- 8001a54:	001af793          	andi	a5,s5,1
- 8001a58:	cb89                	beqz	a5,8001a6a <LCD_ShowChar+0xc8>
- 8001a5a:	8652                	mv	a2,s4
- 8001a5c:	85a2                	mv	a1,s0
- 8001a5e:	01298533          	add	a0,s3,s2
- 8001a62:	00000097          	auipc	ra,0x0
- 8001a66:	f1c080e7          	jalr	-228(ra) # 800197e <LCD_DrawPoint>
+ 8001a3c:	001af793          	andi	a5,s5,1
+ 8001a40:	cb89                	beqz	a5,8001a52 <LCD_ShowChar+0xc8>
+ 8001a42:	8652                	mv	a2,s4
+ 8001a44:	85a2                	mv	a1,s0
+ 8001a46:	01298533          	add	a0,s3,s2
+ 8001a4a:	00000097          	auipc	ra,0x0
+ 8001a4e:	f1c080e7          	jalr	-228(ra) # 8001966 <LCD_DrawPoint>
 		        temp>>=1; 
- 8001a6a:	0905                	addi	s2,s2,1
- 8001a6c:	001ada93          	srli	s5,s5,0x1
+ 8001a52:	0905                	addi	s2,s2,1
+ 8001a54:	001ada93          	srli	s5,s5,0x1
 			for(t=0;t<8;t++)
- 8001a70:	ff7912e3          	bne	s2,s7,8001a54 <LCD_ShowChar+0xb2>
- 8001a74:	0405                	addi	s0,s0,1
- 8001a76:	0485                	addi	s1,s1,1
+ 8001a58:	ff7912e3          	bne	s2,s7,8001a3c <LCD_ShowChar+0xb2>
+ 8001a5c:	0405                	addi	s0,s0,1
+ 8001a5e:	0485                	addi	s1,s1,1
 		for(pos=0;pos<16;pos++)
- 8001a78:	fd641be3          	bne	s0,s6,8001a4e <LCD_ShowChar+0xac>
- 8001a7c:	bf55                	j	8001a30 <LCD_ShowChar+0x8e>
- 8001a7e:	8082                	ret
+ 8001a60:	fd641be3          	bne	s0,s6,8001a36 <LCD_ShowChar+0xac>
+ 8001a64:	bf55                	j	8001a18 <LCD_ShowChar+0x8e>
+ 8001a66:	8082                	ret
 
-08001a80 <LCD_ShowStr>:
+08001a68 <LCD_ShowStr>:
   Return value: None
   Note: If character position is outside the display area
         the character is not displayed
 */
 void LCD_ShowStr(u16 x,u16 y,const u8 *p,u16 color, u8 mode)
 {         
- 8001a80:	1101                	addi	sp,sp,-32
- 8001a82:	cc22                	sw	s0,24(sp)
- 8001a84:	ca26                	sw	s1,20(sp)
- 8001a86:	c84a                	sw	s2,16(sp)
- 8001a88:	c64e                	sw	s3,12(sp)
- 8001a8a:	c452                	sw	s4,8(sp)
- 8001a8c:	c256                	sw	s5,4(sp)
- 8001a8e:	c05a                	sw	s6,0(sp)
- 8001a90:	ce06                	sw	ra,28(sp)
- 8001a92:	842a                	mv	s0,a0
- 8001a94:	84ae                	mv	s1,a1
- 8001a96:	8932                	mv	s2,a2
- 8001a98:	89b6                	mv	s3,a3
- 8001a9a:	8a3a                	mv	s4,a4
+ 8001a68:	1101                	addi	sp,sp,-32
+ 8001a6a:	cc22                	sw	s0,24(sp)
+ 8001a6c:	ca26                	sw	s1,20(sp)
+ 8001a6e:	c84a                	sw	s2,16(sp)
+ 8001a70:	c64e                	sw	s3,12(sp)
+ 8001a72:	c452                	sw	s4,8(sp)
+ 8001a74:	c256                	sw	s5,4(sp)
+ 8001a76:	c05a                	sw	s6,0(sp)
+ 8001a78:	ce06                	sw	ra,28(sp)
+ 8001a7a:	842a                	mv	s0,a0
+ 8001a7c:	84ae                	mv	s1,a1
+ 8001a7e:	8932                	mv	s2,a2
+ 8001a80:	89b6                	mv	s3,a3
+ 8001a82:	8a3a                	mv	s4,a4
     while(*p!='\0')
     {       
         if(x>LCD_W-8){x=0;y+=16;}
- 8001a9c:	09800a93          	li	s5,152
+ 8001a84:	09800a93          	li	s5,152
         if(y>LCD_H-16) break;
- 8001aa0:	04000b13          	li	s6,64
+ 8001a88:	04000b13          	li	s6,64
     while(*p!='\0')
- 8001aa4:	00094603          	lbu	a2,0(s2)
- 8001aa8:	ea19                	bnez	a2,8001abe <LCD_ShowStr+0x3e>
+ 8001a8c:	00094603          	lbu	a2,0(s2)
+ 8001a90:	ea19                	bnez	a2,8001aa6 <LCD_ShowStr+0x3e>
         LCD_ShowChar(x,y,*p,mode,color);
         x+=8;
         p++;
     }  
 }
- 8001aaa:	40f2                	lw	ra,28(sp)
- 8001aac:	4462                	lw	s0,24(sp)
- 8001aae:	44d2                	lw	s1,20(sp)
- 8001ab0:	4942                	lw	s2,16(sp)
- 8001ab2:	49b2                	lw	s3,12(sp)
- 8001ab4:	4a22                	lw	s4,8(sp)
- 8001ab6:	4a92                	lw	s5,4(sp)
- 8001ab8:	4b02                	lw	s6,0(sp)
- 8001aba:	6105                	addi	sp,sp,32
- 8001abc:	8082                	ret
+ 8001a92:	40f2                	lw	ra,28(sp)
+ 8001a94:	4462                	lw	s0,24(sp)
+ 8001a96:	44d2                	lw	s1,20(sp)
+ 8001a98:	4942                	lw	s2,16(sp)
+ 8001a9a:	49b2                	lw	s3,12(sp)
+ 8001a9c:	4a22                	lw	s4,8(sp)
+ 8001a9e:	4a92                	lw	s5,4(sp)
+ 8001aa0:	4b02                	lw	s6,0(sp)
+ 8001aa2:	6105                	addi	sp,sp,32
+ 8001aa4:	8082                	ret
         if(x>LCD_W-8){x=0;y+=16;}
- 8001abe:	008af463          	bgeu	s5,s0,8001ac6 <LCD_ShowStr+0x46>
- 8001ac2:	04c1                	addi	s1,s1,16
- 8001ac4:	4401                	li	s0,0
+ 8001aa6:	008af463          	bgeu	s5,s0,8001aae <LCD_ShowStr+0x46>
+ 8001aaa:	04c1                	addi	s1,s1,16
+ 8001aac:	4401                	li	s0,0
         if(y>LCD_H-16) break;
- 8001ac6:	fe9b62e3          	bltu	s6,s1,8001aaa <LCD_ShowStr+0x2a>
+ 8001aae:	fe9b62e3          	bltu	s6,s1,8001a92 <LCD_ShowStr+0x2a>
         LCD_ShowChar(x,y,*p,mode,color);
- 8001aca:	8522                	mv	a0,s0
- 8001acc:	874e                	mv	a4,s3
- 8001ace:	86d2                	mv	a3,s4
- 8001ad0:	85a6                	mv	a1,s1
- 8001ad2:	00000097          	auipc	ra,0x0
- 8001ad6:	ed0080e7          	jalr	-304(ra) # 80019a2 <LCD_ShowChar>
+ 8001ab2:	8522                	mv	a0,s0
+ 8001ab4:	874e                	mv	a4,s3
+ 8001ab6:	86d2                	mv	a3,s4
+ 8001ab8:	85a6                	mv	a1,s1
+ 8001aba:	00000097          	auipc	ra,0x0
+ 8001abe:	ed0080e7          	jalr	-304(ra) # 800198a <LCD_ShowChar>
         x+=8;
- 8001ada:	0421                	addi	s0,s0,8
+ 8001ac2:	0421                	addi	s0,s0,8
         p++;
- 8001adc:	0905                	addi	s2,s2,1
- 8001ade:	b7d9                	j	8001aa4 <LCD_ShowStr+0x24>
+ 8001ac4:	0905                	addi	s2,s2,1
+ 8001ac6:	b7d9                	j	8001a8c <LCD_ShowStr+0x24>
 	...
 
 08001b00 <trap_entry>:
@@ -7731,7 +7729,7 @@ trap_entry:
      // Call the function
   call handle_trap
  8001b3c:	fffff097          	auipc	ra,0xfffff
- 8001b40:	5da080e7          	jalr	1498(ra) # 8001116 <handle_trap>
+ 8001b40:	5c2080e7          	jalr	1474(ra) # 80010fe <handle_trap>
 
   // Restore the MEPC/Mstatus/Msubm reg
   RESTORE_EPC_STATUS
@@ -8523,7 +8521,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8001f74:	40a90833          	sub	a6,s2,a0
  8001f78:	10e6eb63          	bltu	a3,a4,800208e <__divdf3+0x1b4>
  8001f7c:	fffff697          	auipc	a3,0xfffff
- 8001f80:	a9c68693          	addi	a3,a3,-1380 # 8000a18 <asc2_1608+0x764>
+ 8001f80:	a8468693          	addi	a3,a3,-1404 # 8000a00 <asc2_1608+0x74c>
  8001f84:	070a                	slli	a4,a4,0x2
  8001f86:	9736                	add	a4,a4,a3
  8001f88:	4318                	lw	a4,0(a4)
@@ -9024,7 +9022,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8002558:	00150813          	addi	a6,a0,1
  800255c:	10d5e663          	bltu	a1,a3,8002668 <__muldf3+0x1a4>
  8002560:	ffffe597          	auipc	a1,0xffffe
- 8002564:	4f458593          	addi	a1,a1,1268 # 8000a54 <asc2_1608+0x7a0>
+ 8002564:	4dc58593          	addi	a1,a1,1244 # 8000a3c <asc2_1608+0x788>
  8002568:	068a                	slli	a3,a3,0x2
  800256a:	96ae                	add	a3,a3,a1
  800256c:	4294                	lw	a3,0(a3)
@@ -9540,7 +9538,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8002b34:	8f1d                	sub	a4,a4,a5
  8002b36:	00f557b3          	srl	a5,a0,a5
  8002b3a:	ffffe517          	auipc	a0,0xffffe
- 8002b3e:	f5650513          	addi	a0,a0,-170 # 8000a90 <__clz_tab>
+ 8002b3e:	f3e50513          	addi	a0,a0,-194 # 8000a78 <__clz_tab>
  8002b42:	97aa                	add	a5,a5,a0
  8002b44:	0007c503          	lbu	a0,0(a5) # 10000 <__stack_size+0xf000>
  8002b48:	40a70533          	sub	a0,a4,a0
@@ -9578,7 +9576,7 @@ flow:   la t0,fcounter      // Prepar to read the internal counter...
  8002b96:	9782                	jalr	a5
  8002b98:	8522                	mv	a0,s0
  8002b9a:	ffffe097          	auipc	ra,0xffffe
- 8002b9e:	44e080e7          	jalr	1102(ra) # 8000fe8 <_exit>
+ 8002b9e:	436080e7          	jalr	1078(ra) # 8000fd0 <_exit>
 
 08002ba2 <__libc_fini_array>:
  8002ba2:	1141                	addi	sp,sp,-16

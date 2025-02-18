@@ -29,17 +29,17 @@ int main(void)
 
             if ((key = keyscan()) >= 0)
             {                            // ...Any key pressed?
-                if (lookUpTbl[key] == 4) // Om tangent 0 är tryckt
+                if (lookUpTbl[key] == 0) // Om tangent 0 är tryckt
                 {
-                    LCD_Clear(BLACK);                                      // Rensar displayen
-                    LCD_ShowStr(1, 1, "Battery full", WHITE, TRANSPARENT); // Skriver texten rött
-                    LCD_ShowChar(75, 50, 126, 0, GREEN);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_Clear(BLACK);                                   // Rensar displayen
+                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowChar(75, 50, 126, 0, RED);                  // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
                 }
-                else if (lookUpTbl[key] == 3)
+                else if (lookUpTbl[key] == 1)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
-                    LCD_ShowChar(75, 50, 127, 0, WHITE);
+                    LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
+                    LCD_ShowChar(75, 50, 127, 0, RED);
                 }
                 else if (lookUpTbl[key] == 2)
                 {
@@ -47,17 +47,17 @@ int main(void)
                     LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
                     LCD_ShowChar(75, 50, 128, 0, YELLOW);
                 }
-                else if (lookUpTbl[key] == 1)
+                else if (lookUpTbl[key] == 3)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(15, 1, "Low Battery, charging          25%", WHITE, TRANSPARENT);
-                    LCD_ShowChar(75, 50, 129, 0, RED);
+                    LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
+                    LCD_ShowChar(75, 50, 129, 0, GREEN);
                 }
-                else if (lookUpTbl[key] == 0)
+                else if (lookUpTbl[key] == 4)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(32, 1, "Low Battery charge now plz            0%", RED, TRANSPARENT);
-                    LCD_ShowChar(75, 50, 130, 0, RED);
+                    LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
+                    LCD_ShowChar(75, 50, 130, 0, GREEN);
                 }
                 else if (lookUpTbl[key] != 0 || 1 || 2 || 3 || 4)
                 {
