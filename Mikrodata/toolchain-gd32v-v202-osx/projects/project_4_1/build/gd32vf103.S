@@ -691,7 +691,7 @@ int main(void)
  8000bfc:	08001cb7          	lui	s9,0x8001
                     LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
  8000c00:	08001d37          	lui	s10,0x8001
-                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
  8000c04:	08001db7          	lui	s11,0x8001
         LCD_WR_Queue(); // Manage LCD com queue!
  8000c08:	00000097          	auipc	ra,0x0
@@ -716,19 +716,19 @@ int main(void)
  8000c3e:	97ba                	add	a5,a5,a4
  8000c40:	fc07a403          	lw	s0,-64(a5)
  8000c44:	e831                	bnez	s0,8000c98 <main+0x120>
-                    LCD_Clear(BLACK);                                   // Rensar displayen
+                    LCD_Clear(BLACK);                                    // Rensar displayen
  8000c46:	4501                	li	a0,0
  8000c48:	00001097          	auipc	ra,0x1
  8000c4c:	cd8080e7          	jalr	-808(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
  8000c50:	4705                	li	a4,1
  8000c52:	86a6                	mv	a3,s1
  8000c54:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
  8000c58:	4585                	li	a1,1
- 8000c5a:	4505                	li	a0,1
+ 8000c5a:	453d                	li	a0,15
  8000c5c:	00001097          	auipc	ra,0x1
  8000c60:	e0c080e7          	jalr	-500(ra) # 8001a68 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 126, 0, RED);                  // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_ShowChar(75, 50, 126, 0, RED);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
  8000c64:	8726                	mv	a4,s1
  8000c66:	4681                	li	a3,0
  8000c68:	07e00613          	li	a2,126
@@ -5614,7 +5614,7 @@ int main(void)
  8000bfc:	08001cb7          	lui	s9,0x8001
                     LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
  8000c00:	08001d37          	lui	s10,0x8001
-                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
  8000c04:	08001db7          	lui	s11,0x8001
         LCD_WR_Queue(); // Manage LCD com queue!
  8000c08:	00000097          	auipc	ra,0x0
@@ -5639,19 +5639,19 @@ int main(void)
  8000c3e:	97ba                	add	a5,a5,a4
  8000c40:	fc07a403          	lw	s0,-64(a5)
  8000c44:	e831                	bnez	s0,8000c98 <main+0x120>
-                    LCD_Clear(BLACK);                                   // Rensar displayen
+                    LCD_Clear(BLACK);                                    // Rensar displayen
  8000c46:	4501                	li	a0,0
  8000c48:	00001097          	auipc	ra,0x1
  8000c4c:	cd8080e7          	jalr	-808(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
  8000c50:	4705                	li	a4,1
  8000c52:	86a6                	mv	a3,s1
  8000c54:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
  8000c58:	4585                	li	a1,1
- 8000c5a:	4505                	li	a0,1
+ 8000c5a:	453d                	li	a0,15
  8000c5c:	00001097          	auipc	ra,0x1
  8000c60:	e0c080e7          	jalr	-500(ra) # 8001a68 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 126, 0, RED);                  // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_ShowChar(75, 50, 126, 0, RED);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
  8000c64:	8726                	mv	a4,s1
  8000c66:	4681                	li	a3,0
  8000c68:	07e00613          	li	a2,126

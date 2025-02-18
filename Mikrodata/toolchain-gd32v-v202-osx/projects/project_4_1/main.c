@@ -31,9 +31,9 @@ int main(void)
             {                            // ...Any key pressed?
                 if (lookUpTbl[key] == 0) // Om tangent 0 är tryckt
                 {
-                    LCD_Clear(BLACK);                                   // Rensar displayen
-                    LCD_ShowStr(1, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
-                    LCD_ShowChar(75, 50, 126, 0, RED);                  // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_Clear(BLACK);                                    // Rensar displayen
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowChar(75, 50, 126, 0, RED);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
                 }
                 else if (lookUpTbl[key] == 1)
                 {
