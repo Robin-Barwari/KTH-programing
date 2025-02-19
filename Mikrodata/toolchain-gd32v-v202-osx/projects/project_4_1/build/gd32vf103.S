@@ -583,8 +583,8 @@ Disassembly of section .text:
  80009a8:	2020 2020 2020 2020 3031 2530 0000 0000             100%....
  80009b8:	7257 6e6f 2067 7562 7474 6e6f 2020 2020     Wrong button    
  80009c8:	2020 7020 6572 7373 6465 2020 2020 2020        pressed      
- 80009d8:	2020 2020 2020 5020 6572 7373 6120 796e            Press any
- 80009e8:	6b20 7965 2020 2020 2020 6220 7465 6577      key       betwe
+ 80009d8:	2020 2020 2020 5420 7972 6120 6420 6669            Try a dif
+ 80009e8:	6566 6572 746e 6b20 7965 6220 7465 6577     ferent key betwe
  80009f8:	6e65 3020 342d 0000 1a08 0000 1958 0000     en 0-4......X...
  8000a08:	195e 0000 1958 0000 19fa 0000 1958 0000     ^...X.......X...
  8000a18:	195e 0000 1a08 0000 1a08 0000 19fa 0000     ^...............
@@ -672,7 +672,7 @@ int main(void)
                 else if (lookUpTbl[key] != 0 || 1 || 2 || 3 || 4)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
  8000bde:	6a41                	lui	s4,0x10
     LCD_Clear(BLACK);
  8000be0:	00001097          	auipc	ra,0x1
@@ -680,18 +680,18 @@ int main(void)
     int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
  8000be8:	4981                	li	s3,0
  8000bea:	5afd                	li	s5,-1
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
  8000bec:	800a0493          	addi	s1,s4,-2048 # f800 <__stack_size+0xe800>
  8000bf0:	08001b37          	lui	s6,0x8001
                     LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
  8000bf4:	08001bb7          	lui	s7,0x8001
                     LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
  8000bf8:	08001c37          	lui	s8,0x8001
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+                    LCD_ShowStr(15, 1, "Battery charging          50%", YELLOW, TRANSPARENT);
  8000bfc:	08001cb7          	lui	s9,0x8001
                     LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
  8000c00:	08001d37          	lui	s10,0x8001
-                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT);
  8000c04:	08001db7          	lui	s11,0x8001
         LCD_WR_Queue(); // Manage LCD com queue!
  8000c08:	00000097          	auipc	ra,0x0
@@ -716,11 +716,11 @@ int main(void)
  8000c3e:	97ba                	add	a5,a5,a4
  8000c40:	fc07a403          	lw	s0,-64(a5)
  8000c44:	e831                	bnez	s0,8000c98 <main+0x120>
-                    LCD_Clear(BLACK);                                    // Rensar displayen
+                    LCD_Clear(BLACK);
  8000c46:	4501                	li	a0,0
  8000c48:	00001097          	auipc	ra,0x1
  8000c4c:	cd8080e7          	jalr	-808(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT);
  8000c50:	4705                	li	a4,1
  8000c52:	86a6                	mv	a3,s1
  8000c54:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
@@ -728,7 +728,7 @@ int main(void)
  8000c5a:	453d                	li	a0,15
  8000c5c:	00001097          	auipc	ra,0x1
  8000c60:	e0c080e7          	jalr	-500(ra) # 8001a68 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 126, 0, RED);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_ShowChar(75, 50, 126, 0, RED);
  8000c64:	8726                	mv	a4,s1
  8000c66:	4681                	li	a3,0
  8000c68:	07e00613          	li	a2,126
@@ -785,9 +785,9 @@ int main(void)
  8000ccc:	4501                	li	a0,0
  8000cce:	00001097          	auipc	ra,0x1
  8000cd2:	c52080e7          	jalr	-942(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+                    LCD_ShowStr(15, 1, "Battery charging          50%", YELLOW, TRANSPARENT);
  8000cd6:	4705                	li	a4,1
- 8000cd8:	fffa0693          	addi	a3,s4,-1
+ 8000cd8:	fe0a0693          	addi	a3,s4,-32
  8000cdc:	958c8613          	addi	a2,s9,-1704 # 8000958 <asc2_1608+0x6a4>
  8000ce0:	4585                	li	a1,1
  8000ce2:	453d                	li	a0,15
@@ -843,7 +843,7 @@ int main(void)
                     LCD_Clear(BLACK);
  8000d5e:	00001097          	auipc	ra,0x1
  8000d62:	bc2080e7          	jalr	-1086(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
  8000d66:	4705                	li	a4,1
  8000d68:	86a6                	mv	a3,s1
  8000d6a:	9b8b0613          	addi	a2,s6,-1608 # 80009b8 <asc2_1608+0x704>
@@ -5506,8 +5506,8 @@ Disassembly of section .text:
  80009a8:	2020 2020 2020 2020 3031 2530 0000 0000             100%....
  80009b8:	7257 6e6f 2067 7562 7474 6e6f 2020 2020     Wrong button    
  80009c8:	2020 7020 6572 7373 6465 2020 2020 2020        pressed      
- 80009d8:	2020 2020 2020 5020 6572 7373 6120 796e            Press any
- 80009e8:	6b20 7965 2020 2020 2020 6220 7465 6577      key       betwe
+ 80009d8:	2020 2020 2020 5420 7972 6120 6420 6669            Try a dif
+ 80009e8:	6566 6572 746e 6b20 7965 6220 7465 6577     ferent key betwe
  80009f8:	6e65 3020 342d 0000 1a08 0000 1958 0000     en 0-4......X...
  8000a08:	195e 0000 1958 0000 19fa 0000 1958 0000     ^...X.......X...
  8000a18:	195e 0000 1a08 0000 1a08 0000 19fa 0000     ^...............
@@ -5595,7 +5595,7 @@ int main(void)
                 else if (lookUpTbl[key] != 0 || 1 || 2 || 3 || 4)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
  8000bde:	6a41                	lui	s4,0x10
     LCD_Clear(BLACK);
  8000be0:	00001097          	auipc	ra,0x1
@@ -5603,18 +5603,18 @@ int main(void)
     int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0;
  8000be8:	4981                	li	s3,0
  8000bea:	5afd                	li	s5,-1
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
  8000bec:	800a0493          	addi	s1,s4,-2048 # f800 <__stack_size+0xe800>
  8000bf0:	08001b37          	lui	s6,0x8001
                     LCD_ShowStr(32, 1, "Battery full            100%", GREEN, TRANSPARENT);
  8000bf4:	08001bb7          	lui	s7,0x8001
                     LCD_ShowStr(15, 1, "Battery charging          75%", WHITE, TRANSPARENT);
  8000bf8:	08001c37          	lui	s8,0x8001
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+                    LCD_ShowStr(15, 1, "Battery charging          50%", YELLOW, TRANSPARENT);
  8000bfc:	08001cb7          	lui	s9,0x8001
                     LCD_ShowStr(15, 1, "Battery low          25%", RED, TRANSPARENT);
  8000c00:	08001d37          	lui	s10,0x8001
-                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT);
  8000c04:	08001db7          	lui	s11,0x8001
         LCD_WR_Queue(); // Manage LCD com queue!
  8000c08:	00000097          	auipc	ra,0x0
@@ -5639,11 +5639,11 @@ int main(void)
  8000c3e:	97ba                	add	a5,a5,a4
  8000c40:	fc07a403          	lw	s0,-64(a5)
  8000c44:	e831                	bnez	s0,8000c98 <main+0x120>
-                    LCD_Clear(BLACK);                                    // Rensar displayen
+                    LCD_Clear(BLACK);
  8000c46:	4501                	li	a0,0
  8000c48:	00001097          	auipc	ra,0x1
  8000c4c:	cd8080e7          	jalr	-808(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT);
  8000c50:	4705                	li	a4,1
  8000c52:	86a6                	mv	a3,s1
  8000c54:	930d8613          	addi	a2,s11,-1744 # 8000930 <asc2_1608+0x67c>
@@ -5651,7 +5651,7 @@ int main(void)
  8000c5a:	453d                	li	a0,15
  8000c5c:	00001097          	auipc	ra,0x1
  8000c60:	e0c080e7          	jalr	-500(ra) # 8001a68 <LCD_ShowStr>
-                    LCD_ShowChar(75, 50, 126, 0, RED);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_ShowChar(75, 50, 126, 0, RED);
  8000c64:	8726                	mv	a4,s1
  8000c66:	4681                	li	a3,0
  8000c68:	07e00613          	li	a2,126
@@ -5708,9 +5708,9 @@ int main(void)
  8000ccc:	4501                	li	a0,0
  8000cce:	00001097          	auipc	ra,0x1
  8000cd2:	c52080e7          	jalr	-942(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+                    LCD_ShowStr(15, 1, "Battery charging          50%", YELLOW, TRANSPARENT);
  8000cd6:	4705                	li	a4,1
- 8000cd8:	fffa0693          	addi	a3,s4,-1
+ 8000cd8:	fe0a0693          	addi	a3,s4,-32
  8000cdc:	958c8613          	addi	a2,s9,-1704 # 8000958 <asc2_1608+0x6a4>
  8000ce0:	4585                	li	a1,1
  8000ce2:	453d                	li	a0,15
@@ -5766,7 +5766,7 @@ int main(void)
                     LCD_Clear(BLACK);
  8000d5e:	00001097          	auipc	ra,0x1
  8000d62:	bc2080e7          	jalr	-1086(ra) # 8001920 <LCD_Clear>
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
  8000d66:	4705                	li	a4,1
  8000d68:	86a6                	mv	a3,s1
  8000d6a:	9b8b0613          	addi	a2,s6,-1608 # 80009b8 <asc2_1608+0x704>

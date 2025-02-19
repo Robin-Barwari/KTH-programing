@@ -31,9 +31,9 @@ int main(void)
             {                            // ...Any key pressed?
                 if (lookUpTbl[key] == 0) // Om tangent 0 är tryckt
                 {
-                    LCD_Clear(BLACK);                                    // Rensar displayen
-                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT); // Skriver texten rött
-                    LCD_ShowChar(75, 50, 126, 0, RED);                   // x-värde 10, y-värde 50, värdet 126 visar antalets batterinivå. Alltså 0%
+                    LCD_Clear(BLACK);
+                    LCD_ShowStr(15, 1, "CHARGE ASAP", RED, TRANSPARENT);
+                    LCD_ShowChar(75, 50, 126, 0, RED);
                 }
                 else if (lookUpTbl[key] == 1)
                 {
@@ -44,7 +44,7 @@ int main(void)
                 else if (lookUpTbl[key] == 2)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(15, 1, "Battery charging          50%", WHITE, TRANSPARENT);
+                    LCD_ShowStr(15, 1, "Battery charging          50%", YELLOW, TRANSPARENT);
                     LCD_ShowChar(75, 50, 128, 0, YELLOW);
                 }
                 else if (lookUpTbl[key] == 3)
@@ -62,7 +62,7 @@ int main(void)
                 else if (lookUpTbl[key] != 0 || 1 || 2 || 3 || 4)
                 {
                     LCD_Clear(BLACK);
-                    LCD_ShowStr(1, 1, "Wrong button       pressed             Press any key       between 0-4", RED, TRANSPARENT);
+                    LCD_ShowStr(1, 1, "Wrong button       pressed             Try a different key between 0-4", RED, TRANSPARENT);
                 }
 
                 if (pKey == key)
