@@ -45,15 +45,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  13 .debug_ranges 00000f80  00000000  00000000  00021cb8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0000e39d  00000000  00000000  00022c38  2**0
+ 14 .debug_line   0000e39b  00000000  00000000  00022c38  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00003996  00000000  00000000  00030fd5  2**0
+ 15 .debug_str    00003996  00000000  00000000  00030fd3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0003496b  2**0
+ 16 .comment      00000028  00000000  00000000  00034969  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  00034993  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  00034991  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00001a28  00000000  00000000  000349c0  2**2
+ 18 .debug_frame  00001a28  00000000  00000000  000349bc  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -633,8 +633,8 @@ Disassembly of section .text:
  80008c8:	0000 0000 000f 0000 000c 0000 0009 0000     ................
  80008d8:	0008 0000 0007 0000 000b 0000 0006 0000     ................
  80008e8:	0005 0000 0004 0000 000a 0000 0003 0000     ................
- 80008f8:	0002 0000 0001 0000 614c 6262 3520 312e     ........Labb 5.1
- 8000908:	0000 0000 24fc 0000 244c 0000 2452 0000     .....$..L$..R$..
+ 80008f8:	0002 0000 0001 0000 7250 6a6f 6365 5f74     ........Project_
+ 8000908:	5f35 0031 24fc 0000 244c 0000 2452 0000     5_1..$..L$..R$..
  8000918:	244c 0000 24ee 0000 244c 0000 2452 0000     L$...$..L$..R$..
  8000928:	24fc 0000 24fc 0000 24ee 0000 2452 0000     .$...$...$..R$..
  8000938:	2432 0000 2432 0000 2432 0000 2456 0000     2$..2$..2$..V$..
@@ -662,20 +662,20 @@ Disassembly of section .text:
  8000a74:	0808 0808 0808 0808 0808 0808 0808 0808     ................
 
 08000a84 <main>:
-     //rtc_interrupt_enable(RTC_INT_SECOND);
-     rtc_lwoff_wait();
-   }
+    rtc_lwoff_wait();
+  }
 }
 
-int main(void){
+int main(void)
+{
  8000a84:	7119                	addi	sp,sp,-128
-  int ms=0, s=0, key, pKey=-1, c=0, idle=0, rtc, hh, mm, ss;
-  int lookUpTbl[16]={13,14,0,15,12,9,8,7,11,6,5,4,10,3,2,1};
+  int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0, rtc, hh, mm, ss;
+  int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1};
  8000a86:	080015b7          	lui	a1,0x8001
  8000a8a:	04000613          	li	a2,64
  8000a8e:	8c058593          	addi	a1,a1,-1856 # 80008c0 <asc2_1608+0x5fc>
  8000a92:	850a                	mv	a0,sp
-int main(void){
+{
  8000a94:	de86                	sw	ra,124(sp)
  8000a96:	dca2                	sw	s0,120(sp)
  8000a98:	daa6                	sw	s1,116(sp)
@@ -689,31 +689,31 @@ int main(void){
  8000aa8:	c8ea                	sw	s10,80(sp)
  8000aaa:	d6ce                	sw	s3,108(sp)
  8000aac:	c6ee                	sw	s11,76(sp)
-  int lookUpTbl[16]={13,14,0,15,12,9,8,7,11,6,5,4,10,3,2,1};
+  int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1};
  8000aae:	00003097          	auipc	ra,0x3
  8000ab2:	b96080e7          	jalr	-1130(ra) # 8003644 <memcpy>
-  char digits[10][10]={"Zero ","One  ","Two  ","Three","Four ","Five ","Six  ","Seven","Eight","Nine "};
-  //char time[7]={0};
-  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;  
+  char digits[10][10] = {"Zero ", "One  ", "Two  ", "Three", "Four ", "Five ", "Six  ", "Seven", "Eight", "Nine "};
+  // char time[7]={0};
+  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;
   char msg[] = {"*"};
 
-  t5omsi();                               // Initialize timer5 1kHz
+  t5omsi();                // Initialize timer5 1kHz
  8000ab6:	00002097          	auipc	ra,0x2
  8000aba:	bb2080e7          	jalr	-1102(ra) # 8002668 <t5omsi>
-  colinit();                              // Initialize column toolbox
+  colinit();               // Initialize column toolbox
  8000abe:	00002097          	auipc	ra,0x2
  8000ac2:	bec080e7          	jalr	-1044(ra) # 80026aa <colinit>
-  l88init();                              // Initialize 8*8 led toolbox
+  l88init();               // Initialize 8*8 led toolbox
  8000ac6:	00002097          	auipc	ra,0x2
  8000aca:	c5c080e7          	jalr	-932(ra) # 8002722 <l88init>
-  keyinit();                              // Initialize keyboard toolbox
+  keyinit();               // Initialize keyboard toolbox
  8000ace:	00002097          	auipc	ra,0x2
  8000ad2:	cd0080e7          	jalr	-816(ra) # 800279e <keyinit>
-  ADC3powerUpInit(1);                     // Initialize ADC0, Ch3
+  ADC3powerUpInit(1);      // Initialize ADC0, Ch3
  8000ad6:	4505                	li	a0,1
  8000ad8:	00001097          	auipc	ra,0x1
  8000adc:	ca0080e7          	jalr	-864(ra) # 8001778 <ADC3powerUpInit>
-  Lcd_SetType(LCD_NORMAL);//NORMAL);                // or use LCD_INVERTED!
+  Lcd_SetType(LCD_NORMAL); // NORMAL);                // or use LCD_INVERTED!
  8000ae0:	4501                	li	a0,0
  8000ae2:	00001097          	auipc	ra,0x1
  8000ae6:	246080e7          	jalr	582(ra) # 8001d28 <Lcd_SetType>
@@ -724,7 +724,7 @@ int main(void){
  8000af2:	4501                	li	a0,0
  8000af4:	00001097          	auipc	ra,0x1
  8000af8:	6be080e7          	jalr	1726(ra) # 80021b2 <LCD_Clear>
-  LCD_ShowStr(10, 10, "Labb 5.1", WHITE, TRANSPARENT);
+  LCD_ShowStr(10, 10, "Project_5_1", WHITE, TRANSPARENT);
  8000afc:	6ac1                	lui	s5,0x10
  8000afe:	08001637          	lui	a2,0x8001
  8000b02:	fffa8693          	addi	a3,s5,-1 # ffff <__stack_size+0xefff>
@@ -734,74 +734,75 @@ int main(void){
  8000b0e:	4529                	li	a0,10
  8000b10:	00001097          	auipc	ra,0x1
  8000b14:	7ea080e7          	jalr	2026(ra) # 80022fa <LCD_ShowStr>
-  //rtcInit();                              // Initialize RTC
-  //rtc_counter_set(3600+60+1);
-  u0init(EI);                             // Initialize USART0 toolbox
+  // rtcInit();                              // Initialize RTC
+  // rtc_counter_set(3600+60+1);
+  u0init(EI); // Initialize USART0 toolbox
  8000b18:	4505                	li	a0,1
   {
-    idle++;                             // Manage Async events
-    LCD_WR_Queue();                     // Manage LCD com queue!
-    u0_TX_Queue();                      // Manage U(S)ART TX Queue!
-    
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    idle++;         // Manage Async events
+    LCD_WR_Queue(); // Manage LCD com queue!
+    u0_TX_Queue();  // Manage U(S)ART TX Queue!
+
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b1a:	400144b7          	lui	s1,0x40014
-  u0init(EI);                             // Initialize USART0 toolbox
+  u0init(EI); // Initialize USART0 toolbox
  8000b1e:	00002097          	auipc	ra,0x2
  8000b22:	8c4080e7          	jalr	-1852(ra) # 80023e2 <u0init>
-  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;  
+  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;
  8000b26:	4c01                	li	s8,0
-  eclic_global_interrupt_enable();        // !!! INTERRUPT ENABLED !!!
+  eclic_global_interrupt_enable(); // !!! INTERRUPT ENABLED !!!
  8000b28:	00000097          	auipc	ra,0x0
  8000b2c:	41a080e7          	jalr	1050(ra) # 8000f42 <eclic_global_interrupt_enable>
-  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;  
+  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;
  8000b30:	4b81                	li	s7,0
  8000b32:	4401                	li	s0,0
  8000b34:	4901                	li	s2,0
-  int ms=0, s=0, key, pKey=-1, c=0, idle=0, rtc, hh, mm, ss;
+  int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0, rtc, hh, mm, ss;
  8000b36:	4b01                	li	s6,0
  8000b38:	4a01                	li	s4,0
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b3a:	80048493          	addi	s1,s1,-2048 # 40013800 <GPIOB+0x2c00>
-    { // USART0 RX?
-      //l88mem(6,usart_data_receive(USART0)); // Yes: Retrive & display!
-      LCD_ShowChar(posX,30,usart_data_receive(USART0), OPAQUE, WHITE); 
+    {                                            // USART0 RX?
+      // l88mem(6,usart_data_receive(USART0)); // Yes: Retrive & display!
+      LCD_ShowChar(posX, 30, usart_data_receive(USART0), OPAQUE, WHITE);
  8000b3e:	1afd                	addi	s5,s5,-1
     }
-    if (t5expq()) {                     // Manage periodic tasks
-      l88row(colset());               // ...8*8LED and Keyboard
-      ms++;                           // ...One second heart beat
-      if (ms==1000){
+    if (t5expq())
+    {                   // Manage periodic tasks
+      l88row(colset()); // ...8*8LED and Keyboard
+      ms++;             // ...One second heart beat
+      if (ms == 1000)
  8000b40:	3e800c93          	li	s9,1000
         {
-          digit2 = lookUpTbl[key]; //Andra siffran läses
-          sum = digit1*16 + digit2; //Omvandlas
-          nrOfDig = 0;  //Återställs så att nytt tal kan skrivas
+          digit2 = lookUpTbl[key];    // Andra siffran läses
+          sum = digit1 * 16 + digit2; // Omvandlas
+          nrOfDig = 0;                // Återställs så att nytt tal kan skrivas
         }
-        if(sum >= MIN_ASCII && sum <= MAX_ASCII)  //Intervall från föreläsning Hex 20 -- 7E
+        if (sum >= MIN_ASCII && sum <= MAX_ASCII) // Intervall från föreläsning Hex 20 -- 7E
  8000b44:	05e00d13          	li	s10,94
-          posX += 8; //Mellanrum mellan tecknena
-          sum = 0; //Sum får värdet 0 vilket låter oss inför ett nytt tecken
+          posX += 8;                        // Mellanrum mellan tecknena
+          sum = 0;                          // Sum får värdet 0 vilket låter oss inför ett nytt tecken
         }
       }
-      l88mem(2,idle>>8);              // ...Performance monitor
-      l88mem(3,idle); idle=0;
+      l88mem(2, idle >> 8); // ...Performance monitor
+      l88mem(3, idle);
  8000b48:	4981                	li	s3,0
-    LCD_WR_Queue();                     // Manage LCD com queue!
+    LCD_WR_Queue(); // Manage LCD com queue!
  8000b4a:	00001097          	auipc	ra,0x1
  8000b4e:	f7a080e7          	jalr	-134(ra) # 8001ac4 <LCD_WR_Queue>
-    u0_TX_Queue();                      // Manage U(S)ART TX Queue!
+    u0_TX_Queue();  // Manage U(S)ART TX Queue!
  8000b52:	00002097          	auipc	ra,0x2
  8000b56:	808080e7          	jalr	-2040(ra) # 800235a <u0_TX_Queue>
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b5a:	4595                	li	a1,5
  8000b5c:	8526                	mv	a0,s1
-    idle++;                             // Manage Async events
+    idle++;         // Manage Async events
  8000b5e:	0985                	addi	s3,s3,1
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b60:	00001097          	auipc	ra,0x1
  8000b64:	856080e7          	jalr	-1962(ra) # 80013b6 <usart_flag_get>
  8000b68:	c105                	beqz	a0,8000b88 <main+0x104>
-      LCD_ShowChar(posX,30,usart_data_receive(USART0), OPAQUE, WHITE); 
+      LCD_ShowChar(posX, 30, usart_data_receive(USART0), OPAQUE, WHITE);
  8000b6a:	8526                	mv	a0,s1
  8000b6c:	00001097          	auipc	ra,0x1
  8000b70:	82a080e7          	jalr	-2006(ra) # 8001396 <usart_data_receive>
@@ -812,47 +813,47 @@ int main(void){
  8000b7e:	8562                	mv	a0,s8
  8000b80:	00001097          	auipc	ra,0x1
  8000b84:	69c080e7          	jalr	1692(ra) # 800221c <LCD_ShowChar>
-    if (t5expq()) {                     // Manage periodic tasks
+    if (t5expq())
  8000b88:	00002097          	auipc	ra,0x2
  8000b8c:	b12080e7          	jalr	-1262(ra) # 800269a <t5expq>
  8000b90:	dd4d                	beqz	a0,8000b4a <main+0xc6>
-      l88row(colset());               // ...8*8LED and Keyboard
+      l88row(colset()); // ...8*8LED and Keyboard
  8000b92:	00002097          	auipc	ra,0x2
  8000b96:	b58080e7          	jalr	-1192(ra) # 80026ea <colset>
-      ms++;                           // ...One second heart beat
+      ms++;             // ...One second heart beat
  8000b9a:	0a05                	addi	s4,s4,1
-      l88row(colset());               // ...8*8LED and Keyboard
+      l88row(colset()); // ...8*8LED and Keyboard
  8000b9c:	00002097          	auipc	ra,0x2
  8000ba0:	bb8080e7          	jalr	-1096(ra) # 8002754 <l88row>
-      if (ms==1000){
+      if (ms == 1000)
  8000ba4:	019a1c63          	bne	s4,s9,8000bbc <main+0x138>
-        l88mem(0,s++);
+        l88mem(0, s++);
  8000ba8:	001b0a13          	addi	s4,s6,1
  8000bac:	85da                	mv	a1,s6
  8000bae:	4501                	li	a0,0
  8000bb0:	8b52                	mv	s6,s4
  8000bb2:	00002097          	auipc	ra,0x2
  8000bb6:	bd8080e7          	jalr	-1064(ra) # 800278a <l88mem>
-        ms=0;
+        ms = 0;
  8000bba:	4a01                	li	s4,0
-      if ((key=keyscan())>=0) // ...Any key pressed?
+      if ((key = keyscan()) >= 0) // ...Any key pressed?
  8000bbc:	00002097          	auipc	ra,0x2
  8000bc0:	c14080e7          	jalr	-1004(ra) # 80027d0 <keyscan>
  8000bc4:	04054b63          	bltz	a0,8000c1a <main+0x196>
-        if(nrOfDig == 0) 
+        if (nrOfDig == 0)
  8000bc8:	050a                	slli	a0,a0,0x2
  8000bca:	009c                	addi	a5,sp,64
  8000bcc:	953e                	add	a0,a0,a5
  8000bce:	fc052d83          	lw	s11,-64(a0)
  8000bd2:	040b8263          	beqz	s7,8000c16 <main+0x192>
-          sum = digit1*16 + digit2; //Omvandlas
+          sum = digit1 * 16 + digit2; // Omvandlas
  8000bd6:	00491413          	slli	s0,s2,0x4
  8000bda:	946e                	add	s0,s0,s11
-          nrOfDig = 0;  //Återställs så att nytt tal kan skrivas
+          nrOfDig = 0;                // Återställs så att nytt tal kan skrivas
  8000bdc:	4b81                	li	s7,0
-          sum = digit1*16 + digit2; //Omvandlas
+          sum = digit1 * 16 + digit2; // Omvandlas
  8000bde:	8dca                	mv	s11,s2
-        if(sum >= MIN_ASCII && sum <= MAX_ASCII)  //Intervall från föreläsning Hex 20 -- 7E
+        if (sum >= MIN_ASCII && sum <= MAX_ASCII) // Intervall från föreläsning Hex 20 -- 7E
  8000be0:	fe040793          	addi	a5,s0,-32
  8000be4:	00fd6a63          	bltu	s10,a5,8000bf8 <main+0x174>
           usart_data_transmit(USART0, sum); // USRAT0 TX! //TX ------> RX på rad 75
@@ -861,21 +862,21 @@ int main(void){
  8000bec:	0c21                	addi	s8,s8,8
  8000bee:	00000097          	auipc	ra,0x0
  8000bf2:	7a0080e7          	jalr	1952(ra) # 800138e <usart_data_transmit>
-          sum = 0; //Sum får värdet 0 vilket låter oss inför ett nytt tecken
+          sum = 0;                          // Sum får värdet 0 vilket låter oss inför ett nytt tecken
  8000bf6:	4401                	li	s0,0
-      l88mem(2,idle>>8);              // ...Performance monitor
+      l88mem(2, idle >> 8); // ...Performance monitor
  8000bf8:	4089d593          	srai	a1,s3,0x8
  8000bfc:	4509                	li	a0,2
  8000bfe:	00002097          	auipc	ra,0x2
  8000c02:	b8c080e7          	jalr	-1140(ra) # 800278a <l88mem>
-      l88mem(3,idle); idle=0;
+      l88mem(3, idle);
  8000c06:	85ce                	mv	a1,s3
  8000c08:	450d                	li	a0,3
  8000c0a:	00002097          	auipc	ra,0x2
  8000c0e:	b80080e7          	jalr	-1152(ra) # 800278a <l88mem>
  8000c12:	896e                	mv	s2,s11
  8000c14:	bf15                	j	8000b48 <main+0xc4>
-          nrOfDig++; //värdet ökas för att kunna läsa in andra talet
+          nrOfDig++;               // värdet ökas för att kunna läsa in andra talet
  8000c16:	4b85                	li	s7,1
  8000c18:	b7e1                	j	8000be0 <main+0x15c>
  8000c1a:	8dca                	mv	s11,s2
@@ -6977,15 +6978,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  13 .debug_ranges 00000f80  00000000  00000000  00021cb8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0000e39d  00000000  00000000  00022c38  2**0
+ 14 .debug_line   0000e39b  00000000  00000000  00022c38  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00003996  00000000  00000000  00030fd5  2**0
+ 15 .debug_str    00003996  00000000  00000000  00030fd3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      00000028  00000000  00000000  0003496b  2**0
+ 16 .comment      00000028  00000000  00000000  00034969  2**0
                   CONTENTS, READONLY
- 17 .riscv.attributes 0000002b  00000000  00000000  00034993  2**0
+ 17 .riscv.attributes 0000002b  00000000  00000000  00034991  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00001a28  00000000  00000000  000349c0  2**2
+ 18 .debug_frame  00001a28  00000000  00000000  000349bc  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -7565,8 +7566,8 @@ Disassembly of section .text:
  80008c8:	0000 0000 000f 0000 000c 0000 0009 0000     ................
  80008d8:	0008 0000 0007 0000 000b 0000 0006 0000     ................
  80008e8:	0005 0000 0004 0000 000a 0000 0003 0000     ................
- 80008f8:	0002 0000 0001 0000 614c 6262 3520 312e     ........Labb 5.1
- 8000908:	0000 0000 24fc 0000 244c 0000 2452 0000     .....$..L$..R$..
+ 80008f8:	0002 0000 0001 0000 7250 6a6f 6365 5f74     ........Project_
+ 8000908:	5f35 0031 24fc 0000 244c 0000 2452 0000     5_1..$..L$..R$..
  8000918:	244c 0000 24ee 0000 244c 0000 2452 0000     L$...$..L$..R$..
  8000928:	24fc 0000 24fc 0000 24ee 0000 2452 0000     .$...$...$..R$..
  8000938:	2432 0000 2432 0000 2432 0000 2456 0000     2$..2$..2$..V$..
@@ -7594,20 +7595,20 @@ Disassembly of section .text:
  8000a74:	0808 0808 0808 0808 0808 0808 0808 0808     ................
 
 08000a84 <main>:
-     //rtc_interrupt_enable(RTC_INT_SECOND);
-     rtc_lwoff_wait();
-   }
+    rtc_lwoff_wait();
+  }
 }
 
-int main(void){
+int main(void)
+{
  8000a84:	7119                	addi	sp,sp,-128
-  int ms=0, s=0, key, pKey=-1, c=0, idle=0, rtc, hh, mm, ss;
-  int lookUpTbl[16]={13,14,0,15,12,9,8,7,11,6,5,4,10,3,2,1};
+  int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0, rtc, hh, mm, ss;
+  int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1};
  8000a86:	080015b7          	lui	a1,0x8001
  8000a8a:	04000613          	li	a2,64
  8000a8e:	8c058593          	addi	a1,a1,-1856 # 80008c0 <asc2_1608+0x5fc>
  8000a92:	850a                	mv	a0,sp
-int main(void){
+{
  8000a94:	de86                	sw	ra,124(sp)
  8000a96:	dca2                	sw	s0,120(sp)
  8000a98:	daa6                	sw	s1,116(sp)
@@ -7621,31 +7622,31 @@ int main(void){
  8000aa8:	c8ea                	sw	s10,80(sp)
  8000aaa:	d6ce                	sw	s3,108(sp)
  8000aac:	c6ee                	sw	s11,76(sp)
-  int lookUpTbl[16]={13,14,0,15,12,9,8,7,11,6,5,4,10,3,2,1};
+  int lookUpTbl[16] = {13, 14, 0, 15, 12, 9, 8, 7, 11, 6, 5, 4, 10, 3, 2, 1};
  8000aae:	00003097          	auipc	ra,0x3
  8000ab2:	b96080e7          	jalr	-1130(ra) # 8003644 <memcpy>
-  char digits[10][10]={"Zero ","One  ","Two  ","Three","Four ","Five ","Six  ","Seven","Eight","Nine "};
-  //char time[7]={0};
-  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;  
+  char digits[10][10] = {"Zero ", "One  ", "Two  ", "Three", "Four ", "Five ", "Six  ", "Seven", "Eight", "Nine "};
+  // char time[7]={0};
+  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;
   char msg[] = {"*"};
 
-  t5omsi();                               // Initialize timer5 1kHz
+  t5omsi();                // Initialize timer5 1kHz
  8000ab6:	00002097          	auipc	ra,0x2
  8000aba:	bb2080e7          	jalr	-1102(ra) # 8002668 <t5omsi>
-  colinit();                              // Initialize column toolbox
+  colinit();               // Initialize column toolbox
  8000abe:	00002097          	auipc	ra,0x2
  8000ac2:	bec080e7          	jalr	-1044(ra) # 80026aa <colinit>
-  l88init();                              // Initialize 8*8 led toolbox
+  l88init();               // Initialize 8*8 led toolbox
  8000ac6:	00002097          	auipc	ra,0x2
  8000aca:	c5c080e7          	jalr	-932(ra) # 8002722 <l88init>
-  keyinit();                              // Initialize keyboard toolbox
+  keyinit();               // Initialize keyboard toolbox
  8000ace:	00002097          	auipc	ra,0x2
  8000ad2:	cd0080e7          	jalr	-816(ra) # 800279e <keyinit>
-  ADC3powerUpInit(1);                     // Initialize ADC0, Ch3
+  ADC3powerUpInit(1);      // Initialize ADC0, Ch3
  8000ad6:	4505                	li	a0,1
  8000ad8:	00001097          	auipc	ra,0x1
  8000adc:	ca0080e7          	jalr	-864(ra) # 8001778 <ADC3powerUpInit>
-  Lcd_SetType(LCD_NORMAL);//NORMAL);                // or use LCD_INVERTED!
+  Lcd_SetType(LCD_NORMAL); // NORMAL);                // or use LCD_INVERTED!
  8000ae0:	4501                	li	a0,0
  8000ae2:	00001097          	auipc	ra,0x1
  8000ae6:	246080e7          	jalr	582(ra) # 8001d28 <Lcd_SetType>
@@ -7656,7 +7657,7 @@ int main(void){
  8000af2:	4501                	li	a0,0
  8000af4:	00001097          	auipc	ra,0x1
  8000af8:	6be080e7          	jalr	1726(ra) # 80021b2 <LCD_Clear>
-  LCD_ShowStr(10, 10, "Labb 5.1", WHITE, TRANSPARENT);
+  LCD_ShowStr(10, 10, "Project_5_1", WHITE, TRANSPARENT);
  8000afc:	6ac1                	lui	s5,0x10
  8000afe:	08001637          	lui	a2,0x8001
  8000b02:	fffa8693          	addi	a3,s5,-1 # ffff <__stack_size+0xefff>
@@ -7666,74 +7667,75 @@ int main(void){
  8000b0e:	4529                	li	a0,10
  8000b10:	00001097          	auipc	ra,0x1
  8000b14:	7ea080e7          	jalr	2026(ra) # 80022fa <LCD_ShowStr>
-  //rtcInit();                              // Initialize RTC
-  //rtc_counter_set(3600+60+1);
-  u0init(EI);                             // Initialize USART0 toolbox
+  // rtcInit();                              // Initialize RTC
+  // rtc_counter_set(3600+60+1);
+  u0init(EI); // Initialize USART0 toolbox
  8000b18:	4505                	li	a0,1
   {
-    idle++;                             // Manage Async events
-    LCD_WR_Queue();                     // Manage LCD com queue!
-    u0_TX_Queue();                      // Manage U(S)ART TX Queue!
-    
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    idle++;         // Manage Async events
+    LCD_WR_Queue(); // Manage LCD com queue!
+    u0_TX_Queue();  // Manage U(S)ART TX Queue!
+
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b1a:	400144b7          	lui	s1,0x40014
-  u0init(EI);                             // Initialize USART0 toolbox
+  u0init(EI); // Initialize USART0 toolbox
  8000b1e:	00002097          	auipc	ra,0x2
  8000b22:	8c4080e7          	jalr	-1852(ra) # 80023e2 <u0init>
-  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;  
+  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;
  8000b26:	4c01                	li	s8,0
-  eclic_global_interrupt_enable();        // !!! INTERRUPT ENABLED !!!
+  eclic_global_interrupt_enable(); // !!! INTERRUPT ENABLED !!!
  8000b28:	00000097          	auipc	ra,0x0
  8000b2c:	41a080e7          	jalr	1050(ra) # 8000f42 <eclic_global_interrupt_enable>
-  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;  
+  int digit1 = 0, digit2 = 0, sum = 0, nrOfDig = 0, posX = 0;
  8000b30:	4b81                	li	s7,0
  8000b32:	4401                	li	s0,0
  8000b34:	4901                	li	s2,0
-  int ms=0, s=0, key, pKey=-1, c=0, idle=0, rtc, hh, mm, ss;
+  int ms = 0, s = 0, key, pKey = -1, c = 0, idle = 0, rtc, hh, mm, ss;
  8000b36:	4b01                	li	s6,0
  8000b38:	4a01                	li	s4,0
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b3a:	80048493          	addi	s1,s1,-2048 # 40013800 <GPIOB+0x2c00>
-    { // USART0 RX?
-      //l88mem(6,usart_data_receive(USART0)); // Yes: Retrive & display!
-      LCD_ShowChar(posX,30,usart_data_receive(USART0), OPAQUE, WHITE); 
+    {                                            // USART0 RX?
+      // l88mem(6,usart_data_receive(USART0)); // Yes: Retrive & display!
+      LCD_ShowChar(posX, 30, usart_data_receive(USART0), OPAQUE, WHITE);
  8000b3e:	1afd                	addi	s5,s5,-1
     }
-    if (t5expq()) {                     // Manage periodic tasks
-      l88row(colset());               // ...8*8LED and Keyboard
-      ms++;                           // ...One second heart beat
-      if (ms==1000){
+    if (t5expq())
+    {                   // Manage periodic tasks
+      l88row(colset()); // ...8*8LED and Keyboard
+      ms++;             // ...One second heart beat
+      if (ms == 1000)
  8000b40:	3e800c93          	li	s9,1000
         {
-          digit2 = lookUpTbl[key]; //Andra siffran läses
-          sum = digit1*16 + digit2; //Omvandlas
-          nrOfDig = 0;  //Återställs så att nytt tal kan skrivas
+          digit2 = lookUpTbl[key];    // Andra siffran läses
+          sum = digit1 * 16 + digit2; // Omvandlas
+          nrOfDig = 0;                // Återställs så att nytt tal kan skrivas
         }
-        if(sum >= MIN_ASCII && sum <= MAX_ASCII)  //Intervall från föreläsning Hex 20 -- 7E
+        if (sum >= MIN_ASCII && sum <= MAX_ASCII) // Intervall från föreläsning Hex 20 -- 7E
  8000b44:	05e00d13          	li	s10,94
-          posX += 8; //Mellanrum mellan tecknena
-          sum = 0; //Sum får värdet 0 vilket låter oss inför ett nytt tecken
+          posX += 8;                        // Mellanrum mellan tecknena
+          sum = 0;                          // Sum får värdet 0 vilket låter oss inför ett nytt tecken
         }
       }
-      l88mem(2,idle>>8);              // ...Performance monitor
-      l88mem(3,idle); idle=0;
+      l88mem(2, idle >> 8); // ...Performance monitor
+      l88mem(3, idle);
  8000b48:	4981                	li	s3,0
-    LCD_WR_Queue();                     // Manage LCD com queue!
+    LCD_WR_Queue(); // Manage LCD com queue!
  8000b4a:	00001097          	auipc	ra,0x1
  8000b4e:	f7a080e7          	jalr	-134(ra) # 8001ac4 <LCD_WR_Queue>
-    u0_TX_Queue();                      // Manage U(S)ART TX Queue!
+    u0_TX_Queue();  // Manage U(S)ART TX Queue!
  8000b52:	00002097          	auipc	ra,0x2
  8000b56:	808080e7          	jalr	-2040(ra) # 800235a <u0_TX_Queue>
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b5a:	4595                	li	a1,5
  8000b5c:	8526                	mv	a0,s1
-    idle++;                             // Manage Async events
+    idle++;         // Manage Async events
  8000b5e:	0985                	addi	s3,s3,1
-    if(usart_flag_get(USART0,USART_FLAG_RBNE)) //RX
+    if (usart_flag_get(USART0, USART_FLAG_RBNE)) // RX
  8000b60:	00001097          	auipc	ra,0x1
  8000b64:	856080e7          	jalr	-1962(ra) # 80013b6 <usart_flag_get>
  8000b68:	c105                	beqz	a0,8000b88 <main+0x104>
-      LCD_ShowChar(posX,30,usart_data_receive(USART0), OPAQUE, WHITE); 
+      LCD_ShowChar(posX, 30, usart_data_receive(USART0), OPAQUE, WHITE);
  8000b6a:	8526                	mv	a0,s1
  8000b6c:	00001097          	auipc	ra,0x1
  8000b70:	82a080e7          	jalr	-2006(ra) # 8001396 <usart_data_receive>
@@ -7744,47 +7746,47 @@ int main(void){
  8000b7e:	8562                	mv	a0,s8
  8000b80:	00001097          	auipc	ra,0x1
  8000b84:	69c080e7          	jalr	1692(ra) # 800221c <LCD_ShowChar>
-    if (t5expq()) {                     // Manage periodic tasks
+    if (t5expq())
  8000b88:	00002097          	auipc	ra,0x2
  8000b8c:	b12080e7          	jalr	-1262(ra) # 800269a <t5expq>
  8000b90:	dd4d                	beqz	a0,8000b4a <main+0xc6>
-      l88row(colset());               // ...8*8LED and Keyboard
+      l88row(colset()); // ...8*8LED and Keyboard
  8000b92:	00002097          	auipc	ra,0x2
  8000b96:	b58080e7          	jalr	-1192(ra) # 80026ea <colset>
-      ms++;                           // ...One second heart beat
+      ms++;             // ...One second heart beat
  8000b9a:	0a05                	addi	s4,s4,1
-      l88row(colset());               // ...8*8LED and Keyboard
+      l88row(colset()); // ...8*8LED and Keyboard
  8000b9c:	00002097          	auipc	ra,0x2
  8000ba0:	bb8080e7          	jalr	-1096(ra) # 8002754 <l88row>
-      if (ms==1000){
+      if (ms == 1000)
  8000ba4:	019a1c63          	bne	s4,s9,8000bbc <main+0x138>
-        l88mem(0,s++);
+        l88mem(0, s++);
  8000ba8:	001b0a13          	addi	s4,s6,1
  8000bac:	85da                	mv	a1,s6
  8000bae:	4501                	li	a0,0
  8000bb0:	8b52                	mv	s6,s4
  8000bb2:	00002097          	auipc	ra,0x2
  8000bb6:	bd8080e7          	jalr	-1064(ra) # 800278a <l88mem>
-        ms=0;
+        ms = 0;
  8000bba:	4a01                	li	s4,0
-      if ((key=keyscan())>=0) // ...Any key pressed?
+      if ((key = keyscan()) >= 0) // ...Any key pressed?
  8000bbc:	00002097          	auipc	ra,0x2
  8000bc0:	c14080e7          	jalr	-1004(ra) # 80027d0 <keyscan>
  8000bc4:	04054b63          	bltz	a0,8000c1a <main+0x196>
-        if(nrOfDig == 0) 
+        if (nrOfDig == 0)
  8000bc8:	050a                	slli	a0,a0,0x2
  8000bca:	009c                	addi	a5,sp,64
  8000bcc:	953e                	add	a0,a0,a5
  8000bce:	fc052d83          	lw	s11,-64(a0)
  8000bd2:	040b8263          	beqz	s7,8000c16 <main+0x192>
-          sum = digit1*16 + digit2; //Omvandlas
+          sum = digit1 * 16 + digit2; // Omvandlas
  8000bd6:	00491413          	slli	s0,s2,0x4
  8000bda:	946e                	add	s0,s0,s11
-          nrOfDig = 0;  //Återställs så att nytt tal kan skrivas
+          nrOfDig = 0;                // Återställs så att nytt tal kan skrivas
  8000bdc:	4b81                	li	s7,0
-          sum = digit1*16 + digit2; //Omvandlas
+          sum = digit1 * 16 + digit2; // Omvandlas
  8000bde:	8dca                	mv	s11,s2
-        if(sum >= MIN_ASCII && sum <= MAX_ASCII)  //Intervall från föreläsning Hex 20 -- 7E
+        if (sum >= MIN_ASCII && sum <= MAX_ASCII) // Intervall från föreläsning Hex 20 -- 7E
  8000be0:	fe040793          	addi	a5,s0,-32
  8000be4:	00fd6a63          	bltu	s10,a5,8000bf8 <main+0x174>
           usart_data_transmit(USART0, sum); // USRAT0 TX! //TX ------> RX på rad 75
@@ -7793,21 +7795,21 @@ int main(void){
  8000bec:	0c21                	addi	s8,s8,8
  8000bee:	00000097          	auipc	ra,0x0
  8000bf2:	7a0080e7          	jalr	1952(ra) # 800138e <usart_data_transmit>
-          sum = 0; //Sum får värdet 0 vilket låter oss inför ett nytt tecken
+          sum = 0;                          // Sum får värdet 0 vilket låter oss inför ett nytt tecken
  8000bf6:	4401                	li	s0,0
-      l88mem(2,idle>>8);              // ...Performance monitor
+      l88mem(2, idle >> 8); // ...Performance monitor
  8000bf8:	4089d593          	srai	a1,s3,0x8
  8000bfc:	4509                	li	a0,2
  8000bfe:	00002097          	auipc	ra,0x2
  8000c02:	b8c080e7          	jalr	-1140(ra) # 800278a <l88mem>
-      l88mem(3,idle); idle=0;
+      l88mem(3, idle);
  8000c06:	85ce                	mv	a1,s3
  8000c08:	450d                	li	a0,3
  8000c0a:	00002097          	auipc	ra,0x2
  8000c0e:	b80080e7          	jalr	-1152(ra) # 800278a <l88mem>
  8000c12:	896e                	mv	s2,s11
  8000c14:	bf15                	j	8000b48 <main+0xc4>
-          nrOfDig++; //värdet ökas för att kunna läsa in andra talet
+          nrOfDig++;               // värdet ökas för att kunna läsa in andra talet
  8000c16:	4b85                	li	s7,1
  8000c18:	b7e1                	j	8000be0 <main+0x15c>
  8000c1a:	8dca                	mv	s11,s2
